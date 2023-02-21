@@ -31,7 +31,7 @@ struct NavigationList: View {
             SupportNavigationLink("Navigation View") { Nav_NavigationView() }
             SupportNavigationLink("Tab View") { Nav_TabView() }
         }
-        .navigationBarTitle("Image")
+        .navigationBarTitle("Navigation")
     }
 }
 
