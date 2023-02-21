@@ -26,12 +26,12 @@ import SwiftUI
 struct AnimationList: View {
     var body: some View {
         List {
-            SupportNavigationLink("Image Basics") { ImageBasics() }
-            SupportNavigationLink("Resizable") { Resizable() }
-            SupportNavigationLink("Rendering Mode") { RenderingMode() }
-            SupportNavigationLink("Image Interpolation") { ImageInterpolation() }
+            SupportNavigationLink("Animation Basics") { AnimationBasics() }
+            SupportNavigationLink("ExplicitAnimation") { ExplicitAnimation() }
+            SupportNavigationLink("Repeat") { Animation_Repeat() }
+            SupportNavigationLink("SpringAnimation") { SpringAnimation() }
         }
-        .navigationBarTitle("Image")
+        .navigationBarTitle("Animation")
     }
 }
 
