@@ -27,11 +27,23 @@ struct ForegroundColor: View {
     @State var a = true
 
     var body: some View {
-        VStack {
+        ZStack {
+            Color
+                .red
+                .ignoresSafeArea()
+
+            Color
+                .yellow
+                .cornerRadius(20)
+                .padding()
+
+            Color
+                .green
+                .cornerRadius(20)
+                .padding(40)
+
             Text("Foreground Color")
                 .font(.largeTitle)
-
-            Spacer()
         }
     }
 }
