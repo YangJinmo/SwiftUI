@@ -30,11 +30,8 @@ struct MultiSelection: View {
 
     var body: some View {
         VStack {
-            Text("Managing Selection")
-                .font(.largeTitle)
-
             Text("\(selected.count) item(s) selected")
-                .font(.title)
+                .font(.largeTitle)
 
             List(items, id: \.self, selection: $selected) { item in
                 Text(item.name)
