@@ -24,38 +24,43 @@
 import SwiftUI
 
 struct FontSizeAndWeight: View {
+    private var size: CGFloat = 48
+
     var body: some View {
-        VStack(spacing: 20) {
-            Text("50pt Font")
-                .font(.system(size: 50))
+        ScrollView {
+            VStack(spacing: 20) {
+                Text("\(Int(size))pt Font")
+                    .font(.system(size: size))
 
-            Text("Black")
-                .font(.system(size: 50, weight: .black))
+                Text("Black")
+                    .font(.system(size: size, weight: .black))
 
-            Text("Heavy")
-                .font(.system(size: 50, weight: .heavy))
+                Text("Heavy")
+                    .font(.system(size: size, weight: .heavy))
 
-            Text("Bold")
-                .font(.system(size: 50, weight: .bold))
+                Text("Bold")
+                    .font(.system(size: size, weight: .bold))
 
-            Text("Semibold")
-                .font(.system(size: 50, weight: .semibold))
+                Text("Semibold")
+                    .font(.system(size: size, weight: .semibold))
 
-            Text("Medium")
-                .font(.system(size: 50, weight: .medium))
+                Text("Medium")
+                    .font(.system(size: size, weight: .medium))
 
-            Text("Regular")
-                .font(.system(size: 50, weight: .regular))
+                Text("Regular")
+                    .font(.system(size: size, weight: .regular))
 
-            Text("Light")
-                .font(.system(size: 50, weight: .light))
+                Text("Light")
+                    .font(.system(size: size, weight: .light))
 
-            Text("Thin")
-                .font(.system(size: 50, weight: .thin))
+                Text("Thin")
+                    .font(.system(size: size, weight: .thin))
 
-            Text("Ultra Light")
-                .font(.system(size: 50, weight: .ultraLight))
-                .fontWeight(.ultraLight)
+                Text("Ultra Light")
+                    .font(.system(size: size, weight: .ultraLight))
+//                 .fontWeight(.ultraLight)
+            }
+            .frame(maxWidth: .infinity)
         }
     }
 }
