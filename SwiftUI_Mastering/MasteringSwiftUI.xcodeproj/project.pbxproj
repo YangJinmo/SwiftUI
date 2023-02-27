@@ -103,6 +103,7 @@
 		AAF1884F243B391D0043A704 /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF1884E243B391D0043A704 /* ActionSheet.swift */; };
 		AAF18852243B5C1B0043A704 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF18851243B5C1B0043A704 /* Group.swift */; };
 		AAF18854243B6A8F0043A704 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF18853243B6A8F0043A704 /* Form.swift */; };
+		E8AAAA0529A727060098ADCB /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AAAA0429A727060098ADCB /* ImageData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -204,6 +205,7 @@
 		AAF1884E243B391D0043A704 /* ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheet.swift; sourceTree = "<group>"; };
 		AAF18851243B5C1B0043A704 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		AAF18853243B6A8F0043A704 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		E8AAAA0429A727060098ADCB /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -504,6 +506,7 @@
 			isa = PBXGroup;
 			children = (
 				AAC2EA062447479F00C4D84F /* SystemViewList.swift */,
+				E8AAAA0429A727060098ADCB /* ImageData.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -596,7 +599,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Keun young Kim";
 				TargetAttributes = {
 					AA7CA70B2437744A000C3462 = {
@@ -687,6 +690,7 @@
 				AA2F014B244A60F800EB0A99 /* LongPress.swift in Sources */,
 				AA7CA72724379752000C3462 /* HStack.swift in Sources */,
 				AA7B228724390091008CCF50 /* Slider.swift in Sources */,
+				E8AAAA0529A727060098ADCB /* ImageData.swift in Sources */,
 				AAF1884F243B391D0043A704 /* ActionSheet.swift in Sources */,
 				AAF18846243B03740043A704 /* Resizable.swift in Sources */,
 				AA0BA656243C7B1100126354 /* TabView.swift in Sources */,
@@ -776,6 +780,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -836,6 +841,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -873,7 +879,7 @@
 				DEVELOPMENT_TEAM = MMMXXXYWN4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MasteringSwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -894,7 +900,7 @@
 				DEVELOPMENT_TEAM = MMMXXXYWN4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MasteringSwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
