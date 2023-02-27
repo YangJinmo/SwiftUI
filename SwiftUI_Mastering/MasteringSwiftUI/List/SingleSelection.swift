@@ -30,33 +30,60 @@ struct SingleSelection: View {
 
     var body: some View {
         VStack {
-            Text("Managing Selection")
+            Text("Selected \(selected?.name ?? "-")")
                 .font(.largeTitle)
 
-            Text("Selected \(selected?.name ?? "-")")
-                .font(.title)
+//            List(items, selection: $selected) { item in
+//                Button(action: {
+//                    self.selected = item
+//                }) {
+//                    Text(item.name)
+//                }
+//            }
 
-            // T##Binding<_?>?: 단일 선택
-            // 편집 모드가 아닌 일반 모드에서는 자동으로 바인딩되지 않습니다.
-            // selection Parameter를 사용하지 않음
+            /// 편집 모드가 아닌 일반 모드에서는 바인딩을 지원하지 않기 때문에
+            /// 두번째 파라미터인 selection Parameter는 필요 없음
+//            List(items) { item in
+//                Button(action: {
+//                    self.selected = item
+//                }) {
+//                    Text(item.name)
+//                }
+//            }
 
-//      List(items) { item in
-//        Button(action: {
-//          self.selected = item
-//        }) {
-//          Text(item.name)
-//        }
-//      }
-
+            /**
+             selection으로 선택을 바인딩하려면
+             리스트가 개별 항목을 구분하는 타입과
+             바인딩한 State Variable이 똑같아야해요.
+             AppleProduct 구조체를 보면 Identifiable 프로토콜을 채용하요 있죠
+             그래서 아이디 속성으로 인스턴스를 구분하고
+             아니디 속성은 UUID죠
+             그런데 State Variable 형식은 Apple Product로 두 형식이 일치하지 않기 때문에
+             편집모드로 전환되지 않아요
+             그래서 selected의 형식을 바꾸거나
+             리스트가 인스턴스 자체를 구분하도록 수정해야하는데
+             여기에서는 두번째 방식으로 할게요. -> id: \.self
+             - 단일 선택: SwiftUI.Binding<SelectionValue> - struct SingleSelection
+             - 복수 선택: SwiftUI.Binding<Set<SelectionValue>>? - struct MultiSelection
+             (왜인지 제대로 동작하지 않음)
+             */
             List(items, id: \.self, selection: $selected) { item in
-                Button(action: {
-                    // self.selected = item
-                }) {
-                    Text(item.name)
-                }
+//                Button(action: {
+                // self.selected = item
+//                }) {
+//                    Text(item.name)
+//                }
+
+                /// 편집모드에서는 탭이벤트가 자동으로 처리되니까 버튼이 없어도 됨.
+                Text(item.name)
             }
         }
-        .navigationBarItems(trailing: EditButton())
+        .toolbar {
+            #if os(iOS)
+                EditButton()
+            #endif
+        }
+//        .navigationBarItems(trailing: EditButton())
     }
 }
 
