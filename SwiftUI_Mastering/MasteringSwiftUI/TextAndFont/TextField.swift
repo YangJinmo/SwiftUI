@@ -24,17 +24,27 @@
 import SwiftUI
 
 struct View_TextField: View {
+    private enum Field: Hashable {
+        case name, password
+    }
+
     @State private var name: String = ""
     @State private var password: String = ""
+
+    @FocusState private var focusField: Field?
 
     var body: some View {
         VStack {
             Text("TextField")
                 .font(.largeTitle)
 
-            Text("input: \(name)")
-                .font(.title)
-                .foregroundColor(.secondary)
+            HStack {
+                Text("Name: \(name)")
+                    .font(.title)
+                    .foregroundColor(.secondary)
+                    .padding()
+                Spacer()
+            }
 
 //      TextField("Input Somthing", text: $name, onEditingChanged: {
 //        print($0)
@@ -42,24 +52,109 @@ struct View_TextField: View {
 //        print("commit")
 //      })
 
-            TextField("Input Somthing", text: $name)
-                .padding()
+            TextField("Input Name", text: $name)
+//                .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .font(.title)
+                .submitLabel(.next)
+                .focused($focusField, equals: .name)
+                // .keyboardType(.numberPad)
+                // .textContentType(.username)
+                // .autocapitalization(.none)
+                .disableAutocorrection(true)
+            TextField("Input Name", text: $name)
+//                .padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .font(.title)
+                .submitLabel(.next)
+                .focused($focusField, equals: .name)
+                // .keyboardType(.numberPad)
+                // .textContentType(.username)
+                // .autocapitalization(.none)
+                .disableAutocorrection(true)
+            TextField("Input Name", text: $name)
+//                .padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .font(.title)
+                .submitLabel(.next)
+                .focused($focusField, equals: .name)
                 // .keyboardType(.numberPad)
                 // .textContentType(.username)
                 // .autocapitalization(.none)
                 .disableAutocorrection(true)
 
-            SecureField("Input Password", text: $password)
-                .padding()
+            TextField("Input Name", text: $name)
+//                .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .font(.title)
+                .submitLabel(.next)
+                .focused($focusField, equals: .name)
+                // .keyboardType(.numberPad)
+                // .textContentType(.username)
+                // .autocapitalization(.none)
+                .disableAutocorrection(true)
+                .onSubmit {
+                    focusField = .password
+                }
+
+            SecureField("Input Password", text: $password)
+//                .padding()
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .font(.title)
+                .submitLabel(.done)
+                .focused($focusField, equals: .password)
+                .onSubmit {
+                    focusField = nil
+                    handleLogin()
+                }
 
             Spacer()
 
+            Button("Login") {
+                if name.isEmpty {
+                    focusField = .name
+                } else if password.isEmpty {
+                    focusField = .password
+                } else {
+                    focusField = nil
+                    handleLogin()
+                }
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.blue)
+            .foregroundColor(.white)
+//            .buttonStyle(.borderedProminent)
+            .cornerRadius(8)
+
+//            Button {
+//                if name.isEmpty {
+//                    focusField = .name
+//                } else if password.isEmpty {
+//                    focusField = .password
+//                } else {
+//                    focusField = nil
+//                    // handleLogin()
+//                }
+//            } label: {
+//                Text("Login 2")
+//                    .frame(maxWidth: .infinity)
+//                    .padding()
+//            }
+//            .frame(maxWidth: .infinity)
+//            .buttonStyle(.borderedProminent)
+//            .cornerRadius(8)
+
             // 키보드가 표시되지 않으면 Cmd + K
         }
+        .padding()
+        .onAppear {
+            focusField = .name
+        }
+    }
+
+    private func handleLogin() {
+        debugPrint("handleLogin")
     }
 }
 
