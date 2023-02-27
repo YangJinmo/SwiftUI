@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		E8D093B529AC5835003C7795 /* Animated_HeaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093B429AC5835003C7795 /* Animated_HeaderApp.swift */; };
-		E8D093B729AC5835003C7795 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093B629AC5835003C7795 /* ContentView.swift */; };
 		E8D093B929AC5836003C7795 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D093B829AC5836003C7795 /* Assets.xcassets */; };
 		E8D093BD29AC5836003C7795 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D093BC29AC5836003C7795 /* Preview Assets.xcassets */; };
 		E8D093C729AC5836003C7795 /* Animated_HeaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093C629AC5836003C7795 /* Animated_HeaderTests.swift */; };
 		E8D093D129AC5836003C7795 /* Animated_HeaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093D029AC5836003C7795 /* Animated_HeaderUITests.swift */; };
 		E8D093D329AC5836003C7795 /* Animated_HeaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093D229AC5836003C7795 /* Animated_HeaderUITestsLaunchTests.swift */; };
-		E8D093E629AC746E003C7795 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093E529AC746E003C7795 /* Home.swift */; };
+		E8D093E629AC746E003C7795 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093E529AC746E003C7795 /* HomeView.swift */; };
 		E8D093E829AC7490003C7795 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093E729AC7490003C7795 /* Food.swift */; };
 		E8D093EA29AC84BB003C7795 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093E929AC84BB003C7795 /* CardView.swift */; };
 		E8D093EC29AC8C59003C7795 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093EB29AC8C59003C7795 /* HeaderView.swift */; };
 		E8D093EE29AC8F64003C7795 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093ED29AC8F64003C7795 /* Tab.swift */; };
+		E8D093F129AC950D003C7795 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093F029AC950D003C7795 /* UIApplication.swift */; };
+		E8D093F329AC9608003C7795 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093F229AC9608003C7795 /* UIViewController.swift */; };
+		E8D093F529AC97F9003C7795 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D093F429AC97F9003C7795 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,6 @@
 /* Begin PBXFileReference section */
 		E8D093B129AC5835003C7795 /* Animated Header.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animated Header.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D093B429AC5835003C7795 /* Animated_HeaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animated_HeaderApp.swift; sourceTree = "<group>"; };
-		E8D093B629AC5835003C7795 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E8D093B829AC5836003C7795 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8D093BA29AC5836003C7795 /* Animated_Header.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Animated_Header.entitlements; sourceTree = "<group>"; };
 		E8D093BC29AC5836003C7795 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -50,11 +51,14 @@
 		E8D093CC29AC5836003C7795 /* Animated HeaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Animated HeaderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D093D029AC5836003C7795 /* Animated_HeaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animated_HeaderUITests.swift; sourceTree = "<group>"; };
 		E8D093D229AC5836003C7795 /* Animated_HeaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animated_HeaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E8D093E529AC746E003C7795 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		E8D093E529AC746E003C7795 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E8D093E729AC7490003C7795 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		E8D093E929AC84BB003C7795 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E8D093EB29AC8C59003C7795 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		E8D093ED29AC8F64003C7795 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		E8D093F029AC950D003C7795 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		E8D093F229AC9608003C7795 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		E8D093F429AC97F9003C7795 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +109,11 @@
 		E8D093B329AC5835003C7795 /* Animated Header */ = {
 			isa = PBXGroup;
 			children = (
+				E8D093EF29AC94FC003C7795 /* Extensions */,
 				E8D093E229AC7433003C7795 /* ViewModel */,
 				E8D093E129AC742C003C7795 /* Model */,
 				E8D093DF29AC740F003C7795 /* View */,
 				E8D093B429AC5835003C7795 /* Animated_HeaderApp.swift */,
-				E8D093B629AC5835003C7795 /* ContentView.swift */,
 				E8D093B829AC5836003C7795 /* Assets.xcassets */,
 				E8D093BA29AC5836003C7795 /* Animated_Header.entitlements */,
 				E8D093BB29AC5836003C7795 /* Preview Content */,
@@ -145,7 +149,7 @@
 		E8D093DF29AC740F003C7795 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E8D093E529AC746E003C7795 /* Home.swift */,
+				E8D093E529AC746E003C7795 /* HomeView.swift */,
 				E8D093E929AC84BB003C7795 /* CardView.swift */,
 				E8D093EB29AC8C59003C7795 /* HeaderView.swift */,
 			);
@@ -164,8 +168,18 @@
 		E8D093E229AC7433003C7795 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E8D093F429AC97F9003C7795 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E8D093EF29AC94FC003C7795 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E8D093F029AC950D003C7795 /* UIApplication.swift */,
+				E8D093F229AC9608003C7795 /* UIViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,10 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D093B729AC5835003C7795 /* ContentView.swift in Sources */,
+				E8D093F129AC950D003C7795 /* UIApplication.swift in Sources */,
+				E8D093F329AC9608003C7795 /* UIViewController.swift in Sources */,
+				E8D093F529AC97F9003C7795 /* HomeViewModel.swift in Sources */,
 				E8D093EC29AC8C59003C7795 /* HeaderView.swift in Sources */,
 				E8D093E829AC7490003C7795 /* Food.swift in Sources */,
-				E8D093E629AC746E003C7795 /* Home.swift in Sources */,
+				E8D093E629AC746E003C7795 /* HomeView.swift in Sources */,
 				E8D093B529AC5835003C7795 /* Animated_HeaderApp.swift in Sources */,
 				E8D093EA29AC84BB003C7795 /* CardView.swift in Sources */,
 				E8D093EE29AC8F64003C7795 /* Tab.swift in Sources */,

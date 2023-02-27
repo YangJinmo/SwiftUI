@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @EnvironmentObject var homeData: HomeViewModel
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Kavsoft Backery")
@@ -37,7 +39,9 @@ struct HeaderView: View {
 
             .frame(maxWidth: .infinity, alignment: .leading)
 
-            Spacer(minLength: 0)
+            if homeData.offset > 250 {
+                Divider()
+            }
         }
         .padding(.horizontal)
         .frame(height: 100)
@@ -47,6 +51,6 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        HomeView()
     }
 }

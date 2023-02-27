@@ -11,7 +11,7 @@ import SwiftUI
 struct Animated_HeaderApp: App {
     var body: some Scene {
         WindowGroup {
-            Home()
+            HomeView()
         }
     }
 }

@@ -15,6 +15,13 @@ struct Food: Identifiable {
     var image: String
 }
 
+var food = Food(
+    title: "",
+    description: "",
+    price: "",
+    image: "https://hips.hearstapps.com/hmg-prod/images/766/healthyfoodsnoteveryday-main-1508848485.jpg"
+)
+
 var foods = [
     Food(
         title: "Chocolate Cake",
@@ -45,5 +52,5 @@ var foods = [
         description: "Pizza is a savory dish of Italian origin consisting of a usually round, flattened base of leavened wheat-based daugh topped",
         price: "$39",
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/800px-Eq_it-na_pizza-margherita_sep2005_sml.jpg"
-    )
+    ),
 ]
