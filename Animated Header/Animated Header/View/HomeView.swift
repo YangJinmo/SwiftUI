@@ -11,6 +11,8 @@ struct HomeView: View {
     @StateObject var homeData = HomeViewModel()
 
     var body: some View {
+        // let _ = print("homeData.offset: \(homeData.offset)")
+
         ScrollView {
             // Since Were Pinning Header View
             LazyVStack(
@@ -75,10 +77,10 @@ struct HomeView: View {
         }
         .overlay(
             // Only Safe Area
-            Color.white
+            Color(UIColor.systemBackground)
                 .frame(height: UIApplication.shared.mainKeyWindow?.safeAreaInsets.top)
                 .ignoresSafeArea(.all, edges: .top)
-                .opacity(homeData.offset > 250 ? 1 : 0),
+                .opacity(homeData.offset <= -250 ? 1 : 0),
             alignment: .top
         )
         // Use It Environment Object For Accessing All Sub Objects
