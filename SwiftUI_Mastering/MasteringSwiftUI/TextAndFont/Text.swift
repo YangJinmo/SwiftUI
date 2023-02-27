@@ -40,10 +40,19 @@ struct View_Text: View {
                 .multilineTextAlignment(.center)
                 .lineSpacing(7)
 
+            Text("Hello, World!")
+                .font(.largeTitle)
+                .foregroundColor(.blue)
+                .background(Color.yellow)
+                .padding()
+                .border(.pink)
+                .cornerRadius(8)
+
             Text("Lorem ipsum dolor sit amet, consectetur")
                 .font(.largeTitle)
+//                .lineLimit(1)
+                .lineLimit(3)
                 .frame(width: 300)
-                .lineLimit(1)
                 // .allowsTightening(true)
                 .minimumScaleFactor(0.5)
         }
