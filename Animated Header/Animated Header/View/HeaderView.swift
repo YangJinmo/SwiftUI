@@ -52,6 +52,22 @@ struct HeaderView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
+
+                // Custom ScrollView
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 0) {
+                        ForEach(tabsItems) { tab in
+                            Text(tab.tab)
+                                .font(.caption)
+                                .padding(.vertical, 10)
+                                .padding(.horizontal)
+                                .background(Color.primary
+                                    .opacity(1))
+                                .clipShape(Capsule())
+                                .foregroundColor(.primary)
+                        }
+                    }
+                }
             }
             // Default Frame = 60...
             // Top Frame = 40
