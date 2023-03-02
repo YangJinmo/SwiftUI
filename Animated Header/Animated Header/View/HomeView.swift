@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var homeData = HomeViewModel()
+    @Environment(\.colorScheme) var scheme
 
     var body: some View {
         // let _ = print("homeData.offset: \(homeData.offset)")
@@ -25,7 +26,7 @@ struct HomeView: View {
 
                         if -offset >= 0 {
                             DispatchQueue.main.async {
-                                self.homeData.offset = offset
+                                self.homeData.offset = -offset
                             }
                         }
 
@@ -34,17 +35,41 @@ struct HomeView: View {
                                 switch phase {
                                 case .empty:
                                     ProgressView()
+
                                 case let .success(image):
-                                    image
-                                        .resizable()
+                                    image.resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(
                                             width: UIScreen.main.bounds.width,
                                             height: 250 + (offset > 0 ? offset : 0)
                                         )
                                         .offset(y: offset > 0 ? -offset : 0)
+                                        .overlay(alignment: .top) {
+                                            HStack {
+                                                Button {
+                                                    print("arrow.left")
+                                                } label: {
+                                                    Image(systemName: "arrow.left")
+                                                        .font(.system(size: 20, weight: .bold))
+                                                        .foregroundColor(.white)
+                                                }
+
+                                                Spacer()
+
+                                                Button {
+                                                    print("suit.heart.fill")
+                                                } label: {
+                                                    Image(systemName: "suit.heart.fill")
+                                                        .font(.system(size: 20, weight: .bold))
+                                                        .foregroundColor(.white)
+                                                }
+                                            }
+                                            .padding()
+                                        }
+
                                 case .failure:
                                     Image(systemName: "photo")
+
                                 @unknown default:
                                     EmptyView()
                                 }
@@ -62,13 +87,39 @@ struct HomeView: View {
                                     .fontWeight(.bold)
                                     .padding(.bottom)
                                     .padding(.leading)
+                                    .onTapGesture {
+                                        print(tab.tab)
+                                    }
 
                                 ForEach(foods) { food in
                                     CardView(food: food)
+                                        .onTapGesture {
+                                            print(food.title)
+                                        }
                                 }
 
                                 Divider()
                                     .padding(.top)
+                            }
+                            .tag(tab.tab)
+                            .overlay {
+                                GeometryReader { reader -> Text in
+                                    // Calculating which tab
+                                    let offset = reader.frame(in: .global).midY
+
+                                    // Top Area + Header Size 100
+                                    let height = (UIApplication.shared.mainKeyWindow?.safeAreaInsets.top ?? 0) + 100
+
+                                    if offset < height && offset > 50 && homeData.selectedTab != tab.tab {
+                                        print("offset: \(offset)")
+
+                                        DispatchQueue.main.async {
+                                            self.homeData.selectedTab = tab.tab
+                                        }
+                                    }
+
+                                    return Text("")
+                                }
                             }
                         }
                     }
@@ -80,7 +131,7 @@ struct HomeView: View {
             Color(UIColor.systemBackground)
                 .frame(height: UIApplication.shared.mainKeyWindow?.safeAreaInsets.top)
                 .ignoresSafeArea(.all, edges: .top)
-                .opacity(homeData.offset <= -250 ? 1 : 0),
+                .opacity(homeData.offset > 250 ? 1 : 0),
             alignment: .top
         )
         // Use It Environment Object For Accessing All Sub Objects

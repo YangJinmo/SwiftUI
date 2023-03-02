@@ -10,5 +10,5 @@ import Foundation
 class HomeViewModel: ObservableObject {
     @Published var offset: CGFloat = 0
 
-    @Published var selectedtab = tabsItems.first!.tab
+    @Published var selectedTab = tabsItems.first!.tab
 }

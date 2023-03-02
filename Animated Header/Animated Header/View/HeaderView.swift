@@ -9,12 +9,14 @@ import SwiftUI
 
 struct HeaderView: View {
     @EnvironmentObject var homeData: HomeViewModel
+    @Environment(\.colorScheme) var scheme
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack(spacing: 0) {
                 // Back
                 Button {
+                    print("arrow.left")
                 } label: {
                     Image(systemName: "arrow.left")
                         .font(.system(size: 20, weight: .bold))
@@ -29,44 +31,78 @@ struct HeaderView: View {
             }
 
             ZStack {
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading, spacing: 12) {
                     Text("Asiatisch . Koreanisch . Japanisch")
                         .font(.caption)
 
-                    HStack(spacing: 4) {
-                        Image(systemName: "clock")
-                            .font(.caption)
+                    HStack(spacing: 8) {
+                        HStack(spacing: 4) {
+                            Image(systemName: "clock")
+                                .font(.caption)
+                            Text("30-40 Min")
+                                .font(.caption)
+                        }
 
-                        Text("30-40 Min")
-                            .font(.caption)
+                        HStack(spacing: 4) {
+                            Image(systemName: "star.fill")
+                                .font(.caption)
 
-                        Text("4.3")
-                            .font(.caption)
+                            Text("4.3")
+                                .font(.caption)
+                        }
 
-                        Image(systemName: "star.fill")
-                            .font(.caption)
+                        HStack(spacing: 4) {
+                            Text("$")
+                                .font(.caption)
 
-                        Text("$6.40 Fee")
-                            .font(.caption)
-                            .padding(.leading, 8)
+                            Text("6.40 Fee")
+                                .font(.caption)
+                        }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
+                .opacity(
+                    homeData.offset > 200 ? 1 - Double(homeData.offset - 200) / 50 : 1
+                )
 
-                // Custom ScrollView
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 0) {
-                        ForEach(tabsItems) { tab in
-                            Text(tab.tab)
-                                .font(.caption)
-                                .padding(.vertical, 10)
-                                .padding(.horizontal)
-                                .background(Color.primary
-                                    .opacity(1))
-                                .clipShape(Capsule())
-                                .foregroundColor(.primary)
+                // Custom ScrollView For Automatic Scrolling
+                ScrollViewReader { reader in
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 0) {
+                            ForEach(tabsItems, id: \.tab) { tab in
+                                Text(tab.tab)
+                                    .font(.caption)
+                                    .padding(.vertical, 8)
+                                    .padding(.horizontal)
+                                    .background(
+                                        Color.primary.opacity(
+                                            homeData.selectedTab == tab.tab ? 1 : 0
+                                        )
+                                    )
+                                    .foregroundColor(
+                                        homeData.selectedTab == tab.tab ? Color(UIColor.systemBackground) : Color(UIColor.label)
+                                    )
+                                    .clipShape(Capsule())
+                                    .onTapGesture {
+                                        print(tab.tab)
+
+//                                        DispatchQueue.main.async {
+//                                            self.homeData.selectedTab = tab.tab
+//                                        }
+                                    }
+                            }
+                            .onChange(of: homeData.selectedTab) { _ in
+                                withAnimation(.easeInOut) {
+                                    reader.scrollTo(homeData.selectedTab, anchor: .leading)
+                                }
+                            }
                         }
                     }
+
+                    // Visible Only When Scrolls Up
+                    .opacity(
+                        homeData.offset > 200 ? Double(homeData.offset - 200) / 50 : 0
+                    )
                 }
             }
             // Default Frame = 60...
@@ -74,7 +110,7 @@ struct HeaderView: View {
             // So Total = 100
             .frame(height: 60)
 
-            if homeData.offset <= -250 {
+            if homeData.offset > 250 {
                 Divider()
             }
         }
@@ -87,8 +123,8 @@ struct HeaderView: View {
     func getSize() -> CGFloat {
 //        let _ = print(homeData.offset)
 
-        if homeData.offset < -200 {
-            let progress = -(homeData.offset + 200) / 50
+        if homeData.offset > 200 {
+            let progress = (homeData.offset - 200) / 50
 
 //            let _ = print(progress)
 

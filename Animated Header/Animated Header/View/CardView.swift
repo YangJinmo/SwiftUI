@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CardView: View {
     var food: Food
+
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 8) {
                 Text(food.title)
-                    .font(.title2)
                     .fontWeight(.bold)
 
                 Text(food.description)
@@ -30,12 +30,15 @@ struct CardView: View {
                 switch phase {
                 case .empty:
                     ProgressView()
+
                 case let .success(image):
                     image.resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(maxWidth: 120, maxHeight: 120)
+
                 case .failure:
                     Image(systemName: "photo")
+
                 @unknown default:
                     // Since the AsyncImagePhase enum isn't frozen,
                     // we need to add this currently unused fallback
@@ -45,7 +48,7 @@ struct CardView: View {
                 }
             }
             .frame(maxWidth: 120, maxHeight: 120)
-            .cornerRadius(10)
+            .cornerRadius(8)
         }
         .padding(.horizontal)
     }
