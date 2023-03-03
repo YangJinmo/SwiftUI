@@ -35,6 +35,11 @@ struct HomeView: View {
                                 switch phase {
                                 case .empty:
                                     ProgressView()
+                                        .scaleEffect(1.5)
+                                        .frame(
+                                            width: UIScreen.main.bounds.width,
+                                            height: 200
+                                        )
 
                                 case let .success(image):
                                     image.resizable()
@@ -68,7 +73,15 @@ struct HomeView: View {
                                         }
 
                                 case .failure:
-                                    Image(systemName: "photo")
+                                    Color
+                                        .gray
+                                        .opacity(0.75)
+                                        .overlay {
+                                            Image(systemName: "photo")
+                                                .foregroundColor(.white)
+                                                .font(.system(size: 24, weight: .bold))
+                                                .transition(.opacity.combined(with: .scale))
+                                        }
 
                                 @unknown default:
                                     EmptyView()
