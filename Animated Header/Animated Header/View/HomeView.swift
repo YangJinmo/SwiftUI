@@ -71,6 +71,9 @@ struct HomeView: View {
                                             }
                                             .padding()
                                         }
+                                        .onTapGesture {
+                                            print(image)
+                                        }
 
                                 case .failure:
                                     Color
