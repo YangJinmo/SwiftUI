@@ -14,6 +14,7 @@
 		E82C2D5529B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C2D5429B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewTests.swift */; };
 		E82C2D5F29B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C2D5E29B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITests.swift */; };
 		E82C2D6129B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C2D6029B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITestsLaunchTests.swift */; };
+		E82C2D7329B5C91600C7FE05 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C2D7229B5C91600C7FE05 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		E82C2D5A29B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerticalPageTabViewCarouselListOverSlidingViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82C2D5E29B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalPageTabViewCarouselListOverSlidingViewUITests.swift; sourceTree = "<group>"; };
 		E82C2D6029B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalPageTabViewCarouselListOverSlidingViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E82C2D7229B5C91600C7FE05 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +97,9 @@
 		E82C2D4129B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingView */ = {
 			isa = PBXGroup;
 			children = (
+				E82C2D6F29B5C8C300C7FE05 /* Model */,
+				E82C2D6E29B5C7A000C7FE05 /* View */,
 				E82C2D4229B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewApp.swift */,
-				E82C2D4429B5C6C500C7FE05 /* ContentView.swift */,
 				E82C2D4629B5C6C600C7FE05 /* Assets.xcassets */,
 				E82C2D4829B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingView.entitlements */,
 				E82C2D4929B5C6C600C7FE05 /* Preview Content */,
@@ -127,6 +130,22 @@
 				E82C2D6029B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITestsLaunchTests.swift */,
 			);
 			path = VerticalPageTabViewCarouselListOverSlidingViewUITests;
+			sourceTree = "<group>";
+		};
+		E82C2D6E29B5C7A000C7FE05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E82C2D4429B5C6C500C7FE05 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E82C2D6F29B5C8C300C7FE05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E82C2D7229B5C91600C7FE05 /* Profile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E82C2D4529B5C6C500C7FE05 /* ContentView.swift in Sources */,
+				E82C2D7329B5C91600C7FE05 /* Profile.swift in Sources */,
 				E82C2D4329B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VerticalPageTabViewCarouselListOverSlidingView/Preview Content\"";
+				DEVELOPMENT_TEAM = MMMXXXYWN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -427,7 +448,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -451,6 +472,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VerticalPageTabViewCarouselListOverSlidingView/Preview Content\"";
+				DEVELOPMENT_TEAM = MMMXXXYWN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -463,7 +485,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
