@@ -41,12 +41,21 @@ struct ContentView: View {
                         }
                     }
                 }
+                .rotationEffect(.degrees(-90)) // Rotate Content
                 .frame(
                     width: proxy.size.width,
                     height: proxy.size.height
                 )
             }
-            .tabViewStyle(PageTabViewStyle())
+            .frame(
+                width: proxy.size.height, // Swap Height and width
+                height: proxy.size.width
+            )
+            .rotationEffect(.degrees(90), anchor: .topLeading) // Rotate TabView
+            .offset(x: proxy.size.width) // Offset back into screens bounds
+            .tabViewStyle(
+                PageTabViewStyle(indexDisplayMode: .never)
+            )
         }
     }
 }
