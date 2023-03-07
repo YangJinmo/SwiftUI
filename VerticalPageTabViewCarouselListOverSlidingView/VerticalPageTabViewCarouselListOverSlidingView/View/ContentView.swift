@@ -5,6 +5,7 @@
 //  Created by Jmy on 2023/03/06.
 //
 
+import PopupView
 import SwiftUI
 
 struct ContentView: View {
@@ -12,6 +13,9 @@ struct ContentView: View {
 //    init() {
 //        UIScrollView.appearance().bounces = false
 //    }
+
+    @State var currentPage = 0
+    @State var showingPopup = false
 
     var body: some View {
         // Ignore Top Edge
@@ -22,7 +26,7 @@ struct ContentView: View {
                     let offset = screen.minX
                     let scale = 1 + (offset / screen.width)
 
-                    TabView {
+                    TabView(selection: $currentPage) {
                         ForEach(verticalProfiles) { profile in
                             AsyncImage(url: URL(string: profile.image)) { phase in
                                 switch phase {
@@ -59,12 +63,14 @@ struct ContentView: View {
 //                                        .offset(y: -offset)
                                         .blur(radius: (1 - scale) * 20)
 
+                                        .tag(profile.id)
+
                                 case .failure:
                                     Color.gray
                                         .opacity(0.75)
                                         .overlay {
                                             Image(systemName: "photo")
-                                                .foregroundColor(.white)
+                                                .rotationEffect(.degrees(-90))
                                                 .font(.system(size: 24, weight: .bold))
                                                 .transition(.opacity.combined(with: .scale))
                                         }
@@ -92,7 +98,10 @@ struct ContentView: View {
                     )
                 }
 
-                Color.gray
+                DatailView(
+                    currentPage: $currentPage,
+                    showingPopup: $showingPopup
+                )
             }
             // Page Tab Bar
             .tabViewStyle(
@@ -101,6 +110,15 @@ struct ContentView: View {
         }
         .background(Color(UIColor.systemBackground).ignoresSafeArea())
         .ignoresSafeArea()
+        .popup(isPresented: $showingPopup) {
+            DownloadFloatBottomView()
+        } customize: {
+            $0
+                .type(.floater())
+                .position(.bottom)
+                .animation(.spring())
+                .autohideIn(1.25)
+        }
     }
 }
 
@@ -109,3 +127,98 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+struct DatailView: View {
+    @Binding var currentPage: Int
+    @Binding var showingPopup: Bool
+
+    var body: some View {
+//        let _ = print("edges?.top: \(edges?.top ?? 0)")
+        let currentProfile = verticalProfiles[currentPage]
+
+        VStack(spacing: 16) {
+            Text("Details")
+                .font(.title)
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, edges?.top ?? 16)
+
+            AsyncImage(url: URL(string: currentProfile.image)) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+
+                case let .success(image):
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(24)
+                        .padding()
+
+                case .failure:
+                    Color.gray
+                        .opacity(0.75)
+                        .overlay {
+                            Image(systemName: "photo")
+                                .rotationEffect(.degrees(-90))
+                                .font(.system(size: 24, weight: .bold))
+                                .transition(.opacity.combined(with: .scale))
+                        }
+
+                @unknown default:
+                    EmptyView()
+                }
+            }
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(currentProfile.name)
+                    .font(.title)
+                    .fontWeight(.bold)
+
+                Text("\(currentProfile.id)")
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color(UIColor.secondaryLabel))
+            }
+
+            Button {
+                showingPopup.toggle()
+            } label: {
+                Text("Download Image")
+                    .fontWeight(.semibold)
+                    .foregroundColor(.red)
+                    .padding(.vertical, 8)
+                    .frame(maxWidth: .infinity)
+                    .background(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.red, lineWidth: 1.5)
+                    )
+                    .padding()
+            }
+
+            Spacer()
+        }
+        .padding()
+//        .background(Color("slider").ignoresSafeArea())
+    }
+}
+
+struct DownloadFloatBottomView: View {
+    var body: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "photo")
+                .foregroundColor(.white)
+                .frame(width: 24, height: 24)
+
+            Text("Downloading Image...")
+                .foregroundColor(.white)
+                .font(.system(size: 16))
+        }
+        .padding(16)
+        .background(Color(hex: "FFB93D").cornerRadius(12))
+        .padding(.horizontal, 16)
+    }
+}
+
+var edges = UIApplication.shared.connectedScenes
+    .first(where: { $0 is UIWindowScene })
+    .flatMap({ $0 as? UIWindowScene })?.windows
+    .first(where: \.isKeyWindow)?.safeAreaInsets

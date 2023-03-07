@@ -15,6 +15,8 @@
 		E82C2D5F29B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C2D5E29B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITests.swift */; };
 		E82C2D6129B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C2D6029B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITestsLaunchTests.swift */; };
 		E82C2D7329B5C91600C7FE05 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C2D7229B5C91600C7FE05 /* Profile.swift */; };
+		E853F2A029B7719E00339021 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = E853F29F29B7719E00339021 /* PopupView */; };
+		E853F2A429B77AE400339021 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E853F2A329B77AE400339021 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		E82C2D5E29B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalPageTabViewCarouselListOverSlidingViewUITests.swift; sourceTree = "<group>"; };
 		E82C2D6029B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalPageTabViewCarouselListOverSlidingViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E82C2D7229B5C91600C7FE05 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		E853F2A329B77AE400339021 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E853F2A029B7719E00339021 /* PopupView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +101,7 @@
 		E82C2D4129B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingView */ = {
 			isa = PBXGroup;
 			children = (
+				E853F2A529B77B1500339021 /* Extension */,
 				E82C2D6F29B5C8C300C7FE05 /* Model */,
 				E82C2D6E29B5C7A000C7FE05 /* View */,
 				E82C2D4229B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewApp.swift */,
@@ -148,6 +153,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E853F2A529B77B1500339021 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E853F2A329B77AE400339021 /* Color.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,6 +177,9 @@
 			dependencies = (
 			);
 			name = VerticalPageTabViewCarouselListOverSlidingView;
+			packageProductDependencies = (
+				E853F29F29B7719E00339021 /* PopupView */,
+			);
 			productName = VerticalPageTabViewCarouselListOverSlidingView;
 			productReference = E82C2D3F29B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingView.app */;
 			productType = "com.apple.product-type.application";
@@ -236,6 +252,9 @@
 				Base,
 			);
 			mainGroup = E82C2D3629B5C6C500C7FE05;
+			packageReferences = (
+				E853F29E29B7719E00339021 /* XCRemoteSwiftPackageReference "PopupView" */,
+			);
 			productRefGroup = E82C2D4029B5C6C500C7FE05 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E82C2D4529B5C6C500C7FE05 /* ContentView.swift in Sources */,
+				E853F2A429B77AE400339021 /* Color.swift in Sources */,
 				E82C2D7329B5C91600C7FE05 /* Profile.swift in Sources */,
 				E82C2D4329B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewApp.swift in Sources */,
 			);
@@ -626,6 +646,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E853F29E29B7719E00339021 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E853F29F29B7719E00339021 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E853F29E29B7719E00339021 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E82C2D3729B5C6C500C7FE05 /* Project object */;
 }
