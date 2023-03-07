@@ -18,8 +18,12 @@ struct ContentView: View {
         ScrollView(.init()) {
             TabView {
                 GeometryReader { proxy in
+                    let screen = proxy.frame(in: .global)
+                    let offset = screen.minX
+                    let scale = 1 + (offset / screen.width)
+
                     TabView {
-                        ForEach(data) { profile in
+                        ForEach(verticalProfiles) { profile in
                             AsyncImage(url: URL(string: profile.image)) { phase in
                                 switch phase {
                                 case .empty:
@@ -33,12 +37,27 @@ struct ContentView: View {
                                         // Setting the ContentMode to Fill and a solution to the problem with the size of the IMAGE
                                         .cornerRadius(1)
 
+                                        .overlay {
+                                            VStack {
+                                                Spacer()
+                                                Text(profile.name)
+                                                    .padding()
+                                                    .background()
+                                                    .clipShape(Capsule())
+                                                    .padding()
+                                            }
+                                        }
+
                                         // Rotate Content
                                         .rotationEffect(.degrees(-90))
                                         .frame(
                                             width: proxy.size.width,
                                             height: proxy.size.height
                                         )
+
+//                                        .scaleEffect(scale >= 0.88 ? scale : 0.88, anchor: .center)
+//                                        .offset(y: -offset)
+                                        .blur(radius: (1 - scale) * 20)
 
                                 case .failure:
                                     Color.gray
@@ -80,6 +99,7 @@ struct ContentView: View {
                 PageTabViewStyle(indexDisplayMode: .never)
             )
         }
+        .background(Color(UIColor.systemBackground).ignoresSafeArea())
         .ignoresSafeArea()
     }
 }
