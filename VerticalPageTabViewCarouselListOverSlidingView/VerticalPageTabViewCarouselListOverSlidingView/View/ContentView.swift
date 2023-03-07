@@ -17,38 +17,63 @@ struct ContentView: View {
         // Ignore Top Edge
         ScrollView(.init()) {
             TabView {
-                ForEach(data) { profile in
-                    AsyncImage(url: URL(string: profile.image)) { phase in
-                        switch phase {
-                        case .empty:
-                            ProgressView()
+                GeometryReader { proxy in
+                    TabView {
+                        ForEach(data) { profile in
+                            AsyncImage(url: URL(string: profile.image)) { phase in
+                                switch phase {
+                                case .empty:
+                                    ProgressView()
 
-                        case let .success(image):
-                            image.resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: UIScreen.main.bounds.width)
-                                // Setting the ContentMode to Fill and a solution to the problem with the size of the IMAGE
-                                .cornerRadius(1)
-                                .onTapGesture {
-                                    print(profile.image)
+                                case let .success(image):
+                                    image.resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: UIScreen.main.bounds.width)
+
+                                        // Setting the ContentMode to Fill and a solution to the problem with the size of the IMAGE
+                                        .cornerRadius(1)
+
+                                        // Rotate Content
+                                        .rotationEffect(.degrees(-90))
+                                        .frame(
+                                            width: proxy.size.width,
+                                            height: proxy.size.height
+                                        )
+
+                                case .failure:
+                                    Color.gray
+                                        .opacity(0.75)
+                                        .overlay {
+                                            Image(systemName: "photo")
+                                                .foregroundColor(.white)
+                                                .font(.system(size: 24, weight: .bold))
+                                                .transition(.opacity.combined(with: .scale))
+                                        }
+
+                                @unknown default:
+                                    EmptyView()
                                 }
-
-                        case .failure:
-                            Color
-                                .gray
-                                .opacity(0.75)
-                                .overlay {
-                                    Image(systemName: "photo")
-                                        .foregroundColor(.white)
-                                        .font(.system(size: 24, weight: .bold))
-                                        .transition(.opacity.combined(with: .scale))
-                                }
-
-                        @unknown default:
-                            EmptyView()
+                            }
                         }
                     }
+                    // Swap Height and width
+                    .frame(
+                        width: proxy.size.height,
+                        height: proxy.size.width
+                    )
+                    // Rotate TabView
+                    .rotationEffect(.degrees(90), anchor: .topLeading)
+
+                    // Offset back into screens bounds
+                    .offset(x: proxy.size.width)
+
+                    // Page Tab Bar
+                    .tabViewStyle(
+                        PageTabViewStyle(indexDisplayMode: .never)
+                    )
                 }
+
+                Color.gray
             }
             // Page Tab Bar
             .tabViewStyle(
