@@ -26,10 +26,11 @@ struct ReelsView: View {
 
             TabView(selection: $currentReel) {
                 ForEach($reels) { $reel in
-                    ReelsPlayer(reel: $reel)
+                    ReelsPlayer(reel: $reel, currentReel: $currentReel)
                         .frame(width: size.width)
                         .rotationEffect(.degrees(-90))
                         .ignoresSafeArea(.all, edges: .top)
+                        .tag(reel.id)
                 }
             }
             .rotationEffect(.degrees(90))
@@ -39,6 +40,10 @@ struct ReelsView: View {
         }
         .ignoresSafeArea(.all, edges: .top)
         .background(Color.black.ignoresSafeArea())
+        // Setting inital reel
+        .onAppear {
+            currentReel = reels.first?.id ?? ""
+        }
     }
 }
 
@@ -50,6 +55,7 @@ struct ReelsView_Previews: PreviewProvider {
 
 struct ReelsPlayer: View {
     @Binding var reel: Reel
+    @Binding var currentReel: String
 
     @State var showMore = false
     @State var isMuted = false
@@ -59,6 +65,26 @@ struct ReelsPlayer: View {
         ZStack {
             if let player = reel.player {
                 CustomVideoPlayer(player: player)
+
+                // Playing Video Based On Offset
+
+                GeometryReader { proxy -> Color in
+                    let minY = proxy.frame(in: .global).minY
+                    let size = proxy.size
+
+                    // since we have many card and offset goes beyond
+                    // so it starts playing the below videos
+                    // to avoid this checking the current one with current real id
+                    DispatchQueue.main.async {
+                        if -minY < (size.height / 2) && minY < (size.height / 2) && currentReel == reel.id {
+                            player.play()
+                        } else {
+                            player.pause()
+                        }
+                    }
+
+                    return Color.clear
+                }
 
                 // Volume control
                 Color.black
@@ -175,7 +201,7 @@ struct ReelsPlayer: View {
 
                         ActionButton(reel: reel)
                     }
-                    
+
                     HStack {
                         Text("A Sky full of Stars")
                             .font(.caption)
