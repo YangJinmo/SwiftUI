@@ -12,7 +12,7 @@ struct TabBar: View {
         UITabBar.appearance().isHidden = true
     }
 
-    @State var currentTab = "Reels"
+    @State var currentTab = "play.rectangle"
 
     var body: some View {
         VStack {
