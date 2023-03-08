@@ -15,7 +15,7 @@ struct TabBar: View {
     @State var currentTab = "play.rectangle"
 
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             TabView(selection: $currentTab) {
                 Text("Home")
                     .tag("house.fill")
@@ -33,13 +33,15 @@ struct TabBar: View {
                     .tag("person.circle")
             }
 
-            HStack {
+            HStack(spacing: 0) {
                 ForEach(["house.fill", "magnifyingglass", "play.rectangle", "suit.heart", "person.circle"], id: \.self) { image in
                     TabBarButton(image: image, isSystemImage: image != "Reels", currentTab: $currentTab)
                 }
             }
             .padding(.horizontal)
             .padding(.vertical, 10)
+            .overlay(Divider(), alignment: .top)
+            .background(currentTab == "play.rectangle" ? .black : .clear)
         }
     }
 }
@@ -65,7 +67,7 @@ struct TabBarButton: View {
             ZStack {
                 if isSystemImage {
                     Image(systemName: image)
-                        .font(.title)
+                        .font(.title2)
                 } else {
                     Image(image)
                         .resizable()
@@ -75,7 +77,7 @@ struct TabBarButton: View {
                 }
             }
         }
-        .foregroundColor(currentTab == image ? .primary : .gray)
+        .foregroundColor(currentTab == image ? currentTab == "play.rectangle" ? .white : .primary : .gray)
         .frame(maxWidth: .infinity)
     }
 }
