@@ -14,6 +14,8 @@ struct ContentView: View {
 //        UIScrollView.appearance().bounces = false
 //    }
 
+    @Environment(\.colorScheme) var colorScheme
+
     @State var currentPage = 0
     @State var showingPopup = false
 
@@ -111,13 +113,13 @@ struct ContentView: View {
         .background(Color(UIColor.systemBackground).ignoresSafeArea())
         .ignoresSafeArea()
         .popup(isPresented: $showingPopup) {
-            DownloadFloatBottomView()
+            FloatBottomView()
         } customize: {
             $0
                 .type(.floater())
                 .position(.bottom)
                 .animation(.spring())
-                .autohideIn(1.25)
+                .autohideIn(2)
         }
     }
 }
@@ -125,23 +127,28 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        ContentView()
+            .preferredColorScheme(.dark)
     }
 }
 
 struct DatailView: View {
+    @Environment(\.colorScheme) var colorScheme
+
     @Binding var currentPage: Int
     @Binding var showingPopup: Bool
 
     var body: some View {
-//        let _ = print("edges?.top: \(edges?.top ?? 0)")
         let currentProfile = verticalProfiles[currentPage]
+        let safeAreaInsets = UIApplication.sharedKeyWindow?.safeAreaInsets
+        let _ = print("safeAreaInsets?.top: \(safeAreaInsets?.top ?? 0)")
 
         VStack(spacing: 16) {
             Text("Details")
                 .font(.title)
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top, edges?.top ?? 16)
+                .padding(.top, safeAreaInsets?.top ?? 16)
 
             AsyncImage(url: URL(string: currentProfile.image)) { phase in
                 switch phase {
@@ -197,28 +204,12 @@ struct DatailView: View {
             Spacer()
         }
         .padding()
-//        .background(Color("slider").ignoresSafeArea())
+        .background(
+            (colorScheme == .light
+                ? Color(UIColor.tertiarySystemBackground)
+                : Color(hex: "171B1C")
+            )
+            .ignoresSafeArea()
+        )
     }
 }
-
-struct DownloadFloatBottomView: View {
-    var body: some View {
-        HStack(spacing: 8) {
-            Image(systemName: "photo")
-                .foregroundColor(.white)
-                .frame(width: 24, height: 24)
-
-            Text("Downloading Image...")
-                .foregroundColor(.white)
-                .font(.system(size: 16))
-        }
-        .padding(16)
-        .background(Color(hex: "FFB93D").cornerRadius(12))
-        .padding(.horizontal, 16)
-    }
-}
-
-var edges = UIApplication.shared.connectedScenes
-    .first(where: { $0 is UIWindowScene })
-    .flatMap({ $0 as? UIWindowScene })?.windows
-    .first(where: \.isKeyWindow)?.safeAreaInsets

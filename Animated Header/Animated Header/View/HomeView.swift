@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var homeData = HomeViewModel()
-    @Environment(\.colorScheme) var scheme
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         // let _ = print("homeData.offset: \(homeData.offset)")

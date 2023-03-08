@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HeaderView: View {
     @EnvironmentObject var homeData: HomeViewModel
-    @Environment(\.colorScheme) var scheme
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
