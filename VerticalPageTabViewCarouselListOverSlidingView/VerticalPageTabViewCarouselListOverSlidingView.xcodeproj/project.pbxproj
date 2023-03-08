@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E82ABF0E29B839770004A64F /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82ABF0D29B839770004A64F /* UIApplication.swift */; };
+		E82ABF1129B8512D0004A64F /* FloatBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82ABF1029B8512D0004A64F /* FloatBottomView.swift */; };
 		E82C2D4329B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C2D4229B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewApp.swift */; };
 		E82C2D4529B5C6C500C7FE05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C2D4429B5C6C500C7FE05 /* ContentView.swift */; };
 		E82C2D4729B5C6C600C7FE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82C2D4629B5C6C600C7FE05 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E82ABF0D29B839770004A64F /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		E82ABF1029B8512D0004A64F /* FloatBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatBottomView.swift; sourceTree = "<group>"; };
 		E82C2D3F29B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerticalPageTabViewCarouselListOverSlidingView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82C2D4229B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalPageTabViewCarouselListOverSlidingViewApp.swift; sourceTree = "<group>"; };
 		E82C2D4429B5C6C500C7FE05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E82ABF0F29B8511E0004A64F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E82ABF1029B8512D0004A64F /* FloatBottomView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		E82C2D3629B5C6C500C7FE05 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +116,7 @@
 				E853F2A529B77B1500339021 /* Extension */,
 				E82C2D6F29B5C8C300C7FE05 /* Model */,
 				E82C2D6E29B5C7A000C7FE05 /* View */,
+				E82ABF0F29B8511E0004A64F /* Common */,
 				E82C2D4229B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewApp.swift */,
 				E82C2D4629B5C6C600C7FE05 /* Assets.xcassets */,
 				E82C2D4829B5C6C600C7FE05 /* VerticalPageTabViewCarouselListOverSlidingView.entitlements */,
@@ -157,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				E853F2A329B77AE400339021 /* Color.swift */,
+				E82ABF0D29B839770004A64F /* UIApplication.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -297,9 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82ABF1129B8512D0004A64F /* FloatBottomView.swift in Sources */,
 				E82C2D4529B5C6C500C7FE05 /* ContentView.swift in Sources */,
 				E853F2A429B77AE400339021 /* Color.swift in Sources */,
 				E82C2D7329B5C91600C7FE05 /* Profile.swift in Sources */,
+				E82ABF0E29B839770004A64F /* UIApplication.swift in Sources */,
 				E82C2D4329B5C6C500C7FE05 /* VerticalPageTabViewCarouselListOverSlidingViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
