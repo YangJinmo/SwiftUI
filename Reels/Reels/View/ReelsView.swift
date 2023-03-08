@@ -16,9 +16,14 @@ struct ReelsView: View {
 
             TabView(selection: $currentReel) {
                 ForEach(mediaFiles) { _ in
-                    Color.red
-                        .padding()
+                    VStack {
+                        Text("Hello")
+                        Spacer()
+                        Text("Hello")
+                    }
+                    .padding()
                 }
+                .rotationEffect(.degrees(-90))
             }
             .rotationEffect(.degrees(90))
             .frame(width: size.height)
