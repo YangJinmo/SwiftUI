@@ -23,7 +23,7 @@ struct TabBar: View {
                 Text("Search")
                     .tag("magnifyingglass")
 
-                ReelsView()
+                ReelsView(currentTab: $currentTab)
                     .tag("play.rectangle")
 
                 Text("Linked")

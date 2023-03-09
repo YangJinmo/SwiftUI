@@ -9,6 +9,7 @@ import AVKit
 import SwiftUI
 
 struct ReelsView: View {
+    @Binding var currentTab: String
     @State var currentReel = ""
     @State var reels = medias.map { media -> Reel in
         guard let url = media.url.toURL else {
@@ -26,35 +27,36 @@ struct ReelsView: View {
     private let audioSession = AVAudioSession.sharedInstance()
 
     var body: some View {
-        GeometryReader { proxy in
-            let size = proxy.size
+        if currentTab == "play.rectangle" {
+            GeometryReader { proxy in
+                let size = proxy.size
 
-            TabView(selection: $currentReel) {
-                ForEach($reels) { $reel in
-                    ReelsPlayer(reel: $reel, currentReel: $currentReel)
-                        .frame(width: size.width)
-                        .rotationEffect(.degrees(-90))
-                        .ignoresSafeArea(.all, edges: .top)
-                        .tag(reel.id)
+                TabView(selection: $currentReel) {
+                    ForEach($reels) { $reel in
+                        ReelsPlayer(reel: $reel, currentReel: $currentReel)
+                            .frame(width: size.width)
+                            .rotationEffect(.degrees(-90))
+                            .ignoresSafeArea(.all, edges: .top)
+                            .tag(reel.id)
+                    }
                 }
+                .rotationEffect(.degrees(90))
+                .frame(width: size.height)
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .frame(width: size.width)
             }
-            .rotationEffect(.degrees(90))
-            .frame(width: size.height)
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            .frame(width: size.width)
-        }
-        .ignoresSafeArea(.all, edges: .top)
-        .background(Color.black.ignoresSafeArea())
-        // Setting inital reel
-        .onAppear {
-            print("onAppear")
+            .ignoresSafeArea(.all, edges: .top)
+            .background(Color.black.ignoresSafeArea())
+            .onAppear {
+                print("onAppear")
 
-            if let reel = reels.first {
-                currentReel = reel.id
-                print("currentReel: \(reel.media.url)")
+                if let reel = reels.first {
+                    currentReel = reel.id
+                    print("currentReel: \(reel.media.url)")
+                }
+
+                setAudioToPlayback()
             }
-
-            setAudioToPlayback()
         }
     }
 
@@ -382,6 +384,13 @@ struct ReelsPlayer: View {
                     .clipShape(Circle())
                     .foregroundStyle(.black)
                     .opacity(volumeAnimation ? 1 : 0)
+            }
+        }
+        .onDisappear {
+            print("onDisappear")
+
+            DispatchQueue.main.async {
+                reel.player?.pause()
             }
         }
     }

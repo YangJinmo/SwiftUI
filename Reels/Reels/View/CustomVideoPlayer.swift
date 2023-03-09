@@ -36,8 +36,11 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ playerViewController: AVPlayerViewController, context: Context) {
-        let urlDescription = ((player.currentItem?.asset) as? AVURLAsset)?.url.description ?? ""
-        print("updateUIViewController: \(urlDescription)")
+        print("updateReel: \(player.currentItem?.url?.description ?? "")")
+    }
+
+    static func dismantleUIViewController(_ uiViewController: AVPlayerViewController, coordinator: Coordinator) {
+        print("dismantleReel: \(coordinator.parent.player.currentItem?.url?.description ?? "")")
     }
 
     class Coordinator: NSObject {
@@ -58,3 +61,8 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
 //        ContentView()
 //    }
 // }
+extension AVPlayerItem {
+    var url: URL? {
+        return (asset as? AVURLAsset)?.url
+    }
+}
