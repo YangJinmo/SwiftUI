@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct TabBar: View {
-    @Environment(\.scenePhase) var scenePhase
-
     @State var currentTab = "play.rectangle"
 
     init() {
