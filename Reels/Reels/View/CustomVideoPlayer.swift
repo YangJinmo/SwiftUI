@@ -22,10 +22,9 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
 
         let controller = AVPlayerViewController()
         controller.player = player
+//        controller.videoGravity = .resizeAspectFill
+        controller.videoGravity = .resizeAspect
         controller.showsPlaybackControls = false
-
-        controller.videoGravity = .resizeAspectFill
-
         controller.allowsVideoFrameAnalysis = false
 
         // repeating playback
@@ -37,6 +36,8 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ playerViewController: AVPlayerViewController, context: Context) {
+        let urlDescription = ((player.currentItem?.asset) as? AVURLAsset)?.url.description ?? ""
+        print("updateUIViewController: \(urlDescription)")
     }
 
     class Coordinator: NSObject {
@@ -52,8 +53,8 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
     }
 }
 
-struct CustomVideoPlayer_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+// struct CustomVideoPlayer_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+// }

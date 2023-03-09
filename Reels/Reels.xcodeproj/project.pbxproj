@@ -14,7 +14,7 @@
 		E87716E929B8700200DDE81C /* ReelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87716E829B8700200DDE81C /* ReelsTests.swift */; };
 		E87716F329B8700200DDE81C /* ReelsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87716F229B8700200DDE81C /* ReelsUITests.swift */; };
 		E87716F529B8700200DDE81C /* ReelsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87716F429B8700200DDE81C /* ReelsUITestsLaunchTests.swift */; };
-		E877170429B8706700DDE81C /* MediaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877170329B8706700DDE81C /* MediaFile.swift */; };
+		E877170429B8706700DDE81C /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877170329B8706700DDE81C /* Media.swift */; };
 		E877170A29B871A100DDE81C /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877170929B871A100DDE81C /* ReelsView.swift */; };
 		E877170E29B877CB00DDE81C /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877170D29B877CB00DDE81C /* TabBar.swift */; };
 		E877171229B87EB000DDE81C /* Reel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877171129B87EB000DDE81C /* Reel.swift */; };
@@ -50,7 +50,7 @@
 		E87716EE29B8700200DDE81C /* ReelsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReelsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87716F229B8700200DDE81C /* ReelsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsUITests.swift; sourceTree = "<group>"; };
 		E87716F429B8700200DDE81C /* ReelsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E877170329B8706700DDE81C /* MediaFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFile.swift; sourceTree = "<group>"; };
+		E877170329B8706700DDE81C /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		E877170929B871A100DDE81C /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
 		E877170D29B877CB00DDE81C /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		E877171129B87EB000DDE81C /* Reel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reel.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 		E877170129B8704800DDE81C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E877170329B8706700DDE81C /* MediaFile.swift */,
+				E877170329B8706700DDE81C /* Media.swift */,
 				E877171129B87EB000DDE81C /* Reel.swift */,
 			);
 			path = Model;
@@ -306,7 +306,7 @@
 				E87716D829B8700100DDE81C /* ReelsApp.swift in Sources */,
 				E877170E29B877CB00DDE81C /* TabBar.swift in Sources */,
 				E877171729B88AFB00DDE81C /* String.swift in Sources */,
-				E877170429B8706700DDE81C /* MediaFile.swift in Sources */,
+				E877170429B8706700DDE81C /* Media.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

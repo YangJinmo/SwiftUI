@@ -11,5 +11,5 @@ import AVKit
 struct Reel: Identifiable {
     var id = UUID().uuidString
     var player: AVPlayer?
-    var mediaFile: MediaFile
+    var media: Media
 }

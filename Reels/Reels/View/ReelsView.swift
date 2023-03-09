@@ -10,9 +10,9 @@ import SwiftUI
 
 struct ReelsView: View {
     @State var currentReel = ""
-    @State var reels = mediaFiles.map { mediaFile -> Reel in
-        guard let url = mediaFile.url.toURL else {
-            return Reel(player: AVPlayer(), mediaFile: mediaFile)
+    @State var reels = medias.map { media -> Reel in
+        guard let url = media.url.toURL else {
+            return Reel(player: AVPlayer(), media: media)
         }
 
         let playerItem = AVPlayerItem(url: url)
@@ -20,8 +20,10 @@ struct ReelsView: View {
 
         let player = AVPlayer(playerItem: playerItem)
 
-        return Reel(player: player, mediaFile: mediaFile)
+        return Reel(player: player, media: media)
     }
+
+    private let audioSession = AVAudioSession.sharedInstance()
 
     var body: some View {
         GeometryReader { proxy in
@@ -47,7 +49,20 @@ struct ReelsView: View {
         .onAppear {
             print("onAppear")
 
-            currentReel = reels.first?.id ?? ""
+            if let reel = reels.first {
+                currentReel = reel.id
+                print("currentReel: \(reel.media.url)")
+            }
+
+            setAudioToPlayback()
+        }
+    }
+
+    private func setAudioToPlayback() {
+        do {
+            try audioSession.setCategory(.playback)
+        } catch {
+            print("Error: \(error.localizedDescription)")
         }
     }
 }
@@ -230,7 +245,7 @@ struct ReelsPlayer: View {
                             ZStack {
                                 if showMore {
                                     // No issue in this case
-//                                    Text(reel.mediaFile.title + sampleText)
+//                                    Text(reel.media.title + sampleText)
 //                                        .font(.system(size: 14))
 //                                        .frame(maxWidth: .infinity, alignment: .leading)
 //                                        .onTapGesture {
@@ -242,7 +257,7 @@ struct ReelsPlayer: View {
 
                                     // TODO: An issue where the right action button moves
                                     ScrollView(.vertical, showsIndicators: false) {
-                                        Text(reel.mediaFile.title + sampleText)
+                                        Text(reel.media.title + sampleText)
                                             .font(.system(size: 14))
                                             .frame(maxWidth: .infinity, alignment: .leading)
                                             .onTapGesture {
@@ -262,7 +277,7 @@ struct ReelsPlayer: View {
                                         }
                                     } label: {
                                         HStack(spacing: 4) {
-                                            Text(reel.mediaFile.title)
+                                            Text(reel.media.title)
                                                 .font(.system(size: 14))
                                                 .lineLimit(1)
 
