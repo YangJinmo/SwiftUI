@@ -9,6 +9,7 @@ import AVKit
 import SwiftUI
 
 struct CustomVideoPlayer: UIViewControllerRepresentable {
+//    var playerItem: AVPlayerItem?
     var player: AVPlayer
 
     func makeCoordinator() -> Coordinator {
@@ -16,11 +17,16 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
     }
 
     func makeUIViewController(context: Context) -> AVPlayerViewController {
+        player.automaticallyWaitsToMinimizeStalling = true
+        player.playImmediately(atRate: 1)
+
         let controller = AVPlayerViewController()
         controller.player = player
         controller.showsPlaybackControls = false
 
         controller.videoGravity = .resizeAspectFill
+
+        controller.allowsVideoFrameAnalysis = false
 
         // repeating playback
         player.actionAtItemEnd = .none
