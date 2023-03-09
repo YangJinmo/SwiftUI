@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct TabBar: View {
+    @Environment(\.scenePhase) var scenePhase
+
+    @State var currentTab = "play.rectangle"
+
     init() {
         UITabBar.appearance().isHidden = true
     }
-
-    @State var currentTab = "play.rectangle"
 
     var body: some View {
         VStack(spacing: 0) {

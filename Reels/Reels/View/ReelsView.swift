@@ -15,7 +15,10 @@ struct ReelsView: View {
             return Reel(player: AVPlayer(), mediaFile: mediaFile)
         }
 
-        let player = AVPlayer(url: url)
+        let playerItem = AVPlayerItem(url: url)
+        playerItem.preferredForwardBufferDuration = 1
+
+        let player = AVPlayer(playerItem: playerItem)
 
         return Reel(player: player, mediaFile: mediaFile)
     }
@@ -42,6 +45,8 @@ struct ReelsView: View {
         .background(Color.black.ignoresSafeArea())
         // Setting inital reel
         .onAppear {
+            print("onAppear")
+
             currentReel = reels.first?.id ?? ""
         }
     }
@@ -58,6 +63,7 @@ struct ReelsPlayer: View {
     @Binding var currentReel: String
 
     @State var showMore = false
+    @State var isFollow = false
     @State var isMuted = false
     @State var volumeAnimation = false
 
@@ -67,7 +73,6 @@ struct ReelsPlayer: View {
                 CustomVideoPlayer(player: player)
 
                 // Playing Video Based On Offset
-
                 GeometryReader { proxy -> Color in
                     let minY = proxy.frame(in: .global).minY
                     let size = proxy.size
@@ -86,10 +91,24 @@ struct ReelsPlayer: View {
                     return Color.clear
                 }
 
+                LinearGradient(
+                    gradient: Gradient(
+                        colors: [
+                            Color.black.opacity(0.1),
+                            Color.black.opacity(0),
+                            Color.black.opacity(0.4),
+                        ]
+                    ),
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+
                 // Volume control
-                Color.black
-                    .opacity(0.01)
-                    .frame(width: 150, height: 150)
+                Color.black.opacity(0.01)
+                    .frame(
+                        width: UIScreen.main.bounds.width - 120,
+                        height: UIScreen.main.bounds.height - 320
+                    )
                     .onTapGesture {
                         if volumeAnimation {
                             return
@@ -111,6 +130,7 @@ struct ReelsPlayer: View {
                             }
                         }
                     }
+//                    .border(.red)
 
                 // Dimming background when showing more content
                 Color.black.opacity(showMore ? 0.35 : 0)
@@ -119,30 +139,54 @@ struct ReelsPlayer: View {
                             showMore.toggle()
                         }
                     }
-                VStack(spacing: 25) {
+
+                VStack {
                     HStack(alignment: .bottom) {
-                        VStack(alignment: .leading, spacing: 10) {
-                            HStack(spacing: 15) {
-                                AsyncImage(url: URL(string: "https://i.ytimg.com/vi/Kv38mphgpqw/maxresdefault.jpg")) { phase in
+                        VStack(alignment: .leading, spacing: 8) {
+                            HStack(spacing: 12) {
+                                let urlString = "https://img.kpopmap.com/680x384/2022/07/iu-concert_cover-image.jpg"
+                                let size: CGFloat = 32
+
+                                AsyncImage(url: URL(string: urlString)) { phase in
                                     switch phase {
                                     case .empty:
                                         ProgressView()
+                                            .scaleEffect(1, anchor: .center)
+                                            .font(.system(size: 8))
+                                            .frame(width: size, height: size)
+                                            .clipShape(Circle())
+                                            .transition(.opacity.combined(with: .scale))
+                                            .onTapGesture {
+                                                print(urlString)
+                                            }
 
                                     case let .success(image):
                                         image.resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 35, height: 35)
+                                            .frame(width: size, height: size)
                                             .clipShape(Circle())
+                                            .transition(.opacity.combined(with: .scale))
+                                            .onTapGesture {
+                                                print(urlString)
+                                            }
+                                            .onTapGesture {
+                                                print(urlString)
+                                            }
 
                                     case .failure:
-                                        Color
-                                            .gray
-                                            .opacity(0.75)
+                                        Color.gray.opacity(0.75)
+                                            .frame(width: size, height: size)
+                                            .transition(.opacity.combined(with: .scale))
                                             .overlay {
                                                 Image(systemName: "photo")
                                                     .foregroundColor(.white)
                                                     .font(.system(size: 24, weight: .bold))
+                                                    .frame(width: size, height: size)
+                                                    .clipShape(Circle())
                                                     .transition(.opacity.combined(with: .scale))
+                                            }
+                                            .onTapGesture {
+                                                print(urlString)
                                             }
 
                                     @unknown default:
@@ -150,51 +194,75 @@ struct ReelsPlayer: View {
                                     }
                                 }
 
-                                Text("iJustine")
-                                    .font(.callout.bold())
+                                Text("avantgardey_")
+                                    .font(.system(size: 14, weight: .semibold))
                                     .foregroundColor(.white)
 
                                 Button {
+                                    isFollow.toggle()
                                 } label: {
-                                    Text("Follow")
-                                        .font(.caption.bold())
+                                    Text(isFollow ? "팔로잉" : "팔로우")
+                                        .font(.system(size: 14, weight: .semibold))
                                         .foregroundColor(.white)
+                                        .padding(.vertical, 3)
+                                        .padding(.horizontal, 8)
+                                        .cornerRadius(6)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 6)
+                                                .stroke(Color.white.opacity(0.4), lineWidth: 1)
+                                        )
                                 }
                             }
 
                             ZStack {
                                 if showMore {
+                                    // No issue in this case
+//                                    Text(reel.mediaFile.title + sampleText)
+//                                        .font(.system(size: 14))
+//                                        .frame(maxWidth: .infinity, alignment: .leading)
+//                                        .onTapGesture {
+//                                            withAnimation {
+//                                                showMore.toggle()
+//                                            }
+//                                        }
+//                                        .border(.red)
+
+                                    // TODO: An issue where the right action button moves
                                     ScrollView(.vertical, showsIndicators: false) {
                                         Text(reel.mediaFile.title + sampleText)
-                                            .font(.callout)
-                                            .fontWeight(.semibold)
+                                            .font(.system(size: 14))
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .onTapGesture {
+                                                withAnimation {
+                                                    showMore.toggle()
+                                                }
+                                            }
+//                                            .border(.red)
                                     }
-                                    .frame(height: 120)
-                                    .onTapGesture {
-                                        withAnimation {
-                                            showMore.toggle()
-                                        }
-                                    }
+                                    .frame(height: 320)
+//                                    .border(.red)
+
                                 } else {
                                     Button {
                                         withAnimation {
                                             showMore.toggle()
                                         }
                                     } label: {
-                                        HStack {
+                                        HStack(spacing: 4) {
                                             Text(reel.mediaFile.title)
-                                                .font(.callout)
-                                                .fontWeight(.semibold)
+                                                .font(.system(size: 14))
                                                 .lineLimit(1)
 
-                                            Text("more")
-                                                .font(.callout.bold())
+                                            Text("...")
+                                                .font(.system(size: 14))
+                                                .foregroundColor(Color.white.opacity(0.8))
                                         }
-                                        .padding(.top, 6)
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                     }
+//                                    .border(.red)
                                 }
                             }
+                            .padding(.top, 4)
                         }
 
                         Spacer(minLength: 20)
@@ -203,37 +271,68 @@ struct ReelsPlayer: View {
                     }
 
                     HStack {
-                        Text("A Sky full of Stars")
-                            .font(.caption)
-                            .fontWeight(.semibold)
+                        Image(systemName: "music.note")
+                            .font(.system(size: 12, weight: .regular))
+
+                        Text("threesmallfriends · 원본 오디오")
+                            .font(.system(size: 14, weight: .regular))
 
                         Spacer(minLength: 20)
 
-                        AsyncImage(url: URL(string: "https://upload.wikimedia.org/wikipedia/en/8/8d/Coldplay_-_A_Sky_Full_of_Stars_%28Single%29.png")) { phase in
+                        let urlString = "https://pbs.twimg.com/media/EzzGJeNWEAIQZ9F?format=jpg&name=large"
+                        let size: CGFloat = 24
+
+                        AsyncImage(url: URL(string: urlString)) { phase in
                             switch phase {
                             case .empty:
                                 ProgressView()
-
-                            case let .success(image):
-                                image.resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 30, height: 30)
+                                    .scaleEffect(0.5, anchor: .center)
+                                    .frame(width: size, height: size)
                                     .cornerRadius(6)
                                     .background(
                                         RoundedRectangle(cornerRadius: 6)
                                             .stroke(Color.white, lineWidth: 3)
                                     )
-                                    .offset(x: -5)
+                                    .offset(x: -6)
+                                    .transition(.opacity.combined(with: .scale))
+                                    .onTapGesture {
+                                        print(urlString)
+                                    }
+
+                            case let .success(image):
+                                image.resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: size, height: size)
+                                    .cornerRadius(6)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 6)
+                                            .stroke(Color.white, lineWidth: 3)
+                                    )
+                                    .offset(x: -6)
+                                    .transition(.opacity.combined(with: .scale))
+                                    .onTapGesture {
+                                        print(urlString)
+                                    }
 
                             case .failure:
-                                Color
-                                    .gray
-                                    .opacity(0.75)
+                                Color.gray.opacity(0.75)
+                                    .frame(width: size, height: size)
+                                    .transition(.opacity.combined(with: .scale))
                                     .overlay {
                                         Image(systemName: "photo")
                                             .foregroundColor(.white)
                                             .font(.system(size: 24, weight: .bold))
+                                            .frame(width: size, height: size)
+                                            .cornerRadius(6)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 6)
+                                                    .stroke(Color.white, lineWidth: 3)
+                                            )
+                                            .offset(x: -6)
                                             .transition(.opacity.combined(with: .scale))
+                                    }
+                                    .onTapGesture {
+                                        print(urlString)
                                     }
 
                             @unknown default:
@@ -264,46 +363,71 @@ struct ActionButton: View {
     var reel: Reel
 
     var body: some View {
-        VStack(spacing: 25) {
+        VStack(spacing: 24) {
             Button {
             } label: {
-                VStack(spacing: 10) {
+                VStack(spacing: 8) {
                     Image(systemName: "suit.heart")
                         .font(.title)
+                        .frame(width: 28, height: 28)
 
-                    Text("233K")
-                        .font(.caption.bold())
+                    Text("13.9만")
+                        .font(.footnote.bold())
                 }
             }
+//            .border(.white)
 
             Button {
             } label: {
-                VStack(spacing: 10) {
+                VStack(spacing: 8) {
                     Image(systemName: "bubble.right")
                         .font(.title)
+                        .frame(width: 28, height: 28)
 
-                    Text("120")
-                        .font(.caption.bold())
+                    Text("2,545")
+                        .font(.footnote.bold())
                 }
             }
+//            .border(.white)
 
             Button {
             } label: {
-                VStack(spacing: 10) {
+                VStack(spacing: 8) {
                     Image(systemName: "paperplane")
                         .font(.title)
+                        .frame(width: 28, height: 28)
                 }
             }
+//            .border(.white)
 
             Button {
             } label: {
-                VStack(spacing: 10) {
+                VStack(spacing: 8) {
                     Image(systemName: "ellipsis")
-                        .font(.title)
+                        .font(.callout)
+                        .frame(width: 28, height: 32)
+                        .offset(y: -5)
                 }
             }
+//            .border(.white)
         }
     }
 }
 
-var sampleText = "A barking dog never bites, A big fish in a small pond, No pain No gain, A good medicine tastes bitter, It never rains but it pours, A bad workman blames his tools"
+var sampleText = " A barking dog never bites, A big fish in a small pond, No pain No gain, A good medicine tastes bitter, It never rains but it pours, A bad workman blames his tools, A barking dog never bites, A big fish in a small pond, No pain No gain, A good medicine tastes bitter, It never rains but it pours, A bad workman blames his tools, A barking dog never bites, A big fish in a small pond, No pain No gain, A good medicine tastes bitter, It never rains but it pours, A bad workman blames his tools, A barking dog never bites, A big fish in a small pond, No pain No gain, A good medicine tastes bitter, It never rains but it pours, A bad workman blames his tools, A barking dog never bites, A big fish in a small pond, No pain No gain, A good medicine tastes bitter, It never rains but it pours, A bad workman blames his tools.\n\n#bad #workman #blames #bad #workman #blames"
+
+/*
+ | Style        | Font          | Size |
+ | ------------ | ------------- | ---- |
+ | .largeTitle  | SFUI-Regular  | 34.0 |
+ | .title1      | SFUI-Regular  | 28.0 |
+ | .title2      | SFUI-Regular  | 22.0 |
+ | .title3      | SFUI-Regular  | 20.0 |
+ | .headline    | SFUI-Semibold | 17.0 |
+ | .callout     | SFUI-Regular  | 16.0 |
+ | .subheadline | SFUI-Regular  | 15.0 |
+ | .body        | SFUI-Regular  | 17.0 |
+ | .footnote    | SFUI-Regular  | 13.0 |
+ | .caption1    | SFUI-Regular  | 12.0 |
+ | .caption2    | SFUI-Regular  | 11.0 |
+ */
