@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8548EE029BECBBD00625E62 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8548EDF29BECBBD00625E62 /* Symbol.swift */; };
 		E87716D829B8700100DDE81C /* ReelsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87716D729B8700100DDE81C /* ReelsApp.swift */; };
 		E87716DA29B8700100DDE81C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87716D929B8700100DDE81C /* ContentView.swift */; };
 		E87716DC29B8700200DDE81C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87716DB29B8700200DDE81C /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E8548EDF29BECBBD00625E62 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		E87716D429B8700100DDE81C /* Reels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87716D729B8700100DDE81C /* ReelsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsApp.swift; sourceTree = "<group>"; };
 		E87716D929B8700100DDE81C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8548EDE29BECBAE00625E62 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				E8548EDF29BECBBD00625E62 /* Symbol.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		E87716CB29B8700100DDE81C = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				E877171529B88AEF00DDE81C /* Extension */,
+				E8548EDE29BECBAE00625E62 /* Enum */,
 				E877170129B8704800DDE81C /* Model */,
 				E877170229B8705100DDE81C /* View */,
 				E87716D729B8700100DDE81C /* ReelsApp.swift */,
@@ -304,6 +315,7 @@
 				E877171229B87EB000DDE81C /* Reel.swift in Sources */,
 				E877170A29B871A100DDE81C /* ReelsView.swift in Sources */,
 				E87716D829B8700100DDE81C /* ReelsApp.swift in Sources */,
+				E8548EE029BECBBD00625E62 /* Symbol.swift in Sources */,
 				E877170E29B877CB00DDE81C /* TabBar.swift in Sources */,
 				E877171729B88AFB00DDE81C /* String.swift in Sources */,
 				E877170429B8706700DDE81C /* Media.swift in Sources */,

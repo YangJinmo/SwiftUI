@@ -27,7 +27,7 @@ struct ReelsView: View {
     private let audioSession = AVAudioSession.sharedInstance()
 
     var body: some View {
-        if currentTab == "play.rectangle" {
+        if currentTab == Symbol.play_rectangle.fullName {
             GeometryReader { proxy in
                 let size = proxy.size
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBar: View {
-    @State var currentTab = "play.rectangle"
+    @State var currentTab = Symbol.play_rectangle.fullName
 
     init() {
         UITabBar.appearance().isHidden = true
@@ -18,30 +18,34 @@ struct TabBar: View {
         VStack(spacing: 0) {
             TabView(selection: $currentTab) {
                 Text("Home")
-                    .tag("house.fill")
+                    .tag(Symbol.house_fill.fullName)
 
                 Text("Search")
-                    .tag("magnifyingglass")
+                    .tag(Symbol.magnifyingglass.fullName)
 
                 ReelsView(currentTab: $currentTab)
-                    .tag("play.rectangle")
+                    .tag(Symbol.play_rectangle.fullName)
 
                 Text("Linked")
-                    .tag("suit.heart")
+                    .tag(Symbol.suit_heart.fullName)
 
                 Text("Profile")
-                    .tag("person.circle")
+                    .tag(Symbol.person_circle.fullName)
             }
 
             HStack(spacing: 0) {
-                ForEach(["house.fill", "magnifyingglass", "play.rectangle", "suit.heart", "person.circle"], id: \.self) { image in
-                    TabBarButton(image: image, isSystemImage: image != "Reels", currentTab: $currentTab)
+                ForEach(Symbol.allCases, id: \.self) { image in
+                    TabBarButton(
+                        image: image.fullName,
+                        isSystemImage: image.fullName != "Reels",
+                        currentTab: $currentTab
+                    )
                 }
             }
             .padding(.horizontal)
             .padding(.vertical, 10)
             .overlay(Divider(), alignment: .top)
-            .background(currentTab == "play.rectangle" ? .black : .clear)
+            .background(currentTab == Symbol.play_rectangle.fullName ? .black : .clear)
         }
     }
 }
@@ -77,7 +81,7 @@ struct TabBarButton: View {
                 }
             }
         }
-        .foregroundColor(currentTab == image ? currentTab == "play.rectangle" ? .white : .primary : .gray)
+        .foregroundColor(currentTab == image ? currentTab == Symbol.play_rectangle.fullName ? .white : .primary : .gray)
         .frame(maxWidth: .infinity)
     }
 }
