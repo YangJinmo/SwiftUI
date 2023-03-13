@@ -1,0 +1,69 @@
+//
+//  ContentView.swift
+//  YouTube
+//
+//  Created by Jmy on 2023/03/13.
+//
+
+import AVKit
+import SwiftUI
+
+struct ContentView: View {
+    @State var player = AVPlayer(url: URL(string: "https://assets.afcdn.com/video49/20210722/v_645516.m3u8")!)
+
+    var body: some View {
+        VStack {
+            VideoPlayer(player: $player)
+
+            Spacer()
+        }
+        .background(Color.black.edgesIgnoringSafeArea(.all))
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+struct VideoPlayer: UIViewControllerRepresentable {
+    @Binding var player: AVPlayer
+
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(parent: self)
+    }
+
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
+        let controller = AVPlayerViewController()
+        controller.player = player
+        controller.showsPlaybackControls = false
+        return controller
+    }
+
+    func updateUIViewController(_ playerViewController: AVPlayerViewController, context: Context) {
+        print("updateReel: \(player.currentItem?.url?.description ?? "")")
+    }
+
+    static func dismantleUIViewController(_ uiViewController: AVPlayerViewController, coordinator: Coordinator) {
+        print("dismantleReel: \(coordinator.parent.player.currentItem?.url?.description ?? "")")
+    }
+
+    class Coordinator: NSObject {
+        var parent: VideoPlayer
+
+        init(parent: VideoPlayer) {
+            self.parent = parent
+        }
+
+        @objc func restartPlayback() {
+            parent.player.seek(to: .zero)
+        }
+    }
+}
+
+extension AVPlayerItem {
+    var url: URL? {
+        return (asset as? AVURLAsset)?.url
+    }
+}
