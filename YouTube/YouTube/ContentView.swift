@@ -14,16 +14,26 @@ struct ContentView: View {
     var body: some View {
         VStack {
             VideoPlayer(player: $player)
+                .frame(height: UIScreen.main.bounds.height / 3.5)
 
             Spacer()
         }
         .background(Color.black.edgesIgnoringSafeArea(.all))
+        .onAppear {
+            self.player.play()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+class Host: UIHostingController<ContentView> {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
