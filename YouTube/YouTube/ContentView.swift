@@ -13,12 +13,16 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            VideoPlayer(player: $player)
-                .frame(height: UIScreen.main.bounds.height / 3.5)
+            ZStack {
+                VideoPlayer(player: $player)
+
+                Controls()
+            }
+            .frame(height: UIScreen.main.bounds.height / 3.5)
 
             Spacer()
         }
-        .background(Color.black.edgesIgnoringSafeArea(.all))
+        .background(Color.black.ignoresSafeArea())
         .onAppear {
             self.player.play()
         }
@@ -31,9 +35,42 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-class Host: UIHostingController<ContentView> {
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+struct Controls: View {
+    var body: some View {
+        VStack {
+            Spacer()
+
+            HStack {
+                Button {
+                } label: {
+                    Image(systemName: "backward.fill")
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .padding(20)
+                }
+
+                Spacer()
+
+                Button {
+                } label: {
+                    Image(systemName: "play.fill")
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .padding(20)
+                }
+
+                Spacer()
+
+                Button {
+                } label: {
+                    Image(systemName: "forward.fill")
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .padding(20)
+                }
+            }
+        }
+        .padding()
     }
 }
 
