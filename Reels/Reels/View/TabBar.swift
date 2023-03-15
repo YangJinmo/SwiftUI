@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBar: View {
-    @State var currentTab = Symbol.play_rectangle.fullName
+    @State var currentTab = Symbol().fullName
 
     init() {
         UITabBar.appearance().isHidden = true
@@ -18,19 +18,19 @@ struct TabBar: View {
         VStack(spacing: 0) {
             TabView(selection: $currentTab) {
                 Text("Home")
-                    .tag(Symbol.house_fill.fullName)
+                    .tag(Symbol.houseFill.fullName)
 
                 Text("Search")
                     .tag(Symbol.magnifyingglass.fullName)
 
-                    .tag(Symbol.play_rectangle.fullName)
                 ReelsView()
+                    .tag(Symbol.playRectangle.fullName)
 
                 Text("Linked")
-                    .tag(Symbol.suit_heart.fullName)
+                    .tag(Symbol.suitHeart.fullName)
 
                 Text("Profile")
-                    .tag(Symbol.person_circle.fullName)
+                    .tag(Symbol.personCircle.fullName)
             }
 
             HStack(spacing: 0) {
@@ -45,7 +45,7 @@ struct TabBar: View {
             .padding(.horizontal)
             .padding(.vertical, 10)
             .overlay(Divider(), alignment: .top)
-            .background(currentTab == Symbol.play_rectangle.fullName ? .black : .clear)
+            .background(currentTab == Symbol().fullName ? .black : .clear)
         }
     }
 }
@@ -81,7 +81,7 @@ struct TabBarButton: View {
                 }
             }
         }
-        .foregroundColor(currentTab == image ? currentTab == Symbol.play_rectangle.fullName ? .white : .primary : .gray)
+        .foregroundColor(currentTab == image ? currentTab == Symbol().fullName ? .white : .primary : .gray)
         .frame(maxWidth: .infinity)
     }
 }

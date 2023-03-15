@@ -8,31 +8,31 @@
 import SwiftUI
 
 // enum Symbol: CaseIterable {
-//    static let house_fill = "house.fill"
+//    static let houseFill = "house.fill"
 //    static let magnifyingglass = "magnifyingglass"
-//    static let play_rectangle = "play.rectangle"
-//    static let suit_heart = "suit.heart"
-//    static let person_circle = "person.circle"
+//    static let playRectangle = "play.rectangle"
+//    static let suitHeart = "suit.heart"
+//    static let personCircle = "person.circle"
 // }
 
 enum Symbol: String, CaseIterable {
-    case house_fill
+    case houseFill
     case magnifyingglass
-    case play_rectangle
-    case suit_heart
-    case person_circle
+    case playRectangle
+    case suitHeart
+    case personCircle
 
     init() {
-        self = .play_rectangle
+        self = .playRectangle
     }
 
     var fullName: String {
         switch self {
-        case .house_fill: return "house.fill"
+        case .houseFill: return "house.fill"
         case .magnifyingglass: return "magnifyingglass"
-        case .play_rectangle: return "play.rectangle"
-        case .suit_heart: return "suit.heart"
-        case .person_circle: return "person.circle"
+        case .playRectangle: return "play.rectangle"
+        case .suitHeart: return "suit.heart"
+        case .personCircle: return "person.circle"
         }
     }
 }
