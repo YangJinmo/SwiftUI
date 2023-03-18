@@ -20,11 +20,4 @@ var medias = [
     Media(url: "http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8", title: "Revenge🔥🔥💥💥💥"),
     Media(url: "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8", title: "Revenge🔥🔥💥💥💥"),
     Media(url: "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8", title: "Revenge🔥🔥💥💥💥"),
-
-    Media(url: "https://d3po4q2cli99m3.cloudfront.net/review/video/180/20220512_mixed_bugaboo_bee6_wheel_break_handling.m3u8", title: "Revenge🔥🔥💥💥💥"),
-    Media(url: "https://d3po4q2cli99m3.cloudfront.net/review/video/179/20220512_mixed_bugaboo_bee6_seatback_sunscreen.m3u8", title: "Revenge🔥🔥💥💥💥"),
-    Media(url: "https://d3po4q2cli99m3.cloudfront.net/review/video/132/6dc2dec4-67a7-4268-98c7-b8e1a2886426.m3u8", title: "Revenge🔥🔥💥💥💥"),
-    Media(url: "https://d3po4q2cli99m3.cloudfront.net/review/video/1/d16adaa0-0699-4219-9cbb-ba530c383a85.m3u8", title: "Revenge🔥🔥💥💥💥"),
-    Media(url: "https://d3po4q2cli99m3.cloudfront.net/review/video/180/20220512_mixed_bugaboo_bee6_wheel_break_handling.m3u8", title: "Revenge🔥🔥💥💥💥"),
-    Media(url: "https://d3po4q2cli99m3.cloudfront.net/review/video/179/20220512_mixed_bugaboo_bee6_seatback_sunscreen.m3u8", title: "Revenge🔥🔥💥💥💥"),
 ]
