@@ -33,19 +33,19 @@ struct Nav_Popover: View {
             }, label: {
                 Text("Show Popover")
             })
-                .padding()
-//        .popover(isPresented: $showPopover, attachmentAnchor: .rect(Anchor<CGRect>.Source.bounds), arrowEdge: .top) {
-//          NumberScene(number: 1, color: Color.blue)
-//            .frame(minWidth: 200, minHeight: 200)
+            .padding()
+//            .popover(isPresented: $showPopover, attachmentAnchor: .rect(Anchor<CGRect>.Source.bounds), arrowEdge: .top) {
+//                NumberScene(number: 1, color: Color.blue)
+//                    .frame(minWidth: 200, minHeight: 200)
 
-//        .popover(isPresented: $showPopover, attachmentAnchor: .rect(Anchor<CGRect>.Source.rect(.zero)), arrowEdge: .top) {
-//          NumberScene(number: 1, color: Color.blue)
-//            .frame(minWidth: 200, minHeight: 200)
-
-                .popover(isPresented: $showPopover, attachmentAnchor: .point(.bottomTrailing), arrowEdge: .bottom) {
-                    NumberScene(number: 1, color: Color.blue)
-                        .frame(minWidth: 200, minHeight: 200)
-                }
+//            .popover(isPresented: $showPopover, attachmentAnchor: .rect(Anchor<CGRect>.Source.rect(.zero)), arrowEdge: .top) {
+//                NumberScene(number: 1, color: Color.blue)
+//                    .frame(minWidth: 200, minHeight: 200)
+//
+            .popover(isPresented: $showPopover, attachmentAnchor: .point(.bottomTrailing), arrowEdge: .bottom) {
+                NumberScene(number: 1, color: Color.blue)
+                    .frame(minWidth: 200, minHeight: 200)
+            }
         }
         .navigationBarTitle("Popover")
     }
