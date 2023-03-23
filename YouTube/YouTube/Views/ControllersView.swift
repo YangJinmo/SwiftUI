@@ -11,68 +11,77 @@ import SwiftUI
 struct ControllersView: View {
     @Binding var player: AVPlayer
     @Binding var isPlaying: Bool
-    @Binding var pannel: Bool
-    @Binding var value: Float
+    @Binding var isShow: Bool
+    @Binding var progress: Float
 
     var body: some View {
-        VStack {
-            Spacer()
-
-            HStack {
-                Button {
-                    player.seek(to: CMTime(seconds: getSeconds() - 10, preferredTimescale: 1))
-                } label: {
-                    Image(systemName: "backward.fill")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding(20)
-                }
-
+        ZStack {
+            VStack {
                 Spacer()
 
-                Button {
-                    if isPlaying {
-                        player.pause()
-                        isPlaying = false
-                    } else {
-                        player.play()
-                        isPlaying = true
+                HStack {
+                    Button {
+                        player.seek(to: CMTime(seconds: getSeconds() - 10, preferredTimescale: 1))
+                    } label: {
+                        Image(systemName: "backward.fill")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .padding(20)
                     }
-                } label: {
-                    Image(systemName: isPlaying ? "pause.fill" : "play.fill")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding(20)
+
+                    Spacer()
+
+                    Button {
+                        if isPlaying {
+                            player.pause()
+                            isPlaying = false
+                        } else {
+                            player.play()
+                            isPlaying = true
+                        }
+                    } label: {
+                        Image(systemName: isPlaying ? "pause.fill" : "play.fill")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .padding(20)
+                    }
+
+                    Spacer()
+
+                    Button {
+                        player.seek(to: CMTime(seconds: getSeconds() + 10, preferredTimescale: 1))
+                    } label: {
+                        Image(systemName: "forward.fill")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .padding(20)
+                    }
                 }
 
                 Spacer()
+            }
+            .padding()
+            .background(Color.black.opacity(0.4))
+            .onTapGesture {
+                withAnimation {
+                    isShow = false
+                }
+            }
+            .onAppear {
+                player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1), queue: .main) { _ in
+                    progress = getSliderValue()
 
-                Button {
-                    player.seek(to: CMTime(seconds: getSeconds() + 10, preferredTimescale: 1))
-                } label: {
-                    Image(systemName: "forward.fill")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding(20)
+                    if progress == 1.0 {
+                        isPlaying = false
+                    }
                 }
             }
 
-            Spacer()
+            VStack {
+                Spacer()
 
-            VideoSlider(value: $value, player: $player, isPlaying: $isPlaying)
-        }
-        .padding()
-        .background(Color.black.opacity(0.4))
-        .onTapGesture {
-            pannel = false
-        }
-        .onAppear {
-            player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1), queue: .main) { _ in
-                value = getSliderValue()
-
-                if value == 1.0 {
-                    isPlaying = false
-                }
+                VideoSlider(value: $progress, player: $player, isPlaying: $isPlaying)
+                    .padding()
             }
         }
     }
@@ -82,6 +91,6 @@ struct ControllersView: View {
     }
 
     func getSeconds() -> Double {
-        return Double(Double(value) * (player.currentItem?.duration.seconds)!)
+        return Double(Double(progress) * (player.currentItem?.duration.seconds)!)
     }
 }

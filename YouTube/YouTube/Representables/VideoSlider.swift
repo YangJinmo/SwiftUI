@@ -15,7 +15,7 @@ struct VideoSlider: UIViewRepresentable {
     @Binding var isPlaying: Bool
 
     func makeUIView(context: Context) -> UISlider {
-        let slider = UISlider()
+        let slider = TapSlider()
         slider.minimumTrackTintColor = .red
         slider.maximumTrackTintColor = .gray
         slider.thumbTintColor = .red

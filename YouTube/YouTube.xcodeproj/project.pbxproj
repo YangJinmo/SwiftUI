@@ -10,6 +10,7 @@
 		E839ACB429CAEEC900DBA1AA /* ControllersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E839ACB329CAEEC900DBA1AA /* ControllersView.swift */; };
 		E839ACB629CAEF4500DBA1AA /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E839ACB529CAEF4500DBA1AA /* VideoPlayer.swift */; };
 		E839ACB829CAF00500DBA1AA /* VideoSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E839ACB729CAF00500DBA1AA /* VideoSlider.swift */; };
+		E839ACBD29CAFEDC00DBA1AA /* TapSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E839ACBC29CAFEDC00DBA1AA /* TapSlider.swift */; };
 		E8DD1B3E29BEE926009D4115 /* YouTubeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD1B3D29BEE926009D4115 /* YouTubeApp.swift */; };
 		E8DD1B4029BEE926009D4115 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD1B3F29BEE926009D4115 /* ContentView.swift */; };
 		E8DD1B4229BEE927009D4115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DD1B4129BEE927009D4115 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		E839ACB329CAEEC900DBA1AA /* ControllersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllersView.swift; sourceTree = "<group>"; };
 		E839ACB529CAEF4500DBA1AA /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		E839ACB729CAF00500DBA1AA /* VideoSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSlider.swift; sourceTree = "<group>"; };
+		E839ACBC29CAFEDC00DBA1AA /* TapSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapSlider.swift; sourceTree = "<group>"; };
 		E8DD1B3A29BEE926009D4115 /* YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DD1B3D29BEE926009D4115 /* YouTubeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeApp.swift; sourceTree = "<group>"; };
 		E8DD1B3F29BEE926009D4115 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 			path = Representables;
 			sourceTree = "<group>";
 		};
+		E839ACBB29CAFED300DBA1AA /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				E839ACBC29CAFEDC00DBA1AA /* TapSlider.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		E8DD1B3129BEE926009D4115 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		E8DD1B3C29BEE926009D4115 /* YouTube */ = {
 			isa = PBXGroup;
 			children = (
+				E839ACBB29CAFED300DBA1AA /* Commons */,
 				E839ACBA29CAF88C00DBA1AA /* Representables */,
 				E839ACB929CAF88000DBA1AA /* Views */,
 				E8DD1B3D29BEE926009D4115 /* YouTubeApp.swift */,
@@ -284,6 +295,7 @@
 			files = (
 				E839ACB629CAEF4500DBA1AA /* VideoPlayer.swift in Sources */,
 				E8DD1B4029BEE926009D4115 /* ContentView.swift in Sources */,
+				E839ACBD29CAFEDC00DBA1AA /* TapSlider.swift in Sources */,
 				E839ACB829CAF00500DBA1AA /* VideoSlider.swift in Sources */,
 				E8DD1B3E29BEE926009D4115 /* YouTubeApp.swift in Sources */,
 				E839ACB429CAEEC900DBA1AA /* ControllersView.swift in Sources */,

@@ -17,8 +17,8 @@ let url = URL(string: urlString)!
 struct ContentView: View {
     @State var player = AVPlayer(url: url)
     @State var isPlaying = false
-    @State var showControls = false
-    @State var value: Float = 0
+    @State var isShowControllers = false
+    @State var progress: Float = 0
 
     var body: some View {
         GeometryReader { proxy in
@@ -26,12 +26,12 @@ struct ContentView: View {
                 ZStack {
                     VideoPlayer(player: $player)
 
-                    if showControls {
+                    if isShowControllers {
                         ControllersView(
                             player: $player,
                             isPlaying: $isPlaying,
-                            pannel: $showControls,
-                            value: $value
+                            isShow: $isShowControllers,
+                            progress: $progress
                         )
                     }
                 }
@@ -41,7 +41,9 @@ struct ContentView: View {
                         : proxy.size.height / 3.5
                 )
                 .onTapGesture {
-                    showControls = true
+                    withAnimation {
+                        isShowControllers = true
+                    }
                 }
 
                 if !UIDevice.current.orientation.isLandscape {
