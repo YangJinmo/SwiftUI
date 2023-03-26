@@ -23,7 +23,7 @@
 
 import SwiftUI
 
-struct GridItem: View {
+struct GridItemView: View {
     let product: AppleProduct
 
     var body: some View {
@@ -42,6 +42,6 @@ struct GridItem: View {
 
 struct GridItem_Previews: PreviewProvider {
     static var previews: some View {
-        GridItem(product: AppleProduct.sampleList[0])
+        GridItemView(product: AppleProduct.sampleList[0])
     }
 }

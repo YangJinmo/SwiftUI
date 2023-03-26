@@ -24,8 +24,8 @@ struct VideoSlider: UIViewRepresentable {
         return slider
     }
 
-    func updateUIView(_ uiView: UISlider, context: Context) {
-        uiView.value = value
+    func updateUIView(_ slider: UISlider, context: Context) {
+        slider.value = value
     }
 
     func makeCoordinator() -> Coordinator {
