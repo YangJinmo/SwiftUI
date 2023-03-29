@@ -26,10 +26,10 @@ import SwiftUI
 // ObservableObject: 감시가 가능한 객체
 class SharedList: ObservableObject {
     var title = ""
-    // @Published 가 없다면 값이 바뀌어도 새로운 값을 방출하지 않습니다.
+    // @Published가 없다면 값이 바뀌어도 새로운 값을 방출하지 않습니다.
     // 그래서 이 속성을 바꾸는 것 만으로는 뷰가 업데이트 되지 않습니다.
     @Published var list = [String]()
-    // @Published 를 추가하면 배열의 새로운 요소가 추가되거나 삭제되는 시점마다 새로운 배열을 방출합니다.
+    // @Published를 추가하면 배열의 새로운 요소가 추가되거나 삭제되는 시점마다 새로운 배열을 방출합니다.
     // ObservableObject에는 최소 1개 이상의 Published가 있어야 의미가 있다.
 }
 
@@ -58,7 +58,7 @@ struct ObservableList: View {
                 }, label: {
                     Text("Add To List")
                 })
-                    .padding()
+                .padding()
             }
 
             List(sharedList.list, id: \.self) { item in
