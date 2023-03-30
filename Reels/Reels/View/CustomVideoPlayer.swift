@@ -25,7 +25,12 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
 //        controller.videoGravity = .resizeAspectFill
         controller.videoGravity = .resizeAspect
         controller.showsPlaybackControls = false
-        controller.allowsVideoFrameAnalysis = false
+
+        if #available(iOS 16.0, *) {
+            controller.allowsVideoFrameAnalysis = false
+        } else {
+            // Fallback on earlier versions
+        }
 
         // repeating playback
         player.actionAtItemEnd = .none
