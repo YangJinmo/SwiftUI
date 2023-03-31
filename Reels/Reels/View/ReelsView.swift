@@ -78,12 +78,13 @@ struct ReelsPlayer: View {
                 GeometryReader { proxy -> Color in
                     let minY = proxy.frame(in: .global).minY
                     let size = proxy.size
+                    let isCurrentView = -minY < (size.height / 2) && minY < (size.height / 2)
 
                     // since we have many card and offset goes beyond
                     // so it starts playing the below videos
                     // to avoid this checking the current one with current real id
                     DispatchQueue.main.async {
-                        if -minY < (size.height / 2) && minY < (size.height / 2) && currentReel == reel.id {
+                        if isCurrentView && currentReel == reel.id {
                             player.play()
                         } else {
                             player.pause()
