@@ -23,8 +23,6 @@ struct ReelsView: View {
         return Reel(player: player, media: media)
     }
 
-    private let audioSession = AVAudioSession.sharedInstance()
-
     var body: some View {
         GeometryReader { proxy in
             let size = proxy.size
