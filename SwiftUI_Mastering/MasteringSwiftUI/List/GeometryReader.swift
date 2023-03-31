@@ -23,54 +23,57 @@
 
 import SwiftUI
 
-// struct View_GeometryReader: View {
-//   var items = AppleProduct.sampleList
-//
-//   var body: some View {
-//      VStack {
-//
-//         //         VStack(spacing: 30) {
-//         //            ForEach(0..<3) { row in
-//         //               HStack(spacing: 30) {
-//         //                  ForEach(0..<2) { col in
-//         //                     GridItem(product: self.items[(row * 3 + col) % self.items.count])
-//         //                        .frame(width: 150, height: 150)
-//         //                  }
-//         //               }
-//         //            }
-//         //         }
-//
-//         GeometryReader { geometry in
-//            ScrollView {
-//
-//               VStack(spacing: 30) {
-//
-//                  ForEach(0..<30) { row in
-//                     HStack(spacing: 30) {
-//                        ForEach(0..<2) { col in
-//
-//                           GridItem(product: self.items[(row * 3 + col) % self.items.count])
-//                              .frame(width: geometry.size.width / 2.0 - 30.0, height: 150.0)
-//                           //.frame(width: UIScreen.main.bounds.width / 2 - 30, height: 150)
+struct View_GeometryReader: View {
+    var items = AppleProduct.sampleList
+    let item = AppleProduct.sampleList[0]
+
+    var body: some View {
+//        VStack {
+//        ScrollView([.horizontal, .vertical]) {
+//            VStack {
+//                ForEach(0 ..< 10) { row in
+//                    HStack {
+//                        ForEach(0 ..< 10) { col in
+//                            GridItemView(
+//                                product: self.items[(row * 3 + col) % self.items.count]
+//                            )
+//                            .border(.red)
+//                            .frame(
+//                                width: UIScreen.main.bounds.width,
+//                                height: UIScreen.main.bounds.height
+//                            )
+//                            .border(.green)
 //                        }
-//                     }
-//                  }
-//
-//               }
-//               .frame(width: 200)
+//                    }
+//                }
 //            }
-//         }
-//
-//
-//      }
-//      //.navigationBarTitle("GeometryReader")
-//   }
-// }
-//
-// struct View_GeometryReader_Previews: PreviewProvider {
-//   static var previews: some View {
-//      NavigationView {
-//         View_GeometryReader()
-//      }
-//   }
-// }
+//        }
+
+        GeometryReader { geometry in
+            ScrollView {
+                VStack(spacing: 30) {
+                    ForEach(0 ..< 30) { row in
+                        HStack(spacing: 30) {
+                            ForEach(0 ..< 2) { col in
+
+                                GridItemView(product: self.items[(row * 3 + col) % self.items.count])
+                                    .frame(width: geometry.size.width / 2.0 - 30.0, height: 150.0)
+                                // .frame(width: UIScreen.main.bounds.width / 2 - 30, height: 150)
+                            }
+                        }
+                    }
+                }
+                .frame(width: 200)
+            }
+        }
+        .navigationBarTitle("GeometryReader")
+    }
+}
+
+struct View_GeometryReader_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            View_ScrollView()
+        }
+    }
+}
