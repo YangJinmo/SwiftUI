@@ -61,8 +61,6 @@ struct ReelsView_Previews: PreviewProvider {
 }
 
 struct ReelsPlayer: View {
-    @Environment(\.scenePhase) var scenePhase
-
     @Binding var reel: Reel
     @Binding var currentReel: String
 
@@ -93,17 +91,6 @@ struct ReelsPlayer: View {
                     }
 
                     return Color.clear
-                }
-                .onChange(of: scenePhase) { newPhase in
-                    print("newPhase: \(newPhase)")
-
-                    DispatchQueue.main.async {
-                        if newPhase == .active {
-                            player.play()
-                        } else {
-                            player.pause()
-                        }
-                    }
                 }
 
                 LinearGradient(
