@@ -145,7 +145,6 @@ struct ReelsPlayer: View {
                             }
                         }
                     }
-//                    .border(.red)
 
                 // Dimming background when showing more content
                 Color.black.opacity(showMore ? 0.35 : 0)
@@ -240,7 +239,6 @@ struct ReelsPlayer: View {
 //                                                showMore.toggle()
 //                                            }
 //                                        }
-//                                        .border(.red)
 
                                     // TODO: An issue where the right action button moves
                                     ScrollView(.vertical, showsIndicators: false) {
@@ -252,10 +250,8 @@ struct ReelsPlayer: View {
                                                     showMore.toggle()
                                                 }
                                             }
-//                                            .border(.red)
                                     }
                                     .frame(height: 320)
-//                                    .border(.red)
 
                                 } else {
                                     Button {
@@ -274,7 +270,6 @@ struct ReelsPlayer: View {
                                         }
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                     }
-//                                    .border(.red)
                                 }
                             }
                             .padding(.top, 4)
@@ -397,7 +392,6 @@ struct ActionButton: View {
                         .font(.footnote.bold())
                 }
             }
-//            .border(.white)
 
             Button {
             } label: {
@@ -410,7 +404,6 @@ struct ActionButton: View {
                         .font(.footnote.bold())
                 }
             }
-//            .border(.white)
 
             Button {
             } label: {
@@ -420,7 +413,6 @@ struct ActionButton: View {
                         .frame(width: 28, height: 28)
                 }
             }
-//            .border(.white)
 
             Button {
             } label: {
@@ -431,7 +423,6 @@ struct ActionButton: View {
                         .offset(y: -5)
                 }
             }
-//            .border(.white)
         }
     }
 }
