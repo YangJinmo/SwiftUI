@@ -24,6 +24,7 @@
 import SwiftUI
 
 struct AnimationBasics: View {
+    @State private var isAnimating: Bool = false
     @State private var position = CGPoint.zero
 
     var body: some View {
@@ -36,17 +37,27 @@ struct AnimationBasics: View {
                 // .animation(.default)
                 // .animation(.easeInOut(duration: 3))
                 // .animation(Animation.easeInOut(duration: 3).delay(1))
-                .animation(Animation.easeInOut(duration: 3).speed(2)) // 3 / 2 의 실행시간: 1.5
-            // .animation(Animation.easeInOut(duration: 3).speed(0.5)) // 3 * 2 의 실행시간: 6
+
+                // FIX: - isAnimating을 추가하면 애니메이션이 동작하지 않는 문제
+                // .animation(Animation.easeInOut(duration: 3).speed(2), value: isAnimating) // 3 / 2 의 실행시간: 1.5
+                // .animation(Animation.easeInOut(duration: 3).speed(0.5)) // 3 * 2 의 실행시간: 6
+                .animation(Animation.easeInOut(duration: 3).speed(2))
 
             Spacer()
 
             Button(action: {
                 self.position = self.position == .zero ? CGPoint(x: 300, y: 500) : .zero
+
+                withAnimation {
+                    isAnimating.toggle()
+                }
             }, label: {
                 Text("Animate")
             })
-                .padding()
+            .padding()
+        }
+        .onAppear {
+            isAnimating = true
         }
     }
 }
