@@ -52,16 +52,6 @@ struct ReelsView: View {
                 currentReel = reel.id
                 print("currentReel: \(reel.media.url)")
             }
-
-            setAudioToPlayback()
-        }
-    }
-
-    private func setAudioToPlayback() {
-        do {
-            try audioSession.setCategory(.playback)
-        } catch {
-            print("Error: \(error.localizedDescription)")
         }
     }
 }

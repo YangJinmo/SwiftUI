@@ -12,6 +12,8 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
 //    var playerItem: AVPlayerItem?
     var player: AVPlayer
 
+    private let audioSession = AVAudioSession.sharedInstance()
+
     func makeCoordinator() -> Coordinator {
         return Coordinator(parent: self)
     }
@@ -32,12 +34,29 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
             // Fallback on earlier versions
         }
 
-        // repeating playback
-        player.actionAtItemEnd = .none
-
-        NotificationCenter.default.addObserver(context.coordinator, selector: #selector(context.coordinator.restartPlayback), name: .AVPlayerItemDidPlayToEndTime, object: player.currentItem)
+        addObservers(context: context)
 
         return controller
+    }
+
+    func addObservers(context: Context) {
+        // Repeat
+        player.actionAtItemEnd = .none
+
+        NotificationCenter.default.addObserver(
+            context.coordinator,
+            selector: #selector(context.coordinator.restartPlayback),
+            name: .AVPlayerItemDidPlayToEndTime,
+            object: player.currentItem
+        )
+
+        // Audio
+        do {
+            try audioSession.setCategory(.playback, mode: .moviePlayback)
+            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 
     func updateUIViewController(_ playerViewController: AVPlayerViewController, context: Context) {
