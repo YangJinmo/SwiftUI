@@ -21,6 +21,7 @@
 		E877171229B87EB000DDE81C /* Reel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877171129B87EB000DDE81C /* Reel.swift */; };
 		E877171429B8809900DDE81C /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877171329B8809900DDE81C /* CustomVideoPlayer.swift */; };
 		E877171729B88AFB00DDE81C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E877171629B88AFB00DDE81C /* String.swift */; };
+		E8B94C0C29D6B8140068BEE9 /* AVPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B94C0B29D6B8140068BEE9 /* AVPlayerItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		E877171129B87EB000DDE81C /* Reel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reel.swift; sourceTree = "<group>"; };
 		E877171329B8809900DDE81C /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
 		E877171629B88AFB00DDE81C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E8B94C0B29D6B8140068BEE9 /* AVPlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				E877171629B88AFB00DDE81C /* String.swift */,
+				E8B94C0B29D6B8140068BEE9 /* AVPlayerItem.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			files = (
 				E877171429B8809900DDE81C /* CustomVideoPlayer.swift in Sources */,
 				E87716DA29B8700100DDE81C /* ContentView.swift in Sources */,
+				E8B94C0C29D6B8140068BEE9 /* AVPlayerItem.swift in Sources */,
 				E877171229B87EB000DDE81C /* Reel.swift in Sources */,
 				E877170A29B871A100DDE81C /* ReelsView.swift in Sources */,
 				E87716D829B8700100DDE81C /* ReelsApp.swift in Sources */,

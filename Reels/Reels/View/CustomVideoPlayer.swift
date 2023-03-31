@@ -66,8 +66,3 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
 //        ContentView()
 //    }
 // }
-extension AVPlayerItem {
-    var url: URL? {
-        return (asset as? AVURLAsset)?.url
-    }
-}
