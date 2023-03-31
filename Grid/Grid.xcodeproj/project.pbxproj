@@ -17,6 +17,7 @@
 		E8B94BF529D3CC250068BEE9 /* GridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B94BF429D3CC250068BEE9 /* GridUITests.swift */; };
 		E8B94BF729D3CC250068BEE9 /* GridUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B94BF629D3CC250068BEE9 /* GridUITestsLaunchTests.swift */; };
 		E8B94C0429D3CC730068BEE9 /* GridWithSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B94C0329D3CC730068BEE9 /* GridWithSectionHeader.swift */; };
+		E8B94C0829D3CE9C0068BEE9 /* GridWithScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B94C0729D3CE9C0068BEE9 /* GridWithScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		E8B94BF429D3CC250068BEE9 /* GridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridUITests.swift; sourceTree = "<group>"; };
 		E8B94BF629D3CC250068BEE9 /* GridUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E8B94C0329D3CC730068BEE9 /* GridWithSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridWithSectionHeader.swift; sourceTree = "<group>"; };
+		E8B94C0729D3CE9C0068BEE9 /* GridWithScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridWithScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				E8B94BD429D3CC230068BEE9 /* GridApp.swift */,
+				E8B94C0729D3CE9C0068BEE9 /* GridWithScrollView.swift */,
 				E8B94C0329D3CC730068BEE9 /* GridWithSectionHeader.swift */,
 				E8B94BD629D3CC240068BEE9 /* ContentView.swift */,
 				E8B94BD829D3CC250068BEE9 /* Assets.xcassets */,
@@ -271,6 +274,7 @@
 				E8B94BD529D3CC230068BEE9 /* GridApp.swift in Sources */,
 				E8B94C0429D3CC730068BEE9 /* GridWithSectionHeader.swift in Sources */,
 				E8B94BE129D3CC250068BEE9 /* Grid.xcdatamodeld in Sources */,
+				E8B94C0829D3CE9C0068BEE9 /* GridWithScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
