@@ -35,6 +35,7 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
         }
 
         addObservers(context: context)
+        setAudioSession()
 
         return controller
     }
@@ -49,8 +50,9 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
             name: .AVPlayerItemDidPlayToEndTime,
             object: player.currentItem
         )
+    }
 
-        // Audio
+    func setAudioSession() {
         do {
             try audioSession.setCategory(.playback, mode: .moviePlayback)
             try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
