@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E80F68D829DD3A6200C2548C /* ReelsPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80F68D729DD3A6200C2548C /* ReelsPlayerView.swift */; };
 		E8548EE029BECBBD00625E62 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8548EDF29BECBBD00625E62 /* Symbol.swift */; };
 		E87716D829B8700100DDE81C /* ReelsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87716D729B8700100DDE81C /* ReelsApp.swift */; };
 		E87716DA29B8700100DDE81C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87716D929B8700100DDE81C /* ContentView.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E80F68D729DD3A6200C2548C /* ReelsPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsPlayerView.swift; sourceTree = "<group>"; };
 		E8548EDF29BECBBD00625E62 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		E87716D429B8700100DDE81C /* Reels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87716D729B8700100DDE81C /* ReelsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsApp.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				E877170D29B877CB00DDE81C /* TabBar.swift */,
 				E877170929B871A100DDE81C /* ReelsView.swift */,
+				E80F68D729DD3A6200C2548C /* ReelsPlayerView.swift */,
 				E877171329B8809900DDE81C /* CustomVideoPlayer.swift */,
 			);
 			path = View;
@@ -320,6 +323,7 @@
 				E877170A29B871A100DDE81C /* ReelsView.swift in Sources */,
 				E87716D829B8700100DDE81C /* ReelsApp.swift in Sources */,
 				E8548EE029BECBBD00625E62 /* Symbol.swift in Sources */,
+				E80F68D829DD3A6200C2548C /* ReelsPlayerView.swift in Sources */,
 				E877170E29B877CB00DDE81C /* TabBar.swift in Sources */,
 				E877171729B88AFB00DDE81C /* String.swift in Sources */,
 				E877170429B8706700DDE81C /* Media.swift in Sources */,
