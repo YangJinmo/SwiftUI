@@ -44,12 +44,11 @@ struct ReelsView: View {
         .ignoresSafeArea(.all, edges: .top)
         .background(Color.black.ignoresSafeArea())
         .onAppear {
-            print("onAppear")
-
             if let reel = reels.first {
                 currentReel = reel.id
-                print("currentReel: \(reel.media.url)")
             }
+
+            print("onAppear - currentReel: \(currentReel)")
         }
     }
 }

@@ -9,14 +9,9 @@ import AVKit
 import SwiftUI
 
 struct CustomVideoPlayer: UIViewControllerRepresentable {
-//    var playerItem: AVPlayerItem?
     var player: AVPlayer
 
     private let audioSession = AVAudioSession.sharedInstance()
-
-    func makeCoordinator() -> Coordinator {
-        return Coordinator(parent: self)
-    }
 
     func makeUIViewController(context: Context) -> AVPlayerViewController {
         player.automaticallyWaitsToMinimizeStalling = true
@@ -67,6 +62,10 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
 
     static func dismantleUIViewController(_ uiViewController: AVPlayerViewController, coordinator: Coordinator) {
         print("dismantleReel: \(coordinator.parent.player.currentItem?.url?.description ?? "")")
+    }
+
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(parent: self)
     }
 
     class Coordinator: NSObject {
