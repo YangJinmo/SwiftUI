@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E80F68D829DD3A6200C2548C /* ReelsPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80F68D729DD3A6200C2548C /* ReelsPlayerView.swift */; };
+		E813E19E29E0FD7500380787 /* AVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813E19D29E0FD7500380787 /* AVPlayer.swift */; };
 		E8548EE029BECBBD00625E62 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8548EDF29BECBBD00625E62 /* Symbol.swift */; };
 		E87716D829B8700100DDE81C /* ReelsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87716D729B8700100DDE81C /* ReelsApp.swift */; };
 		E87716DA29B8700100DDE81C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87716D929B8700100DDE81C /* ContentView.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		E80F68D729DD3A6200C2548C /* ReelsPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsPlayerView.swift; sourceTree = "<group>"; };
+		E813E19D29E0FD7500380787 /* AVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayer.swift; sourceTree = "<group>"; };
 		E8548EDF29BECBBD00625E62 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		E87716D429B8700100DDE81C /* Reels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87716D729B8700100DDE81C /* ReelsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsApp.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			children = (
 				E877171629B88AFB00DDE81C /* String.swift */,
 				E8B94C0B29D6B8140068BEE9 /* AVPlayerItem.swift */,
+				E813E19D29E0FD7500380787 /* AVPlayer.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				E8B94C0C29D6B8140068BEE9 /* AVPlayerItem.swift in Sources */,
 				E877171229B87EB000DDE81C /* Reel.swift in Sources */,
 				E877170A29B871A100DDE81C /* ReelsView.swift in Sources */,
+				E813E19E29E0FD7500380787 /* AVPlayer.swift in Sources */,
 				E87716D829B8700100DDE81C /* ReelsApp.swift in Sources */,
 				E8548EE029BECBBD00625E62 /* Symbol.swift in Sources */,
 				E80F68D829DD3A6200C2548C /* ReelsPlayerView.swift in Sources */,

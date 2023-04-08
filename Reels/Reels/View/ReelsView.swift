@@ -15,12 +15,7 @@ struct ReelsView: View {
             return Reel(player: AVPlayer(), media: media)
         }
 
-        let playerItem = AVPlayerItem(url: url)
-        playerItem.preferredForwardBufferDuration = 1
-
-        let player = AVPlayer(playerItem: playerItem)
-
-        return Reel(player: player, media: media)
+        return Reel(player: AVPlayer(url: url), media: media)
     }
 
     var body: some View {
