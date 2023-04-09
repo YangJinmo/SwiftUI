@@ -305,6 +305,7 @@ struct ReelsPlayerView: View {
             print("onDisappear - reel.id: \(reel.id)")
 
             DispatchQueue.main.async {
+                reel.player?.pause()
                 reel.player?.seek(to: .zero)
             }
         }
