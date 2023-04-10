@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBar: View {
-    @State var currentTab = Symbol().fullName
+    @State var currentTab = Symbol().imageName
 
     init() {
         UITabBar.appearance().isHidden = true
@@ -18,26 +18,26 @@ struct TabBar: View {
         VStack(spacing: 0) {
             TabView(selection: $currentTab) {
                 Text("Home")
-                    .tag(Symbol.houseFill.fullName)
+                    .tag(Symbol.houseFill.imageName)
 
                 Text("Search")
-                    .tag(Symbol.magnifyingglass.fullName)
+                    .tag(Symbol.magnifyingglass.imageName)
 
                 ReelsView()
-                    .tag(Symbol.playRectangle.fullName)
+                    .tag(Symbol.playRectangle.imageName)
 
                 Text("Linked")
-                    .tag(Symbol.suitHeart.fullName)
+                    .tag(Symbol.suitHeart.imageName)
 
                 Text("Profile")
-                    .tag(Symbol.personCircle.fullName)
+                    .tag(Symbol.personCircle.imageName)
             }
 
             HStack(spacing: 0) {
-                ForEach(Symbol.allCases, id: \.self) { image in
+                ForEach(Symbol.allCases, id: \.self) { symbol in
                     TabBarButton(
-                        image: image.fullName,
-                        isSystemImage: image.fullName != "Reels",
+                        image: symbol.imageName,
+                        isSystemImage: symbol.imageName != "Reels",
                         currentTab: $currentTab
                     )
                 }
@@ -45,7 +45,7 @@ struct TabBar: View {
             .padding(.horizontal)
             .padding(.vertical, 10)
             .overlay(Divider(), alignment: .top)
-            .background(currentTab == Symbol().fullName ? .black : .clear)
+            .background(currentTab == Symbol().imageName ? .black : .clear)
             .preferredColorScheme(.dark)
         }
     }
@@ -82,7 +82,7 @@ struct TabBarButton: View {
                 }
             }
         }
-        .foregroundColor(currentTab == image ? currentTab == Symbol().fullName ? .white : .primary : .gray)
+        .foregroundColor(currentTab == image ? currentTab == Symbol().imageName ? .white : .primary : .gray)
         .frame(maxWidth: .infinity)
     }
 }

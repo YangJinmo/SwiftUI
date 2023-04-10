@@ -26,7 +26,7 @@ enum Symbol: String, CaseIterable {
         self = .playRectangle
     }
 
-    var fullName: String {
+    var imageName: String {
         switch self {
         case .houseFill: return "house.fill"
         case .magnifyingglass: return "magnifyingglass"
