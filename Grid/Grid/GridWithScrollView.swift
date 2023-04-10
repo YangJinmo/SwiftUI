@@ -505,9 +505,180 @@ struct SelectedItemView: View {
     }
 }
 
+struct GridWithScrollView12: View {
+    @State private var rows = 0
+    @State private var columns = 0
+
+    var body: some View {
+        VStack {
+            Button("Add Row and Column") {
+                rows += 1
+                columns += 1
+            }
+
+            ScrollViewReader { _ in
+                ScrollView(.vertical, showsIndicators: false) {
+                    LazyVStack(spacing: 0) {
+                        ForEach(0 ..< rows) { rowIndex in
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                LazyHStack(spacing: 0) {
+                                    ForEach(0 ..< columns) { columnIndex in
+                                        Text("(\(rowIndex), \(columnIndex))")
+                                            .border(.red)
+                                            .frame(
+                                                width: UIScreen.main.bounds.width,
+                                                height: UIScreen.main.bounds.height
+                                            )
+                                            .border(.green)
+                                    }
+                                }
+                            }
+                            .id(rowIndex)
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+                .onAppear {
+                    UIScrollView.appearance().isPagingEnabled = true
+                }
+                .ignoresSafeArea()
+            }
+        }
+    }
+}
+
+struct SampleRow: View {
+    let id: Int
+
+    var body: some View {
+        Text("Row \(id)")
+    }
+
+    init(id: Int) {
+        print("init row: \(id)")
+        self.id = id
+    }
+
+//    deinit {
+//        print("deinit - row: \(id)")
+//    }
+}
+
+struct LazyVStackView: View {
+    var body: some View {
+//        ScrollView {
+        List {
+            ForEach(1 ... 1000, id: \.self, content: SampleRow.init)
+        }
+//        }
+        .frame(height: 300)
+    }
+}
+
+struct LazyVGridView: View {
+    let rows = Array(0 ..< 10)
+    let columns = Array(0 ..< 10)
+
+    init() {
+        UIScrollView.appearance().isPagingEnabled = true
+    }
+
+    var body: some View {
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVGrid(columns: Array(repeating: GridItem(), count: 10)) {
+                ForEach(rows, id: \.self) { row in
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        ForEach(columns, id: \.self) { column in
+                            Color.blue
+                                .border(.red)
+                                .frame(
+                                    width: UIScreen.main.bounds.width,
+                                    height: UIScreen.main.bounds.height
+                                )
+                                .border(.green)
+                                .overlay {
+                                    Text("(\(row), \(column))")
+                                }
+                        }
+                    }
+                }
+            }
+            .frame(
+                width: UIScreen.main.bounds.width,
+                height: UIScreen.main.bounds.height
+            )
+        }
+        .ignoresSafeArea()
+    }
+}
+
+struct LazyVGridView2: View {
+    let items = Array(0 ..< 20)
+
+    init() {
+        UIScrollView.appearance().isPagingEnabled = true
+    }
+
+    var body: some View {
+        ScrollView(.vertical, showsIndicators: true) {
+            LazyVGrid(columns: [GridItem(.flexible())]) {
+                ForEach(items.chunked(into: 3), id: \.self) { rowItems in
+                    ScrollView(.horizontal, showsIndicators: true) {
+                        LazyHGrid(rows: [GridItem(.flexible())]) {
+                            ForEach(rowItems, id: \.self) { item in
+                                Rectangle()
+                                    .fill(Color.blue)
+                                    .overlay(Text("\(item)"))
+                                    .frame(
+                                        width: UIScreen.main.bounds.width,
+                                        height: UIScreen.main.bounds.height
+                                    )
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ignoresSafeArea()
+    }
+}
+
+extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[$0 ..< Swift.min($0 + size, self.count)])
+        }
+    }
+}
+
+struct LazyVGridView3: View {
+    let columns = [
+        GridItem(.flexible()),
+    ]
+
+    init() {
+        UIScrollView.appearance().isPagingEnabled = true
+    }
+
+    var body: some View {
+        GeometryReader { geo in
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 10) {
+                    ForEach(0 ..< 30) { index in
+                        Color.blue
+                            .frame(height: geo.size.height)
+                            .overlay(Text("\(index)"))
+                    }
+                }
+            }
+        }
+        .ignoresSafeArea()
+    }
+}
+
 struct GridWithScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectedItemView()
+        LazyVGridView3()
     }
 }
 

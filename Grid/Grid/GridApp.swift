@@ -13,7 +13,7 @@ struct GridApp: App {
 
     var body: some Scene {
         WindowGroup {
-            
+            LazyVStackView()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
