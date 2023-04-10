@@ -46,6 +46,7 @@ struct TabBar: View {
             .padding(.vertical, 10)
             .overlay(Divider(), alignment: .top)
             .background(currentTab == Symbol().fullName ? .black : .clear)
+            .preferredColorScheme(.dark)
         }
     }
 }
