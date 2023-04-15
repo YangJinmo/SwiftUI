@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-// enum Symbol: CaseIterable {
-//    static let houseFill = "house.fill"
-//    static let magnifyingglass = "magnifyingglass"
-//    static let playRectangle = "play.rectangle"
-//    static let suitHeart = "suit.heart"
-//    static let personCircle = "person.circle"
-// }
-
 enum Symbol: String, CaseIterable {
     case houseFill
     case magnifyingglass
