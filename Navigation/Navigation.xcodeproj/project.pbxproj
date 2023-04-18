@@ -16,6 +16,7 @@
 		E8B9B5B929ED444E0054EB89 /* NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9B5B829ED444E0054EB89 /* NavigationTests.swift */; };
 		E8B9B5C329ED444E0054EB89 /* NavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9B5C229ED444E0054EB89 /* NavigationUITests.swift */; };
 		E8B9B5C529ED444E0054EB89 /* NavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9B5C429ED444E0054EB89 /* NavigationUITestsLaunchTests.swift */; };
+		E8B9B5D529ED4F9C0054EB89 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9B5D429ED4F9C0054EB89 /* CustomNavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		E8B9B5BE29ED444E0054EB89 /* NavigationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B9B5C229ED444E0054EB89 /* NavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITests.swift; sourceTree = "<group>"; };
 		E8B9B5C429ED444E0054EB89 /* NavigationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E8B9B5D429ED4F9C0054EB89 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				E8B9B5A229ED444D0054EB89 /* NavigationApp.swift */,
 				E8B9B5A429ED444D0054EB89 /* ContentView.swift */,
+				E8B9B5D429ED4F9C0054EB89 /* CustomNavigationView.swift */,
 				E8B9B5A629ED444E0054EB89 /* Assets.xcassets */,
 				E8B9B5AB29ED444E0054EB89 /* Persistence.swift */,
 				E8B9B5AD29ED444E0054EB89 /* Navigation.xcdatamodeld */,
@@ -265,6 +268,7 @@
 			files = (
 				E8B9B5AC29ED444E0054EB89 /* Persistence.swift in Sources */,
 				E8B9B5A529ED444D0054EB89 /* ContentView.swift in Sources */,
+				E8B9B5D529ED4F9C0054EB89 /* CustomNavigationView.swift in Sources */,
 				E8B9B5A329ED444D0054EB89 /* NavigationApp.swift in Sources */,
 				E8B9B5AF29ED444E0054EB89 /* Navigation.xcdatamodeld in Sources */,
 			);
