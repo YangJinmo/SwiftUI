@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct CustomNavigationView<Title: View, Content: View, Destination: View>: View {
-    let isLeft: Bool
-    let isRight: Bool
+struct CustomNavigationView<Title: View, Content: View>: View {
+    let isBack: Bool
+    let isExpandRight: Bool
+    let isDivider: Bool
 
     let title: Title
     let content: Content
-    let destination: Destination
 
     private let size = 44.0
 
@@ -21,54 +21,55 @@ struct CustomNavigationView<Title: View, Content: View, Destination: View>: View
     @Environment(\.presentationMode) private var mode: Binding<PresentationMode>
 
     init(
-        isLeft: Bool = false,
-        isRight: Bool = false,
+        isBack: Bool = false,
+        isExpandRight: Bool = true,
+        isDivider: Bool = true,
         @ViewBuilder title: () -> Title,
-        @ViewBuilder content: () -> Content,
-        @ViewBuilder destination: () -> Destination
+        @ViewBuilder content: () -> Content
     ) {
-        self.isLeft = isLeft
-        self.isRight = isRight
-
+        self.isBack = isBack
+        self.isDivider = isDivider
+        self.isExpandRight = isExpandRight
         self.title = title()
         self.content = content()
-        self.destination = destination()
     }
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             GeometryReader { geometry in
                 VStack(spacing: 0) {
-                    HStack {
-                        Image(systemName: "chevron.left")
-                            .frame(width: size, height: size)
-                            .opacity(isLeft ? 1 : 0)
-                            .onTapGesture(count: 1, perform: {
-                                self.mode.wrappedValue.dismiss()
-                            })
+                    HStack(spacing: 0) {
+                        if isBack {
+                            Button {
+                                /// Remove Focus
+                                endEditing()
 
-                        Spacer()
+                                /// Dismiss
+                                mode.wrappedValue.dismiss()
+                            } label: {
+                                Image(systemName: "chevron.backward")
+                                    .frame(width: size, height: size)
+                                    .opacity(isBack ? 1 : 0)
+                            }
+                        }
 
                         title
-                            .frame(height: size)
+                            .frame(
+                                width: geometry.size.width - (isBack ? size : 0) - (isExpandRight ? size : 0),
+                                height: size
+                            )
                             .font(.callout)
 
-                        Spacer()
-
-                        Image(systemName: "line.3.horizontal")
-                            .frame(width: size, height: size)
-                            .opacity(isRight ? 1 : 0)
-                            .onTapGesture(count: 1, perform: {
-                                self.isShowRight.toggle()
-                            })
-                            .navigationDestination(isPresented: $isShowRight) {
-                                destination.navigationBarHidden(true)
-                            }
+                        if isBack, isExpandRight {
+                            Spacer(minLength: size)
+                        }
                     }
                     .frame(width: geometry.size.width, height: size)
 
-                    Divider()
-                        .frame(height: 1)
+                    if isDivider {
+                        Divider()
+                            .frame(height: 1)
+                    }
 
                     ZStack {
                         Color.clear
@@ -86,24 +87,57 @@ struct CustomNavigationView<Title: View, Content: View, Destination: View>: View
 
 struct CustomNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomNavigationView(isRight: true) {
+        RootView()
+    }
+}
+
+struct RootView: View {
+    var body: some View {
+        CustomNavigationView {
             Text("RootView")
         } content: {
-            Text("This is the Root View")
-        } destination: {
-            FirstView()
+            NavigationLink {
+                FirstView()
+            } label: {
+                Text("Go to FirstView")
+                    .padding(16)
+                    .background(Color.gray)
+                    .cornerRadius(16)
+            }
         }
     }
 }
 
 struct FirstView: View {
     var body: some View {
-        CustomNavigationView(isLeft: true) {
+        CustomNavigationView(isBack: true) {
             Text("FirstView")
         } content: {
             Text("This is the First View")
-        } destination: {
-            EmptyView()
         }
+    }
+}
+
+extension UINavigationController: UIGestureRecognizerDelegate {
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+
+        interactivePopGestureRecognizer?.delegate = self
+    }
+
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
+    }
+}
+
+extension View {
+    func endEditing() {
+        #if os(iOS)
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        #elseif os(macOS)
+            DispatchQueue.main.async {
+                NSApp.keyWindow?.makeFirstResponder(nil)
+            }
+        #endif
     }
 }

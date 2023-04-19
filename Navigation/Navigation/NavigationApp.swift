@@ -16,13 +16,7 @@ struct NavigationApp: App {
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
 
-            CustomNavigationView(isRight: true) {
-                Text("RootView")
-            } content: {
-                Text("This is the Root View")
-            } destination: {
-                FirstView()
-            }
+            RootView()
         }
     }
 }
