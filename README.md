@@ -9,6 +9,7 @@
 - AutoScrollingTabs
 - HorizontalAndVerticalPagingUsingTabView
 - VerticalPageTabViewCarouselListOverSlidingView
+- Navigation
 
 ### AVKit
 - YouTube
