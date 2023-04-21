@@ -17,7 +17,6 @@ struct CustomNavigationView<Title: View, Content: View>: View {
 
     private let size = 44.0
 
-    @State private var isShowRight = false
     @Environment(\.presentationMode) private var mode: Binding<PresentationMode>
 
     init(
