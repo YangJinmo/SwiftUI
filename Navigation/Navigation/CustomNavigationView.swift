@@ -79,6 +79,7 @@ struct CustomNavigationView<Title: View, Content: View>: View {
                 .foregroundColor(Color(UIColor.label))
                 .background(Color(UIColor.systemBackground))
             }
+            .navigationBarHidden(true)
         }
         .navigationBarHidden(true)
     }
