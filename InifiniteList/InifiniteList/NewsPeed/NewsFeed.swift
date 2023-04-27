@@ -15,7 +15,6 @@ class NewsFeed: ObservableObject, RandomAccessCollection {
     var startIndex: Int { newsListItems.startIndex }
     var endIndex: Int { newsListItems.endIndex }
     var loadStatus = LoadStatus.ready(nextPage: 1)
-
     var urlBase = "https://newsapi.org/v2/everything?q=apple&sortBy=popularity&apiKey=55c250f06e1144c29a3ec4d2530adbe5&language=en&page="
 
     init() {
@@ -33,9 +32,10 @@ class NewsFeed: ObservableObject, RandomAccessCollection {
         guard case let .ready(page) = loadStatus else {
             return
         }
-        loadStatus = .loading(page: page)
-        let urlString = "\(urlBase)\(page)"
 
+        loadStatus = .loading(page: page)
+
+        let urlString = "\(urlBase)\(page)"
         let url = URL(string: urlString)!
         let task = URLSession.shared.dataTask(with: url, completionHandler: parseArticlesFromResponse(data:response:error:))
         task.resume()
