@@ -20,6 +20,8 @@
 		E815C4FC29F916C700F286C8 /* UrlWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E815C4FB29F916C700F286C8 /* UrlWebView.swift */; };
 		E815C50029FA95B700F286C8 /* InfiniteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E815C4FF29FA95B700F286C8 /* InfiniteList.swift */; };
 		E815C50229FA9DE300F286C8 /* InfiniteListWithPullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = E815C50129FA9DE300F286C8 /* InfiniteListWithPullToRefresh.swift */; };
+		E84CCAAA29FBE42000B82D66 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = E84CCAA929FBE42000B82D66 /* SwiftUIPullToRefresh */; };
+		E84CCAAC29FBE5BE00B82D66 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CCAAB29FBE5BE00B82D66 /* ListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,7 @@
 		E815C4FB29F916C700F286C8 /* UrlWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlWebView.swift; sourceTree = "<group>"; };
 		E815C4FF29FA95B700F286C8 /* InfiniteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteList.swift; sourceTree = "<group>"; };
 		E815C50129FA9DE300F286C8 /* InfiniteListWithPullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteListWithPullToRefresh.swift; sourceTree = "<group>"; };
+		E84CCAAB29FBE5BE00B82D66 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84CCAAA29FBE42000B82D66 /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +110,7 @@
 			children = (
 				E815C4FF29FA95B700F286C8 /* InfiniteList.swift */,
 				E815C50129FA9DE300F286C8 /* InfiniteListWithPullToRefresh.swift */,
+				E84CCAAB29FBE5BE00B82D66 /* ListItem.swift */,
 			);
 			path = InfiniteList;
 			sourceTree = "<group>";
@@ -126,6 +131,9 @@
 			dependencies = (
 			);
 			name = InifiniteList;
+			packageProductDependencies = (
+				E84CCAA929FBE42000B82D66 /* SwiftUIPullToRefresh */,
+			);
 			productName = InifiniteList;
 			productReference = E815C4DE29F915F100F286C8 /* InifiniteList.app */;
 			productType = "com.apple.product-type.application";
@@ -154,6 +162,9 @@
 				Base,
 			);
 			mainGroup = E815C4D529F915F100F286C8;
+			packageReferences = (
+				E84CCAA829FBE42000B82D66 /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */,
+			);
 			productRefGroup = E815C4DF29F915F100F286C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -180,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84CCAAC29FBE5BE00B82D66 /* ListItem.swift in Sources */,
 				E815C50229FA9DE300F286C8 /* InfiniteListWithPullToRefresh.swift in Sources */,
 				E815C4F629F9168500F286C8 /* NewsFeed.swift in Sources */,
 				E815C4F429F9166900F286C8 /* NewsListItemListView.swift in Sources */,
@@ -393,6 +405,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E84CCAA829FBE42000B82D66 /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-pull-to-refresh";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E84CCAA929FBE42000B82D66 /* SwiftUIPullToRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E84CCAA829FBE42000B82D66 /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */;
+			productName = SwiftUIPullToRefresh;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E815C4D629F915F100F286C8 /* Project object */;
 }

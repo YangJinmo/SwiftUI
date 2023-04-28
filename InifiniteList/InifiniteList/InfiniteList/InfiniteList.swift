@@ -43,11 +43,7 @@ struct InfiniteList<Data, Content>: View
     }
 }
 
-struct ListItem: Hashable {
-    let text: String
-}
-
-class ListViewModel: ObservableObject {
+private class ListViewModel: ObservableObject {
     @Published var items = [ListItem]()
     @Published var isLoading = false
     private var page = 1
@@ -72,12 +68,14 @@ class ListViewModel: ObservableObject {
 }
 
 struct InifiniteListTest: View {
-    @ObservedObject var viewModel: ListViewModel
+    @ObservedObject fileprivate var viewModel: ListViewModel
 
     var body: some View {
-        InfiniteList(data: $viewModel.items,
-                     isLoading: $viewModel.isLoading,
-                     loadMore: viewModel.loadMore) { item in
+        InfiniteList(
+            data: $viewModel.items,
+            isLoading: $viewModel.isLoading,
+            loadMore: viewModel.loadMore
+        ) { item in
             Text(item.text)
         }
     }
