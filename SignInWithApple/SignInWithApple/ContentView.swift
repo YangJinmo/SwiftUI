@@ -23,7 +23,10 @@ struct ContentView: View {
                     .font(.headline)
             }
             .onReceive(NotificationCenter.default.publisher(for: ASAuthorizationAppleIDProvider.credentialRevokedNotification)) { notification in
+                // A notification that indicates the user’s credentials have been revoked and they should be signed out.
+                // 사용자의 자격 증명이 취소되었으며 로그아웃해야 함을 나타내는 알림입니다.
                 // Perform any necessary actions when credentials are revoked
+                // 자격 증명이 취소되면 필요한 조치를 수행합니다.
                 print("Credentials revoked!: \(notification)")
                 self.alertMessage = AlertMessage(title: "credentialRevokedNotification", message: "Credentials revoked")
             }
