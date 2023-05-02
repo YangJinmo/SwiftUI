@@ -1,5 +1,5 @@
 //
-//  MatchedView.swift
+//  MatchedViewPart1.swift
 //  CustomTransitionBetweenScreens
 //
 //  Created by Jmy on 2023/05/01.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MatchedView: View {
+struct MatchedViewPart1: View {
     @Namespace var namespace
     @State var show = false
 
@@ -63,6 +63,6 @@ struct MatchedView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MatchedView()
+        MatchedViewPart1()
     }
 }

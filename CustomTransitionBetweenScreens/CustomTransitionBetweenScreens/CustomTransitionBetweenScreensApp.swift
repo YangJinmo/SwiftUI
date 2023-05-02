@@ -11,7 +11,7 @@ import SwiftUI
 struct CustomTransitionBetweenScreensApp: App {
     var body: some Scene {
         WindowGroup {
-            MatchedView()
+            MatchedViewPart1()
         }
     }
 }
