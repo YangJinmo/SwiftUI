@@ -14,20 +14,29 @@ struct MatchedViewPart2: View {
     var body: some View {
         ZStack {
             if !show {
-                VStack(alignment: .leading, spacing: 12) {
+                VStack {
                     Spacer()
-                    Text("SwiftUI")
-                        .font(.largeTitle.weight(.bold))
-                        .matchedGeometryEffect(id: "title", in: namespace)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("20 sections - 3 hours".uppercased())
-                        .font(.footnote.weight(.semibold))
-                        .matchedGeometryEffect(id: "subtitle", in: namespace)
-                    Text("Build an iOS app for 15 with custom layouts, animations and ...")
-                        .font(.footnote)
-                        .matchedGeometryEffect(id: "text", in: namespace)
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("SwiftUI")
+                            .font(.largeTitle.weight(.bold))
+                            .matchedGeometryEffect(id: "title", in: namespace)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Text("20 sections - 3 hours".uppercased())
+                            .font(.footnote.weight(.semibold))
+                            .matchedGeometryEffect(id: "subtitle", in: namespace)
+                        Text("Build an iOS app for 15 with custom layouts, animations and ...")
+                            .font(.footnote)
+                            .matchedGeometryEffect(id: "text", in: namespace)
+                    }
+                    .padding(20)
+                    .background(
+                        Rectangle()
+                            .fill(.ultraThinMaterial)
+                            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                            .blur(radius: 30)
+                            .matchedGeometryEffect(id: "blur", in: namespace)
+                    )
                 }
-                .padding(20)
                 .foregroundColor(.white)
                 .background(
                     Image("Swift")
@@ -48,36 +57,52 @@ struct MatchedViewPart2: View {
                 .frame(height: 570)
                 .padding(20)
             } else {
-                VStack(alignment: .leading, spacing: 12) {
-                    Spacer()
-                    Text("Build an iOS app for 15 with custom layouts, animations and ...")
-                        .font(.footnote)
-                        .matchedGeometryEffect(id: "text", in: namespace)
-                    Text("20 sections - 3 hours".uppercased())
-                        .font(.footnote.weight(.semibold))
-                        .matchedGeometryEffect(id: "subtitle", in: namespace)
-                    Text("SwiftUI")
-                        .font(.largeTitle.weight(.bold))
-                        .matchedGeometryEffect(id: "title", in: namespace)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .padding(20)
-                .foregroundColor(.white)
-                .background(
-                    Image("Swift")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .matchedGeometryEffect(id: "image", in: namespace)
-                )
-                .background(
-                    Image("macOS-Monterey-Apple-Stock-Wallpaper-still-5")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .matchedGeometryEffect(id: "background", in: namespace)
-                )
-                .mask {
-                    RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .matchedGeometryEffect(id: "mask", in: namespace)
+                ScrollView {
+                    VStack {
+                        Spacer()
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 500)
+                    .foregroundColor(.black)
+                    .background(
+                        Image("Swift")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .matchedGeometryEffect(id: "image", in: namespace)
+                    )
+                    .background(
+                        Image("macOS-Monterey-Apple-Stock-Wallpaper-still-5")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .matchedGeometryEffect(id: "background", in: namespace)
+                    )
+                    .mask {
+                        RoundedRectangle(cornerRadius: 30, style: .continuous)
+                            .matchedGeometryEffect(id: "mask", in: namespace)
+                    }
+                    .overlay(
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Build an iOS app for 15 with custom layouts, animations and ...")
+                                .font(.footnote)
+                                .matchedGeometryEffect(id: "text", in: namespace)
+                            Text("20 sections - 3 hours".uppercased())
+                                .font(.footnote.weight(.semibold))
+                                .matchedGeometryEffect(id: "subtitle", in: namespace)
+                            Text("SwiftUI")
+                                .font(.largeTitle.weight(.bold))
+                                .matchedGeometryEffect(id: "title", in: namespace)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .padding(20)
+                        .background(
+                            Rectangle()
+                                .fill(.ultraThinMaterial)
+                                .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                                .matchedGeometryEffect(id: "blur", in: namespace)
+                        )
+                        .offset(y: 250)
+                        .padding(20)
+                    )
                 }
             }
         }
