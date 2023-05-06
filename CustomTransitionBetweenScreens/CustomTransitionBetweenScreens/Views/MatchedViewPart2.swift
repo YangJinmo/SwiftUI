@@ -82,16 +82,31 @@ struct MatchedViewPart2: View {
                     }
                     .overlay(
                         VStack(alignment: .leading, spacing: 12) {
-                            Text("Build an iOS app for 15 with custom layouts, animations and ...")
-                                .font(.footnote)
-                                .matchedGeometryEffect(id: "text", in: namespace)
-                            Text("20 sections - 3 hours".uppercased())
-                                .font(.footnote.weight(.semibold))
-                                .matchedGeometryEffect(id: "subtitle", in: namespace)
                             Text("SwiftUI")
                                 .font(.largeTitle.weight(.bold))
                                 .matchedGeometryEffect(id: "title", in: namespace)
                                 .frame(maxWidth: .infinity, alignment: .leading)
+                            Text("20 sections - 3 hours".uppercased())
+                                .font(.footnote.weight(.semibold))
+                                .matchedGeometryEffect(id: "subtitle", in: namespace)
+                            Text("Build an iOS app for 15 with custom layouts, animations and ...")
+                                .font(.footnote)
+                                .matchedGeometryEffect(id: "text", in: namespace)
+
+                            Divider()
+
+                            HStack {
+                                Image(systemName: "person.crop.circle.fill")
+                                    .resizable()
+                                    .frame(width: 26, height: 26)
+                                    .cornerRadius(10)
+                                    .padding(8)
+                                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous)
+                                    )
+
+                                Text("Taught by Meng To")
+                                    .font(.footnote)
+                            }
                         }
                         .padding(20)
                         .background(
