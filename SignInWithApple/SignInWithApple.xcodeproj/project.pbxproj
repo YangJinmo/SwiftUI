@@ -13,6 +13,7 @@
 		E84CCAC129FD4F3E00B82D66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84CCAC029FD4F3E00B82D66 /* Preview Assets.xcassets */; };
 		E84CCAC929FD59B900B82D66 /* AppleSigninButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CCAC829FD59B900B82D66 /* AppleSigninButton.swift */; };
 		E84CCACB29FD59FE00B82D66 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CCACA29FD59FE00B82D66 /* AlertMessage.swift */; };
+		E88B3BB32A08F701007FF35A /* CustomSignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88B3BB22A08F701007FF35A /* CustomSignInWithAppleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E84CCAC729FD55BC00B82D66 /* SignInWithApple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignInWithApple.entitlements; sourceTree = "<group>"; };
 		E84CCAC829FD59B900B82D66 /* AppleSigninButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSigninButton.swift; sourceTree = "<group>"; };
 		E84CCACA29FD59FE00B82D66 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		E88B3BB22A08F701007FF35A /* CustomSignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInWithAppleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				E84CCAB929FD4F3C00B82D66 /* SignInWithAppleApp.swift */,
 				E84CCABB29FD4F3C00B82D66 /* ContentView.swift */,
 				E84CCAC829FD59B900B82D66 /* AppleSigninButton.swift */,
+				E88B3BB22A08F701007FF35A /* CustomSignInWithAppleButton.swift */,
 				E84CCACA29FD59FE00B82D66 /* AlertMessage.swift */,
 				E84CCABD29FD4F3E00B82D66 /* Assets.xcassets */,
 				E84CCABF29FD4F3E00B82D66 /* Preview Content */,
@@ -148,6 +151,7 @@
 				E84CCABC29FD4F3C00B82D66 /* ContentView.swift in Sources */,
 				E84CCABA29FD4F3C00B82D66 /* SignInWithAppleApp.swift in Sources */,
 				E84CCACB29FD59FE00B82D66 /* AlertMessage.swift in Sources */,
+				E88B3BB32A08F701007FF35A /* CustomSignInWithAppleButton.swift in Sources */,
 				E84CCAC929FD59B900B82D66 /* AppleSigninButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +290,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +321,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

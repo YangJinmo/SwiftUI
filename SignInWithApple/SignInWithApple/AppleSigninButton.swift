@@ -11,16 +11,18 @@ import SwiftUI
 struct AppleSigninButton: View {
     var body: some View {
         SignInWithAppleButton(
+            .signIn,
             onRequest: { request in
                 request.requestedScopes = [.fullName, .email]
             },
             onCompletion: { result in
                 switch result {
-                case let .success(authResults):
+                case let .success(authorization):
                     print("Apple Login Successful")
 
-                    switch authResults.credential {
+                    switch authorization.credential {
                     case let appleIDCredential as ASAuthorizationAppleIDCredential:
+
                         let userID = appleIDCredential.user
                         let fullName = appleIDCredential.fullName
                         let name = (fullName?.familyName ?? "") + (fullName?.givenName ?? "")
@@ -34,6 +36,15 @@ struct AppleSigninButton: View {
                         print("email: \(email ?? "")")
                         print("identityToken: \(identityToken ?? "")")
                         print("authorizationCode: \(authorizationCode ?? "")")
+
+                    case let passwordCredential as ASPasswordCredential:
+
+                        // Sign in using an existing iCloud Keychain credential.
+                        let username = passwordCredential.user
+                        let password = passwordCredential.password
+                        print("username: \(username)")
+                        print("password: \(password)")
+
                     default:
                         break
                     }
