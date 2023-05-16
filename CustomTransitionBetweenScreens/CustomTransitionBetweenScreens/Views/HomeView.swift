@@ -21,6 +21,8 @@ struct HomeView: View {
 
 //                featured
                 
+                FeaturedItem()
+                
                 Text("Courses".uppercased())
                     .font(.footnote.weight(.semibold))
                     .foregroundColor(.secondary)
