@@ -20,9 +20,9 @@ struct HomeView: View {
 //                scrollDetection
 
 //                featured
-                
+
                 FeaturedItem()
-                
+
                 Text("Courses".uppercased())
                     .font(.footnote.weight(.semibold))
                     .foregroundColor(.secondary)
@@ -37,16 +37,16 @@ struct HomeView: View {
                             }
                         }
                 }
-
-                Color.clear.frame(height: 1000)
             }
             .coordinateSpace(name: "scroll")
             .safeAreaInset(edge: .top) {
                 Color.clear.frame(height: 70)
             }
-//            .overlay(
-//                NavigationBar(title: "Featured", hasScrolled: $hasScrolled)
-//            )
+            .overlay {
+                NavigationBar(title: "Featured")
+                // NavigationBar(title: "Featured", hasScrolled: $hasScrolled)
+            }
+
             if show {
                 CourseView(namespace: namespace, show: $show)
             }
