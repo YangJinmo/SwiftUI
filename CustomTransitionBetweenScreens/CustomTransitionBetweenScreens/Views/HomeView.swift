@@ -43,8 +43,7 @@ struct HomeView: View {
                 Color.clear.frame(height: 70)
             }
             .overlay {
-                NavigationBar(title: "Featured")
-                // NavigationBar(title: "Featured", hasScrolled: $hasScrolled)
+                NavigationBar(title: "Featured", hasScrolled: $hasScrolled)
             }
 
             if show {
