@@ -17,11 +17,28 @@ struct HomeView: View {
             Color("Background").ignoresSafeArea()
 
             ScrollView {
+//                GeometryReader { proxy in
+//                    Text("\(proxy.frame(in: .named("scroll")).minY)")
+//                    Color.clear.preference(value: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
+//                }
+//                .frame(height: 0)
+
 //                scrollDetection
 
 //                featured
 
-                FeaturedItem()
+                TabView {
+                    ForEach(courses) { item in
+                        FeaturedItem(course: item)
+                    }
+                }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .frame(height: 430)
+                .background(
+                    Image("COMINGSOON")
+                        .offset(x: 250, y: -100)
+                        .opacity(0.5)
+                )
 
                 Text("Courses".uppercased())
                     .font(.footnote.weight(.semibold))

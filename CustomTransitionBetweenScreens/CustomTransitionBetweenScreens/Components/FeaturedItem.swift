@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct FeaturedItem: View {
+    var course: Course
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Spacer()
 
-            Image("swiftui-96x96_2x")
+            Image(course.logo)
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 26, height: 26)
@@ -20,7 +22,7 @@ struct FeaturedItem: View {
                 .padding(9)
                 .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
 
-            Text("SwiftUI for iOS 15")
+            Text(course.title)
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundStyle(
@@ -32,12 +34,12 @@ struct FeaturedItem: View {
                 )
                 .lineLimit(1)
 
-            Text("20 sections - 3 hours".uppercased())
+            Text(course.subtitle.uppercased())
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .foregroundStyle(.secondary)
 
-            Text("Build an iOS app for iOS 15 with custom layouts, animations and ...")
+            Text(course.text)
                 .font(.footnote)
                 .multilineTextAlignment(.leading)
                 .lineLimit(2)
@@ -50,22 +52,29 @@ struct FeaturedItem: View {
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
 //        .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x: 0, y: 10)
         .padding(.horizontal, 20)
-        .background(
-            Image("COMINGSOON")
-                .offset(x: 250, y: -100)
-        )
         .overlay(
-            Image("swiftui-96x96_2x")
+            Image(course.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 230)
-                .offset(x: 32, y: -80)
+                .frame(maxWidth: 250, maxHeight: 250)
+                .offset(x: 32, y: -100)
         )
     }
 }
 
 struct FeaturedItem_Previews: PreviewProvider {
     static var previews: some View {
-        FeaturedItem()
+        TabView {
+            ForEach(courses) { item in
+                FeaturedItem(course: item)
+            }
+        }
+        .tabViewStyle(.page(indexDisplayMode: .never))
+        .frame(height: 430)
+        .background(
+            Image("COMINGSOON")
+                .offset(x: 250, y: -100)
+                .opacity(0.5)
+        )
     }
 }
