@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E831C3C22A1B5B8B004AFD2A /* CustomSignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831C3C12A1B5B8B004AFD2A /* CustomSignInWithAppleButton.swift */; };
+		E831C3C42A1B5D50004AFD2A /* SignInWithAppleDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831C3C32A1B5D50004AFD2A /* SignInWithAppleDelegates.swift */; };
 		E84CCABA29FD4F3C00B82D66 /* SignInWithAppleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CCAB929FD4F3C00B82D66 /* SignInWithAppleApp.swift */; };
 		E84CCABC29FD4F3C00B82D66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CCABB29FD4F3C00B82D66 /* ContentView.swift */; };
 		E84CCABE29FD4F3E00B82D66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84CCABD29FD4F3E00B82D66 /* Assets.xcassets */; };
 		E84CCAC129FD4F3E00B82D66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84CCAC029FD4F3E00B82D66 /* Preview Assets.xcassets */; };
 		E84CCAC929FD59B900B82D66 /* AppleSigninButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CCAC829FD59B900B82D66 /* AppleSigninButton.swift */; };
 		E84CCACB29FD59FE00B82D66 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CCACA29FD59FE00B82D66 /* AlertMessage.swift */; };
-		E88B3BB32A08F701007FF35A /* CustomSignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88B3BB22A08F701007FF35A /* CustomSignInWithAppleButton.swift */; };
+		E88B3BB32A08F701007FF35A /* CustomSignInWithAppleButtonWithAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88B3BB22A08F701007FF35A /* CustomSignInWithAppleButtonWithAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E831C3C12A1B5B8B004AFD2A /* CustomSignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInWithAppleButton.swift; sourceTree = "<group>"; };
+		E831C3C32A1B5D50004AFD2A /* SignInWithAppleDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleDelegates.swift; sourceTree = "<group>"; };
 		E84CCAB629FD4F3C00B82D66 /* SignInWithApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignInWithApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84CCAB929FD4F3C00B82D66 /* SignInWithAppleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleApp.swift; sourceTree = "<group>"; };
 		E84CCABB29FD4F3C00B82D66 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,7 +29,7 @@
 		E84CCAC729FD55BC00B82D66 /* SignInWithApple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SignInWithApple.entitlements; sourceTree = "<group>"; };
 		E84CCAC829FD59B900B82D66 /* AppleSigninButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSigninButton.swift; sourceTree = "<group>"; };
 		E84CCACA29FD59FE00B82D66 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
-		E88B3BB22A08F701007FF35A /* CustomSignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInWithAppleButton.swift; sourceTree = "<group>"; };
+		E88B3BB22A08F701007FF35A /* CustomSignInWithAppleButtonWithAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignInWithAppleButtonWithAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E831C3C52A1B5DAD004AFD2A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E84CCAC829FD59B900B82D66 /* AppleSigninButton.swift */,
+				E88B3BB22A08F701007FF35A /* CustomSignInWithAppleButtonWithAction.swift */,
+				E831C3C12A1B5B8B004AFD2A /* CustomSignInWithAppleButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		E84CCAAD29FD4F3C00B82D66 = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +72,11 @@
 		E84CCAB829FD4F3C00B82D66 /* SignInWithApple */ = {
 			isa = PBXGroup;
 			children = (
+				E831C3C52A1B5DAD004AFD2A /* Components */,
 				E84CCAC729FD55BC00B82D66 /* SignInWithApple.entitlements */,
 				E84CCAB929FD4F3C00B82D66 /* SignInWithAppleApp.swift */,
 				E84CCABB29FD4F3C00B82D66 /* ContentView.swift */,
-				E84CCAC829FD59B900B82D66 /* AppleSigninButton.swift */,
-				E88B3BB22A08F701007FF35A /* CustomSignInWithAppleButton.swift */,
+				E831C3C32A1B5D50004AFD2A /* SignInWithAppleDelegates.swift */,
 				E84CCACA29FD59FE00B82D66 /* AlertMessage.swift */,
 				E84CCABD29FD4F3E00B82D66 /* Assets.xcassets */,
 				E84CCABF29FD4F3E00B82D66 /* Preview Content */,
@@ -148,10 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E831C3C42A1B5D50004AFD2A /* SignInWithAppleDelegates.swift in Sources */,
 				E84CCABC29FD4F3C00B82D66 /* ContentView.swift in Sources */,
 				E84CCABA29FD4F3C00B82D66 /* SignInWithAppleApp.swift in Sources */,
+				E831C3C22A1B5B8B004AFD2A /* CustomSignInWithAppleButton.swift in Sources */,
 				E84CCACB29FD59FE00B82D66 /* AlertMessage.swift in Sources */,
-				E88B3BB32A08F701007FF35A /* CustomSignInWithAppleButton.swift in Sources */,
+				E88B3BB32A08F701007FF35A /* CustomSignInWithAppleButtonWithAction.swift in Sources */,
 				E84CCAC929FD59B900B82D66 /* AppleSigninButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

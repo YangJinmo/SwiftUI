@@ -9,16 +9,23 @@ import AuthenticationServices
 import SwiftUI
 
 struct ContentView: View {
+    @State private var appleSignInDelegates: SignInWithAppleDelegates! = nil
     @State private var alertMessage: AlertMessage?
+
     private let userID = ""
 
     var body: some View {
         VStack {
             AppleSigninButton()
 
+            CustomSignInWithAppleButtonWithAction()
+                .frame(height: 48)
+                .padding(.horizontal, 20)
+
             CustomSignInWithAppleButton()
                 .frame(height: 48)
                 .padding(.horizontal, 20)
+                .onTapGesture(perform: showAppleLogin)
 
             Button {
                 getCredentialState(forUserID: userID)
@@ -44,6 +51,31 @@ struct ContentView: View {
                 dismissButton: .default(Text("OK"))
             )
         }
+    }
+
+    private func showAppleLogin() {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+
+        performSignIn(using: [request])
+    }
+
+    private func performSignIn(using requests: [ASAuthorizationRequest]) {
+        appleSignInDelegates = SignInWithAppleDelegates { success in
+            if success {
+                // update UI
+                print("update UI")
+            } else {
+                // show the user an error
+                print("show the user an error")
+            }
+        }
+
+        let controller = ASAuthorizationController(authorizationRequests: requests)
+        controller.delegate = appleSignInDelegates
+        controller.presentationContextProvider = appleSignInDelegates as? any ASAuthorizationControllerPresentationContextProviding
+
+        controller.performRequests()
     }
 
     private func getCredentialState(forUserID userID: String) {

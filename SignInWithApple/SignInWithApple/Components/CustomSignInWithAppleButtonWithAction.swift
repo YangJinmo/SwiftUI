@@ -1,5 +1,5 @@
 //
-//  CustomSignInWithAppleButton.swift
+//  CustomSignInWithAppleButtonWithAction.swift
 //  SignInWithApple
 //
 //  Created by Jmy on 2023/05/08.
@@ -8,7 +8,7 @@
 import AuthenticationServices
 import SwiftUI
 
-struct CustomSignInWithAppleButton: UIViewRepresentable {
+struct CustomSignInWithAppleButtonWithAction: UIViewRepresentable {
     func makeUIView(context: Context) -> UIButton {
         var titleAttr = AttributedString("Apple로 계속하기")
         titleAttr.font = .systemFont(ofSize: 20.0, weight: .bold)
@@ -70,7 +70,7 @@ struct CustomSignInWithAppleButton: UIViewRepresentable {
     }
 }
 
-extension CustomSignInWithAppleButton.Coordinator: ASAuthorizationControllerDelegate {
+extension CustomSignInWithAppleButtonWithAction.Coordinator: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         print("Apple Login Successful")
 
