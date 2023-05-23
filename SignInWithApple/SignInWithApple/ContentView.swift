@@ -6,11 +6,13 @@
 //
 
 import AuthenticationServices
+import PopupView
 import SwiftUI
 
 struct ContentView: View {
     @State private var appleSignInDelegates: SignInWithAppleDelegates! = nil
     @State private var alertMessage: AlertMessage?
+    @State private var isPresented: Bool = false
 
     private let userID = ""
 
@@ -51,6 +53,15 @@ struct ContentView: View {
                 dismissButton: .default(Text("OK"))
             )
         }
+        .popup(isPresented: $isPresented) {
+            ToastBottomFirst(isShowing: $isPresented)
+        } customize: {
+            $0
+                .type(.toast)
+                .position(.bottom)
+                .closeOnTap(false)
+                .backgroundColor(.black.opacity(0.4))
+        }
     }
 
     private func showAppleLogin() {
@@ -65,6 +76,7 @@ struct ContentView: View {
             if success {
                 // update UI
                 print("update UI")
+                isPresented = true
             } else {
                 // show the user an error
                 print("show the user an error")

@@ -86,5 +86,6 @@ extension SignInWithAppleDelegates: ASAuthorizationControllerDelegate {
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
+        print("Apple Login Error: \(error.localizedDescription)")
     }
 }
