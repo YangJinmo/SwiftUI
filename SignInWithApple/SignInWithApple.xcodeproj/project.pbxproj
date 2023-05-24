@@ -12,6 +12,7 @@
 		E831C3C82A1B5F9C004AFD2A /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = E831C3C72A1B5F9C004AFD2A /* PopupView */; };
 		E831C3CA2A1B6153004AFD2A /* ToastBottomFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831C3C92A1B6153004AFD2A /* ToastBottomFirst.swift */; };
 		E831C3CD2A1B61A7004AFD2A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831C3CC2A1B61A7004AFD2A /* Utils.swift */; };
+		E831C3D52A1E00F9004AFD2A /* ToastBottomTermsAgreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831C3D42A1E00F9004AFD2A /* ToastBottomTermsAgreeView.swift */; };
 		E84CCABA29FD4F3C00B82D66 /* SignInWithAppleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CCAB929FD4F3C00B82D66 /* SignInWithAppleApp.swift */; };
 		E84CCABC29FD4F3C00B82D66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84CCABB29FD4F3C00B82D66 /* ContentView.swift */; };
 		E84CCABE29FD4F3E00B82D66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84CCABD29FD4F3E00B82D66 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		E831C3C32A1B5D50004AFD2A /* SignInWithAppleDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleDelegates.swift; sourceTree = "<group>"; };
 		E831C3C92A1B6153004AFD2A /* ToastBottomFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastBottomFirst.swift; sourceTree = "<group>"; };
 		E831C3CC2A1B61A7004AFD2A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		E831C3D42A1E00F9004AFD2A /* ToastBottomTermsAgreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastBottomTermsAgreeView.swift; sourceTree = "<group>"; };
 		E84CCAB629FD4F3C00B82D66 /* SignInWithApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignInWithApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84CCAB929FD4F3C00B82D66 /* SignInWithAppleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleApp.swift; sourceTree = "<group>"; };
 		E84CCABB29FD4F3C00B82D66 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				E88B3BB22A08F701007FF35A /* CustomSignInWithAppleButtonWithAction.swift */,
 				E831C3C12A1B5B8B004AFD2A /* CustomSignInWithAppleButton.swift */,
 				E831C3C92A1B6153004AFD2A /* ToastBottomFirst.swift */,
+				E831C3D42A1E00F9004AFD2A /* ToastBottomTermsAgreeView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E831C3D52A1E00F9004AFD2A /* ToastBottomTermsAgreeView.swift in Sources */,
 				E831C3C42A1B5D50004AFD2A /* SignInWithAppleDelegates.swift in Sources */,
 				E831C3CA2A1B6153004AFD2A /* ToastBottomFirst.swift in Sources */,
 				E831C3CD2A1B61A7004AFD2A /* Utils.swift in Sources */,
