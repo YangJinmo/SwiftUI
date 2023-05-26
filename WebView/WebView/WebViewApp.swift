@@ -11,7 +11,7 @@ import SwiftUI
 struct WebViewApp: App {
     var body: some Scene {
         WindowGroup {
-            WebViewLoadHTML(html: """
+            HTMLWebViewRepresentable(html: """
             <html>
             <body>
             <h1>Hello, world!</h1>
