@@ -173,16 +173,29 @@ extension UIApplication {
     }
 }
 
-import UIKit
+import UIKit.UIGeometry
+
+extension UIEdgeInsets {
+    static var safeAreaInsets: UIEdgeInsets {
+        return UIApplication.sharedKeyWindow?.safeAreaInsets ?? UIEdgeInsets()
+    }
+}
+
+import CoreFoundation
+import UIKit.UIGeometry
 
 extension CGFloat {
-    static let toastBottom: CGFloat = {
-        guard let bottom = UIApplication.sharedKeyWindow?.safeAreaInsets.bottom else {
-            return 20
-        }
+    static var top: CGFloat {
+        return UIEdgeInsets.safeAreaInsets.top
+    }
 
+    static var bottom: CGFloat {
+        return UIEdgeInsets.safeAreaInsets.bottom
+    }
+
+    static var toastBottom: CGFloat {
         return bottom > 0 ? bottom : 20
-    }()
+    }
 }
 
 struct TermsDTO: Codable, Identifiable {
