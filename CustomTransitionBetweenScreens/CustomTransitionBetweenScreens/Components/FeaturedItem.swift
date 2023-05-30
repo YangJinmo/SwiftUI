@@ -49,16 +49,10 @@ struct FeaturedItem: View {
         .padding(20)
         .padding(.vertical, 20)
         .frame(height: 350)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
-//        .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x: 0, y: 10)
+        .background(.ultraThinMaterial)
+        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+        .strokeStyle()
         .padding(.horizontal, 20)
-        .overlay(
-            Image(course.image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: 250, maxHeight: 250)
-                .offset(x: 32, y: -100)
-        )
     }
 }
 
