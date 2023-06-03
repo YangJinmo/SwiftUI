@@ -22,6 +22,7 @@ struct PhotoPickerResultView: View {
     @State private var url: URL?
     @State private var livePhoto: PHLivePhoto?
 
+    @State private var progress: Progress?
     @State private var loaded = false
     @State private var latestErrorDescription = ""
 
@@ -29,7 +30,7 @@ struct PhotoPickerResultView: View {
         Group {
             switch mediaType {
             case .loading:
-                ProgressView()
+                ProgressView(value: progress?.fractionCompleted)
 
             case .error:
                 VStack {
@@ -95,7 +96,7 @@ struct PhotoPickerResultView: View {
             return
         }
 
-        itemProvider.loadObject(ofClass: objectType) { object, error in
+        progress = itemProvider.loadObject(ofClass: objectType) { object, error in
             if let error = error {
                 print(error.localizedDescription)
                 latestErrorDescription = error.localizedDescription
@@ -131,7 +132,7 @@ struct PhotoPickerResultView: View {
             return
         }
 
-        itemProvider.loadFileRepresentation(forTypeIdentifier: typeIdentifier) { url, error in
+        progress = itemProvider.loadFileRepresentation(forTypeIdentifier: typeIdentifier) { url, error in
             if let error = error {
                 print(error.localizedDescription)
                 latestErrorDescription = error.localizedDescription

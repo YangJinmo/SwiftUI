@@ -15,15 +15,12 @@ struct LivePhotoView: UIViewRepresentable {
 
     func makeUIView(context: Context) -> PHLivePhotoView {
         let livePhotoView = PHLivePhotoView()
-        livePhotoView.livePhoto = livePhoto
-
-        // Enable the following optionally to see live photo
-        // playing back when it appears.
-        // livePhotoView.startPlayback(with: .hint)
-
+        livePhotoView.contentMode = .scaleAspectFit
         return livePhotoView
     }
 
     func updateUIView(_ uiView: PHLivePhotoView, context: Context) {
+        uiView.livePhoto = livePhoto
+        uiView.startPlayback(with: .full)
     }
 }

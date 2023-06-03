@@ -9,7 +9,7 @@ import PhotosUI
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var photoPickerService = PhotoPickerService()
+    @StateObject private var photoPickerService = PhotoPickerService()
 
     var body: some View {
         NavigationView {
