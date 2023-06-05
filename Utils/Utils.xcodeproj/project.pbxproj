@@ -12,6 +12,7 @@
 		E83DC5C52A2CD043006E2E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83DC5C42A2CD043006E2E4F /* Assets.xcassets */; };
 		E83DC5C92A2CD043006E2E4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83DC5C82A2CD043006E2E4F /* Preview Assets.xcassets */; };
 		E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5D02A2CD07C006E2E4F /* GaugeProgressStyle.swift */; };
+		E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E83DC5C62A2CD043006E2E4F /* Utils.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Utils.entitlements; sourceTree = "<group>"; };
 		E83DC5C82A2CD043006E2E4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E83DC5D02A2CD07C006E2E4F /* GaugeProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeProgressStyle.swift; sourceTree = "<group>"; };
+		E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		E83DC5BF2A2CD042006E2E4F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E83DC5D72A2DB83F006E2E4F /* Extensions */,
 				E83DC5CF2A2CD049006E2E4F /* Styles */,
 				E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */,
 				E83DC5C22A2CD042006E2E4F /* ContentView.swift */,
@@ -80,6 +83,23 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		E83DC5D72A2DB83F006E2E4F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E83DC5E52A2DBC09006E2E4F /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E83DC5E52A2DBC09006E2E4F /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E83DC5EA2A2DBCBE006E2E4F /* Color */ = {
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */,
+				E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */,
 				E83DC5C32A2CD042006E2E4F /* ContentView.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
 			);
