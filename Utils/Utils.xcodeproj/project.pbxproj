@@ -12,7 +12,15 @@
 		E83DC5C52A2CD043006E2E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83DC5C42A2CD043006E2E4F /* Assets.xcassets */; };
 		E83DC5C92A2CD043006E2E4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83DC5C82A2CD043006E2E4F /* Preview Assets.xcassets */; };
 		E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5D02A2CD07C006E2E4F /* GaugeProgressStyle.swift */; };
+		E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5D22A2DB3CD006E2E4F /* CheckboxToggleStyle.swift */; };
+		E83DC5D62A2DB806006E2E4F /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5D52A2DB806006E2E4F /* RoundedCorner.swift */; };
+		E83DC5DA2A2DB8FA006E2E4F /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5D92A2DB8FA006E2E4F /* CGFloat.swift */; };
+		E83DC5DD2A2DB97E006E2E4F /* HTMLWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5DC2A2DB97E006E2E4F /* HTMLWebView.swift */; };
+		E83DC5E12A2DBB9D006E2E4F /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */; };
+		E83DC5E42A2DBBD4006E2E4F /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E32A2DBBD4006E2E4F /* KeyboardObserver.swift */; };
+		E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E62A2DBC16006E2E4F /* UIEdgeInsets.swift */; };
 		E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */; };
+		E83DC5ED2A2DBCCD006E2E4F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5EC2A2DBCCD006E2E4F /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +31,15 @@
 		E83DC5C62A2CD043006E2E4F /* Utils.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Utils.entitlements; sourceTree = "<group>"; };
 		E83DC5C82A2CD043006E2E4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E83DC5D02A2CD07C006E2E4F /* GaugeProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeProgressStyle.swift; sourceTree = "<group>"; };
+		E83DC5D22A2DB3CD006E2E4F /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		E83DC5D52A2DB806006E2E4F /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		E83DC5D92A2DB8FA006E2E4F /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		E83DC5DC2A2DB97E006E2E4F /* HTMLWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLWebView.swift; sourceTree = "<group>"; };
+		E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
+		E83DC5E32A2DBBD4006E2E4F /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		E83DC5E62A2DBC16006E2E4F /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		E83DC5EC2A2DBCCD006E2E4F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +72,9 @@
 		E83DC5BF2A2CD042006E2E4F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E83DC5DF2A2DBB7F006E2E4F /* Views */,
 				E83DC5D72A2DB83F006E2E4F /* Extensions */,
+				E83DC5D42A2DB7DA006E2E4F /* Shapes */,
 				E83DC5CF2A2CD049006E2E4F /* Styles */,
 				E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */,
 				E83DC5C22A2CD042006E2E4F /* ContentView.swift */,
@@ -79,27 +97,96 @@
 			isa = PBXGroup;
 			children = (
 				E83DC5D02A2CD07C006E2E4F /* GaugeProgressStyle.swift */,
+				E83DC5D22A2DB3CD006E2E4F /* CheckboxToggleStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		E83DC5D42A2DB7DA006E2E4F /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				E83DC5D52A2DB806006E2E4F /* RoundedCorner.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 		E83DC5D72A2DB83F006E2E4F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E83DC5EB2A2DBCC4006E2E4F /* SwiftUI */,
 				E83DC5E52A2DBC09006E2E4F /* UIKit */,
+				E83DC5D82A2DB84E006E2E4F /* CoreGraphics */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E83DC5D82A2DB84E006E2E4F /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				E83DC5D92A2DB8FA006E2E4F /* CGFloat.swift */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		E83DC5DB2A2DB96E006E2E4F /* Representables */ = {
+			isa = PBXGroup;
+			children = (
+				E83DC5DC2A2DB97E006E2E4F /* HTMLWebView.swift */,
+			);
+			path = Representables;
+			sourceTree = "<group>";
+		};
+		E83DC5DE2A2DBB77006E2E4F /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		E83DC5DF2A2DBB7F006E2E4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E83DC5E22A2DBBC6006E2E4F /* ObservableObjects */,
+				E83DC5DB2A2DB96E006E2E4F /* Representables */,
+				E83DC5DE2A2DBB77006E2E4F /* Commons */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E83DC5E22A2DBBC6006E2E4F /* ObservableObjects */ = {
+			isa = PBXGroup;
+			children = (
+				E83DC5E32A2DBBD4006E2E4F /* KeyboardObserver.swift */,
+			);
+			path = ObservableObjects;
 			sourceTree = "<group>";
 		};
 		E83DC5E52A2DBC09006E2E4F /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */,
+				E83DC5E62A2DBC16006E2E4F /* UIEdgeInsets.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
 		};
 		E83DC5EA2A2DBCBE006E2E4F /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				E83DC5EC2A2DBCCD006E2E4F /* Color.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		E83DC5EB2A2DBCC4006E2E4F /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				E83DC5EA2A2DBCBE006E2E4F /* Color */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +257,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E83DC5DA2A2DB8FA006E2E4F /* CGFloat.swift in Sources */,
+				E83DC5E42A2DBBD4006E2E4F /* KeyboardObserver.swift in Sources */,
 				E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */,
 				E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */,
 				E83DC5C32A2CD042006E2E4F /* ContentView.swift in Sources */,
+				E83DC5ED2A2DBCCD006E2E4F /* Color.swift in Sources */,
+				E83DC5E12A2DBB9D006E2E4F /* CustomNavigationView.swift in Sources */,
+				E83DC5D62A2DB806006E2E4F /* RoundedCorner.swift in Sources */,
+				E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */,
+				E83DC5DD2A2DB97E006E2E4F /* HTMLWebView.swift in Sources */,
+				E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
