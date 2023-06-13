@@ -21,6 +21,7 @@
 		E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E62A2DBC16006E2E4F /* UIEdgeInsets.swift */; };
 		E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */; };
 		E83DC5ED2A2DBCCD006E2E4F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5EC2A2DBCCD006E2E4F /* Color.swift */; };
+		E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E83DC5E62A2DBC16006E2E4F /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		E83DC5EC2A2DBCCD006E2E4F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */,
+				E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E83DC5DA2A2DB8FA006E2E4F /* CGFloat.swift in Sources */,
+				E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */,
 				E83DC5E42A2DBBD4006E2E4F /* KeyboardObserver.swift in Sources */,
 				E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */,
 				E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */,
