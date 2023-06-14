@@ -22,6 +22,7 @@
 		E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */; };
 		E83DC5ED2A2DBCCD006E2E4F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5EC2A2DBCCD006E2E4F /* Color.swift */; };
 		E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */; };
+		E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEF1C22A39B29A0031933E /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		E83DC5EC2A2DBCCD006E2E4F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableTextField.swift; sourceTree = "<group>"; };
+		E8EEF1C22A39B29A0031933E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */,
 				E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */,
+				E8EEF1C22A39B29A0031933E /* CustomTextField.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */,
 				E83DC5DA2A2DB8FA006E2E4F /* CGFloat.swift in Sources */,
 				E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */,
 				E83DC5E42A2DBBD4006E2E4F /* KeyboardObserver.swift in Sources */,
