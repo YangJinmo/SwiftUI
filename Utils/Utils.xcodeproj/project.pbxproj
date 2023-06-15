@@ -22,6 +22,9 @@
 		E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */; };
 		E83DC5ED2A2DBCCD006E2E4F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5EC2A2DBCCD006E2E4F /* Color.swift */; };
 		E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */; };
+		E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B12A3B17A20096E57E /* TagTextField.swift */; };
+		E8BF16B42A3B17ED0096E57E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B32A3B17ED0096E57E /* Font.swift */; };
+		E8BF16B72A3B18800096E57E /* TextFieldClearButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B62A3B18800096E57E /* TextFieldClearButtonViewModifier.swift */; };
 		E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEF1C22A39B29A0031933E /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		E83DC5EC2A2DBCCD006E2E4F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableTextField.swift; sourceTree = "<group>"; };
+		E8BF16B12A3B17A20096E57E /* TagTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTextField.swift; sourceTree = "<group>"; };
+		E8BF16B32A3B17ED0096E57E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		E8BF16B62A3B18800096E57E /* TextFieldClearButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldClearButtonViewModifier.swift; sourceTree = "<group>"; };
 		E8EEF1C22A39B29A0031933E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +152,7 @@
 				E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */,
 				E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */,
 				E8EEF1C22A39B29A0031933E /* CustomTextField.swift */,
+				E8BF16B12A3B17A20096E57E /* TagTextField.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -154,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				E83DC5E22A2DBBC6006E2E4F /* ObservableObjects */,
+				E8BF16B52A3B185D0096E57E /* ViewModifiers */,
 				E83DC5DB2A2DB96E006E2E4F /* Representables */,
 				E83DC5DE2A2DBB77006E2E4F /* Commons */,
 			);
@@ -177,20 +185,21 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		E83DC5EA2A2DBCBE006E2E4F /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				E83DC5EC2A2DBCCD006E2E4F /* Color.swift */,
-			);
-			path = Color;
-			sourceTree = "<group>";
-		};
 		E83DC5EB2A2DBCC4006E2E4F /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				E83DC5EA2A2DBCBE006E2E4F /* Color */,
+				E83DC5EC2A2DBCCD006E2E4F /* Color.swift */,
+				E8BF16B32A3B17ED0096E57E /* Font.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		E8BF16B52A3B185D0096E57E /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				E8BF16B62A3B18800096E57E /* TextFieldClearButtonViewModifier.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +283,11 @@
 				E83DC5E12A2DBB9D006E2E4F /* CustomNavigationView.swift in Sources */,
 				E83DC5D62A2DB806006E2E4F /* RoundedCorner.swift in Sources */,
 				E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */,
+				E8BF16B72A3B18800096E57E /* TextFieldClearButtonViewModifier.swift in Sources */,
 				E83DC5DD2A2DB97E006E2E4F /* HTMLWebView.swift in Sources */,
+				E8BF16B42A3B17ED0096E57E /* Font.swift in Sources */,
 				E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */,
+				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
