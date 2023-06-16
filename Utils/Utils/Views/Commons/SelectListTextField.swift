@@ -75,9 +75,11 @@ struct SelectListTextFieldView: View {
         } + [.cancel()]
 
         return SelectListTextField(text: $selectedExperienceType.fullName, placeholder: "제품을 접하게 된 경로를 선택해 주세요.")
+            .onAppear {
+                getReviewExperienceTypes()
+            }
             .onTapGesture {
                 // endEditing()
-                getReviewExperienceTypes()
             }
             .actionSheet(isPresented: $isShowingDialog) {
                 ActionSheet(
