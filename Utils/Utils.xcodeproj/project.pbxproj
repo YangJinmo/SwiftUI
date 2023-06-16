@@ -25,6 +25,7 @@
 		E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B12A3B17A20096E57E /* TagTextField.swift */; };
 		E8BF16B42A3B17ED0096E57E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B32A3B17ED0096E57E /* Font.swift */; };
 		E8BF16B72A3B18800096E57E /* TextFieldClearButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B62A3B18800096E57E /* TextFieldClearButtonViewModifier.swift */; };
+		E8BF16B92A3BED170096E57E /* SelectListTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B82A3BED170096E57E /* SelectListTextField.swift */; };
 		E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEF1C22A39B29A0031933E /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		E8BF16B12A3B17A20096E57E /* TagTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTextField.swift; sourceTree = "<group>"; };
 		E8BF16B32A3B17ED0096E57E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		E8BF16B62A3B18800096E57E /* TextFieldClearButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldClearButtonViewModifier.swift; sourceTree = "<group>"; };
+		E8BF16B82A3BED170096E57E /* SelectListTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListTextField.swift; sourceTree = "<group>"; };
 		E8EEF1C22A39B29A0031933E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 				E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */,
 				E8EEF1C22A39B29A0031933E /* CustomTextField.swift */,
 				E8BF16B12A3B17A20096E57E /* TagTextField.swift */,
+				E8BF16B82A3BED170096E57E /* SelectListTextField.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				E83DC5DD2A2DB97E006E2E4F /* HTMLWebView.swift in Sources */,
 				E8BF16B42A3B17ED0096E57E /* Font.swift in Sources */,
 				E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */,
+				E8BF16B92A3BED170096E57E /* SelectListTextField.swift in Sources */,
 				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
 			);
