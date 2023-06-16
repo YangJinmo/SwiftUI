@@ -64,8 +64,6 @@ struct SelectListTextFieldView: View {
                 ExperienceTypeDTO(id: 2, fullName: "2", imageUrl: ""),
                 ExperienceTypeDTO(id: 3, fullName: "3", imageUrl: ""),
             ]
-
-            isShowingDialog = true
         }
 
         let buttons: [ActionSheet.Button] = experienceTypes.map { experienceType in
@@ -80,6 +78,7 @@ struct SelectListTextFieldView: View {
             }
             .onTapGesture {
                 // endEditing()
+                isShowingDialog = true
             }
             .actionSheet(isPresented: $isShowingDialog) {
                 ActionSheet(
