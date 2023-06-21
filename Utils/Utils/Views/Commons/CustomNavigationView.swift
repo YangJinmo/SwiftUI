@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct CustomNavigationView<Title: View, Content: View>: View {
+struct CustomNavigationView<Title: View, Right: View, Content: View>: View {
     let isBack: Bool
-    let isExpandRight: Bool
     let isDivider: Bool
 
     let title: Title
+    let right: Right
     let content: Content
 
     private let size = 44.0
@@ -22,24 +22,24 @@ struct CustomNavigationView<Title: View, Content: View>: View {
 
     init(
         isBack: Bool = false,
-        isExpandRight: Bool = true,
         isDivider: Bool = true,
         @ViewBuilder title: () -> Title,
+        @ViewBuilder right: () -> Right = { EmptyView() },
         @ViewBuilder content: () -> Content
     ) {
         self.isBack = isBack
         self.isDivider = isDivider
-        self.isExpandRight = isExpandRight
         self.title = title()
+        self.right = right()
         self.content = content()
     }
 
     var body: some View {
         NavigationView {
-            GeometryReader { geometry in
-                let width = abs(geometry.size.width - (isBack ? size : 0) - (isExpandRight ? size : 0))
+            VStack(spacing: 0) {
+                ZStack {
+                    title
 
-                VStack(spacing: 0) {
                     HStack(spacing: 0) {
                         if isBack {
                             Button {
@@ -58,34 +58,29 @@ struct CustomNavigationView<Title: View, Content: View>: View {
                             }
                         }
 
-                        title
-                            .frame(
-                                width: width,
-                                height: size
-                            )
-                            .font(.callout)
+                        Spacer()
 
-                        if isBack, isExpandRight {
-                            Spacer(minLength: size)
-                        }
-                    }
-                    .frame(width: geometry.size.width, height: size)
-
-                    if isDivider {
-                        Divider()
-                            .frame(height: 1)
-                            .background(Color.gray700)
-                    }
-
-                    ZStack {
-                        Color.clear
-
-                        content
+                        right
+                            .frame(width: size, height: size)
                     }
                 }
-                .foregroundColor(.gray100)
-                .background(Color.gray800)
+                .frame(height: size)
+                .font(.callout)
+
+                if isDivider {
+                    Divider()
+                        .frame(height: 1)
+                        .background(Color.gray700)
+                }
+
+                ZStack {
+                    Color.clear
+
+                    content
+                }
             }
+            .foregroundColor(.gray100)
+            .background(Color.gray800)
             .navigationBarHidden(true)
         }
         .navigationBarHidden(true)
