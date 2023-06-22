@@ -21,7 +21,7 @@
 		E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E62A2DBC16006E2E4F /* UIEdgeInsets.swift */; };
 		E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */; };
 		E83DC5ED2A2DBCCD006E2E4F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5EC2A2DBCCD006E2E4F /* Color.swift */; };
-		E893DBAA2A3D4A3D0058E729 /* ListClearScrollContentBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ListClearScrollContentBackgroundModifier.swift */; };
+		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
 		E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */; };
 		E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */; };
 		E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B12A3B17A20096E57E /* TagTextField.swift */; };
@@ -50,7 +50,7 @@
 		E83DC5E62A2DBC16006E2E4F /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		E83DC5EC2A2DBCCD006E2E4F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		E893DBA92A3D4A3D0058E729 /* ListClearScrollContentBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListClearScrollContentBackgroundModifier.swift; sourceTree = "<group>"; };
+		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
 		E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWithLineHeightViewModifier.swift; sourceTree = "<group>"; };
 		E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableTextField.swift; sourceTree = "<group>"; };
 		E8BF16B12A3B17A20096E57E /* TagTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTextField.swift; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				E8BF16B62A3B18800096E57E /* TextFieldClearButtonViewModifier.swift */,
-				E893DBA92A3D4A3D0058E729 /* ListClearScrollContentBackgroundModifier.swift */,
+				E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */,
 				E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */,
 			);
 			path = ViewModifiers;
@@ -315,7 +315,7 @@
 				E8BF16B92A3BED170096E57E /* SelectListTextField.swift in Sources */,
 				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
-				E893DBAA2A3D4A3D0058E729 /* ListClearScrollContentBackgroundModifier.swift in Sources */,
+				E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */,
 				E8BF16BD2A4177540096E57E /* AsyncImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
