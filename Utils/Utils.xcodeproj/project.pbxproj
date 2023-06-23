@@ -31,6 +31,8 @@
 		E8BF16B92A3BED170096E57E /* SelectListTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B82A3BED170096E57E /* SelectListTextField.swift */; };
 		E8BF16BD2A4177540096E57E /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16BC2A4177540096E57E /* AsyncImageView.swift */; };
 		E8BF16C02A4178AB0096E57E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16BF2A4178AB0096E57E /* String.swift */; };
+		E8E3678F2A46047900379934 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E3678E2A46047900379934 /* PresentView.swift */; };
+		E8E367912A4604C400379934 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E367902A4604C400379934 /* View.swift */; };
 		E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEF1C22A39B29A0031933E /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		E8BF16B82A3BED170096E57E /* SelectListTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListTextField.swift; sourceTree = "<group>"; };
 		E8BF16BC2A4177540096E57E /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		E8BF16BF2A4178AB0096E57E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E8E3678E2A46047900379934 /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
+		E8E367902A4604C400379934 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E8EEF1C22A39B29A0031933E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +166,7 @@
 		E83DC5DE2A2DBB77006E2E4F /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				E8E3678E2A46047900379934 /* PresentView.swift */,
 				E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */,
 				E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */,
 				E8EEF1C22A39B29A0031933E /* CustomTextField.swift */,
@@ -206,6 +211,7 @@
 			children = (
 				E83DC5EC2A2DBCCD006E2E4F /* Color.swift */,
 				E8BF16B32A3B17ED0096E57E /* Font.swift */,
+				E8E367902A4604C400379934 /* View.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -314,11 +320,13 @@
 				E8BF16C02A4178AB0096E57E /* String.swift in Sources */,
 				E83DC5DD2A2DB97E006E2E4F /* HTMLWebView.swift in Sources */,
 				E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */,
+				E8E3678F2A46047900379934 /* PresentView.swift in Sources */,
 				E8BF16B42A3B17ED0096E57E /* Font.swift in Sources */,
 				E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */,
 				E8BF16B92A3BED170096E57E /* SelectListTextField.swift in Sources */,
 				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
+				E8E367912A4604C400379934 /* View.swift in Sources */,
 				E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */,
 				E8BF16BD2A4177540096E57E /* AsyncImageView.swift in Sources */,
 			);
