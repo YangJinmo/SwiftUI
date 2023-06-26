@@ -25,7 +25,7 @@ struct DeletableItemView: View {
             Button(action: {
                 xmarkTapped(text)
             }, label: {
-                Image.xmark
+                Image(systemName: "xmark")
                     .frame(width: 18, height: 18)
             })
         }
