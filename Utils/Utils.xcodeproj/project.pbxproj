@@ -10,6 +10,7 @@
 		E804C5C22A486B320026616E /* DeletableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804C5C12A486B320026616E /* DeletableItemView.swift */; };
 		E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809D2A4998A400563CBC /* PhotoPicker.swift */; };
 		E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809F2A4998CA00563CBC /* PhotoPickerService.swift */; };
+		E83280A42A4B131B00563CBC /* BackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */; };
 		E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */; };
 		E83DC5C32A2CD042006E2E4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5C22A2CD042006E2E4F /* ContentView.swift */; };
 		E83DC5C52A2CD043006E2E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83DC5C42A2CD043006E2E4F /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		E804C5C12A486B320026616E /* DeletableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableItemView.swift; sourceTree = "<group>"; };
 		E832809D2A4998A400563CBC /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		E832809F2A4998CA00563CBC /* PhotoPickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerService.swift; sourceTree = "<group>"; };
+		E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifier.swift; sourceTree = "<group>"; };
 		E83DC5BD2A2CD042006E2E4F /* Utils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsApp.swift; sourceTree = "<group>"; };
 		E83DC5C22A2CD042006E2E4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		E8BF16B52A3B185D0096E57E /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
+				E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */,
 				E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */,
 				E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */,
 				E8BF16B62A3B18800096E57E /* TextFieldClearButtonViewModifier.swift */,
@@ -332,6 +335,7 @@
 				E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */,
 				E8E3678F2A46047900379934 /* PresentView.swift in Sources */,
 				E8BF16B42A3B17ED0096E57E /* Font.swift in Sources */,
+				E83280A42A4B131B00563CBC /* BackgroundViewModifier.swift in Sources */,
 				E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */,
 				E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */,
 				E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */,
