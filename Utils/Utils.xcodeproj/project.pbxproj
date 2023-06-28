@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E804C5C22A486B320026616E /* DeletableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804C5C12A486B320026616E /* DeletableItemView.swift */; };
+		E8108FC82A4C202E009D60AB /* CurrentTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */; };
 		E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809D2A4998A400563CBC /* PhotoPicker.swift */; };
 		E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809F2A4998CA00563CBC /* PhotoPickerService.swift */; };
 		E83280A42A4B131B00563CBC /* BackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		E804C5C12A486B320026616E /* DeletableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableItemView.swift; sourceTree = "<group>"; };
+		E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTimeView.swift; sourceTree = "<group>"; };
 		E832809D2A4998A400563CBC /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		E832809F2A4998CA00563CBC /* PhotoPickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerService.swift; sourceTree = "<group>"; };
 		E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifier.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				E8BF16BC2A4177540096E57E /* AsyncImageView.swift */,
 				E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */,
 				E804C5C12A486B320026616E /* DeletableItemView.swift */,
+				E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				E8E367912A4604C400379934 /* View.swift in Sources */,
 				E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */,
 				E8BF16BD2A4177540096E57E /* AsyncImageView.swift in Sources */,
+				E8108FC82A4C202E009D60AB /* CurrentTimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
