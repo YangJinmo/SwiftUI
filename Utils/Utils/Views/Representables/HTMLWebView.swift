@@ -8,7 +8,7 @@
 import SwiftUI
 import WebKit
 
-struct HTMLWebViewRepresentable: UIViewRepresentable {
+struct HTMLWebView: UIViewRepresentable {
     let html: String
 
     func makeUIView(context: Context) -> WKWebView {
@@ -21,7 +21,7 @@ struct HTMLWebViewRepresentable: UIViewRepresentable {
     }
 }
 
-struct HTMLWebView: View {
+struct HTMLWebNavigationView: View {
     let title: String
     let html: String
 
@@ -29,15 +29,15 @@ struct HTMLWebView: View {
         CustomNavigationView(isBack: true) {
             Text(title)
         } content: {
-            HTMLWebViewRepresentable(html: html)
+            HTMLWebView(html: html)
                 .edgesIgnoringSafeArea(.all)
         }
     }
 }
 
-struct HTMLWebView_Previews: PreviewProvider {
+struct HTMLWebNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        HTMLWebView(
+        HTMLWebNavigationView(
             title: "Hello, world!",
             html: """
             <html>

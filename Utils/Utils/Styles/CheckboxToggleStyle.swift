@@ -93,7 +93,7 @@ struct ToastBottomTermsAgreeView: View {
                         .toggleStyle(.checklist)
 
                     NavigationLink {
-                        HTMLWebView(title: term.name, html: term.content)
+                        HTMLWebNavigationView(title: term.name, html: term.content)
                     } label: {
                         Text("보기")
                             .font(.footnote)
