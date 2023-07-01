@@ -28,6 +28,7 @@
 		E83DC5ED2A2DBCCD006E2E4F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5EC2A2DBCCD006E2E4F /* Color.swift */; };
 		E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */; };
 		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
+		E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */; };
 		E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */; };
 		E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */; };
 		E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B12A3B17A20096E57E /* TagTextField.swift */; };
@@ -66,6 +67,7 @@
 		E83DC5EC2A2DBCCD006E2E4F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
+		E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingVideoPlayer.swift; sourceTree = "<group>"; };
 		E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWithLineHeightViewModifier.swift; sourceTree = "<group>"; };
 		E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableTextField.swift; sourceTree = "<group>"; };
 		E8BF16B12A3B17A20096E57E /* TagTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTextField.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				E83DC5DC2A2DB97E006E2E4F /* HTMLWebView.swift */,
 				E832809D2A4998A400563CBC /* PhotoPicker.swift */,
 				E832809F2A4998CA00563CBC /* PhotoPickerService.swift */,
+				E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */,
 			);
 			path = Representables;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */,
 				E8BF16B72A3B18800096E57E /* TextFieldClearButtonViewModifier.swift in Sources */,
 				E8BF16C02A4178AB0096E57E /* String.swift in Sources */,
+				E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */,
 				E83DC5DD2A2DB97E006E2E4F /* HTMLWebView.swift in Sources */,
 				E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */,
 				E8E3678F2A46047900379934 /* PresentView.swift in Sources */,
