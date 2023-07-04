@@ -10,20 +10,28 @@ import SwiftUI
 struct Home: View {
     @State var currentTab = "Mail"
     
-    init() {
+    var bottomEdge: CGFloat
+
+    init(bottomEdge: CGFloat) {
         UITabBar.appearance().isHidden = true
+        self.bottomEdge = bottomEdge
     }
 
     var body: some View {
         TabView(selection: $currentTab) {
             Text("Mail")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.primary.opacity(0.05))
                 .tag("Mail")
 
             Text("Meet")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.primary.opacity(0.05))
                 .tag("Meet")
         }
         .overlay(
-            CustomTabBar(currentTab: $currentTab), alignment: .bottom
+            CustomTabBar(currentTab: $currentTab, bottomEdge: bottomEdge),
+            alignment: .bottom
         )
     }
 }

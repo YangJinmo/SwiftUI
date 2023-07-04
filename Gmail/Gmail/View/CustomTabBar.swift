@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CustomTabBar: View {
     @Binding var currentTab: String
+    var bottomEdge: CGFloat
 
     var body: some View {
         HStack(spacing: 0) {
@@ -16,6 +17,9 @@ struct CustomTabBar: View {
                 TabButton(image: image, currentTab: $currentTab)
             }
         }
+        .padding(.top, 15)
+        .padding(.bottom, bottomEdge)
+        .background(.white)
     }
 }
 
