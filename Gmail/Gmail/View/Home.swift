@@ -21,7 +21,7 @@ struct Home: View {
 
     var body: some View {
         TabView(selection: $currentTab) {
-            MailView()
+            MailView(hideBar: $hideBar, bottomEdge: bottomEdge)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.primary.opacity(0.05))
                 .tag("Mail")
@@ -35,15 +35,19 @@ struct Home: View {
             VStack {
                 Button {
                 } label: {
-                    HStack(spacing: 10) {
+                    HStack(spacing: hideBar ? 0 : 12) {
                         Image(systemName: "pencil")
                             .font(.title)
 
                         Text("Compose")
                             .fontWeight(.semibold)
+                            .frame(
+                                width: hideBar ? 0 : nil,
+                                height: hideBar ? 0 : nil
+                            )
                     }
                     .foregroundColor(Color("Pink"))
-                    .padding(.vertical)
+                    .padding(.vertical, hideBar ? 15 : 12)
                     .padding(.horizontal)
                     .background(Color("TabBG"), in: Capsule())
                     .shadow(color: .primary.opacity(0.06), radius: 5, x: 5, y: 10)
@@ -55,7 +59,10 @@ struct Home: View {
                 .animation(.none, value: currentTab)
 
                 CustomTabBar(currentTab: $currentTab, bottomEdge: bottomEdge)
-            },
+            }
+            .offset(y: hideBar ? (15 + 35 + bottomEdge) : 0)
+
+            ,
             alignment: .bottom
         )
     }
