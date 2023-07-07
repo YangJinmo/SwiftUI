@@ -9,11 +9,13 @@ import SwiftUI
 import UIKit
 
 struct CollectionViewWrapper<Data, Content>: UIViewRepresentable where Data: RandomAccessCollection, Content: View {
+    let scrollDirection: UICollectionView.ScrollDirection
     let items: Data
     let content: (Data.Element) -> Content
     var currentPage: Binding<Int>
 
-    init(items: Data, currentPage: Binding<Int>, @ViewBuilder content: @escaping (Data.Element) -> Content) {
+    init(_ scrollDirection: UICollectionView.ScrollDirection = .vertical, items: Data, currentPage: Binding<Int>, @ViewBuilder content: @escaping (Data.Element) -> Content) {
+        self.scrollDirection = scrollDirection
         self.items = items
         self.content = content
         self.currentPage = currentPage
@@ -21,13 +23,14 @@ struct CollectionViewWrapper<Data, Content>: UIViewRepresentable where Data: Ran
 
     func makeUIView(context: Context) -> UICollectionView {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = scrollDirection
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = context.coordinator
         collectionView.dataSource = context.coordinator
         collectionView.isPagingEnabled = true
-        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = true
+        collectionView.showsHorizontalScrollIndicator = true
         collectionView.backgroundColor = .clear
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
 
@@ -57,7 +60,11 @@ struct CollectionViewWrapper<Data, Content>: UIViewRepresentable where Data: Ran
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
 
             let childView = UIHostingController(rootView: parent.content(parent.items[indexPath.row as! Data.Index]))
-            childView.view.frame = cell.contentView.bounds
+            print("cell.contentView.bounds: \(cell.contentView.bounds)")
+            print("cell.contentView.frame: \(cell.contentView.frame)")
+            childView.view.frame = cell.contentView.frame
+            print("childView.view.bounds: \(childView.view.bounds)")
+            print("childView.view.frame: \(childView.view.frame)")
             childView.view.backgroundColor = UIColor.clear
             childView.view.translatesAutoresizingMaskIntoConstraints = false
 

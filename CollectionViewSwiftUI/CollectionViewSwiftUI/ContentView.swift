@@ -13,13 +13,19 @@ struct ContentView: View {
     @State var currentPage: Int = 0
 
     var body: some View {
-        ZStack {
+        GeometryReader { proxy in
+            let _ = print(proxy.size.height)
+
             CollectionViewWrapper(items: pages, currentPage: $currentPage) { page in
-                Rectangle()
-                    .foregroundColor(page)
+                page
+                    .ignoresSafeArea()
+                    .frame(
+                        width: proxy.size.width,
+                        height: proxy.size.height
+                    )
             }
         }
-        .padding()
+        .ignoresSafeArea()
     }
 }
 
