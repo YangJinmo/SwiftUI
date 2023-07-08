@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E80403C32A59ADD800B5D7A8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C22A59ADD800B5D7A8 /* ListView.swift */; };
 		E804C5C22A486B320026616E /* DeletableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804C5C12A486B320026616E /* DeletableItemView.swift */; };
 		E8108FC82A4C202E009D60AB /* CurrentTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */; };
 		E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809D2A4998A400563CBC /* PhotoPicker.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E80403C22A59ADD800B5D7A8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E804C5C12A486B320026616E /* DeletableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableItemView.swift; sourceTree = "<group>"; };
 		E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTimeView.swift; sourceTree = "<group>"; };
 		E832809D2A4998A400563CBC /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */,
 				E804C5C12A486B320026616E /* DeletableItemView.swift */,
 				E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */,
+				E80403C22A59ADD800B5D7A8 /* ListView.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */,
 				E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */,
 				E83DC5C32A2CD042006E2E4F /* ContentView.swift in Sources */,
+				E80403C32A59ADD800B5D7A8 /* ListView.swift in Sources */,
 				E83DC5ED2A2DBCCD006E2E4F /* Color.swift in Sources */,
 				E83DC5E12A2DBB9D006E2E4F /* CustomNavigationView.swift in Sources */,
 				E83DC5D62A2DB806006E2E4F /* RoundedCorner.swift in Sources */,
