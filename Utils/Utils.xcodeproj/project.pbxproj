@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E80403C32A59ADD800B5D7A8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C22A59ADD800B5D7A8 /* ListView.swift */; };
+		E80403C52A5A7FA800B5D7A8 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C42A5A7FA800B5D7A8 /* ItemView.swift */; };
 		E804C5C22A486B320026616E /* DeletableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804C5C12A486B320026616E /* DeletableItemView.swift */; };
 		E8108FC82A4C202E009D60AB /* CurrentTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */; };
 		E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809D2A4998A400563CBC /* PhotoPicker.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		E80403C22A59ADD800B5D7A8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		E80403C42A5A7FA800B5D7A8 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		E804C5C12A486B320026616E /* DeletableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableItemView.swift; sourceTree = "<group>"; };
 		E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTimeView.swift; sourceTree = "<group>"; };
 		E832809D2A4998A400563CBC /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				E804C5C12A486B320026616E /* DeletableItemView.swift */,
 				E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */,
 				E80403C22A59ADD800B5D7A8 /* ListView.swift */,
+				E80403C42A5A7FA800B5D7A8 /* ItemView.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				E8E367912A4604C400379934 /* View.swift in Sources */,
 				E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */,
 				E8BF16BD2A4177540096E57E /* AsyncImageView.swift in Sources */,
+				E80403C52A5A7FA800B5D7A8 /* ItemView.swift in Sources */,
 				E8D163672A4D46A400A570A9 /* NavigationBarModifier.swift in Sources */,
 				E8108FC82A4C202E009D60AB /* CurrentTimeView.swift in Sources */,
 			);
