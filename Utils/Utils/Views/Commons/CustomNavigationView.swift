@@ -53,7 +53,7 @@ struct CustomNavigationView<Title: View, Right: View, Content: View>: View {
                                     mode.wrappedValue.dismiss()
                                 }
                             } label: {
-                                Image(systemName: "chevron.left")
+                                Image.chevron_left
                                     .frame(width: size, height: size)
                             }
                         }

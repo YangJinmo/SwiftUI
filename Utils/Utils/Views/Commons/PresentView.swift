@@ -35,7 +35,7 @@ struct PresentView<Content: View>: View {
                     Button {
                         dismiss()
                     } label: {
-                        Image(systemName: "xmark")
+                        Image.xmark
                             .frame(width: size, height: size)
                     }
 
@@ -46,7 +46,7 @@ struct PresentView<Content: View>: View {
                     Button {
                         action?()
                     } label: {
-                        Image(systemName: "checkmark")
+                        Image.checkmark
                             .frame(width: size, height: size)
                     }
                     .isHidden(action == nil)

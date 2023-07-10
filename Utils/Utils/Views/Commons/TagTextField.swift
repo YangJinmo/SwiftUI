@@ -55,7 +55,7 @@ struct TagTextField: View {
                 Button {
                     xmarkTapped(currentTag)
                 } label: {
-                    Image(systemName: "xmark")
+                    Image.xmark
                         .renderingMode(.template)
                         .foregroundColor(.gray500)
                         .frame(width: 18, height: 18)

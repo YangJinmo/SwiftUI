@@ -30,6 +30,7 @@
 		E83DC5ED2A2DBCCD006E2E4F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5EC2A2DBCCD006E2E4F /* Color.swift */; };
 		E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */; };
 		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
+		E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB512A5BAD880074A9BE /* Image.swift */; };
 		E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */; };
 		E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */; };
 		E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */; };
@@ -71,6 +72,7 @@
 		E83DC5EC2A2DBCCD006E2E4F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
+		E8A3CB512A5BAD880074A9BE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingVideoPlayer.swift; sourceTree = "<group>"; };
 		E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWithLineHeightViewModifier.swift; sourceTree = "<group>"; };
 		E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableTextField.swift; sourceTree = "<group>"; };
@@ -195,10 +197,10 @@
 				E8BF16B82A3BED170096E57E /* SelectListTextField.swift */,
 				E8BF16BC2A4177540096E57E /* AsyncImageView.swift */,
 				E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */,
-				E804C5C12A486B320026616E /* DeletableItemView.swift */,
 				E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */,
 				E80403C22A59ADD800B5D7A8 /* ListView.swift */,
 				E80403C42A5A7FA800B5D7A8 /* ItemView.swift */,
+				E804C5C12A486B320026616E /* DeletableItemView.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -237,6 +239,7 @@
 				E83DC5EC2A2DBCCD006E2E4F /* Color.swift */,
 				E8BF16B32A3B17ED0096E57E /* Font.swift */,
 				E8E367902A4604C400379934 /* View.swift */,
+				E8A3CB512A5BAD880074A9BE /* Image.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				E83DC5D62A2DB806006E2E4F /* RoundedCorner.swift in Sources */,
 				E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */,
 				E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */,
+				E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */,
 				E8BF16B72A3B18800096E57E /* TextFieldClearButtonViewModifier.swift in Sources */,
 				E8BF16C02A4178AB0096E57E /* String.swift in Sources */,
 				E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */,

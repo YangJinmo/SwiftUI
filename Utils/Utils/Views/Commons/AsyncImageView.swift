@@ -21,7 +21,7 @@ struct AsyncImageView: View {
                     .scaledToFit()
 
             case .failure:
-                Image(systemName: "photo")
+                Image.photo
                     .foregroundColor(.white)
 
             @unknown default:

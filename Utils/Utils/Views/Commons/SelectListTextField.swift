@@ -39,7 +39,7 @@ struct SelectListTextField: View {
         .focused($isFocused)
         .disabled(true)
         .overlay {
-            Image(systemName: "chevron.down")
+            Image.chevron_down
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .padding(16)
         }

@@ -22,7 +22,7 @@ struct ClearableTextField: View {
                 Button {
                     text = ""
                 } label: {
-                    Image(systemName: "multiply.circle.fill")
+                    Image.multiply_circle_fill
                         .foregroundColor(.gray500)
                 }
             }
