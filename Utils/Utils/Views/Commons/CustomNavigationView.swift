@@ -15,10 +15,7 @@ struct CustomNavigationView<Title: View, Right: View, Content: View>: View {
     let right: Right
     let content: Content
 
-    private let size = 44.0
-
-    @Environment(\.presentationMode) private var mode: Binding<PresentationMode>
-    @StateObject private var keyboardObserver = KeyboardObserver()
+    @Environment(\.dismiss) private var dismiss
 
     init(
         isBack: Bool = false,
@@ -35,54 +32,47 @@ struct CustomNavigationView<Title: View, Right: View, Content: View>: View {
     }
 
     var body: some View {
-        NavigationView {
-            VStack(spacing: 0) {
-                ZStack {
-                    title
+        let size = 44.0
 
-                    HStack(spacing: 0) {
-                        if isBack {
-                            Button {
-                                /// End Editing
-                                if keyboardObserver.keyboardIsVisible {
-                                    endEditing()
-                                }
+        VStack(spacing: 0) {
+            ZStack {
+                title
 
-                                /// Dismiss
-                                if mode.wrappedValue.isPresented {
-                                    mode.wrappedValue.dismiss()
-                                }
-                            } label: {
-                                Image.chevron_left
-                                    .frame(width: size, height: size)
-                            }
+                HStack(spacing: 0) {
+                    if isBack {
+                        Button {
+                            endEditing()
+                            dismiss()
+                        } label: {
+                            Image.back
+                                .frame(width: size, height: size)
                         }
-
-                        Spacer()
-
-                        right
-                            .frame(width: size, height: size)
                     }
-                }
-                .frame(height: size)
-                .font(.callout)
 
-                if isDivider {
-                    Divider()
-                        .frame(height: 1)
-                        .background(Color.gray700)
-                }
+                    Spacer()
 
-                ZStack {
-                    Color.clear
-
-                    content
+                    right
+                        .frame(width: size, height: size)
                 }
             }
-            .foregroundColor(.gray100)
-            .background(Color.gray800)
+            .frame(height: size)
+            .font(.callout)
+
+            if isDivider {
+                Divider()
+                    .frame(height: 1)
+                    .overlay(Color.gray700)
+            }
+
+            ZStack {
+                Color.clear
+
+                content
+            }
             .navigationBarHidden(true)
         }
+        .foregroundColor(.gray100)
+        .background(Color.gray800)
         .navigationBarHidden(true)
     }
 }
@@ -95,28 +85,36 @@ struct CustomNavigationView_Previews: PreviewProvider {
 
 struct RootView: View {
     var body: some View {
-        CustomNavigationView {
-            Text("RootView")
-        } content: {
-            NavigationLink {
-                FirstView()
-            } label: {
-                Text("Go to FirstView")
-                    .padding(16)
-                    .background(Color.gray)
-                    .cornerRadius(16)
+        NavigationView {
+            CustomNavigationView {
+                Text("RootView")
+            } content: {
+                NavigationLink {
+                    FirstView()
+                } label: {
+                    Text("Go to FirstView")
+                        .padding(16)
+                        .background(Color.gray)
+                        .cornerRadius(16)
+                }
             }
+            .navigationBarHidden(true)
         }
+        .navigationBarHidden(true)
     }
 }
 
 struct FirstView: View {
     var body: some View {
-        CustomNavigationView(isBack: true) {
-            Text("FirstView")
-        } content: {
-            Text("This is the First View")
+        NavigationView {
+            CustomNavigationView(isBack: true) {
+                Text("FirstView")
+            } content: {
+                Text("This is the First View")
+            }
+            .navigationBarHidden(true)
         }
+        .navigationBarHidden(true)
     }
 }
 
