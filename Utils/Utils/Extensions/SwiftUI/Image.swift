@@ -12,6 +12,7 @@ extension Image {
     static let chevron_down = Image(systemName: "chevron.down")
     static let chevron_left = Image(systemName: "chevron.left")
     static let chevron_right = Image(systemName: "chevron.right")
+    static let chevron_backward = Image(systemName: "chevron.backward")
 
     static let xmark = Image(systemName: "xmark")
     static let photo = Image(systemName: "photo")

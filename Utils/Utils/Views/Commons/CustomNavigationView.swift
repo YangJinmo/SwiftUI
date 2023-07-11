@@ -44,7 +44,7 @@ struct CustomNavigationView<Title: View, Right: View, Content: View>: View {
                             endEditing()
                             dismiss()
                         } label: {
-                            Image.back
+                            Image.chevron_backward
                                 .frame(width: size, height: size)
                         }
                     }
