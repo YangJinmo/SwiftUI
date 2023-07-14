@@ -18,7 +18,6 @@ struct DeletableItemView: View {
                 textTapped(text)
             }, label: {
                 Text(text)
-                    .foregroundColor(.gray100)
                     .font(.subheadline)
             })
 
@@ -29,6 +28,7 @@ struct DeletableItemView: View {
                     .frame(width: 18, height: 18)
             })
         }
+        .foregroundColor(.gray100)
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
         .background(Color.gray700)
