@@ -194,10 +194,6 @@
 			children = (
 				E8E3678E2A46047900379934 /* PresentView.swift */,
 				E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */,
-				E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */,
-				E8EEF1C22A39B29A0031933E /* CustomTextField.swift */,
-				E8BF16B12A3B17A20096E57E /* TagTextField.swift */,
-				E8BF16B82A3BED170096E57E /* SelectListTextField.swift */,
 				E8BF16BC2A4177540096E57E /* AsyncImageView.swift */,
 				E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */,
 				E80403C22A59ADD800B5D7A8 /* ListView.swift */,
@@ -206,7 +202,11 @@
 				E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */,
 				E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */,
 				E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */,
+				E8EEF1C22A39B29A0031933E /* CustomTextField.swift */,
 				E85AFE082A6293FC00E71575 /* JMTextField.swift */,
+				E8BF16B12A3B17A20096E57E /* TagTextField.swift */,
+				E8BF16B82A3BED170096E57E /* SelectListTextField.swift */,
+				E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
