@@ -73,7 +73,6 @@ struct CustomNavigationView<Title: View, Right: View, Content: View>: View {
         }
         .foregroundColor(.gray100)
         .background(Color.gray800)
-        .navigationBarHidden(true)
     }
 }
 
@@ -98,7 +97,6 @@ struct RootView: View {
                         .cornerRadius(16)
                 }
             }
-            .navigationBarHidden(true)
         }
         .navigationBarHidden(true)
     }
@@ -112,7 +110,6 @@ struct FirstView: View {
             } content: {
                 Text("This is the First View")
             }
-            .navigationBarHidden(true)
         }
         .navigationBarHidden(true)
     }
