@@ -13,38 +13,36 @@ struct DeletableItemView: View {
     let xmarkTapped: (String) -> Void
 
     var body: some View {
-        HStack(spacing: 4) {
-            Button(action: {
+        HStack(spacing: 8) {
+            Button {
                 textTapped(text)
-            }, label: {
+            } label: {
                 Text(text)
                     .font(.subheadline)
-            })
+                    .foregroundColor(.gray100)
+            }
 
-            Button(action: {
+            Button {
                 xmarkTapped(text)
-            }, label: {
+            } label: {
                 Image.xmark
-                    .frame(width: 18, height: 18)
-            })
+                    .foregroundColor(.gray500)
+                    .frame(width: 12, height: 12)
+            }
         }
-        .foregroundColor(.gray100)
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
         .background(Color.gray700)
-        .cornerRadius(17)
+        .cornerRadius(20)
     }
 }
 
 struct DeletableItemView_Previews: PreviewProvider {
     static var previews: some View {
-        DeletableItemView(text: Binding<String>.init(
-            get: { "Apple" },
-            set: { _ in }
-        )) { text in
+        DeletableItemView(text: .constant("검색어")) { text in
             print("Selected text: \(text)")
         } xmarkTapped: { _ in
-            print("Xmark Tapped")
+            print("xmark Tapped")
         }
     }
 }
