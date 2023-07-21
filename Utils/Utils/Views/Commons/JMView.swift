@@ -123,15 +123,13 @@ struct JMView_Previews_View: View {
                 Text("JMView")
             } content: {
                 VStack {
-                    NavigationLink(
-                        destination:
+                    NavigationLink(isActive: $isActiving) {
                         JMView(.navigation, $isActiving) {
                             Text("Navigation")
                         } content: {
                             Text("This is navigation")
-                        },
-                        isActive: $isActiving
-                    ) {
+                        }
+                    } label: {
                         Text("Navigation")
                             .padding(16)
                             .background(Color.gray)
