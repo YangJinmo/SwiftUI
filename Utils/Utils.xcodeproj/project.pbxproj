@@ -212,7 +212,6 @@
 				E8BF16B12A3B17A20096E57E /* TagTextField.swift */,
 				E8BF16B82A3BED170096E57E /* SelectListTextField.swift */,
 				E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */,
-				E868E7B82A6F4C580095F030 /* ScrollToID.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -220,6 +219,7 @@
 		E83DC5DF2A2DBB7F006E2E4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E868E7BA2A6F96B70095F030 /* BootCamps */,
 				E83DC5E22A2DBBC6006E2E4F /* ObservableObjects */,
 				E8BF16B52A3B185D0096E57E /* ViewModifiers */,
 				E83DC5DB2A2DB96E006E2E4F /* Representables */,
@@ -254,6 +254,14 @@
 				E8A3CB512A5BAD880074A9BE /* Image.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		E868E7BA2A6F96B70095F030 /* BootCamps */ = {
+			isa = PBXGroup;
+			children = (
+				E868E7B82A6F4C580095F030 /* ScrollToID.swift */,
+			);
+			path = BootCamps;
 			sourceTree = "<group>";
 		};
 		E8BF16B52A3B185D0096E57E /* ViewModifiers */ = {
