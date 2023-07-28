@@ -86,3 +86,9 @@ struct PullToRefresh: View {
         .padding(.top, -50)
     }
 }
+
+struct PullToRefresh_Previews: PreviewProvider {
+    static var previews: some View {
+        NewsItemView()
+    }
+}
