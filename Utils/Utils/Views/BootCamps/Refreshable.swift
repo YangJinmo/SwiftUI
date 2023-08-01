@@ -189,3 +189,42 @@ struct PullToRefreshView: View {
             .opacity(isRefreshIndicatorVisible ? 1 : 0)
     }
 }
+
+struct PullToRefreshView_Previews: PreviewProvider {
+    static var previews: some View {
+        PullToRefreshViewView()
+    }
+}
+
+struct PullToRefreshViewView: View {
+    @State private var news = [
+        NewsItem(id: 0, title: "Want the latest news?", strap: "Pull to refresh!"),
+    ]
+
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 0) {
+                PullToRefreshView {
+                    print("refreshing")
+                    
+                    news = [
+                        NewsItem(id: 0, title: "Want the latest news?", strap: "Pull to refresh!"),
+                        NewsItem(id: 1, title: "Want the latest news?", strap: "Pull to refresh!"),
+                        NewsItem(id: 2, title: "Want the latest news?", strap: "Pull to refresh!"),
+                    ]
+                }
+
+                LazyVStack(spacing: 0) {
+                    ForEach(news) { item in
+                        VStack(alignment: .leading) {
+                            Text(item.title)
+                                .font(.headline)
+                            Text(item.strap)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
