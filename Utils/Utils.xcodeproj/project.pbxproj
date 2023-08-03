@@ -111,6 +111,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8275A592A7BF4A2006F9453 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		E83DC5B42A2CD042006E2E4F = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +177,7 @@
 		E83DC5D72A2DB83F006E2E4F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E8275A592A7BF4A2006F9453 /* Foundation */,
 				E8BF16BE2A41789E0096E57E /* SwiftStandardLibrary */,
 				E83DC5EB2A2DBCC4006E2E4F /* SwiftUI */,
 				E83DC5E52A2DBC09006E2E4F /* UIKit */,
