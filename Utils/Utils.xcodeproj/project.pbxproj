@@ -34,6 +34,7 @@
 		E8627F1C2A7AA07500C01478 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8627F1B2A7AA07500C01478 /* Dictionary.swift */; };
 		E868E7B92A6F4C580095F030 /* ScrollToID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7B82A6F4C580095F030 /* ScrollToID.swift */; };
 		E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7BB2A6F96E60095F030 /* Refreshable.swift */; };
+		E8822E562A7F5DF600E4AF38 /* FocusedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */; };
 		E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */; };
 		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
 		E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB512A5BAD880074A9BE /* Image.swift */; };
@@ -84,6 +85,7 @@
 		E8627F1B2A7AA07500C01478 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		E868E7B82A6F4C580095F030 /* ScrollToID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToID.swift; sourceTree = "<group>"; };
 		E868E7BB2A6F96E60095F030 /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
+		E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedTextField.swift; sourceTree = "<group>"; };
 		E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
 		E8A3CB512A5BAD880074A9BE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				E8BF16B12A3B17A20096E57E /* TagTextField.swift */,
 				E8BF16B82A3BED170096E57E /* SelectListTextField.swift */,
 				E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */,
+				E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */,
 				E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */,
 			);
 			path = Commons;
@@ -377,6 +380,7 @@
 				E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */,
 				E8259C6F2A7CB01A005BF839 /* Bundle.swift in Sources */,
 				E83DC5DA2A2DB8FA006E2E4F /* CGFloat.swift in Sources */,
+				E8822E562A7F5DF600E4AF38 /* FocusedTextField.swift in Sources */,
 				E804C5C22A486B320026616E /* DeletableItemView.swift in Sources */,
 				E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */,
 				E83DC5E42A2DBBD4006E2E4F /* KeyboardObserver.swift in Sources */,
