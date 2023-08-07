@@ -16,7 +16,8 @@ struct CheckboxToggleStyle: ToggleStyle {
             configuration.isOn.toggle()
         } label: {
             HStack {
-                Image(systemName: "checkmark.\(style.sfSymbolName).fill")
+                Image(systemName: "checkmark.\(style.sfSymbolName)")
+                    .symbolVariant(.fill)
                     .imageScale(.large)
 
                 configuration.label
