@@ -24,7 +24,7 @@ struct ItemView: View {
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
         .background(Color.gray700)
-        .cornerRadius(17)
+        .clipShape(Capsule())
     }
 }
 

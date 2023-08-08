@@ -33,7 +33,7 @@ struct DeletableItemView: View {
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
         .background(Color.gray700)
-        .cornerRadius(20)
+        .clipShape(Capsule())
     }
 }
 
