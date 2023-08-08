@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DeletableItemView: View {
-    @Binding var text: String
+    let text: String
     let textTapped: (String) -> Void
     let xmarkTapped: (String) -> Void
 
@@ -26,6 +26,7 @@ struct DeletableItemView: View {
                 xmarkTapped(text)
             } label: {
                 Image.xmark
+                    .renderingMode(.template)
                     .foregroundColor(.gray500)
                     .frame(width: 12, height: 12)
             }
@@ -39,7 +40,7 @@ struct DeletableItemView: View {
 
 struct DeletableItemView_Previews: PreviewProvider {
     static var previews: some View {
-        DeletableItemView(text: .constant("검색어")) { text in
+        DeletableItemView(text: "검색어") { text in
             print("Selected text: \(text)")
         } xmarkTapped: { _ in
             print("xmark Tapped")

@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct DeletableHorizontalScrollableItemView: View {
-    @Binding var texts: [String]
+    let texts: [String]
     let textTapped: (String) -> Void
     let xmarkTapped: (Int) -> Void
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
-                ForEach($texts, id: \.self) { text in
+                ForEach(texts, id: \.self) { text in
                     DeletableItemView(text: text) { text in
                         textTapped(text)
                     } xmarkTapped: { text in
@@ -33,10 +33,7 @@ struct DeletableHorizontalScrollableItemView: View {
 struct DeletableHorizontalScrollableItemView_Previews: PreviewProvider {
     static var previews: some View {
         DeletableHorizontalScrollableItemView(
-            texts: Binding<[String]>.init(
-                get: { ["Apple", "Samsung"] },
-                set: { _ in }
-            ),
+            texts: ["Apple", "Samsung"],
             textTapped: { text in
                 print(text)
             },

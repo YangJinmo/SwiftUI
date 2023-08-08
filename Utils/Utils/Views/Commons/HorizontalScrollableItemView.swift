@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct HorizontalScrollableItemView: View {
-    @Binding var texts: [String]
+    let texts: [String]
     let textTapped: (String) -> Void
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
-                ForEach($texts, id: \.self) { text in
+                ForEach(texts, id: \.self) { text in
                     ItemView(text: text) { text in
                         textTapped(text)
                     }
@@ -28,10 +28,7 @@ struct HorizontalScrollableItemView: View {
 struct HorizontalScrollableItemView_Previews: PreviewProvider {
     static var previews: some View {
         HorizontalScrollableItemView(
-            texts: Binding<[String]>.init(
-                get: { ["Apple", "Samsung"] },
-                set: { _ in }
-            ),
+            texts: ["Apple", "Samsung"],
             textTapped: { text in
                 print(text)
             }
