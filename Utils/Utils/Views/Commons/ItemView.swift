@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct ItemView: View {
-    @Binding var text: String
+    let text: String
     let textTapped: (String) -> Void
 
     var body: some View {
-        HStack(spacing: 4) {
-            Button(action: {
-                textTapped(text)
-            }, label: {
-                Text(text)
-                    .foregroundColor(.gray100)
-                    .font(.subheadline)
-            })
+        Button {
+            textTapped(text)
+        } label: {
+            Text(text)
+                .foregroundColor(.gray100)
+                .font(.subheadline)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
@@ -30,10 +28,7 @@ struct ItemView: View {
 
 struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemView(text: Binding<String>.init(
-            get: { "Apple" },
-            set: { _ in }
-        )) { text in
+        ItemView(text: "Apple") { text in
             print("Selected text: \(text)")
         }
     }
