@@ -167,8 +167,8 @@
 		E83DC5CF2A2CD049006E2E4F /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				E8A990C52A836F1C00EB2BC4 /* ToggleStyles */,
 				E83DC5D02A2CD07C006E2E4F /* GaugeProgressStyle.swift */,
-				E83DC5D22A2DB3CD006E2E4F /* CheckboxToggleStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -284,6 +284,14 @@
 				E868E7BB2A6F96E60095F030 /* Refreshable.swift */,
 			);
 			path = BootCamps;
+			sourceTree = "<group>";
+		};
+		E8A990C52A836F1C00EB2BC4 /* ToggleStyles */ = {
+			isa = PBXGroup;
+			children = (
+				E83DC5D22A2DB3CD006E2E4F /* CheckboxToggleStyle.swift */,
+			);
+			path = ToggleStyles;
 			sourceTree = "<group>";
 		};
 		E8BF16B52A3B185D0096E57E /* ViewModifiers */ = {
