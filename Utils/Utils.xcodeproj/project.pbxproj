@@ -11,6 +11,7 @@
 		E80403C52A5A7FA800B5D7A8 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C42A5A7FA800B5D7A8 /* ItemView.swift */; };
 		E804C5C22A486B320026616E /* DeletableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804C5C12A486B320026616E /* DeletableItemView.swift */; };
 		E8108FC82A4C202E009D60AB /* CurrentTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */; };
+		E8191E542A81EAA30068D113 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8191E532A81EAA30068D113 /* SizePreferenceKey.swift */; };
 		E8259C6F2A7CB01A005BF839 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8259C6E2A7CB01A005BF839 /* Bundle.swift */; };
 		E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809D2A4998A400563CBC /* PhotoPicker.swift */; };
 		E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809F2A4998CA00563CBC /* PhotoPickerService.swift */; };
@@ -61,6 +62,7 @@
 		E80403C42A5A7FA800B5D7A8 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		E804C5C12A486B320026616E /* DeletableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableItemView.swift; sourceTree = "<group>"; };
 		E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTimeView.swift; sourceTree = "<group>"; };
+		E8191E532A81EAA30068D113 /* SizePreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePreferenceKey.swift; sourceTree = "<group>"; };
 		E8259C6E2A7CB01A005BF839 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		E832809D2A4998A400563CBC /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		E832809F2A4998CA00563CBC /* PhotoPickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerService.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				E8E3678F2A46047900379934 /* PresentView.swift in Sources */,
 				E85AFE112A652F6C00E71575 /* JMView.swift in Sources */,
 				E8BF16B42A3B17ED0096E57E /* Font.swift in Sources */,
+				E8191E542A81EAA30068D113 /* SizePreferenceKey.swift in Sources */,
 				E83280A42A4B131B00563CBC /* BackgroundViewModifier.swift in Sources */,
 				E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */,
 				E85AFE092A6293FC00E71575 /* JMTextField.swift in Sources */,
