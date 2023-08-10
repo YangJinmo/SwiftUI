@@ -119,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8191E522A81EA840068D113 /* PreferenceKeys */ = {
+			isa = PBXGroup;
+			children = (
+				E8191E532A81EAA30068D113 /* SizePreferenceKey.swift */,
+				E8191E552A81EAB10068D113 /* HeightPreferenceKey.swift */,
+			);
+			path = PreferenceKeys;
+			sourceTree = "<group>";
+		};
 		E8259C6D2A7CB007005BF839 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +158,7 @@
 				E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */,
 				E83DC5DF2A2DBB7F006E2E4F /* Views */,
 				E83DC5D72A2DB83F006E2E4F /* Extensions */,
+				E8191E522A81EA840068D113 /* PreferenceKeys */,
 				E83DC5D42A2DB7DA006E2E4F /* Shapes */,
 				E83DC5CF2A2CD049006E2E4F /* Styles */,
 				E83DC5C42A2CD043006E2E4F /* Assets.xcassets */,
