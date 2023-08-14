@@ -187,6 +187,7 @@
 		E83DC5CF2A2CD049006E2E4F /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				E8EF44D92A89E80C00F798CC /* ButtonStyles */,
 				E8A990C52A836F1C00EB2BC4 /* ToggleStyles */,
 				E83DC5D02A2CD07C006E2E4F /* GaugeProgressStyle.swift */,
 			);
@@ -336,6 +337,14 @@
 				E8627F1B2A7AA07500C01478 /* Dictionary.swift */,
 			);
 			path = SwiftStandardLibrary;
+			sourceTree = "<group>";
+		};
+		E8EF44D92A89E80C00F798CC /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */,
+			);
+			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
