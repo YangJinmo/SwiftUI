@@ -59,6 +59,7 @@
 		E8E367912A4604C400379934 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E367902A4604C400379934 /* View.swift */; };
 		E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEF1C22A39B29A0031933E /* CustomTextField.swift */; };
 		E8EF44DB2A89E81A00F798CC /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */; };
+		E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		E8E367902A4604C400379934 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E8EEF1C22A39B29A0031933E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
+		E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */,
+				E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */,
 			);
 			path = ButtonStyles;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				E85AFE092A6293FC00E71575 /* JMTextField.swift in Sources */,
 				E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */,
 				E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */,
+				E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */,
 				E8BF16B92A3BED170096E57E /* SelectListTextField.swift in Sources */,
 				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
