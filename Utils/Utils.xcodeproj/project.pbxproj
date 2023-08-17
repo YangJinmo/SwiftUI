@@ -191,9 +191,9 @@
 		E83DC5CF2A2CD049006E2E4F /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				E8BBDC022A8E0B5D00E95C6C /* ProgressViewStyles */,
 				E8EF44D92A89E80C00F798CC /* ButtonStyles */,
 				E8A990C52A836F1C00EB2BC4 /* ToggleStyles */,
-				E83DC5D02A2CD07C006E2E4F /* GaugeProgressStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -320,6 +320,14 @@
 				E80EFF1F2A891737005FD650 /* DarkModeToggleStyle.swift */,
 			);
 			path = ToggleStyles;
+			sourceTree = "<group>";
+		};
+		E8BBDC022A8E0B5D00E95C6C /* ProgressViewStyles */ = {
+			isa = PBXGroup;
+			children = (
+				E83DC5D02A2CD07C006E2E4F /* GaugeProgressStyle.swift */,
+			);
+			path = ProgressViewStyles;
 			sourceTree = "<group>";
 		};
 		E8BF16B52A3B185D0096E57E /* ViewModifiers */ = {
