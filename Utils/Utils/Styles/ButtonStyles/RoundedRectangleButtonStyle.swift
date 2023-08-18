@@ -29,14 +29,14 @@ struct RoundedRectangleButtonStyle_Previews: PreviewProvider {
 }
 
 struct RoundedRectangleButtonStylePreview: View {
-    struct Category2: Identifiable {
+    struct Category: Identifiable {
         let id: Int
         let name: String
 
         var isOn = false
     }
 
-    @State private var category = Category2(id: 0, name: "RoundedRectangleButtonStyle")
+    @State private var category = Category(id: 0, name: "RoundedRectangleButtonStyle")
 
     var body: some View {
         Button {
