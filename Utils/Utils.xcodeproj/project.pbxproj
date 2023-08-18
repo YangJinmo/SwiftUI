@@ -45,6 +45,7 @@
 		E8A3CB582A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */; };
 		E8A990C72A836F8900EB2BC4 /* CapsuleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A990C62A836F8900EB2BC4 /* CapsuleToggleStyle.swift */; };
 		E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */; };
+		E8BBDC062A8F139400E95C6C /* SettingsToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBDC052A8F139400E95C6C /* SettingsToggleStyle.swift */; };
 		E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */; };
 		E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */; };
 		E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */; };
@@ -103,6 +104,7 @@
 		E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableItemView.swift; sourceTree = "<group>"; };
 		E8A990C62A836F8900EB2BC4 /* CapsuleToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleToggleStyle.swift; sourceTree = "<group>"; };
 		E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingVideoPlayer.swift; sourceTree = "<group>"; };
+		E8BBDC052A8F139400E95C6C /* SettingsToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsToggleStyle.swift; sourceTree = "<group>"; };
 		E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMTextEditor.swift; sourceTree = "<group>"; };
 		E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWithLineHeightViewModifier.swift; sourceTree = "<group>"; };
 		E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableTextField.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				E8A990C62A836F8900EB2BC4 /* CapsuleToggleStyle.swift */,
 				E80EFF1D2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift */,
 				E83DC5D22A2DB3CD006E2E4F /* CheckboxToggleStyle.swift */,
+				E8BBDC052A8F139400E95C6C /* SettingsToggleStyle.swift */,
 				E80EFF1F2A891737005FD650 /* DarkModeToggleStyle.swift */,
 			);
 			path = ToggleStyles;
@@ -474,6 +477,7 @@
 				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
 				E8E367912A4604C400379934 /* View.swift in Sources */,
+				E8BBDC062A8F139400E95C6C /* SettingsToggleStyle.swift in Sources */,
 				E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */,
 				E8A3CB582A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift in Sources */,
 				E8EF44DB2A89E81A00F798CC /* CapsuleButtonStyle.swift in Sources */,
