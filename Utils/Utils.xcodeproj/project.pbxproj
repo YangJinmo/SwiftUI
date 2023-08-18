@@ -314,9 +314,9 @@
 		E8A990C52A836F1C00EB2BC4 /* ToggleStyles */ = {
 			isa = PBXGroup;
 			children = (
-				E83DC5D22A2DB3CD006E2E4F /* CheckboxToggleStyle.swift */,
 				E8A990C62A836F8900EB2BC4 /* CapsuleToggleStyle.swift */,
 				E80EFF1D2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift */,
+				E83DC5D22A2DB3CD006E2E4F /* CheckboxToggleStyle.swift */,
 				E80EFF1F2A891737005FD650 /* DarkModeToggleStyle.swift */,
 			);
 			path = ToggleStyles;
