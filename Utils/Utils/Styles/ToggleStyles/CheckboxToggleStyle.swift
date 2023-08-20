@@ -26,6 +26,7 @@ struct CheckboxToggleStyle: ToggleStyle {
             }
         }
         .tint(configuration.isOn ? .accentColor : .gray500)
+        .animation(Animation.easeInOut(duration: 0.3), value: configuration.isOn)
         .disabled(!isEnabled)
     }
 
