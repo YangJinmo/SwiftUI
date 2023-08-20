@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct SizePreferenceKey: PreferenceKey {
-    static var defaultValue: CGSize = .zero
+    typealias Size = CGSize
 
-    static func reduce(value: inout CGSize, nextValue: () -> CGSize) {}
+    static var defaultValue: Size = .zero
+
+    static func reduce(value: inout Size, nextValue: () -> Size) {}
 }
 
 extension View {

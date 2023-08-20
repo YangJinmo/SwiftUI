@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct HeightPreferenceKey: PreferenceKey {
-    static var defaultValue: CGFloat = .zero
+    typealias Value = CGFloat
 
-    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+    static var defaultValue: Value = .zero
+
+    static func reduce(value: inout Value, nextValue: () -> Value) {
         value = max(value, nextValue())
     }
 }
