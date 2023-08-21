@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct SizePreferenceKey: PreferenceKey {
-    typealias Size = CGSize
+    typealias Value = CGSize
 
-    static var defaultValue: Size = .zero
+    static var defaultValue: Value = .zero
 
-    static func reduce(value: inout Size, nextValue: () -> Size) {}
+    static func reduce(value: inout Value, nextValue: () -> Value) {
+        value.width = max(value.width, nextValue().width)
+        value.height = max(value.height, nextValue().height)
+    }
 }
 
 extension View {
