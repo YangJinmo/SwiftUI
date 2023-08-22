@@ -9,15 +9,7 @@ import CoreFoundation
 import UIKit.UIGeometry
 
 extension CGFloat {
-    static var top: CGFloat {
-        return UIEdgeInsets.safeAreaInsets.top
-    }
-
-    static var bottom: CGFloat {
-        return UIEdgeInsets.safeAreaInsets.bottom
-    }
-
     static var toastBottom: CGFloat {
-        return bottom > 0 ? bottom : 20
+        return UIEdgeInsets.safeAreaInsets.bottom > 0 ? UIEdgeInsets.safeAreaInsets.bottom : 20
     }
 }
