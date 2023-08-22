@@ -11,6 +11,7 @@
 		E80403C52A5A7FA800B5D7A8 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C42A5A7FA800B5D7A8 /* ItemView.swift */; };
 		E804C5C22A486B320026616E /* DeletableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804C5C12A486B320026616E /* DeletableItemView.swift */; };
 		E80A07FB2A9302FB006A75FD /* WidthPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A07FA2A9302FB006A75FD /* WidthPreferenceKey.swift */; };
+		E80A08012A938804006A75FD /* TogglableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A08002A938804006A75FD /* TogglableScrollView.swift */; };
 		E80EFF1E2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80EFF1D2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift */; };
 		E80EFF202A891737005FD650 /* DarkModeToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80EFF1F2A891737005FD650 /* DarkModeToggleStyle.swift */; };
 		E8108FC82A4C202E009D60AB /* CurrentTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */; };
@@ -69,6 +70,7 @@
 		E80403C42A5A7FA800B5D7A8 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		E804C5C12A486B320026616E /* DeletableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableItemView.swift; sourceTree = "<group>"; };
 		E80A07FA2A9302FB006A75FD /* WidthPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthPreferenceKey.swift; sourceTree = "<group>"; };
+		E80A08002A938804006A75FD /* TogglableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglableScrollView.swift; sourceTree = "<group>"; };
 		E80EFF1D2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleToggleStyle.swift; sourceTree = "<group>"; };
 		E80EFF1F2A891737005FD650 /* DarkModeToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeToggleStyle.swift; sourceTree = "<group>"; };
 		E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTimeView.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */,
 				E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */,
 				E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */,
+				E80A08002A938804006A75FD /* TogglableScrollView.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				E8BF16B42A3B17ED0096E57E /* Font.swift in Sources */,
 				E8191E542A81EAA30068D113 /* SizePreferenceKey.swift in Sources */,
 				E83280A42A4B131B00563CBC /* BackgroundViewModifier.swift in Sources */,
+				E80A08012A938804006A75FD /* TogglableScrollView.swift in Sources */,
 				E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */,
 				E85AFE092A6293FC00E71575 /* JMTextField.swift in Sources */,
 				E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */,
