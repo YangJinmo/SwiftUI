@@ -28,19 +28,19 @@ struct PhotoPicker: UIViewControllerRepresentable {
     }
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(with: self)
+        Coordinator(self)
     }
 
     class Coordinator: PHPickerViewControllerDelegate {
-        var photoPicker: PhotoPicker
+        var parent: PhotoPicker
 
-        init(with photoPicker: PhotoPicker) {
-            self.photoPicker = photoPicker
+        init(_ parent: PhotoPicker) {
+            self.parent = parent
         }
 
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-            photoPicker.service.isPresented = false
-            photoPicker.service.results = results
+            parent.service.isPresented = false
+            parent.service.results = results
         }
     }
 }
