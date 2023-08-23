@@ -42,6 +42,7 @@
 		E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7BB2A6F96E60095F030 /* Refreshable.swift */; };
 		E8822E562A7F5DF600E4AF38 /* FocusedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */; };
 		E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */; };
+		E890503B2A96040D00ECF159 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E890503A2A96040D00ECF159 /* LottieView.swift */; };
 		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
 		E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB512A5BAD880074A9BE /* Image.swift */; };
 		E8A3CB582A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */; };
@@ -103,6 +104,7 @@
 		E868E7BB2A6F96E60095F030 /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 		E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedTextField.swift; sourceTree = "<group>"; };
 		E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
+		E890503A2A96040D00ECF159 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
 		E8A3CB512A5BAD880074A9BE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableItemView.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				E832809D2A4998A400563CBC /* PhotoPicker.swift */,
 				E832809F2A4998CA00563CBC /* PhotoPickerService.swift */,
 				E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */,
+				E890503A2A96040D00ECF159 /* LottieView.swift */,
 			);
 			path = Representables;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */,
 				E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */,
 				E8BF16B92A3BED170096E57E /* SelectListTextField.swift in Sources */,
+				E890503B2A96040D00ECF159 /* LottieView.swift in Sources */,
 				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
 				E8E367912A4604C400379934 /* View.swift in Sources */,
