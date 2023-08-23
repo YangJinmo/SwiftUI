@@ -46,7 +46,7 @@ struct LottieView: UIViewRepresentable {
         let progressLabel: UILabel = {
             let label = UILabel()
             label.font = .systemFont(ofSize: 17, weight: .bold)
-            label.textColor = .limeGreen
+            label.textColor = UIColor(.limeGreen)
             label.text = Int((progress * 100).rounded()).description
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
