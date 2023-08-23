@@ -26,13 +26,13 @@ struct FocusedTextField: UIViewRepresentable {
     }
 
     func makeCoordinator() -> FocusedTextField.Coordinator {
-        return Coordinator(parent: self)
+        return Coordinator(self)
     }
 
     class Coordinator: NSObject, UITextFieldDelegate {
         var parent: FocusedTextField
 
-        init(parent: FocusedTextField) {
+        init(_ parent: FocusedTextField) {
             self.parent = parent
         }
 
