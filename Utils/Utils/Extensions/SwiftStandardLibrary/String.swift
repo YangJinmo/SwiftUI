@@ -21,4 +21,10 @@ extension String {
 
         return url
     }
+
+    var encode: String? {
+        var allowedQueryParamAndKey: CharacterSet = .urlQueryAllowed // ! $ & \ ( ) * +  - . / : ; = ? @ _ ~
+        allowedQueryParamAndKey.insert("#")
+        return addingPercentEncoding(withAllowedCharacters: allowedQueryParamAndKey)
+    }
 }
