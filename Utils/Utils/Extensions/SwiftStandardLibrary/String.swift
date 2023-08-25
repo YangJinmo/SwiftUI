@@ -27,4 +27,8 @@ extension String {
         allowedQueryParamAndKey.insert("#")
         return addingPercentEncoding(withAllowedCharacters: allowedQueryParamAndKey)
     }
+
+    var isUpdate: Bool {
+        return compare(Bundle.appVersion, options: .numeric) == .orderedDescending
+    }
 }
