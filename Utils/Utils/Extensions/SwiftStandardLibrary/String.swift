@@ -31,4 +31,24 @@ extension String {
     var isUpdate: Bool {
         return compare(Bundle.appVersion, options: .numeric) == .orderedDescending
     }
+
+    // MARK: - Log
+
+    public enum LogTrait: String {
+        case app = "☄️"
+        case verbose = "🔬"
+        case debug = "💬"
+        case info = "ℹ️"
+        case warning = "⚠️"
+        case error = "🔥"
+    }
+
+    func log(trait: LogTrait = LogTrait.info, filename: String = #file, line: Int = #line, function: String = #function, _ comment: String = "") {
+        print("\(trait.rawValue) \(Date().toString()) [\(filename.source):\(line)] \(function) \(comment)\(self)")
+    }
+
+    var source: String {
+        let components = components(separatedBy: "/")
+        return components.isEmpty ? "" : components.last!.components(separatedBy: ".").first!
+    }
 }
