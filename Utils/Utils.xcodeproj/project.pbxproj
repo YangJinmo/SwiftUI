@@ -61,6 +61,7 @@
 		E8BF16C02A4178AB0096E57E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16BF2A4178AB0096E57E /* String.swift */; };
 		E8D163672A4D46A400A570A9 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D163662A4D46A400A570A9 /* NavigationBarModifier.swift */; };
 		E8D2FDB32A99B1890023DA63 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDB22A99B1890023DA63 /* Date.swift */; };
+		E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */; };
 		E8E3678F2A46047900379934 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E3678E2A46047900379934 /* PresentView.swift */; };
 		E8E367912A4604C400379934 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E367902A4604C400379934 /* View.swift */; };
 		E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEF1C22A39B29A0031933E /* CustomTextField.swift */; };
@@ -124,6 +125,7 @@
 		E8BF16BF2A4178AB0096E57E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E8D163662A4D46A400A570A9 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		E8D2FDB22A99B1890023DA63 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
 		E8E3678E2A46047900379934 /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
 		E8E367902A4604C400379934 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E8EEF1C22A39B29A0031933E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				E832809F2A4998CA00563CBC /* PhotoPickerService.swift */,
 				E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */,
 				E890503A2A96040D00ECF159 /* LottieView.swift */,
+				E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */,
 			);
 			path = Representables;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				E83DC5D62A2DB806006E2E4F /* RoundedCorner.swift in Sources */,
 				E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */,
 				E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */,
+				E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */,
 				E8191E562A81EAB10068D113 /* HeightPreferenceKey.swift in Sources */,
 				E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */,
 				E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */,
