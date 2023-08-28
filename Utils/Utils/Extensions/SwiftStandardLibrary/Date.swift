@@ -14,4 +14,14 @@ extension Date {
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.string(from: self)
     }
+
+    // MARK: - Unix Timestamp
+
+    static var timestamp: Date {
+        return Date().millisecondsSince1970.toDate
+    }
+
+    var millisecondsSince1970: Int64 {
+        return Int64((timeIntervalSince1970 * 1000).rounded())
+    }
 }
