@@ -9,13 +9,13 @@ import SwiftUI
 
 struct TogglableScrollView<Content>: View where Content: View {
     @Binding var canScroll: Bool
-    var axes: Axis.Set = .vertical
+    var axis: Axis.Set = .vertical
     var showsIndicators: Bool = false
     var content: () -> Content
 
     var body: some View {
         if canScroll {
-            ScrollView(axes, showsIndicators: showsIndicators, content: content)
+            ScrollView(axis, showsIndicators: showsIndicators, content: content)
         } else {
             content()
         }
