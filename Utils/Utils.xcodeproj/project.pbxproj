@@ -63,6 +63,7 @@
 		E8D2FDB32A99B1890023DA63 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDB22A99B1890023DA63 /* Date.swift */; };
 		E8D2FDB72A9C26210023DA63 /* Int64.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDB62A9C26210023DA63 /* Int64.swift */; };
 		E8D2FDBB2A9E32610023DA63 /* VScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDBA2A9E32610023DA63 /* VScrollView.swift */; };
+		E8D2FDBD2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDBC2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift */; };
 		E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */; };
 		E8E3678F2A46047900379934 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E3678E2A46047900379934 /* PresentView.swift */; };
 		E8E367912A4604C400379934 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E367902A4604C400379934 /* View.swift */; };
@@ -129,6 +130,7 @@
 		E8D2FDB22A99B1890023DA63 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		E8D2FDB62A9C26210023DA63 /* Int64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int64.swift; sourceTree = "<group>"; };
 		E8D2FDBA2A9E32610023DA63 /* VScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VScrollView.swift; sourceTree = "<group>"; };
+		E8D2FDBC2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleScrollEnabledViewModifier.swift; sourceTree = "<group>"; };
 		E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
 		E8E3678E2A46047900379934 /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
 		E8E367902A4604C400379934 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				E8D163662A4D46A400A570A9 /* NavigationBarModifier.swift */,
 				E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */,
 				E8BF16B62A3B18800096E57E /* TextFieldClearButtonViewModifier.swift */,
+				E8D2FDBC2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				E85AFE072A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift in Sources */,
 				E80403C32A59ADD800B5D7A8 /* ListView.swift in Sources */,
 				E83DC5ED2A2DBCCD006E2E4F /* Color.swift in Sources */,
+				E8D2FDBD2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift in Sources */,
 				E80EFF1E2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift in Sources */,
 				E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */,
 				E83DC5E12A2DBB9D006E2E4F /* CustomNavigationView.swift in Sources */,
