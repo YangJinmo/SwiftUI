@@ -66,6 +66,16 @@
 		E8D2FDBB2A9E32610023DA63 /* VScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDBA2A9E32610023DA63 /* VScrollView.swift */; };
 		E8D2FDBD2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDBC2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift */; };
 		E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */; };
+		E8E2971D2AA5C4BA00EB4F6A /* PhoneModels.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */; };
+		E8E2971F2AA5C4DE00EB4F6A /* PrimeMinisters.json in Sources */ = {isa = PBXBuildFile; fileRef = E8E2971E2AA5C4DE00EB4F6A /* PrimeMinisters.json */; };
+		E8E297222AA5C52F00EB4F6A /* PhoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297212AA5C52F00EB4F6A /* PhoneModel.swift */; };
+		E8E297242AA5C54B00EB4F6A /* PrimeMinister.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297232AA5C54B00EB4F6A /* PrimeMinister.swift */; };
+		E8E297262AA5C58500EB4F6A /* PhoneModelsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297252AA5C58500EB4F6A /* PhoneModelsListView.swift */; };
+		E8E297282AA5C59700EB4F6A /* PrimeMinistersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297272AA5C59700EB4F6A /* PrimeMinistersListView.swift */; };
+		E8E2972A2AA5C5FB00EB4F6A /* ListableResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297292AA5C5FB00EB4F6A /* ListableResponseModel.swift */; };
+		E8E2972E2AA5C79D00EB4F6A /* ReusableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E2972D2AA5C79D00EB4F6A /* ReusableListView.swift */; };
+		E8E297302AA5CDA000EB4F6A /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E2972F2AA5CDA000EB4F6A /* ListSection.swift */; };
+		E8E297322AA5CEF100EB4F6A /* ReusableSectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297312AA5CEF100EB4F6A /* ReusableSectionListView.swift */; };
 		E8E3678F2A46047900379934 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E3678E2A46047900379934 /* PresentView.swift */; };
 		E8E367912A4604C400379934 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E367902A4604C400379934 /* View.swift */; };
 		E8E3C6AF2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E3C6AE2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift */; };
@@ -136,6 +146,16 @@
 		E8D2FDBA2A9E32610023DA63 /* VScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VScrollView.swift; sourceTree = "<group>"; };
 		E8D2FDBC2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleScrollEnabledViewModifier.swift; sourceTree = "<group>"; };
 		E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
+		E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PhoneModels.json; sourceTree = "<group>"; };
+		E8E2971E2AA5C4DE00EB4F6A /* PrimeMinisters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PrimeMinisters.json; sourceTree = "<group>"; };
+		E8E297212AA5C52F00EB4F6A /* PhoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneModel.swift; sourceTree = "<group>"; };
+		E8E297232AA5C54B00EB4F6A /* PrimeMinister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeMinister.swift; sourceTree = "<group>"; };
+		E8E297252AA5C58500EB4F6A /* PhoneModelsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneModelsListView.swift; sourceTree = "<group>"; };
+		E8E297272AA5C59700EB4F6A /* PrimeMinistersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeMinistersListView.swift; sourceTree = "<group>"; };
+		E8E297292AA5C5FB00EB4F6A /* ListableResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListableResponseModel.swift; sourceTree = "<group>"; };
+		E8E2972D2AA5C79D00EB4F6A /* ReusableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableListView.swift; sourceTree = "<group>"; };
+		E8E2972F2AA5CDA000EB4F6A /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
+		E8E297312AA5CEF100EB4F6A /* ReusableSectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableSectionListView.swift; sourceTree = "<group>"; };
 		E8E3678E2A46047900379934 /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
 		E8E367902A4604C400379934 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E8E3C6AE2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnWillDisappearViewModifier.swift; sourceTree = "<group>"; };
@@ -339,6 +359,7 @@
 			children = (
 				E868E7B82A6F4C580095F030 /* ScrollToID.swift */,
 				E868E7BB2A6F96E60095F030 /* Refreshable.swift */,
+				E8E297202AA5C52000EB4F6A /* ReusableLists */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -387,6 +408,23 @@
 				E8627F1B2A7AA07500C01478 /* Dictionary.swift */,
 			);
 			path = SwiftStandardLibrary;
+			sourceTree = "<group>";
+		};
+		E8E297202AA5C52000EB4F6A /* ReusableLists */ = {
+			isa = PBXGroup;
+			children = (
+				E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */,
+				E8E2971E2AA5C4DE00EB4F6A /* PrimeMinisters.json */,
+				E8E297212AA5C52F00EB4F6A /* PhoneModel.swift */,
+				E8E297232AA5C54B00EB4F6A /* PrimeMinister.swift */,
+				E8E297252AA5C58500EB4F6A /* PhoneModelsListView.swift */,
+				E8E297272AA5C59700EB4F6A /* PrimeMinistersListView.swift */,
+				E8E297292AA5C5FB00EB4F6A /* ListableResponseModel.swift */,
+				E8E2972D2AA5C79D00EB4F6A /* ReusableListView.swift */,
+				E8E2972F2AA5CDA000EB4F6A /* ListSection.swift */,
+				E8E297312AA5CEF100EB4F6A /* ReusableSectionListView.swift */,
+			);
+			path = ReusableLists;
 			sourceTree = "<group>";
 		};
 		E8EF44D92A89E80C00F798CC /* ButtonStyles */ = {
@@ -462,6 +500,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E2971D2AA5C4BA00EB4F6A /* PhoneModels.json in Resources */,
 				E83DC5C92A2CD043006E2E4F /* Preview Assets.xcassets in Resources */,
 				E83DC5C52A2CD043006E2E4F /* Assets.xcassets in Resources */,
 			);
@@ -477,13 +516,18 @@
 				E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */,
 				E8A990C72A836F8900EB2BC4 /* CapsuleToggleStyle.swift in Sources */,
 				E8E3C6B12AA1BB1500435BA3 /* JMWebView.swift in Sources */,
+				E8E2972E2AA5C79D00EB4F6A /* ReusableListView.swift in Sources */,
 				E8259C6F2A7CB01A005BF839 /* Bundle.swift in Sources */,
 				E83DC5DA2A2DB8FA006E2E4F /* CGFloat.swift in Sources */,
 				E8822E562A7F5DF600E4AF38 /* FocusedTextField.swift in Sources */,
+				E8E297322AA5CEF100EB4F6A /* ReusableSectionListView.swift in Sources */,
 				E804C5C22A486B320026616E /* DeletableItemView.swift in Sources */,
 				E80EFF202A891737005FD650 /* DarkModeToggleStyle.swift in Sources */,
+				E8E297242AA5C54B00EB4F6A /* PrimeMinister.swift in Sources */,
 				E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */,
 				E83DC5E42A2DBBD4006E2E4F /* KeyboardObserver.swift in Sources */,
+				E8E297282AA5C59700EB4F6A /* PrimeMinistersListView.swift in Sources */,
+				E8E2972A2AA5C5FB00EB4F6A /* ListableResponseModel.swift in Sources */,
 				E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */,
 				E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */,
 				E868E7B92A6F4C580095F030 /* ScrollToID.swift in Sources */,
@@ -499,6 +543,7 @@
 				E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */,
 				E83DC5E12A2DBB9D006E2E4F /* CustomNavigationView.swift in Sources */,
 				E83DC5D62A2DB806006E2E4F /* RoundedCorner.swift in Sources */,
+				E8E297222AA5C52F00EB4F6A /* PhoneModel.swift in Sources */,
 				E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */,
 				E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */,
 				E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */,
@@ -517,6 +562,8 @@
 				E8191E542A81EAA30068D113 /* SizePreferenceKey.swift in Sources */,
 				E83280A42A4B131B00563CBC /* BackgroundViewModifier.swift in Sources */,
 				E80A08012A938804006A75FD /* TogglableScrollView.swift in Sources */,
+				E8E297302AA5CDA000EB4F6A /* ListSection.swift in Sources */,
+				E8E2971F2AA5C4DE00EB4F6A /* PrimeMinisters.json in Sources */,
 				E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */,
 				E85AFE092A6293FC00E71575 /* JMTextField.swift in Sources */,
 				E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */,
@@ -527,6 +574,7 @@
 				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
 				E8E367912A4604C400379934 /* View.swift in Sources */,
+				E8E297262AA5C58500EB4F6A /* PhoneModelsListView.swift in Sources */,
 				E8BBDC062A8F139400E95C6C /* SettingsToggleStyle.swift in Sources */,
 				E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */,
 				E8A3CB582A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift in Sources */,

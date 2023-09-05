@@ -1,0 +1,20 @@
+{
+    "prime_ministers": [
+        {
+            "name": "Sir Robert Walpole",
+                "term": {
+                    "start": "1721-04-03",
+                        "end": "1742-02-11"
+                },
+                "party": "Whig"
+        },
+        {
+            "name": "Arthur Balfour",
+                "term": {
+                    "start": "1902-07-12",
+                        "end": "1905-12-04"
+                },
+                "party": "Conservative"
+        },
+    ]
+}
