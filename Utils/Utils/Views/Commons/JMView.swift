@@ -121,11 +121,23 @@ struct JMView_Previews_View: View {
         NavigationView {
             JMView {
                 Text("JMView")
+                    .onAppear {
+                        print("JMView - onAppear")
+                    }
+                    .onDisappear {
+                        print("JMView - onDisappear")
+                    }
             } content: {
                 VStack {
                     NavigationLink(isActive: $isActiving) {
                         JMView(.navigation, $isActiving) {
                             Text("Navigation")
+                                .onAppear {
+                                    print("Navigation - onAppear")
+                                }
+                                .onDisappear {
+                                    print("Navigation - onDisappear")
+                                }
                         } content: {
                             Text("This is navigation")
                         }
@@ -159,6 +171,12 @@ struct JMView_Previews_View: View {
                 } content: {
                     JMView(.presentation, $isShowingSheet) {
                         Text("Sheet")
+                            .onAppear {
+                                print("Sheet - onAppear")
+                            }
+                            .onDisappear {
+                                print("Sheet - onDisappear")
+                            }
                     } right: {
                         Button {
                             print("checkmark button touched")
@@ -174,6 +192,12 @@ struct JMView_Previews_View: View {
                 } content: {
                     JMView(.presentation, $isPresenting) {
                         Text("Full Screen Cover")
+                            .onAppear {
+                                print("Full Screen Cover - onAppear")
+                            }
+                            .onDisappear {
+                                print("Full Screen Cover - onDisappear")
+                            }
                     } right: {
                         Button {
                             print("checkmark button touched")
