@@ -76,6 +76,7 @@
 		E8E2972E2AA5C79D00EB4F6A /* ReusableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E2972D2AA5C79D00EB4F6A /* ReusableListView.swift */; };
 		E8E297302AA5CDA000EB4F6A /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E2972F2AA5CDA000EB4F6A /* ListSection.swift */; };
 		E8E297322AA5CEF100EB4F6A /* ReusableSectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297312AA5CEF100EB4F6A /* ReusableSectionListView.swift */; };
+		E8E297342AA7272D00EB4F6A /* VerticalPageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297332AA7272D00EB4F6A /* VerticalPageTabView.swift */; };
 		E8E3678F2A46047900379934 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E3678E2A46047900379934 /* PresentView.swift */; };
 		E8E367912A4604C400379934 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E367902A4604C400379934 /* View.swift */; };
 		E8E3C6AF2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E3C6AE2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift */; };
@@ -156,6 +157,7 @@
 		E8E2972D2AA5C79D00EB4F6A /* ReusableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableListView.swift; sourceTree = "<group>"; };
 		E8E2972F2AA5CDA000EB4F6A /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		E8E297312AA5CEF100EB4F6A /* ReusableSectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableSectionListView.swift; sourceTree = "<group>"; };
+		E8E297332AA7272D00EB4F6A /* VerticalPageTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalPageTabView.swift; sourceTree = "<group>"; };
 		E8E3678E2A46047900379934 /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
 		E8E367902A4604C400379934 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E8E3C6AE2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnWillDisappearViewModifier.swift; sourceTree = "<group>"; };
@@ -357,9 +359,10 @@
 		E868E7BA2A6F96B70095F030 /* BootCamps */ = {
 			isa = PBXGroup;
 			children = (
+				E8E297202AA5C52000EB4F6A /* ReusableLists */,
 				E868E7B82A6F4C580095F030 /* ScrollToID.swift */,
 				E868E7BB2A6F96E60095F030 /* Refreshable.swift */,
-				E8E297202AA5C52000EB4F6A /* ReusableLists */,
+				E8E297332AA7272D00EB4F6A /* VerticalPageTabView.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E297342AA7272D00EB4F6A /* VerticalPageTabView.swift in Sources */,
 				E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */,
 				E8A990C72A836F8900EB2BC4 /* CapsuleToggleStyle.swift in Sources */,
 				E8E3C6B12AA1BB1500435BA3 /* JMWebView.swift in Sources */,
