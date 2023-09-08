@@ -77,6 +77,7 @@
 		E8E297302AA5CDA000EB4F6A /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E2972F2AA5CDA000EB4F6A /* ListSection.swift */; };
 		E8E297322AA5CEF100EB4F6A /* ReusableSectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297312AA5CEF100EB4F6A /* ReusableSectionListView.swift */; };
 		E8E297342AA7272D00EB4F6A /* VerticalPageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297332AA7272D00EB4F6A /* VerticalPageTabView.swift */; };
+		E8E297362AAACAE200EB4F6A /* AsyncAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297352AAACAE200EB4F6A /* AsyncAwait.swift */; };
 		E8E3678F2A46047900379934 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E3678E2A46047900379934 /* PresentView.swift */; };
 		E8E367912A4604C400379934 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E367902A4604C400379934 /* View.swift */; };
 		E8E3C6AF2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E3C6AE2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift */; };
@@ -158,6 +159,7 @@
 		E8E2972F2AA5CDA000EB4F6A /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		E8E297312AA5CEF100EB4F6A /* ReusableSectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableSectionListView.swift; sourceTree = "<group>"; };
 		E8E297332AA7272D00EB4F6A /* VerticalPageTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalPageTabView.swift; sourceTree = "<group>"; };
+		E8E297352AAACAE200EB4F6A /* AsyncAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwait.swift; sourceTree = "<group>"; };
 		E8E3678E2A46047900379934 /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
 		E8E367902A4604C400379934 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E8E3C6AE2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnWillDisappearViewModifier.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 				E868E7B82A6F4C580095F030 /* ScrollToID.swift */,
 				E868E7BB2A6F96E60095F030 /* Refreshable.swift */,
 				E8E297332AA7272D00EB4F6A /* VerticalPageTabView.swift */,
+				E8E297352AAACAE200EB4F6A /* AsyncAwait.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */,
 				E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */,
 				E8BF16B72A3B18800096E57E /* TextFieldClearButtonViewModifier.swift in Sources */,
+				E8E297362AAACAE200EB4F6A /* AsyncAwait.swift in Sources */,
 				E8BF16C02A4178AB0096E57E /* String.swift in Sources */,
 				E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */,
 				E83DC5DD2A2DB97E006E2E4F /* HTMLWebView.swift in Sources */,
