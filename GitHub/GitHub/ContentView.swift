@@ -92,10 +92,9 @@ struct ContentView: View {
     }
 
     private func getUser(username: String) async throws -> GitHubUser {
-        // errorMessage = ""
+        errorMessage = ""
 
         let endPoint = "https://api.github.com/users/\(username)"
-        print("endPoint: \(endPoint)")
 
         guard let url = URL(string: endPoint) else {
             throw GHError.invalidURL
