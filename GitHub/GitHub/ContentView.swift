@@ -36,6 +36,39 @@ struct ContentView: View {
             }
             .frame(width: 120, height: 120)
 
+            if let name = user?.name {
+                Text(name)
+                    .bold()
+                    .font(.title3)
+
+                Text(user?.login ?? "")
+            } else {
+                Text(user?.login ?? "")
+                    .bold()
+                    .font(.title3)
+            }
+
+            Text(user?.bio ?? "")
+                .fontWeight(.medium)
+                .padding(.top, 2)
+
+            HStack(spacing: 4) {
+                Image(systemName: "person.2")
+
+                Text("\(user?.followers ?? 0)")
+                    .fontWeight(.semibold)
+
+                Text("followers")
+
+                Text("\(user?.following ?? 0)")
+                    .fontWeight(.semibold)
+
+                Text("following")
+            }
+            .padding(.top, 2)
+
+            Spacer()
+
             TextField(titleKey, text: $username)
                 .bold()
                 .font(.title3)
@@ -65,15 +98,6 @@ struct ContentView: View {
                         await fetchUser()
                     }
                 }
-
-            Text(user?.login ?? "Login Placeholder")
-                .bold()
-                .font(.title3)
-
-            Text(user?.bio ?? "Bio Placeholder")
-                .padding()
-
-            Spacer()
         }
         .padding()
         .task {
@@ -137,8 +161,11 @@ struct ContentView_Previews: PreviewProvider {
 
 struct GitHubUser: Codable {
     let login: String
-    let avatarUrl: String
-    let bio: String
+    let name: String?
+    let avatarUrl: String?
+    let bio: String?
+    let followers: Int
+    let following: Int
 }
 
 enum GHError: Error {
