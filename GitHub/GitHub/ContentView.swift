@@ -60,6 +60,8 @@ struct ContentView: View {
 
                 Text("followers")
 
+                Text("·")
+
                 Text("\(user?.following ?? 0)")
                     .fontWeight(.semibold)
 
