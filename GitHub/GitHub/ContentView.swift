@@ -69,6 +69,17 @@ struct ContentView: View {
             }
             .padding(.top, 2)
 
+            Button {
+                guard let url = URL(string: user?.htmlUrl ?? "") else {
+                    return
+                }
+
+                UIApplication.shared.open(url)
+            } label: {
+                Text(user?.htmlUrl ?? "")
+            }
+            .padding(.top, 2)
+
             Spacer()
 
             TextField(titleKey, text: $username)
@@ -168,6 +179,7 @@ struct GitHubUser: Codable {
     let bio: String?
     let followers: Int
     let following: Int
+    let htmlUrl: String
 }
 
 enum GHError: Error {
