@@ -11,6 +11,7 @@
 		E8A319142AAEE33F00465490 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A319132AAEE33F00465490 /* ContentView.swift */; };
 		E8A319162AAEE34000465490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A319152AAEE34000465490 /* Assets.xcassets */; };
 		E8A319192AAEE34000465490 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8A319182AAEE34000465490 /* Preview Assets.xcassets */; };
+		E8A319212AB2C88100465490 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = E8A319202AB2C88100465490 /* SwiftSoup */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8A319212AB2C88100465490 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = GitHub;
+			packageProductDependencies = (
+				E8A319202AB2C88100465490 /* SwiftSoup */,
+			);
 			productName = GitHub;
 			productReference = E8A3190E2AAEE33F00465490 /* GitHub.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = E8A319052AAEE33F00465490;
+			packageReferences = (
+				E8A3191F2AB2C88100465490 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = E8A3190F2AAEE33F00465490 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E8A3191F2AB2C88100465490 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E8A319202AB2C88100465490 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8A3191F2AB2C88100465490 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E8A319062AAEE33F00465490 /* Project object */;
 }
