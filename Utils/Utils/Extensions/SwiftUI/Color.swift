@@ -46,7 +46,7 @@ extension Color {
         .init(red: red / 255, green: green / 255, blue: blue / 255, opacity: opacity)
     }
 
-    static func random() -> Color {
-        .init(red: .random(in: 0 ... 1), green: .random(in: 0 ... 1), blue: .random(in: 0 ... 1))
+    static func random(_ opacity: CGFloat = 1) -> Color {
+        .init(red: .random(in: 0 ... 1), green: .random(in: 0 ... 1), blue: .random(in: 0 ... 1), opacity: opacity)
     }
 }
