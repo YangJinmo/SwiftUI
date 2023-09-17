@@ -46,6 +46,7 @@
 		E890503B2A96040D00ECF159 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E890503A2A96040D00ECF159 /* LottieView.swift */; };
 		E890503E2A96045800ECF159 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E890503D2A96045800ECF159 /* Lottie */; };
 		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
+		E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */; };
 		E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB512A5BAD880074A9BE /* Image.swift */; };
 		E8A3CB582A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */; };
 		E8A990C72A836F8900EB2BC4 /* CapsuleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A990C62A836F8900EB2BC4 /* CapsuleToggleStyle.swift */; };
@@ -129,6 +130,7 @@
 		E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 		E890503A2A96040D00ECF159 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
+		E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridBootCamp.swift; sourceTree = "<group>"; };
 		E8A3CB512A5BAD880074A9BE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableItemView.swift; sourceTree = "<group>"; };
 		E8A990C62A836F8900EB2BC4 /* CapsuleToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleToggleStyle.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				E868E7BB2A6F96E60095F030 /* Refreshable.swift */,
 				E8E297332AA7272D00EB4F6A /* VerticalPageTabView.swift */,
 				E8E297352AAACAE200EB4F6A /* AsyncAwait.swift */,
+				E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				E8BF16B72A3B18800096E57E /* TextFieldClearButtonViewModifier.swift in Sources */,
 				E8E297362AAACAE200EB4F6A /* AsyncAwait.swift in Sources */,
 				E8BF16C02A4178AB0096E57E /* String.swift in Sources */,
+				E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */,
 				E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */,
 				E83DC5DD2A2DB97E006E2E4F /* HTMLWebView.swift in Sources */,
 				E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */,
