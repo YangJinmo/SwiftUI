@@ -44,6 +44,8 @@
 		E8627F1C2A7AA07500C01478 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8627F1B2A7AA07500C01478 /* Dictionary.swift */; };
 		E868E7B92A6F4C580095F030 /* ScrollToID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7B82A6F4C580095F030 /* ScrollToID.swift */; };
 		E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7BB2A6F96E60095F030 /* Refreshable.swift */; };
+		E86DA7A82AB986B9006A1743 /* ViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7A72AB986B9006A1743 /* ViewControllerRepresentable.swift */; };
+		E86DA7AA2AB98DA6006A1743 /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7A92AB98DA6006A1743 /* ViewRepresentable.swift */; };
 		E8822E562A7F5DF600E4AF38 /* FocusedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */; };
 		E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */; };
 		E890503B2A96040D00ECF159 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E890503A2A96040D00ECF159 /* LottieView.swift */; };
@@ -132,6 +134,8 @@
 		E8627F1B2A7AA07500C01478 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		E868E7B82A6F4C580095F030 /* ScrollToID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToID.swift; sourceTree = "<group>"; };
 		E868E7BB2A6F96E60095F030 /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
+		E86DA7A72AB986B9006A1743 /* ViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		E86DA7A92AB98DA6006A1743 /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
 		E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedTextField.swift; sourceTree = "<group>"; };
 		E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 		E890503A2A96040D00ECF159 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 		E83DC5DB2A2DB96E006E2E4F /* Representables */ = {
 			isa = PBXGroup;
 			children = (
+				E86DA7A72AB986B9006A1743 /* ViewControllerRepresentable.swift */,
+				E86DA7A92AB98DA6006A1743 /* ViewRepresentable.swift */,
 				E83DC5DC2A2DB97E006E2E4F /* HTMLWebView.swift */,
 				E8E3C6B02AA1BB1500435BA3 /* JMWebView.swift */,
 				E832809D2A4998A400563CBC /* PhotoPicker.swift */,
@@ -570,6 +576,7 @@
 				E83DC5ED2A2DBCCD006E2E4F /* Color.swift in Sources */,
 				E8D2FDBD2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift in Sources */,
 				E80EFF1E2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift in Sources */,
+				E86DA7AA2AB98DA6006A1743 /* ViewRepresentable.swift in Sources */,
 				E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */,
 				E8128E082AB968EE00B6B8F6 /* CollectionViewService.swift in Sources */,
 				E83DC5E12A2DBB9D006E2E4F /* CustomNavigationView.swift in Sources */,
@@ -600,6 +607,7 @@
 				E8E297302AA5CDA000EB4F6A /* ListSection.swift in Sources */,
 				E8E2971F2AA5C4DE00EB4F6A /* PrimeMinisters.json in Sources */,
 				E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */,
+				E86DA7A82AB986B9006A1743 /* ViewControllerRepresentable.swift in Sources */,
 				E85AFE092A6293FC00E71575 /* JMTextField.swift in Sources */,
 				E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */,
 				E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */,
