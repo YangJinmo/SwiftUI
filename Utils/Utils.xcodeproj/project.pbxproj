@@ -31,7 +31,7 @@
 		E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5D22A2DB3CD006E2E4F /* CheckboxToggleStyle.swift */; };
 		E83DC5D62A2DB806006E2E4F /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5D52A2DB806006E2E4F /* RoundedCorner.swift */; };
 		E83DC5DA2A2DB8FA006E2E4F /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5D92A2DB8FA006E2E4F /* CGFloat.swift */; };
-		E83DC5DD2A2DB97E006E2E4F /* HTMLWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5DC2A2DB97E006E2E4F /* HTMLWebView.swift */; };
+		E83DC5DD2A2DB97E006E2E4F /* JMWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5DC2A2DB97E006E2E4F /* JMWebView.swift */; };
 		E83DC5E12A2DBB9D006E2E4F /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */; };
 		E83DC5E42A2DBBD4006E2E4F /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E32A2DBBD4006E2E4F /* KeyboardObserver.swift */; };
 		E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E62A2DBC16006E2E4F /* UIEdgeInsets.swift */; };
@@ -120,7 +120,7 @@
 		E83DC5D22A2DB3CD006E2E4F /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		E83DC5D52A2DB806006E2E4F /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		E83DC5D92A2DB8FA006E2E4F /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
-		E83DC5DC2A2DB97E006E2E4F /* HTMLWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLWebView.swift; sourceTree = "<group>"; };
+		E83DC5DC2A2DB97E006E2E4F /* JMWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMWebView.swift; sourceTree = "<group>"; };
 		E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 		E83DC5E32A2DBBD4006E2E4F /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		E83DC5E62A2DBC16006E2E4F /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 			children = (
 				E86DA7A72AB986B9006A1743 /* ViewControllerRepresentable.swift */,
 				E86DA7A92AB98DA6006A1743 /* ViewRepresentable.swift */,
-				E83DC5DC2A2DB97E006E2E4F /* HTMLWebView.swift */,
+				E83DC5DC2A2DB97E006E2E4F /* JMWebView.swift */,
 				E832809D2A4998A400563CBC /* PhotoPicker.swift */,
 				E832809F2A4998CA00563CBC /* PhotoPickerService.swift */,
 				E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */,
@@ -591,7 +591,7 @@
 				E8128E022AB81BA300B6B8F6 /* ListBootCamp.swift in Sources */,
 				E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */,
 				E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */,
-				E83DC5DD2A2DB97E006E2E4F /* HTMLWebView.swift in Sources */,
+				E83DC5DD2A2DB97E006E2E4F /* JMWebView.swift in Sources */,
 				E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */,
 				E83E09982AA027D200065AEF /* OnDidLoadViewModifier.swift in Sources */,
 				E8E3678F2A46047900379934 /* PresentView.swift in Sources */,
