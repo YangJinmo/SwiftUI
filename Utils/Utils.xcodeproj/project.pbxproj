@@ -16,6 +16,8 @@
 		E80EFF202A891737005FD650 /* DarkModeToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80EFF1F2A891737005FD650 /* DarkModeToggleStyle.swift */; };
 		E8108FC82A4C202E009D60AB /* CurrentTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */; };
 		E8128E022AB81BA300B6B8F6 /* ListBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8128E012AB81BA300B6B8F6 /* ListBootCamp.swift */; };
+		E8128E042AB84BF500B6B8F6 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8128E032AB84BF500B6B8F6 /* CollectionView.swift */; };
+		E8128E082AB968EE00B6B8F6 /* CollectionViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8128E072AB968EE00B6B8F6 /* CollectionViewService.swift */; };
 		E8191E542A81EAA30068D113 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8191E532A81EAA30068D113 /* SizePreferenceKey.swift */; };
 		E8191E562A81EAB10068D113 /* HeightPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8191E552A81EAB10068D113 /* HeightPreferenceKey.swift */; };
 		E8259C6F2A7CB01A005BF839 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8259C6E2A7CB01A005BF839 /* Bundle.swift */; };
@@ -100,6 +102,8 @@
 		E80EFF1F2A891737005FD650 /* DarkModeToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeToggleStyle.swift; sourceTree = "<group>"; };
 		E8108FC72A4C202E009D60AB /* CurrentTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTimeView.swift; sourceTree = "<group>"; };
 		E8128E012AB81BA300B6B8F6 /* ListBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBootCamp.swift; sourceTree = "<group>"; };
+		E8128E032AB84BF500B6B8F6 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		E8128E072AB968EE00B6B8F6 /* CollectionViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewService.swift; sourceTree = "<group>"; };
 		E8191E532A81EAA30068D113 /* SizePreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePreferenceKey.swift; sourceTree = "<group>"; };
 		E8191E552A81EAB10068D113 /* HeightPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightPreferenceKey.swift; sourceTree = "<group>"; };
 		E8259C6E2A7CB01A005BF839 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 				E890503A2A96040D00ECF159 /* LottieView.swift */,
 				E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */,
 				E8D2FDBA2A9E32610023DA63 /* VScrollView.swift */,
+				E8128E032AB84BF500B6B8F6 /* CollectionView.swift */,
+				E8128E072AB968EE00B6B8F6 /* CollectionViewService.swift */,
 			);
 			path = Representables;
 			sourceTree = "<group>";
@@ -565,6 +571,7 @@
 				E8D2FDBD2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift in Sources */,
 				E80EFF1E2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift in Sources */,
 				E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */,
+				E8128E082AB968EE00B6B8F6 /* CollectionViewService.swift in Sources */,
 				E83DC5E12A2DBB9D006E2E4F /* CustomNavigationView.swift in Sources */,
 				E83DC5D62A2DB806006E2E4F /* RoundedCorner.swift in Sources */,
 				E8E297222AA5C52F00EB4F6A /* PhoneModel.swift in Sources */,
@@ -575,6 +582,7 @@
 				E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */,
 				E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */,
 				E8BF16B72A3B18800096E57E /* TextFieldClearButtonViewModifier.swift in Sources */,
+				E8128E042AB84BF500B6B8F6 /* CollectionView.swift in Sources */,
 				E8E297362AAACAE200EB4F6A /* AsyncAwait.swift in Sources */,
 				E8BF16C02A4178AB0096E57E /* String.swift in Sources */,
 				E8128E022AB81BA300B6B8F6 /* ListBootCamp.swift in Sources */,
