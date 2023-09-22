@@ -18,6 +18,7 @@
 		E8128E022AB81BA300B6B8F6 /* ListBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8128E012AB81BA300B6B8F6 /* ListBootCamp.swift */; };
 		E8128E042AB84BF500B6B8F6 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8128E032AB84BF500B6B8F6 /* CollectionView.swift */; };
 		E8128E082AB968EE00B6B8F6 /* CollectionViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8128E072AB968EE00B6B8F6 /* CollectionViewService.swift */; };
+		E8128E0C2AB9719F00B6B8F6 /* TableViewBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8128E0B2AB9719F00B6B8F6 /* TableViewBootCamp.swift */; };
 		E8191E542A81EAA30068D113 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8191E532A81EAA30068D113 /* SizePreferenceKey.swift */; };
 		E8191E562A81EAB10068D113 /* HeightPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8191E552A81EAB10068D113 /* HeightPreferenceKey.swift */; };
 		E8259C6F2A7CB01A005BF839 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8259C6E2A7CB01A005BF839 /* Bundle.swift */; };
@@ -105,6 +106,7 @@
 		E8128E012AB81BA300B6B8F6 /* ListBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBootCamp.swift; sourceTree = "<group>"; };
 		E8128E032AB84BF500B6B8F6 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		E8128E072AB968EE00B6B8F6 /* CollectionViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewService.swift; sourceTree = "<group>"; };
+		E8128E0B2AB9719F00B6B8F6 /* TableViewBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewBootCamp.swift; sourceTree = "<group>"; };
 		E8191E532A81EAA30068D113 /* SizePreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePreferenceKey.swift; sourceTree = "<group>"; };
 		E8191E552A81EAB10068D113 /* HeightPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightPreferenceKey.swift; sourceTree = "<group>"; };
 		E8259C6E2A7CB01A005BF839 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 				E8E297352AAACAE200EB4F6A /* AsyncAwait.swift */,
 				E8128E012AB81BA300B6B8F6 /* ListBootCamp.swift */,
 				E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */,
+				E8128E0B2AB9719F00B6B8F6 /* TableViewBootCamp.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
