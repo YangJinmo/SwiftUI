@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CollectionView: UIViewRepresentable {
+    // struct CollectionView<Content: View>: UIViewRepresentable {
     typealias UIViewType = UICollectionView
 
     // UICollectionViewDataSource
@@ -18,6 +19,12 @@ struct CollectionView: UIViewRepresentable {
 
     @ObservedObject var service: CollectionViewService
 
+//    let content: Content
+//
+//    init(@ViewBuilder content: () -> Content) {
+//        self.content = content()
+//    }
+
     func makeUIView(context: Context) -> UIViewType {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = service.scrollDirection
@@ -26,9 +33,13 @@ struct CollectionView: UIViewRepresentable {
         layout.minimumInteritemSpacing = service.minimumInteritemSpacing
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .systemBackground
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         collectionView.isPagingEnabled = service.isPagingEnabled
+        collectionView.backgroundColor = .systemBackground
+
+//        let child = UIHostingController(rootView: content)
+//        child.view
+
+        // collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
 
         collectionView.dataSource = context.coordinator
         collectionView.delegate = context.coordinator
@@ -56,8 +67,38 @@ struct CollectionView: UIViewRepresentable {
         }
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-            cell.backgroundColor = .systemYellow
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+//            cell.backgroundColor = .systemYellow
+
+            let cell = UICollectionViewCell()
+//            cell.contentConfiguration = UIHostingConfiguration {
+//                HStack {
+//                    Image(systemName: "star").foregroundStyle(.purple)
+//                    Text("Favorites")
+//                    Spacer()
+//                }
+//            }
+            
+            let swiftUIContent = {
+                HStack {
+                    Image(systemName: "star")
+                        .foregroundColor(.purple)
+                    Text("Favorites")
+                    Spacer() // A spacer to left align the 2 views above
+                }
+            }
+
+            if #available(iOS 16.0, *) {
+                cell.contentConfiguration = UIHostingConfiguration(content: swiftUIContent)
+            } else {
+                cell.contentConfiguration = HostingContentConfiguration {
+                    // We add a little bit of padding & height to match the UIHostingConfiguration
+                    swiftUIContent()
+                        .padding()
+                        .frame(height: 44)
+                }
+            }
+
             return cell
         }
 
@@ -96,5 +137,86 @@ struct CollectionViewPreview: View {
 struct CollectionViewRepresentable_Previews: PreviewProvider {
     static var previews: some View {
         CollectionViewPreview()
+    }
+}
+
+struct HostingContentConfiguration<Content>: UIContentConfiguration where Content: View {
+    // fileprivate, since we'll put ContentView that will be expained in the next code block in the same file
+    fileprivate let hostingController: UIHostingController<Content>
+
+    init(@ViewBuilder content: () -> Content) {
+        hostingController = UIHostingController(rootView: content())
+    }
+
+    func makeContentView() -> UIView & UIContentView {
+        // Our custom UIView that conforms to UIContentView
+        ContentView<Content>(self)
+    }
+
+    func updated(for state: UIConfigurationState) -> HostingContentConfiguration<Content> {
+        self
+    }
+}
+
+private class ContentView<Content>: UIView, UIContentView where Content: View {
+    var configuration: UIContentConfiguration {
+        didSet {
+            // (Re)configure once we have have a configuration
+            configure(configuration)
+        }
+    }
+
+    init(_ configuration: UIContentConfiguration) {
+        self.configuration = configuration
+        super.init(frame: .zero)
+    }
+
+    required init?(coder: NSCoder) {
+        // This view shouldn't be initialized this way so we crash
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func configure(_ configuration: UIContentConfiguration) {
+        guard let configuration = configuration as? HostingContentConfiguration<Content>,
+              let parent = findViewController() else {
+            return
+        }
+
+        let hostingController = configuration.hostingController
+
+        guard let swiftUICellView = hostingController.view,
+              subviews.isEmpty else {
+            hostingController.view.invalidateIntrinsicContentSize()
+            return
+        }
+
+        // A clear background since that's all we need for now
+        hostingController.view.backgroundColor = .clear
+
+        parent.addChild(hostingController)
+        addSubview(hostingController.view)
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+
+        let constraints = [
+            leadingAnchor.constraint(equalTo: swiftUICellView.leadingAnchor),
+            trailingAnchor.constraint(equalTo: swiftUICellView.trailingAnchor),
+            topAnchor.constraint(equalTo: swiftUICellView.topAnchor),
+            bottomAnchor.constraint(equalTo: swiftUICellView.bottomAnchor),
+        ]
+
+        NSLayoutConstraint.activate(constraints)
+        hostingController.didMove(toParent: parent)
+    }
+}
+
+extension UIView {
+    func findViewController() -> UIViewController? {
+        if let nextResponder = next as? UIViewController {
+            return nextResponder
+        } else if let nextResponder = next as? UIView {
+            return nextResponder.findViewController()
+        }
+
+        return nil
     }
 }
