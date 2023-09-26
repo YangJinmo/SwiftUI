@@ -66,17 +66,19 @@ struct CollectionView: UIViewRepresentable {
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: parent.reuseIdentifier, for: indexPath)
-            cell.backgroundColor = .systemOrange
+            cell.backgroundColor = .black
 
             let swiftUIContent = {
-                HStack {
-                    Image(systemName: "star")
-                        .foregroundColor(.purple)
+//                HStack {
+//                    Image(systemName: "star")
+//                        .foregroundColor(.purple)
+//
+//                    Text("Favorites")
+//
+//                    Spacer() // A spacer to left align the 2 views above
+//                }
 
-                    Text("Favorites")
-
-                    Spacer() // A spacer to left align the 2 views above
-                }
+                LoopingVideoPlayer()
             }
 
             if #available(iOS 16.0, *) {
@@ -109,7 +111,7 @@ struct CollectionViewPreview: View {
     @StateObject private var collectionViewService = CollectionViewService(
         scrollDirection: .horizontal,
         minimumLineSpacing: 1,
-        minimumInteritemSpacing: 20,
+        minimumInteritemSpacing: 0,
         isPagingEnabled: true
     )
 
