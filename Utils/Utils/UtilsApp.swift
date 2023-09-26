@@ -11,9 +11,7 @@ import SwiftUI
 struct UtilsApp: App {
     var body: some Scene {
         WindowGroup {
-            ViewControllerRepresentable {
-                CollectionViewBootCamp()
-            }
+            CollectionViewPreview()
         }
     }
 }
