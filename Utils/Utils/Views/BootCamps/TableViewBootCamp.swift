@@ -28,12 +28,34 @@ class TableViewBootCamp: UITableViewController {
 
         // Example content based on:
         // https://developer.apple.com/documentation/uikit/uilistcontentconfiguration
-        var listContentConfiguration = cell.defaultContentConfiguration()
-        listContentConfiguration.image = UIImage(systemName: "star")
-        listContentConfiguration.text = "Favorites"
-        listContentConfiguration.imageProperties.tintColor = .purple
+//        var listContentConfiguration = cell.defaultContentConfiguration()
+//        listContentConfiguration.image = UIImage(systemName: "star")
+//        listContentConfiguration.text = "Favorites"
+//        listContentConfiguration.imageProperties.tintColor = .purple
+//
+//        cell.contentConfiguration = listContentConfiguration
 
-        cell.contentConfiguration = listContentConfiguration
+        let swiftUIContent = {
+            HStack {
+                Image(systemName: "star")
+                    .foregroundColor(.purple)
+
+                Text("Favorites")
+
+                Spacer() // A spacer to left align the 2 views above
+            }
+        }
+
+        if #available(iOS 16.0, *) {
+            cell.contentConfiguration = UIHostingConfiguration(content: swiftUIContent)
+        } else {
+            cell.contentConfiguration = HostingContentConfiguration {
+                // We add a little bit of padding & height to match the UIHostingConfiguration
+                swiftUIContent()
+                    .padding()
+                    .frame(height: 44)
+            }
+        }
 
         return cell
     }
