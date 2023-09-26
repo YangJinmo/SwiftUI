@@ -24,6 +24,7 @@ struct CollectionView: UIViewRepresentable {
 //    init(@ViewBuilder content: () -> Content) {
 //        self.content = content()
 //    }
+    private let reuseIdentifier = "CollectionViewCell"
 
     func makeUIView(context: Context) -> UIViewType {
         let layout = UICollectionViewFlowLayout()
@@ -36,10 +37,7 @@ struct CollectionView: UIViewRepresentable {
         collectionView.isPagingEnabled = service.isPagingEnabled
         collectionView.backgroundColor = .systemBackground
 
-//        let child = UIHostingController(rootView: content)
-//        child.view
-
-        // collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         collectionView.dataSource = context.coordinator
         collectionView.delegate = context.coordinator
@@ -67,23 +65,16 @@ struct CollectionView: UIViewRepresentable {
         }
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-//            cell.backgroundColor = .systemYellow
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: parent.reuseIdentifier, for: indexPath)
+            cell.backgroundColor = .systemOrange
 
-            let cell = UICollectionViewCell()
-//            cell.contentConfiguration = UIHostingConfiguration {
-//                HStack {
-//                    Image(systemName: "star").foregroundStyle(.purple)
-//                    Text("Favorites")
-//                    Spacer()
-//                }
-//            }
-            
             let swiftUIContent = {
                 HStack {
                     Image(systemName: "star")
                         .foregroundColor(.purple)
+
                     Text("Favorites")
+
                     Spacer() // A spacer to left align the 2 views above
                 }
             }
@@ -94,8 +85,8 @@ struct CollectionView: UIViewRepresentable {
                 cell.contentConfiguration = HostingContentConfiguration {
                     // We add a little bit of padding & height to match the UIHostingConfiguration
                     swiftUIContent()
-                        .padding()
-                        .frame(height: 44)
+//                        .padding()
+//                        .frame(height: 44)
                 }
             }
 
@@ -168,6 +159,7 @@ private class ContentView<Content>: UIView, UIContentView where Content: View {
 
     init(_ configuration: UIContentConfiguration) {
         self.configuration = configuration
+
         super.init(frame: .zero)
     }
 
