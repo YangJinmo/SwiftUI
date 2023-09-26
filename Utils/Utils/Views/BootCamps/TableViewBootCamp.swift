@@ -9,12 +9,12 @@ import SwiftUI
 import UIKit
 
 class TableViewBootCamp: UITableViewController {
-    private let aCellIdentifier = "someIdentifier"
+    private let reuseIdentifier = "TableViewBootCamp"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: aCellIdentifier)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -22,7 +22,7 @@ class TableViewBootCamp: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: aCellIdentifier) else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) else {
             fatalError("You forgot to register your table view cell")
         }
 
