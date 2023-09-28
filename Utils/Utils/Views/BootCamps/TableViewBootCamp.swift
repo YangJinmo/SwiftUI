@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-class TableViewBootCamp: UITableViewController {
+final class TableViewBootCamp: UITableViewController {
     private let reuseIdentifier = "TableViewBootCamp"
 
     override func viewDidLoad() {
