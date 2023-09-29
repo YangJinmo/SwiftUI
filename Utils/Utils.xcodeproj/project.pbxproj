@@ -48,6 +48,7 @@
 		E86DA7A82AB986B9006A1743 /* ViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7A72AB986B9006A1743 /* ViewControllerRepresentable.swift */; };
 		E86DA7AA2AB98DA6006A1743 /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7A92AB98DA6006A1743 /* ViewRepresentable.swift */; };
 		E86DA7B22ABE92BA006A1743 /* CollectionViewBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7B12ABE92BA006A1743 /* CollectionViewBootCamp.swift */; };
+		E8703E152AC2B7F900FE1FF7 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */; };
 		E8822E562A7F5DF600E4AF38 /* FocusedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */; };
 		E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */; };
 		E890503B2A96040D00ECF159 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E890503A2A96040D00ECF159 /* LottieView.swift */; };
@@ -139,6 +140,7 @@
 		E86DA7A72AB986B9006A1743 /* ViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		E86DA7A92AB98DA6006A1743 /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
 		E86DA7B12ABE92BA006A1743 /* CollectionViewBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBootCamp.swift; sourceTree = "<group>"; };
+		E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedTextField.swift; sourceTree = "<group>"; };
 		E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 		E890503A2A96040D00ECF159 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 				E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */,
 				E8128E0B2AB9719F00B6B8F6 /* TableViewBootCamp.swift */,
 				E86DA7B12ABE92BA006A1743 /* CollectionViewBootCamp.swift */,
+				E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				E83DC5E12A2DBB9D006E2E4F /* CustomNavigationView.swift in Sources */,
 				E86DA7B22ABE92BA006A1743 /* CollectionViewBootCamp.swift in Sources */,
 				E83DC5D62A2DB806006E2E4F /* RoundedCorner.swift in Sources */,
+				E8703E152AC2B7F900FE1FF7 /* CollectionViewController.swift in Sources */,
 				E8E297222AA5C52F00EB4F6A /* PhoneModel.swift in Sources */,
 				E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */,
 				E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */,
