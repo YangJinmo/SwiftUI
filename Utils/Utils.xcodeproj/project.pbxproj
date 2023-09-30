@@ -19,6 +19,7 @@
 		E8128E042AB84BF500B6B8F6 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8128E032AB84BF500B6B8F6 /* CollectionView.swift */; };
 		E8128E082AB968EE00B6B8F6 /* CollectionViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8128E072AB968EE00B6B8F6 /* CollectionViewService.swift */; };
 		E8128E0C2AB9719F00B6B8F6 /* TableViewBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8128E0B2AB9719F00B6B8F6 /* TableViewBootCamp.swift */; };
+		E817C22E2AC82710007FF6D3 /* HorizontalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E817C22D2AC82710007FF6D3 /* HorizontalList.swift */; };
 		E8191E542A81EAA30068D113 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8191E532A81EAA30068D113 /* SizePreferenceKey.swift */; };
 		E8191E562A81EAB10068D113 /* HeightPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8191E552A81EAB10068D113 /* HeightPreferenceKey.swift */; };
 		E8259C6F2A7CB01A005BF839 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8259C6E2A7CB01A005BF839 /* Bundle.swift */; };
@@ -109,6 +110,7 @@
 		E8128E032AB84BF500B6B8F6 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		E8128E072AB968EE00B6B8F6 /* CollectionViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewService.swift; sourceTree = "<group>"; };
 		E8128E0B2AB9719F00B6B8F6 /* TableViewBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewBootCamp.swift; sourceTree = "<group>"; };
+		E817C22D2AC82710007FF6D3 /* HorizontalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalList.swift; sourceTree = "<group>"; };
 		E8191E532A81EAA30068D113 /* SizePreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePreferenceKey.swift; sourceTree = "<group>"; };
 		E8191E552A81EAB10068D113 /* HeightPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightPreferenceKey.swift; sourceTree = "<group>"; };
 		E8259C6E2A7CB01A005BF839 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				E8128E0B2AB9719F00B6B8F6 /* TableViewBootCamp.swift */,
 				E86DA7B12ABE92BA006A1743 /* CollectionViewBootCamp.swift */,
 				E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */,
+				E817C22D2AC82710007FF6D3 /* HorizontalList.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				E85AFE092A6293FC00E71575 /* JMTextField.swift in Sources */,
 				E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */,
 				E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */,
+				E817C22E2AC82710007FF6D3 /* HorizontalList.swift in Sources */,
 				E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */,
 				E8BF16B92A3BED170096E57E /* SelectListTextField.swift in Sources */,
 				E890503B2A96040D00ECF159 /* LottieView.swift in Sources */,
