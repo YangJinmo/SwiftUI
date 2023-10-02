@@ -13,7 +13,8 @@ struct AnalogClock: View {
     var body: some View {
         return ZStack {
             Text("\(time.seconds)")
-        }.frame(width: 200, height: 200, alignment: .center)
+        }
+        .frame(width: 200, height: 200, alignment: .center)
     }
 }
 
