@@ -37,7 +37,7 @@ struct AsyncAwait_Previews: PreviewProvider {
 
 import SwiftUI
 
-class AsyncAwaitViewModel: ObservableObject {
+final class AsyncAwaitViewModel: ObservableObject {
     @Published var dataArray = [String]()
 
     func addTitle1() {
