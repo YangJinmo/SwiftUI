@@ -11,7 +11,7 @@ import SwiftUI
 struct UtilsApp: App {
     var body: some Scene {
         WindowGroup {
-            CollectionViewPreview()
+            AnalogClock()
         }
     }
 }
