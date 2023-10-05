@@ -10,21 +10,45 @@ import SwiftUI
 struct AnalogClock: View {
     @ObservedObject var time = CurrentTime()
 
+    func tick(at tick: Int) -> some View {
+        VStack {
+            Rectangle()
+                .fill(Color.primary)
+                .opacity(tick % 5 == 0 ? 1 : 0.4)
+                .frame(width: 2, height: tick % 5 == 0 ? 15 : 7)
+
+            Spacer()
+        }
+        .rotationEffect(Angle.degrees(Double(tick) / 60 * 360))
+    }
+
     var body: some View {
         ZStack {
-            // Text("\(time.seconds)")
+            ForEach(0 ..< 60) { tick in
+                self.tick(at: tick)
+            }
 
-            Clock(model: .init(type: .hour, timeInterval: time.seconds, tickScale: 0.4))
-                .stroke(Color.primary, style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
-                .rotationEffect(Angle.degrees(360 / 60))
+            GeometryReader { geometry in
+                ZStack {
+                    HStack(spacing: 0) {
+                        Text("9")
 
-            Clock(model: .init(type: .minute, timeInterval: time.seconds, tickScale: 0.6))
-                .stroke(Color.blue, style: StrokeStyle(lineWidth: 3, lineCap: .round, lineJoin: .round))
-                .rotationEffect(Angle.degrees(360 / 60))
+                        Spacer()
 
-            Clock(model: .init(type: .second, timeInterval: time.seconds, tickScale: 0.8))
-                .stroke(Color.red, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
-                .rotationEffect(Angle.degrees(360 / 60))
+                        Text("3")
+                    }
+
+                    VStack(spacing: 0) {
+                        Text("12")
+
+                        Spacer()
+
+                        Text("6")
+                    }
+                }
+                .frame(width: geometry.size.width - 38, height: geometry.size.height - 30, alignment: .center)
+                .offset(.init(width: 19, height: 15))
+            }
         }
         .frame(width: 200, height: 200, alignment: .center)
     }
