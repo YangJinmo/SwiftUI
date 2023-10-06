@@ -18,6 +18,21 @@ final class CollectionViewController: UICollectionViewController, UICollectionVi
         super.init(collectionViewLayout: layout)
     }
 
+    init(
+        scrollDirection: UICollectionView.ScrollDirection = .vertical,
+        sectionInset: UIEdgeInsets = .zero,
+        minimumLineSpacing: CGFloat = .zero,
+        minimumInteritemSpacing: CGFloat = .zero
+    ) {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = scrollDirection
+        layout.sectionInset = sectionInset
+        layout.minimumLineSpacing = minimumLineSpacing
+        layout.minimumInteritemSpacing = minimumInteritemSpacing
+
+        super.init(collectionViewLayout: layout)
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
