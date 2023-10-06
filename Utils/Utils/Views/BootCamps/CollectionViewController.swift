@@ -46,16 +46,10 @@ final class CollectionViewController: UICollectionViewController, UICollectionVi
         collectionView.register(MyCollectionViewCell.self, forCellWithReuseIdentifier: MyCollectionViewCell.reuseIdentifier)
         collectionView.dataSource = self
         collectionView.delegate = self
-    }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        collectionView.contentInsetAdjustmentBehavior = .never
-        collectionView.contentInset = .zero
-        collectionView.scrollIndicatorInsets = .zero
-        collectionView.verticalScrollIndicatorInsets = .zero
-        collectionView.horizontalScrollIndicatorInsets = .zero
+        if let top = UIApplication.sharedKeyWindow?.safeAreaInsets.top {
+            collectionView.contentInset.top = -top
+        }
     }
 
     // UICollectionViewDataSource
