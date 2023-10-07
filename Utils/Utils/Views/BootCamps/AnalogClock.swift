@@ -46,8 +46,8 @@ struct AnalogClock: View {
                         Text("6")
                     }
                 }
-                .frame(width: geometry.size.width - 38, height: geometry.size.height - 30, alignment: .center)
-                .offset(.init(width: 19, height: 15))
+                .frame(width: geometry.size.width - 36, height: geometry.size.height - 30, alignment: .center)
+                .offset(.init(width: 18, height: 15))
             }
         }
         .frame(width: 200, height: 200, alignment: .center)
