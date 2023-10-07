@@ -11,23 +11,24 @@ import UIKit
 final class CollectionViewBootCamp: UIViewController {
     // MARK: Data
 
-    struct Item: MyCollectionViewCell.Content {
+    struct CardItem: MyCollectionViewCell.Content {
         var id: String
         var imageName: String
         var title: String
         var description: String
+        var imageURL: String
     }
 
-    let items: [Item] = [
-        Item(id: UUID().uuidString, imageName: "condos", title: "Condo with awesome views of downtown", description: "$117 avg/night"),
-        Item(id: UUID().uuidString, imageName: "houses", title: "Oceanfront 3 BR/3 BA", description: "$400 avg/night"),
-        Item(id: UUID().uuidString, imageName: "studios", title: "Art Studio", description: "$65 avg/night"),
-        Item(id: UUID().uuidString, imageName: "villas", title: "Luxury 4 BR/3 BA Villa", description: "$109 avg/night"),
-        Item(id: UUID().uuidString, imageName: "cabins", title: "Cabin in the Pike", description: "$200 avg/night"),
-        Item(id: UUID().uuidString, imageName: "bungalows", title: "Cottage on Ocean Bluff", description: "$159 avg/night"),
-        Item(id: UUID().uuidString, imageName: "resorts", title: "Terranea Oceanside King Casita", description: "$351 avg/night"),
-        Item(id: UUID().uuidString, imageName: "chalets", title: "Romantic Mountain Chalet", description: "$104 avg/night"),
-        Item(id: UUID().uuidString, imageName: "farmhouses", title: "Cozy Farmhouse on 10 Acres", description: "$199 avg/night"),
+    let items: [CardItem] = [
+        CardItem(id: UUID().uuidString, imageName: "condos", title: "Condo with awesome views of downtown", description: "$117 avg/night", imageURL: "https://www.forbes.com/advisor/wp-content/uploads/2022/10/condo-vs-apartment.jpeg.jpg"),
+        CardItem(id: UUID().uuidString, imageName: "houses", title: "Oceanfront 3 BR/3 BA", description: "$400 avg/night", imageURL: "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg"),
+        CardItem(id: UUID().uuidString, imageName: "studios", title: "Art Studio", description: "$65 avg/night", imageURL: "https://www.sweetwater.com/insync/media/2019/09/5cce6b1f-091919-insync-tourgearsweetwaterstudio.jpg"),
+        CardItem(id: UUID().uuidString, imageName: "villas", title: "Luxury 4 BR/3 BA Villa", description: "$109 avg/night", imageURL: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/415304940.jpg?k=7446785620db62901eca0c847ba71dab1097fb9d5c4b614234b7909fd78d7f71&o=&hp=1"),
+        CardItem(id: UUID().uuidString, imageName: "cabins", title: "Cabin in the Pike", description: "$200 avg/night", imageURL: "https://static.wixstatic.com/media/3ffa1d_54089e5082b448c49c4e803543841971~mv2.jpg/v1/fit/w_479,h_320,q_90/3ffa1d_54089e5082b448c49c4e803543841971~mv2.jpg"),
+        CardItem(id: UUID().uuidString, imageName: "bungalows", title: "Cottage on Ocean Bluff", description: "$159 avg/night", imageURL: "https://www.journeyera.com/wp-content/uploads/2023/05/Overwater_bungalows_caribbean-46-1024x683.jpg"),
+        CardItem(id: UUID().uuidString, imageName: "resorts", title: "Terranea Oceanside King Casita", description: "$351 avg/night", imageURL: "https://images.lifestyleasia.com/wp-content/uploads/sites/6/2022/03/04111335/amandari-indonesia-suite-exterior-and-pool_original_11588-2-1401x900.jpg"),
+        CardItem(id: UUID().uuidString, imageName: "chalets", title: "Romantic Mountain Chalet", description: "$104 avg/night", imageURL: "https://3792.ch/wp-content/uploads/2022/03/canstockphoto96476824-scaled.jpg"),
+        CardItem(id: UUID().uuidString, imageName: "farmhouses", title: "Cozy Farmhouse on 10 Acres", description: "$199 avg/night", imageURL: "https://agavecustomhomes.com/wp-content/uploads/2022/02/Agave-Custom-Homes-American-Farmhouse.jpg"),
     ]
 
     private lazy var logo: UIImageView = {
@@ -66,6 +67,8 @@ final class CollectionViewBootCamp: UIViewController {
         super.viewDidLoad()
 
         setupView()
+
+        logo.setImage(urlString: "https://i.pinimg.com/originals/df/5f/d4/df5fd4cc30ed0eddb4c2bb45645586a5.png")
     }
 
     private func setupView() {
@@ -74,8 +77,10 @@ final class CollectionViewBootCamp: UIViewController {
         view.addSubview(collectionView)
 
         NSLayoutConstraint.activate([
-            logo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logo.topAnchor.constraint(equalTo: view.topAnchor),
+            logo.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            logo.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            logo.heightAnchor.constraint(equalToConstant: 80),
 
             label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             label.topAnchor.constraint(equalTo: logo.bottomAnchor, constant: 32),
@@ -172,6 +177,7 @@ protocol CardContent {
     var imageName: String { get }
     var title: String { get }
     var description: String { get }
+    var imageURL: String { get }
 }
 
 struct Card: View {
@@ -183,7 +189,12 @@ struct Card: View {
         VStack(alignment: .leading, spacing: 8) {
             // Image(systemName: "photo.artframe")
             // .resizable()
-            Image(content.imageName)
+
+            // Image(content.imageName)
+            // .fitToAspectRatio(3 / 2)
+            // .clipShape(RoundedRectangle(cornerRadius: 4))
+
+            AsyncImageView(url: content.imageURL)
                 .fitToAspectRatio(3 / 2)
                 .clipShape(RoundedRectangle(cornerRadius: 4))
 
@@ -195,6 +206,8 @@ struct Card: View {
             Text(content.description)
                 .font(.body)
                 .lineLimit(1)
+
+            Spacer()
         }
     }
 }
@@ -244,5 +257,52 @@ public extension Image {
 
     func fitToAspectRatio(_ aspectRatio: AspectRatio) -> some View {
         resizable().modifier(FitToAspectRatio(aspectRatio))
+    }
+}
+
+// Image extension that composes with the `.resizable()` modifier
+extension AsyncImageView {
+    func fitToAspectRatio(_ aspectRatio: CGFloat) -> some View {
+        modifier(FitToAspectRatio(aspectRatio))
+    }
+
+    func fitToAspectRatio(_ aspectRatio: AspectRatio) -> some View {
+        modifier(FitToAspectRatio(aspectRatio))
+    }
+}
+
+extension UIImageView {
+    // MARK: - Error
+
+    private func toURL(urlString: String?) -> URL? {
+        guard let urlString = urlString else {
+            "Error: urlString is nil".log()
+            return nil
+        }
+        guard let url = urlString.toURL else {
+            return nil
+        }
+        return url
+    }
+
+    // MARK: - Asynchronously
+
+    func setImage(urlString: String?) {
+        guard let url = toURL(urlString: urlString) else {
+            return
+        }
+
+        DispatchQueue.global().async { [weak self] in
+            do {
+                let data = try Data(contentsOf: url)
+                let image = UIImage(data: data)
+
+                DispatchQueue.main.async {
+                    self?.image = image
+                }
+            } catch {
+                "Error: \(error)".log()
+            }
+        }
     }
 }
