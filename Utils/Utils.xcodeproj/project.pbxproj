@@ -51,6 +51,7 @@
 		E86DA7AA2AB98DA6006A1743 /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7A92AB98DA6006A1743 /* ViewRepresentable.swift */; };
 		E86DA7B22ABE92BA006A1743 /* CollectionViewBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7B12ABE92BA006A1743 /* CollectionViewBootCamp.swift */; };
 		E8703E152AC2B7F900FE1FF7 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */; };
+		E870C8FD2AD2BED8003F7DB7 /* FitToAspectRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatio.swift */; };
 		E8822E562A7F5DF600E4AF38 /* FocusedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */; };
 		E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */; };
 		E890503B2A96040D00ECF159 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E890503A2A96040D00ECF159 /* LottieView.swift */; };
@@ -145,6 +146,7 @@
 		E86DA7A92AB98DA6006A1743 /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
 		E86DA7B12ABE92BA006A1743 /* CollectionViewBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBootCamp.swift; sourceTree = "<group>"; };
 		E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitToAspectRatio.swift; sourceTree = "<group>"; };
 		E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedTextField.swift; sourceTree = "<group>"; };
 		E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 		E890503A2A96040D00ECF159 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 				E8D2FDBC2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift */,
 				E83E09972AA027D200065AEF /* OnDidLoadViewModifier.swift */,
 				E8E3C6AE2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift */,
+				E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatio.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				E817C2302AC91F9D007FF6D3 /* AnalogClock.swift in Sources */,
 				E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */,
 				E83DC5DD2A2DB97E006E2E4F /* JMWebView.swift in Sources */,
+				E870C8FD2AD2BED8003F7DB7 /* FitToAspectRatio.swift in Sources */,
 				E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */,
 				E83E09982AA027D200065AEF /* OnDidLoadViewModifier.swift in Sources */,
 				E8E3678F2A46047900379934 /* PresentView.swift in Sources */,
