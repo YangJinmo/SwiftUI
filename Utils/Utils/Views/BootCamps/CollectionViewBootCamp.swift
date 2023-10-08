@@ -19,7 +19,7 @@ final class CollectionViewBootCamp: UIViewController {
         var imageURL: String
     }
 
-    let items: [CardItem] = [
+    let cardItems: [CardItem] = [
         CardItem(id: UUID().uuidString, imageName: "condos", title: "Condo with awesome views of downtown", description: "$117 avg/night", imageURL: "https://www.forbes.com/advisor/wp-content/uploads/2022/10/condo-vs-apartment.jpeg.jpg"),
         CardItem(id: UUID().uuidString, imageName: "houses", title: "Oceanfront 3 BR/3 BA", description: "$400 avg/night", imageURL: "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg"),
         CardItem(id: UUID().uuidString, imageName: "studios", title: "Art Studio", description: "$65 avg/night", imageURL: "https://www.sweetwater.com/insync/media/2019/09/5cce6b1f-091919-insync-tourgearsweetwaterstudio.jpg"),
@@ -96,7 +96,7 @@ final class CollectionViewBootCamp: UIViewController {
 
 extension CollectionViewBootCamp: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return cardItems.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -104,7 +104,7 @@ extension CollectionViewBootCamp: UICollectionViewDataSource {
             fatalError("Could not dequeue cell")
         }
 
-        let item = items[indexPath.row]
+        let item = cardItems[indexPath.row]
         cell.configure(with: item, parent: self)
 
         return cell
