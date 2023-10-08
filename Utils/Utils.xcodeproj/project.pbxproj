@@ -52,6 +52,7 @@
 		E86DA7B22ABE92BA006A1743 /* CollectionViewBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7B12ABE92BA006A1743 /* CollectionViewBootCamp.swift */; };
 		E8703E152AC2B7F900FE1FF7 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */; };
 		E870C8FD2AD2BED8003F7DB7 /* FitToAspectRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatio.swift */; };
+		E870C8FF2AD2BF6D003F7DB7 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870C8FE2AD2BF6D003F7DB7 /* CacheAsyncImage.swift */; };
 		E8822E562A7F5DF600E4AF38 /* FocusedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */; };
 		E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */; };
 		E890503B2A96040D00ECF159 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E890503A2A96040D00ECF159 /* LottieView.swift */; };
@@ -147,6 +148,7 @@
 		E86DA7B12ABE92BA006A1743 /* CollectionViewBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBootCamp.swift; sourceTree = "<group>"; };
 		E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitToAspectRatio.swift; sourceTree = "<group>"; };
+		E870C8FE2AD2BF6D003F7DB7 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
 		E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedTextField.swift; sourceTree = "<group>"; };
 		E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 		E890503A2A96040D00ECF159 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */,
 				E85AFE102A652F6C00E71575 /* JMView.swift */,
 				E8BF16BC2A4177540096E57E /* AsyncImageView.swift */,
+				E870C8FE2AD2BF6D003F7DB7 /* CacheAsyncImage.swift */,
 				E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */,
 				E80403C22A59ADD800B5D7A8 /* ListView.swift */,
 				E80403C42A5A7FA800B5D7A8 /* ItemView.swift */,
@@ -625,6 +628,7 @@
 				E8E297302AA5CDA000EB4F6A /* ListSection.swift in Sources */,
 				E8E2971F2AA5C4DE00EB4F6A /* PrimeMinisters.json in Sources */,
 				E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */,
+				E870C8FF2AD2BF6D003F7DB7 /* CacheAsyncImage.swift in Sources */,
 				E86DA7A82AB986B9006A1743 /* ViewControllerRepresentable.swift in Sources */,
 				E8128E0C2AB9719F00B6B8F6 /* TableViewBootCamp.swift in Sources */,
 				E85AFE092A6293FC00E71575 /* JMTextField.swift in Sources */,

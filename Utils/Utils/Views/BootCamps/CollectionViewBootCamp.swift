@@ -194,9 +194,29 @@ struct Card: View {
             // .fitToAspectRatio(3 / 2)
             // .clipShape(RoundedRectangle(cornerRadius: 4))
 
-            AsyncImageView(url: content.imageURL)
-                .fitToAspectRatio(3 / 2)
-                .clipShape(RoundedRectangle(cornerRadius: 4))
+            // AsyncImageView(url: content.imageURL)
+            // .fitToAspectRatio(3 / 2)
+            // .clipShape(RoundedRectangle(cornerRadius: 4))
+
+            CacheAsyncImage(url: content.imageURL.toURL!) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+
+                case let .success(image):
+                    image.resizable()
+                        .scaledToFit()
+
+                case .failure:
+                    Image.photo
+                        .foregroundColor(.white)
+
+                @unknown default:
+                    EmptyView()
+                }
+            }
+            .fitToAspectRatio(3 / 2)
+            .clipShape(RoundedRectangle(cornerRadius: 4))
 
             // Text("Condo with awesome views of downtown")
             Text(content.title)
