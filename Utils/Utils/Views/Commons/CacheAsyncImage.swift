@@ -62,32 +62,34 @@ fileprivate class ImageCache {
 }
 
 struct CacheAsyncImageView: View {
+    var url: String?
+
     var body: some View {
-        let imageURL = "https://www.forbes.com/advisor/wp-content/uploads/2022/10/condo-vs-apartment.jpeg.jpg"
+        if let url = url?.toURL {
+            CacheAsyncImage(url: url) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
 
-        CacheAsyncImage(url: imageURL.toURL!) { phase in
-            switch phase {
-            case .empty:
-                ProgressView()
+                case let .success(image):
+                    image.resizable()
+                        .scaledToFit()
 
-            case let .success(image):
-                image.resizable()
-                    .scaledToFit()
+                case .failure:
+                    Image.photo
+                        .foregroundColor(.white)
 
-            case .failure:
-                Image.photo
-                    .foregroundColor(.white)
-
-            @unknown default:
-                EmptyView()
+                @unknown default:
+                    EmptyView()
+                }
             }
+            .fitToAspectRatio(3 / 2)
+            .clipShape(RoundedRectangle(cornerRadius: 4))
+            .padding()
         }
-        .fitToAspectRatio(3 / 2)
-        .clipShape(RoundedRectangle(cornerRadius: 4))
-        .padding()
     }
 }
 
 #Preview {
-    CacheAsyncImageView()
+    CacheAsyncImageView(url: "https://www.forbes.com/advisor/wp-content/uploads/2022/10/condo-vs-apartment.jpeg.jpg")
 }
