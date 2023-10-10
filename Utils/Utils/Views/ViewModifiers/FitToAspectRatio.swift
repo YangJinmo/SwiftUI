@@ -53,18 +53,7 @@ public extension Image {
     }
 }
 
-// Image extension that composes with the `.resizable()` modifier
-extension AsyncImageView {
-    func fitToAspectRatio(_ aspectRatio: CGFloat) -> some View {
-        modifier(FitToAspectRatio(aspectRatio))
-    }
-
-    func fitToAspectRatio(_ aspectRatio: AspectRatio) -> some View {
-        modifier(FitToAspectRatio(aspectRatio))
-    }
-}
-
-extension CacheAsyncImage {
+public extension View {
     func fitToAspectRatio(_ aspectRatio: CGFloat) -> some View {
         modifier(FitToAspectRatio(aspectRatio))
     }
