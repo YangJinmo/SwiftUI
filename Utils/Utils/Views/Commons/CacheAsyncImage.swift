@@ -31,6 +31,7 @@ struct CacheAsyncImage<Content>: View where Content: View {
             content(.success(cached))
         } else {
             let _ = print("request: \(url.absoluteString)")
+
             AsyncImage(
                 url: url,
                 scale: scale,
@@ -77,7 +78,7 @@ struct CacheAsyncImageView: View {
 
                 case .failure:
                     Image.photo
-                        .foregroundColor(.white)
+                        .foregroundColor(.primary)
 
                 @unknown default:
                     EmptyView()
