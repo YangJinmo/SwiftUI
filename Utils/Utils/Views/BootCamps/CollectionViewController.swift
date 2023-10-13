@@ -85,9 +85,11 @@ final class CollectionViewController: UICollectionViewController, UICollectionVi
 
 import SwiftUI
 
-#Preview {
-    ViewControllerRepresentable {
-        CollectionViewController()
+struct CollectionViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        ViewControllerRepresentable {
+            CollectionViewController()
+        }
+        .ignoresSafeArea()
     }
-    .ignoresSafeArea()
 }

@@ -33,9 +33,11 @@ struct CacheAsyncImageView: View {
     }
 }
 
-#Preview {
-    CacheAsyncImageView(url: "https://www.forbes.com/advisor/wp-content/uploads/2022/10/condo-vs-apartment.jpeg.jpg")
-        .fitToAspectRatio(3 / 2)
-        .clipShape(RoundedRectangle(cornerRadius: 4))
-        .padding()
+struct CacheAsyncImageView_Previews: PreviewProvider {
+    static var previews: some View {
+        CacheAsyncImageView(url: "https://www.forbes.com/advisor/wp-content/uploads/2022/10/condo-vs-apartment.jpeg.jpg")
+            .fitToAspectRatio(3 / 2)
+            .clipShape(RoundedRectangle(cornerRadius: 4))
+            .padding()
+    }
 }
