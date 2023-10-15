@@ -9,28 +9,57 @@ import AVKit
 import SwiftUI
 
 struct LoopingVideoPlayer: UIViewRepresentable {
-    func makeUIView(context: Context) -> some UIView {
-        return LoopingVideoPlayerUIView(frame: .zero)
+    typealias UIViewType = UIView
+
+    var url: URL
+    // @Binding var url: URL
+
+    func makeUIView(context: Context) -> UIView {
+        print("LoopingVideoPlayer makeUIView: \(url.absoluteString)")
+        return LoopingVideoPlayerUIView(url: url)
     }
 
     func updateUIView(_ uiView: UIViewType, context: Context) {
-    }
-}
+        print("LoopingVideoPlayer updateUIView: \(url.absoluteString)")
 
-fileprivate class LoopingVideoPlayerUIView: UIView {
-    fileprivate var playerLayer = AVPlayerLayer()
-    fileprivate var playerLooper: AVPlayerLooper?
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-
-        guard let url = "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8".toURL else {
+        guard let uiView = uiView as? LoopingVideoPlayerUIView, uiView.url != url else {
             return
         }
 
+        uiView.url = url
+        // uiView.configurePlayerItem()
+    }
+}
+
+fileprivate final class LoopingVideoPlayerUIView: UIView {
+    var url: URL {
+        didSet {
+            print("LoopingVideoPlayer didSet: \(url.absoluteString)")
+            configurePlayerItem()
+        }
+    }
+
+    fileprivate var playerLayer = AVPlayerLayer()
+    fileprivate var playerLooper: AVPlayerLooper?
+
+    init(url: URL) {
+        self.url = url
+
+        super.init(frame: .zero)
+
+        configure()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func configure() {
+        print("LoopingVideoPlayer configure: \(url.absoluteString)")
+
         let playerItem = AVPlayerItem(url: url)
         let queuePlayer = AVQueuePlayer(playerItem: playerItem)
-        playerLayer.videoGravity = .resizeAspect
+        playerLayer.videoGravity = .resizeAspectFill
         playerLayer.player = queuePlayer
 
         layer.addSublayer(playerLayer)
@@ -40,8 +69,18 @@ fileprivate class LoopingVideoPlayerUIView: UIView {
         queuePlayer.play()
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    private func configurePlayerItem() {
+        let playerItem = AVPlayerItem(url: url)
+        let queuePlayer = AVQueuePlayer(playerItem: playerItem)
+        playerLayer.player = queuePlayer
+
+        if let playerLooper = playerLooper {
+            playerLooper.disableLooping()
+        }
+
+        playerLooper = AVPlayerLooper(player: queuePlayer, templateItem: playerItem)
+
+        queuePlayer.play()
     }
 
     override func layoutSubviews() {

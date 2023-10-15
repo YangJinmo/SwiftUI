@@ -68,6 +68,7 @@ struct CollectionView: UIViewRepresentable {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: parent.reuseIdentifier, for: indexPath)
             cell.backgroundColor = .black
 
+            let url = "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8".toURL!
             let swiftUIContent = {
 //                HStack {
 //                    Image(systemName: "star")
@@ -78,7 +79,7 @@ struct CollectionView: UIViewRepresentable {
 //                    Spacer() // A spacer to left align the 2 views above
 //                }
 
-                LoopingVideoPlayer()
+                LoopingVideoPlayer(url: url)
             }
 
             if #available(iOS 16.0, *) {
