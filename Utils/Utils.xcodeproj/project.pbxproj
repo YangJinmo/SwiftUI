@@ -79,6 +79,8 @@
 		E8D2FDBB2A9E32610023DA63 /* VScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDBA2A9E32610023DA63 /* VScrollView.swift */; };
 		E8D2FDBD2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDBC2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift */; };
 		E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */; };
+		E8D6D2482ADCE3DB001CFD9F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */; };
+		E8D6D24A2ADCE41D001CFD9F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */; };
 		E8E2971D2AA5C4BA00EB4F6A /* PhoneModels.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */; };
 		E8E2971F2AA5C4DE00EB4F6A /* PrimeMinisters.json in Sources */ = {isa = PBXBuildFile; fileRef = E8E2971E2AA5C4DE00EB4F6A /* PrimeMinisters.json */; };
 		E8E297222AA5C52F00EB4F6A /* PhoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297212AA5C52F00EB4F6A /* PhoneModel.swift */; };
@@ -175,6 +177,8 @@
 		E8D2FDBA2A9E32610023DA63 /* VScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VScrollView.swift; sourceTree = "<group>"; };
 		E8D2FDBC2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleScrollEnabledViewModifier.swift; sourceTree = "<group>"; };
 		E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
+		E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PhoneModels.json; sourceTree = "<group>"; };
 		E8E2971E2AA5C4DE00EB4F6A /* PrimeMinisters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PrimeMinisters.json; sourceTree = "<group>"; };
 		E8E297212AA5C52F00EB4F6A /* PhoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneModel.swift; sourceTree = "<group>"; };
@@ -329,6 +333,8 @@
 				E8E3678E2A46047900379934 /* PresentView.swift */,
 				E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */,
 				E85AFE102A652F6C00E71575 /* JMView.swift */,
+				E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */,
+				E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */,
 				E8BF16BC2A4177540096E57E /* AsyncImageView.swift */,
 				E870C8FE2AD2BF6D003F7DB7 /* CacheAsyncImage.swift */,
 				E8E2E96D2AD7FACC00712630 /* CacheAsyncImageView.swift */,
@@ -590,6 +596,7 @@
 				E8627F1C2A7AA07500C01478 /* Dictionary.swift in Sources */,
 				E8D2FDBB2A9E32610023DA63 /* VScrollView.swift in Sources */,
 				E8D2FDB72A9C26210023DA63 /* Int64.swift in Sources */,
+				E8D6D24A2ADCE41D001CFD9F /* ImageManager.swift in Sources */,
 				E85AFE072A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift in Sources */,
 				E8E3C6AF2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift in Sources */,
 				E80403C32A59ADD800B5D7A8 /* ListView.swift in Sources */,
@@ -610,6 +617,7 @@
 				E8191E562A81EAB10068D113 /* HeightPreferenceKey.swift in Sources */,
 				E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */,
 				E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */,
+				E8D6D2482ADCE3DB001CFD9F /* ImageView.swift in Sources */,
 				E8BF16B72A3B18800096E57E /* TextFieldClearButtonViewModifier.swift in Sources */,
 				E8128E042AB84BF500B6B8F6 /* CollectionView.swift in Sources */,
 				E8E297362AAACAE200EB4F6A /* AsyncAwait.swift in Sources */,
