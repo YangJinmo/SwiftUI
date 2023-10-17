@@ -209,17 +209,22 @@ struct Card: View {
             CacheAsyncImageView(url: content.imageURL)
                 .fitToAspectRatio(3 / 2)
                 .clipShape(RoundedRectangle(cornerRadius: 4))
+// MARK: HeartsProvider
 
-            // Text("Condo with awesome views of downtown")
-            Text(content.title)
-                .font(.headline)
+import SwiftUI
 
-            // Text("$42 avg/night")
-            Text(content.description)
-                .font(.body)
-                .lineLimit(1)
+final class HeartsProvider: ObservableObject {
+    @Published var hearts: [String] = []
 
-            Spacer()
+    func isHearted(id: String) -> Bool {
+        return hearts.contains(id)
+    }
+
+    func toggle(id: String) {
+        if let index = hearts.firstIndex(of: id) {
+            hearts.remove(at: index)
+        } else {
+            hearts.append(id)
         }
     }
 }
