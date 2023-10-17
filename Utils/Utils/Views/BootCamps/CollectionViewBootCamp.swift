@@ -202,13 +202,23 @@ struct Card: View {
             // .fitToAspectRatio(3 / 2)
             // .clipShape(RoundedRectangle(cornerRadius: 4))
 
-            // AsyncImageView(url: content.imageURL)
-            // .fitToAspectRatio(3 / 2)
-            // .clipShape(RoundedRectangle(cornerRadius: 4))
+// MARK: HeartButton
 
-            CacheAsyncImageView(url: content.imageURL)
-                .fitToAspectRatio(3 / 2)
-                .clipShape(RoundedRectangle(cornerRadius: 4))
+struct HeartButton: View {
+    let isHearted: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action, label: {
+            Image(systemName: "heart")
+                .imageScale(.medium)
+                .symbolVariant(isHearted ? .fill : .none)
+                .foregroundColor(isHearted ? .red : .primary)
+        })
+        .buttonStyle(CircleButtonStyle(backgroundColor: .white))
+    }
+}
+
 // MARK: HeartsProvider
 
 import SwiftUI
