@@ -117,11 +117,18 @@ extension CollectionViewBootCamp: UICollectionViewDelegateFlowLayout {
     }
 }
 
-struct CollectionViewBootCamp_Previews: PreviewProvider {
-    static var previews: some View {
+struct CollectionViewBootCampPreviews: View {
+    var body: some View {
         ViewControllerRepresentable {
             CollectionViewBootCamp()
         }
+        .environmentObject(HeartsProvider())
+    }
+}
+
+struct CollectionViewBootCamp_Previews: PreviewProvider {
+    static var previews: some View {
+        CollectionViewBootCampPreviews()
     }
 }
 
