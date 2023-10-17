@@ -193,14 +193,45 @@ struct Card: View {
 
     let content: Content
 
-    var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            // Image(systemName: "photo.artframe")
-            // .resizable()
+    @EnvironmentObject var heartsProvider: HeartsProvider
 
-            // Image(content.imageName)
-            // .fitToAspectRatio(3 / 2)
-            // .clipShape(RoundedRectangle(cornerRadius: 4))
+    var body: some View {
+        ZStack(alignment: .topTrailing) {
+            VStack(alignment: .leading, spacing: 8) {
+                // Image(systemName: "photo.artframe")
+                // .resizable()
+
+                // Image(content.imageName)
+                // .fitToAspectRatio(3 / 2)
+                // .clipShape(RoundedRectangle(cornerRadius: 4))
+
+                // AsyncImageView(url: content.imageURL)
+                // .fitToAspectRatio(3 / 2)
+                // .clipShape(RoundedRectangle(cornerRadius: 4))
+
+                CacheAsyncImageView(url: content.imageURL)
+                    .fitToAspectRatio(3 / 2)
+                    .clipShape(RoundedRectangle(cornerRadius: 4))
+
+                // Text("Condo with awesome views of downtown")
+                Text(content.title)
+                    .font(.headline)
+
+                // Text("$42 avg/night")
+                Text(content.description)
+                    .font(.body)
+                    .lineLimit(1)
+
+                Spacer()
+            }
+
+            HeartButton(isHearted: heartsProvider.isHearted(id: content.id), action: {
+                self.heartsProvider.toggle(id: content.id)
+            })
+            .padding()
+        }
+    }
+}
 
 // MARK: HeartButton
 
