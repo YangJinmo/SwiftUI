@@ -181,6 +181,7 @@ open class SwiftUICollectionViewCell<Content>: UICollectionViewCell where Conten
 }
 
 protocol CardContent {
+    var id: String { get }
     var imageName: String { get }
     var title: String { get }
     var description: String { get }
