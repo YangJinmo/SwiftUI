@@ -101,6 +101,7 @@
 		E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEF1C22A39B29A0031933E /* CustomTextField.swift */; };
 		E8EF44DB2A89E81A00F798CC /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */; };
 		E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */; };
+		E8F9E4982ADE5F9D00CB465C /* CircleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -199,6 +200,7 @@
 		E8EEF1C22A39B29A0031933E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
 		E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
+		E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -494,6 +496,7 @@
 			children = (
 				E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */,
 				E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */,
+				E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */,
 			);
 			path = ButtonStyles;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				E80EFF1E2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift in Sources */,
 				E86DA7AA2AB98DA6006A1743 /* ViewRepresentable.swift in Sources */,
 				E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */,
+				E8F9E4982ADE5F9D00CB465C /* CircleButtonStyle.swift in Sources */,
 				E8128E082AB968EE00B6B8F6 /* CollectionViewService.swift in Sources */,
 				E83DC5E12A2DBB9D006E2E4F /* CustomNavigationView.swift in Sources */,
 				E86DA7B22ABE92BA006A1743 /* CollectionViewBootCamp.swift in Sources */,
