@@ -11,7 +11,6 @@ extension Color {
     static let limeGreen = Color.rgba(4, 219, 108, 1)
     static let emeraldGreen = Color.rgba(5, 197, 147, 1)
     static let lightYellow = Color.rgba(252, 255, 125, 1)
-    static let red = Color.rgba(223, 29, 29, 1)
 
     static let gray800 = Color.rgba(23, 27, 28, 1)
     static let gray700 = Color.rgba(46, 54, 58, 1)
