@@ -111,8 +111,8 @@ struct CollectionView: UIViewRepresentable {
 struct CollectionViewPreview: View {
     @StateObject private var collectionViewService = CollectionViewService(
         scrollDirection: .horizontal,
-        minimumLineSpacing: 1,
-        minimumInteritemSpacing: 0,
+        minimumLineSpacing: .zero,
+        minimumInteritemSpacing: .zero,
         isPagingEnabled: true
     )
 
@@ -120,7 +120,7 @@ struct CollectionViewPreview: View {
         GeometryReader { proxy in
             CollectionView(
                 items: Array(0 ... 100),
-                itemSize: CGSize(width: proxy.size.width - 1, height: proxy.size.height),
+                itemSize: CGSize(width: proxy.size.width, height: proxy.size.height),
                 service: collectionViewService
             )
         }
