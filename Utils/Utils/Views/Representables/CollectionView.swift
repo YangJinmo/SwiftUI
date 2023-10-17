@@ -68,7 +68,8 @@ struct CollectionView: UIViewRepresentable {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: parent.reuseIdentifier, for: indexPath)
             cell.backgroundColor = .black
 
-            let url = "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8".toURL!
+            let item = parent.items[indexPath.item] as! String
+            let url = item.toURL!
             let swiftUIContent = {
 //                HStack {
 //                    Image(systemName: "star")
@@ -116,10 +117,19 @@ struct CollectionViewPreview: View {
         isPagingEnabled: true
     )
 
+    private let items = [
+        "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
+        "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
+        "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
+        "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
+        "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
+        "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
+    ]
+
     var body: some View {
         GeometryReader { proxy in
             CollectionView(
-                items: Array(0 ... 100),
+                items: items,
                 itemSize: CGSize(width: proxy.size.width, height: proxy.size.height),
                 service: collectionViewService
             )
