@@ -117,6 +117,16 @@ extension CollectionViewBootCamp: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension CollectionViewBootCamp: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = cardItems[indexPath.item]
+        print(item)
+//        let pdp = PropertyDetailsViewController(property: item)
+//        pdp.modalPresentationStyle = .formSheet
+//        present(pdp, animated: true)
+    }
+}
+
 struct CollectionViewBootCampPreviews: View {
     var body: some View {
         ViewControllerRepresentable {
