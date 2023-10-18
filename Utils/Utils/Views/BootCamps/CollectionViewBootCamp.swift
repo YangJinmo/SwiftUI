@@ -150,9 +150,27 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
 
     typealias Content = Card.Content
 
+    lazy var heartButton: UIHeartButton = {
+        UIHeartButton()
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        contentView.addSubview(heartButton)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     func configure(with content: Content, parent: UIViewController) {
         embed(in: parent, withView: Card(content: content))
         host?.view.frame = contentView.bounds
+
+        // UIButton layout
+        heartButton.frame = CGRect(x: contentView.bounds.width - 60, y: 20, width: 40, height: 40)
+        contentView.bringSubviewToFront(heartButton)
     }
 }
 
@@ -313,5 +331,50 @@ extension UIImageView {
                 "Error: \(error)".log()
             }
         }
+    }
+}
+
+final class UIHeartButton: BaseButton {
+    private lazy var config: UIButton.Configuration = {
+        var configuration = UIButton.Configuration.filled()
+        configuration.image = UIImage(systemName: "heart")
+        configuration.baseBackgroundColor = .white
+        configuration.baseForegroundColor = .red
+        configuration.cornerStyle = .capsule
+        configuration.buttonSize = .small
+        return configuration
+    }()
+
+    private lazy var action = UIAction { handler in
+        print("zzimss: \(handler)")
+    }
+
+    override func commonInit() {
+        configuration = config
+
+        addAction(action, for: .touchUpInside)
+    }
+}
+
+import UIKit
+
+class BaseButton: UIButton {
+    // MARK: - Initialization
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        commonInit()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+
+        commonInit()
+    }
+
+    // MARK: - Methods
+
+    func commonInit() {
     }
 }
