@@ -151,7 +151,7 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
     typealias Content = Card.Content
 
     lazy var heartButton: UIHeartButton = {
-        UIHeartButton()
+        UIHeartButton(handler: handler)
     }()
 
     override init(frame: CGRect) {
@@ -171,6 +171,10 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
         // UIButton layout
         heartButton.frame = CGRect(x: contentView.bounds.width - 60, y: 20, width: 40, height: 40)
         contentView.bringSubviewToFront(heartButton)
+    }
+
+    func handler() {
+        print("asdfsdfdsa")
     }
 }
 
@@ -345,14 +349,8 @@ final class UIHeartButton: BaseButton {
         return configuration
     }()
 
-    private lazy var action = UIAction { handler in
-        print("zzimss: \(handler)")
-    }
-
     override func commonInit() {
         configuration = config
-
-        addAction(action, for: .touchUpInside)
     }
 }
 
@@ -376,5 +374,15 @@ class BaseButton: UIButton {
     // MARK: - Methods
 
     func commonInit() {
+    }
+}
+
+extension UIButton {
+    convenience init(handler: @escaping () -> Void) {
+        self.init(
+            primaryAction: UIAction(
+                handler: { _ in handler() }
+            )
+        )
     }
 }
