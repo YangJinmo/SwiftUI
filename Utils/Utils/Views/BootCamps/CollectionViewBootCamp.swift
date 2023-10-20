@@ -257,10 +257,10 @@ struct Card: View {
                 Spacer()
             }
 
-            HeartButton(isHearted: heartsProvider.isHearted(id: content.id), action: {
-                self.heartsProvider.toggle(id: content.id)
-            })
-            .padding()
+//            HeartButton(isHearted: heartsProvider.isHearted(id: content.id), action: {
+//                self.heartsProvider.toggle(id: content.id)
+//            })
+//            .padding()
         }
     }
 }
