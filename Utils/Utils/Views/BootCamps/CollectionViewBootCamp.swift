@@ -106,8 +106,26 @@ extension CollectionViewBootCamp: UICollectionViewDataSource {
 
         let item = cardItems[indexPath.row]
         cell.configure(with: item, parent: self)
+        //cell.content = item
+        cell.handler = { item in
+            if let item = item {
+                print("Button in cell with item \(item) was tapped")
+            }
+        }
+        // cell.heartButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 
         return cell
+    }
+
+    @objc
+    func buttonTapped() {
+        print("buttonTapped")
+    }
+
+    func handler(item: Card.Content?) {
+        if let item = item {
+            print("Button in cell with item \(item) was tapped")
+        }
     }
 }
 
@@ -151,8 +169,11 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
     typealias Content = Card.Content
 
     lazy var heartButton: UIHeartButton = {
-        UIHeartButton(handler: handler)
+        UIHeartButton()
     }()
+
+    var content: Card.Content?
+    var handler: ((Card.Content?) -> Void)?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -168,13 +189,17 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
         embed(in: parent, withView: Card(content: content))
         host?.view.frame = contentView.bounds
 
+        self.content = content
+
         // UIButton layout
         heartButton.frame = CGRect(x: contentView.bounds.width - 60, y: 20, width: 40, height: 40)
         contentView.bringSubviewToFront(heartButton)
+
+        heartButton.addTarget(parent, action: #selector(buttonTapped), for: .touchUpInside)
     }
 
-    func handler() {
-        print("asdfsdfdsa")
+    @objc private func buttonTapped() {
+        handler?(content)
     }
 }
 
