@@ -17,8 +17,6 @@ struct CardItem: MyCollectionViewCell.Content {
 }
 
 final class CollectionViewBootCamp: UIViewController {
-    // MARK: Data
-
     let cardItems: [CardItem] = [
         CardItem(id: UUID().uuidString, imageName: "condos", title: "Condo with awesome views of downtown", description: "$117 avg/night", imageURL: "https://www.forbes.com/advisor/wp-content/uploads/2022/10/condo-vs-apartment.jpeg.jpg"),
         CardItem(id: UUID().uuidString, imageName: "houses", title: "Oceanfront 3 BR/3 BA", description: "$400 avg/night", imageURL: "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg"),
@@ -106,7 +104,6 @@ extension CollectionViewBootCamp: UICollectionViewDataSource {
 
         let item = cardItems[indexPath.row]
         cell.configure(with: item, parent: self)
-        // cell.content = item
 //        cell.handler = { item in
 //            if let item = item {
 //                print("Button in cell with item \(item) was tapped")
@@ -117,21 +114,13 @@ extension CollectionViewBootCamp: UICollectionViewDataSource {
 //        }
         // cell.heartButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 
-        // UIHeartButton 생성과 설정
-        let heartButton = UIHeartButton()
-        heartButton.handler = { [weak self] item in
-            self?.handler(item: item)
-        }
-        heartButton.content = item // 셀의 정보 설정
-        cell.heartButton = heartButton
-
         return cell
     }
 
-//    @objc
-//    func buttonTapped() {
-//        print("buttonTapped")
-//    }
+    @objc
+    func buttonTapped() {
+        print("buttonTapped")
+    }
 
     func handler(item: Card.Content?) {
         if let item = item {
@@ -386,6 +375,7 @@ final class UIHeartButton: BaseButton {
     }()
 
     var content: CardItem? // 추가: 버튼에 대한 셀 정보
+
     var handler: ((CardItem) -> Void)?
 
     override func commonInit() {
