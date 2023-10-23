@@ -104,27 +104,14 @@ extension CollectionViewBootCamp: UICollectionViewDataSource {
 
         let item = cardItems[indexPath.row]
         cell.configure(with: item, parent: self)
-//        cell.handler = { item in
-//            if let item = item {
-//                print("Button in cell with item \(item) was tapped")
-//            }
-//        }
-//        cell.handler = { [weak self] item in
-//            self?.handler(item: item)
-//        }
-        // cell.heartButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        cell.handler = handler(item:)
 
         return cell
     }
 
-    @objc
-    func buttonTapped() {
-        print("buttonTapped")
-    }
-
     func handler(item: Card.Content?) {
         if let item = item {
-            print("Button in cell with item \(item) was tapped")
+            print("handler: \(item.id)")
         }
     }
 }
@@ -138,7 +125,7 @@ extension CollectionViewBootCamp: UICollectionViewDelegateFlowLayout {
 extension CollectionViewBootCamp: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = cardItems[indexPath.item]
-        print(item)
+        print("didSelectItemAt: \(item.id)")
 //        let pdp = PropertyDetailsViewController(property: item)
 //        pdp.modalPresentationStyle = .formSheet
 //        present(pdp, animated: true)
@@ -195,7 +182,7 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
         heartButton.frame = CGRect(x: contentView.bounds.width - 60, y: 20, width: 40, height: 40)
         contentView.bringSubviewToFront(heartButton)
 
-        heartButton.addTarget(parent, action: #selector(buttonTapped), for: .touchUpInside)
+        heartButton.addAction(UIAction(handler: { _ in self.buttonTapped() }), for: .touchUpInside)
     }
 
     @objc private func buttonTapped() {
