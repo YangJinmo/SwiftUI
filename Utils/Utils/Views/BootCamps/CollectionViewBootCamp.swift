@@ -182,7 +182,8 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
         heartButton.frame = CGRect(x: contentView.bounds.width - 60, y: 20, width: 40, height: 40)
         contentView.bringSubviewToFront(heartButton)
 
-        heartButton.addAction(UIAction(handler: { _ in self.buttonTapped() }), for: .touchUpInside)
+        // heartButton.addAction(UIAction(handler: { [weak self] _ in self?.buttonTapped() }), for: .touchUpInside)
+        heartButton.addAction(UIAction { [weak self] _ in self?.buttonTapped() }, for: .touchUpInside)
     }
 
     @objc private func buttonTapped() {
