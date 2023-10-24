@@ -103,13 +103,12 @@ extension CollectionViewBootCamp: UICollectionViewDataSource {
         }
 
         let content = cardItems[indexPath.item]
-        cell.configure(with: content, parent: self)
-        cell.handler = handler(content:)
+        cell.configure(with: content, parent: self, contentHandler: handler(content:))
 
         return cell
     }
 
-    func handler(content: Card.Content?) {
+    private func handler(content: Card.Content?) {
         guard let content = content else {
             print("No content")
             return
@@ -158,15 +157,15 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
 
     typealias Content = Card.Content
 
-    lazy var heartButton: UIHeartButton = {
+    private var content: Content?
+    private var contentHandler: ((Content?) -> Void)?
+
+    private lazy var heartButton: UIHeartButton = {
         let heartButton = UIHeartButton()
-        // heartButton.addAction(UIAction(handler: { [weak self] _ in self?.buttonTapped() }), for: .touchUpInside)
-        heartButton.addAction(UIAction { [weak self] _ in self?.buttonTapped() }, for: .touchUpInside)
+        // heartButton.addAction(UIAction(handler: { [weak self] _ in self?.heartButtonTapped() }), for: .touchUpInside)
+        heartButton.addAction(UIAction { [weak self] _ in self?.heartButtonTapped() }, for: .touchUpInside)
         return heartButton
     }()
-
-    var content: Card.Content?
-    var handler: ((Card.Content?) -> Void)?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -178,8 +177,9 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(with content: Content, parent: UIViewController) {
+    func configure(with content: Content, parent: UIViewController, contentHandler: ((Content?) -> Void)?) {
         self.content = content
+        self.contentHandler = contentHandler
 
         embed(in: parent, withView: Card(content: content))
         host?.view.frame = contentView.bounds
@@ -188,8 +188,8 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
         contentView.bringSubviewToFront(heartButton)
     }
 
-    private func buttonTapped() {
-        handler?(content)
+    private func heartButtonTapped() {
+        contentHandler?(content)
     }
 }
 
