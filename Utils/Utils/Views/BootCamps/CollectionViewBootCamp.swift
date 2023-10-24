@@ -103,7 +103,8 @@ extension CollectionViewBootCamp: UICollectionViewDataSource {
         }
 
         let content = cardItems[indexPath.item]
-        cell.configure(with: content, parent: self, contentHandler: handler(content:))
+        cell.configure(with: content, parent: self)
+        cell.configureHeartButton(contentHandler: handler(content:))
 
         return cell
     }
@@ -177,12 +178,15 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(with content: Content, parent: UIViewController, contentHandler: ((Content?) -> Void)?) {
+    func configure(with content: Content, parent: UIViewController) {
         self.content = content
-        self.contentHandler = contentHandler
 
         embed(in: parent, withView: Card(content: content))
         host?.view.frame = contentView.bounds
+    }
+
+    func configureHeartButton(contentHandler: ((Content?) -> Void)?) {
+        self.contentHandler = contentHandler
 
         heartButton.frame = CGRect(x: contentView.bounds.width - 60, y: 20, width: 40, height: 40)
         contentView.bringSubviewToFront(heartButton)
