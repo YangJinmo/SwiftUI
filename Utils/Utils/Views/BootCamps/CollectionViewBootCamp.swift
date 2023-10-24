@@ -401,3 +401,5 @@ extension UIButton {
         )
     }
 }
+
+// link: https://medium.com/expedia-group-tech/swiftui-with-uicollectionview-aba7cbaf6d16
