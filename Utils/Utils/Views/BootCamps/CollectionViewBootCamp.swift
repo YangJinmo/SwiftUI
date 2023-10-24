@@ -110,9 +110,12 @@ extension CollectionViewBootCamp: UICollectionViewDataSource {
     }
 
     func handler(item: Card.Content?) {
-        if let item = item {
-            print("handler: \(item.id)")
+        guard let item = item else {
+            print("No item")
+            return
         }
+
+        print("handler: \(item.id)")
     }
 }
 
