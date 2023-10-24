@@ -102,20 +102,20 @@ extension CollectionViewBootCamp: UICollectionViewDataSource {
             fatalError("Could not dequeue cell")
         }
 
-        let item = cardItems[indexPath.row]
-        cell.configure(with: item, parent: self)
-        cell.handler = handler(item:)
+        let content = cardItems[indexPath.item]
+        cell.configure(with: content, parent: self)
+        cell.handler = handler(content:)
 
         return cell
     }
 
-    func handler(item: Card.Content?) {
-        guard let item = item else {
-            print("No item")
+    func handler(content: Card.Content?) {
+        guard let content = content else {
+            print("No content")
             return
         }
 
-        print("handler: \(item.id)")
+        print("handler: \(content.id)")
     }
 }
 
@@ -159,7 +159,10 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
     typealias Content = Card.Content
 
     lazy var heartButton: UIHeartButton = {
-        UIHeartButton()
+        let heartButton = UIHeartButton()
+        // heartButton.addAction(UIAction(handler: { [weak self] _ in self?.buttonTapped() }), for: .touchUpInside)
+        heartButton.addAction(UIAction { [weak self] _ in self?.buttonTapped() }, for: .touchUpInside)
+        return heartButton
     }()
 
     var content: Card.Content?
@@ -176,20 +179,16 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
     }
 
     func configure(with content: Content, parent: UIViewController) {
+        self.content = content
+
         embed(in: parent, withView: Card(content: content))
         host?.view.frame = contentView.bounds
 
-        self.content = content
-
-        // UIButton layout
         heartButton.frame = CGRect(x: contentView.bounds.width - 60, y: 20, width: 40, height: 40)
         contentView.bringSubviewToFront(heartButton)
-
-        // heartButton.addAction(UIAction(handler: { [weak self] _ in self?.buttonTapped() }), for: .touchUpInside)
-        heartButton.addAction(UIAction { [weak self] _ in self?.buttonTapped() }, for: .touchUpInside)
     }
 
-    @objc private func buttonTapped() {
+    private func buttonTapped() {
         handler?(content)
     }
 }
