@@ -365,18 +365,8 @@ final class UIHeartButton: BaseButton {
         return configuration
     }()
 
-    var content: CardItem? // 추가: 버튼에 대한 셀 정보
-
-    var handler: ((CardItem) -> Void)?
-
     override func commonInit() {
         configuration = config
-
-        addAction(UIAction { [weak self] _ in
-            if let item = self?.content {
-                self?.handler?(item)
-            }
-        }, for: .touchUpInside)
     }
 }
 
