@@ -295,7 +295,7 @@ struct HeartButton: View {
             Image(systemName: "heart")
                 .imageScale(.medium)
                 .symbolVariant(isHearted ? .fill : .none)
-                .foregroundColor(isHearted ? .red : .primary)
+                .foregroundColor(isHearted ? .red : .red.opacity(0.8))
         })
         .buttonStyle(CircleButtonStyle(backgroundColor: .white))
     }
