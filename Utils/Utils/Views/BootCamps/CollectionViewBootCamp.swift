@@ -104,7 +104,7 @@ extension CollectionViewBootCamp: UICollectionViewDataSource {
 
         let content = cardItems[indexPath.item]
         cell.configure(with: content, parent: self)
-        cell.configureHeartButton(contentHandler: handler(content:))
+        // cell.configureHeartButton(contentHandler: handler(content:))
 
         return cell
     }
@@ -171,7 +171,7 @@ class MyCollectionViewCell: SwiftUICollectionViewCell<Card> {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        contentView.addSubview(heartButton)
+        // contentView.addSubview(heartButton)
     }
 
     required init?(coder: NSCoder) {
@@ -276,10 +276,10 @@ struct Card: View {
                 Spacer()
             }
 
-//            HeartButton(isHearted: heartsProvider.isHearted(id: content.id), action: {
-//                self.heartsProvider.toggle(id: content.id)
-//            })
-//            .padding()
+            HeartButton(isHearted: heartsProvider.isHearted(id: content.id), action: {
+                self.heartsProvider.toggle(id: content.id)
+            })
+            .padding()
         }
     }
 }
