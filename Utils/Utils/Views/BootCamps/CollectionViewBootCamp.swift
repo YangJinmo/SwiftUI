@@ -278,8 +278,12 @@ struct Card: View {
 
             HeartButton(isHearted: heartsProvider.isHearted(id: content.id), action: {
                 self.heartsProvider.toggle(id: content.id)
+                print("HeartButton: \(content.id)")
             })
             .padding()
+        }
+        .onTapGesture {
+            print("Cell: \(content.id)")
         }
     }
 }
