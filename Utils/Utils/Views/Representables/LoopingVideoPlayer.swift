@@ -59,6 +59,9 @@ fileprivate final class LoopingVideoPlayerUIView: UIView {
 
         let playerItem = AVPlayerItem(url: url)
         let queuePlayer = AVQueuePlayer(playerItem: playerItem)
+        queuePlayer.automaticallyWaitsToMinimizeStalling = true
+        queuePlayer.playImmediately(atRate: 1)
+
         playerLayer.videoGravity = .resizeAspectFill
         playerLayer.player = queuePlayer
 
