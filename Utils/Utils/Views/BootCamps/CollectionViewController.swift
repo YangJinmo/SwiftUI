@@ -37,6 +37,14 @@ final class CollectionViewController: UICollectionViewController, UICollectionVi
         fatalError("init(coder:) has not been implemented")
     }
 
+    var items: [Any] = []
+
+    convenience init(items: [Any]) {
+        self.init()
+
+        self.items = items
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,7 +67,7 @@ final class CollectionViewController: UICollectionViewController, UICollectionVi
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 300
+        return items.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
