@@ -9,20 +9,29 @@ import SwiftUI
 
 struct VideoPlayerView: View {
     var body: some View {
-        VideoPlayerContainer()
+        VideoPlayerContainer(url: URL(string: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8")!)
     }
 }
 
 // Test Push
 
 struct VideoPlayerContainer: View {
-    @Binding private(set) var videoPos: Double
-    @Binding private(set) var videoDuration: Double
-    @Binding private(set) var seeking: Bool
+    // The progress through the video, as a percentage (from 0 to 1)
+    @State private var videoPos: Double = 0
+    // The duration of the video in seconds
+    @State private var videoDuration: Double = 0
+    // Whether we're currently interacting with the seek bar or doing a seek
+    @State private var seeking = false
 
     @State private var isPlaying = true
     @State private var currentTime: Float = 0.0
     @State private var playerPaused = true
+    
+    private let player: AVPlayer
+
+    init(url: URL) {
+        player = AVPlayer(url: url)
+    }
     
     var body: some View {
         VStack {
