@@ -49,5 +49,6 @@ struct HGTextField_Previews: PreviewProvider {
 
     static var previews: some View {
         JMTextField(text: $productName, placeholder: "상품을 입력해 주세요.")
+            .padding()
     }
 }

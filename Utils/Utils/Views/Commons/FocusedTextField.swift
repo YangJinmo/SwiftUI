@@ -60,5 +60,6 @@ struct FocusedTextField_Previews_View: View {
         FocusedTextField(text: $text, isFirstResponder: isEditing)
             .frame(height: 44)
             .border(.red)
+            .padding()
     }
 }

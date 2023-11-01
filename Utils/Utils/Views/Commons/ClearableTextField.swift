@@ -42,5 +42,6 @@ struct ClearableTextFieldView: View {
 struct ClearableTextField_Previews: PreviewProvider {
     static var previews: some View {
         ClearableTextFieldView()
+            .padding()
     }
 }

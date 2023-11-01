@@ -94,5 +94,6 @@ struct SelectListTextFieldView: View {
 struct SelectListTextField_Previews: PreviewProvider {
     static var previews: some View {
         SelectListTextFieldView()
+            .padding()
     }
 }
