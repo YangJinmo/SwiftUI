@@ -40,6 +40,8 @@ struct SelectListTextField: View {
         .disabled(true)
         .overlay {
             Image.chevron_down
+                .renderingMode(.template)
+                .foregroundColor(.gray100)
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .padding(16)
         }
