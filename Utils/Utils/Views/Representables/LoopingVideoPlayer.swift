@@ -39,7 +39,7 @@ fileprivate final class LoopingVideoPlayerUIView: UIView {
         }
     }
 
-    fileprivate var playerLayer = AVPlayerLayer()
+    fileprivate var playerLayer: AVPlayerLayer?
     fileprivate var playerLooper: AVPlayerLooper?
 
     init(url: URL) {
@@ -58,27 +58,31 @@ fileprivate final class LoopingVideoPlayerUIView: UIView {
         url.absoluteString.log()
 
         let playerItem = AVPlayerItem(url: url)
-        let queuePlayer = AVQueuePlayer(playerItem: playerItem)
-        queuePlayer.automaticallyWaitsToMinimizeStalling = true
-        queuePlayer.playImmediately(atRate: 1)
+        let player = AVQueuePlayer(playerItem: playerItem)
+        player.automaticallyWaitsToMinimizeStalling = true
+        player.playImmediately(atRate: 1)
 
-        playerLayer.videoGravity = .resizeAspectFill
-        playerLayer.player = queuePlayer
+        if playerLayer == nil {
+            playerLayer = AVPlayerLayer(player: player)
+            playerLayer?.videoGravity = .resizeAspectFill
 
-        layer.addSublayer(playerLayer)
+            layer.addSublayer(playerLayer!)
+        } else {
+            playerLayer?.player = player
+        }
 
         if let playerLooper = playerLooper {
             playerLooper.disableLooping()
         }
 
-        playerLooper = AVPlayerLooper(player: queuePlayer, templateItem: playerItem)
+        playerLooper = AVPlayerLooper(player: player, templateItem: playerItem)
 
-        queuePlayer.play()
+        player.play()
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        playerLayer.frame = bounds
+        playerLayer?.frame = bounds
     }
 }
