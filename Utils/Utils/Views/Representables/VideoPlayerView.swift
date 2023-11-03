@@ -13,8 +13,6 @@ struct VideoPlayerView: View {
     }
 }
 
-// Test Push
-
 struct VideoPlayerContainer: View {
     // The progress through the video, as a percentage (from 0 to 1)
     @State private var videoPos: Double = 0
