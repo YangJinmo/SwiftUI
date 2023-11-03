@@ -58,6 +58,8 @@ fileprivate final class LoopingVideoPlayerUIView: UIView {
         url.absoluteString.log()
 
         let playerItem = AVPlayerItem(url: url)
+        playerItem.preferredForwardBufferDuration = 1
+
         let player = AVQueuePlayer(playerItem: playerItem)
         player.automaticallyWaitsToMinimizeStalling = true
         player.playImmediately(atRate: 1)
