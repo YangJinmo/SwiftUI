@@ -310,7 +310,7 @@ struct HeartButton: View {
 import SwiftUI
 
 final class HeartsProvider: ObservableObject {
-    @Published var hearts: [String] = []
+    @Published private var hearts: [String] = []
 
     func isHearted(id: String) -> Bool {
         return hearts.contains(id)
