@@ -63,7 +63,7 @@ struct DetailView: View {
 
 struct FinalView: View {
     @EnvironmentObject var viewModel: EnvironmentViewModel
-    
+
     var body: some View {
         ZStack {
             LinearGradient(
