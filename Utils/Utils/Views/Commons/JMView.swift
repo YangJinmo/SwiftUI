@@ -116,6 +116,7 @@ struct JMView_Previews_View: View {
     @State private var isActiving = false
     @State private var isShowingSheet = false
     @State private var isPresenting = false
+    @State private var isPresentingPopover = false
 
     var body: some View {
         NavigationView {
@@ -165,6 +166,15 @@ struct JMView_Previews_View: View {
                             .background(Color.gray)
                             .cornerRadius(16)
                     }
+
+                    Button {
+                        isPresentingPopover = true
+                    } label: {
+                        Text("Popover")
+                            .padding(16)
+                            .background(Color.gray)
+                            .cornerRadius(16)
+                    }
                 }
                 .sheet(isPresented: $isShowingSheet) {
                     isShowingSheet = false
@@ -206,6 +216,25 @@ struct JMView_Previews_View: View {
                         }
                     } content: {
                         Text("This is fullScreenCover")
+                    }
+                }
+                .popover(isPresented: $isPresentingPopover) {
+                    JMView(.presentation, $isPresentingPopover) {
+                        Text("Popover")
+                            .onAppear {
+                                print("Popover - onAppear")
+                            }
+                            .onDisappear {
+                                print("Popover - onDisappear")
+                            }
+                    } right: {
+                        Button {
+                            print("checkmark button touched")
+                        } label: {
+                            Image.checkmark
+                        }
+                    } content: {
+                        Text("This is popover")
                     }
                 }
             }
