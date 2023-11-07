@@ -39,6 +39,10 @@ final class CollectionViewService: ObservableObject {
         self.minimumInteritemSpacing = minimumInteritemSpacing
         self.isPagingEnabled = isPagingEnabled
 
+        // configureDidSelectItemAt()
+    }
+
+    private func configureDidSelectItemAt() {
         $indexPath
             .sink { indexPath in
                 self.didSelectItemAt(indexPath: indexPath ?? IndexPath())
