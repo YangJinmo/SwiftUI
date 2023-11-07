@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-struct CollectionView: UIViewRepresentable {
-    // struct CollectionView<Content: View>: UIViewRepresentable {
+struct CollectionView: UIViewRepresentable { // struct CollectionView<Content: View>: UIViewRepresentable {
     typealias UIViewType = UICollectionView
+
+    // UICollectionViewFlowLayout
+    @ObservedObject var service: CollectionViewService
 
     // UICollectionViewDataSource
     var items = [Any]()
@@ -17,13 +19,16 @@ struct CollectionView: UIViewRepresentable {
     // UICollectionViewDelegateFlowLayout
     var itemSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 
-    @ObservedObject var service: CollectionViewService
+    // UICollectionViewDelegate
+    @Binding var indexPath: IndexPath?
+    @Binding var selection: Bool
 
 //    let content: Content
 //
 //    init(@ViewBuilder content: () -> Content) {
 //        self.content = content()
 //    }
+
     private let reuseIdentifier = "CollectionViewCell"
 
     func makeUIView(context: Context) -> UIViewType {
@@ -104,19 +109,14 @@ struct CollectionView: UIViewRepresentable {
 
         // UICollectionViewDelegate
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            parent.service.indexPath = indexPath
+            // parent.service.indexPath = indexPath
+            parent.indexPath = indexPath
+            parent.selection = true
         }
     }
 }
 
 struct CollectionViewPreview: View {
-    @StateObject private var collectionViewService = CollectionViewService(
-        scrollDirection: .horizontal,
-        minimumLineSpacing: .zero,
-        minimumInteritemSpacing: .zero,
-        isPagingEnabled: true
-    )
-
     private let items = [
         "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
         "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
@@ -126,13 +126,52 @@ struct CollectionViewPreview: View {
         "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
     ]
 
+    @StateObject private var collectionViewService = CollectionViewService(
+        scrollDirection: .horizontal,
+        minimumLineSpacing: .zero,
+        minimumInteritemSpacing: .zero,
+        isPagingEnabled: true
+    )
+
+    @State private var indexPath: IndexPath?
+    @State private var selection: Bool = false
+
     var body: some View {
         GeometryReader { proxy in
             CollectionView(
+                service: collectionViewService,
                 items: items,
                 itemSize: CGSize(width: proxy.size.width, height: proxy.size.height),
-                service: collectionViewService
+                indexPath: $indexPath,
+                selection: $selection
             )
+            .onChange(of: selection) { newValue in
+                print(newValue)
+            }
+            .sheet(isPresented: $selection) {
+                selection = false
+            } content: {
+                JMView(.presentation, $selection) {
+                    Text("Sheet")
+                        .onAppear {
+                            print("Sheet - onAppear")
+                        }
+                        .onDisappear {
+                            print("Sheet - onDisappear")
+                        }
+                } right: {
+                    Button {
+                        print("checkmark button touched")
+                    } label: {
+                        Image.checkmark
+                    }
+                } content: {
+                    VStack {
+                        Text("indexPath")
+                        Text(indexPath?.description ?? "Error")
+                    }
+                }
+            }
         }
         .ignoresSafeArea()
     }
