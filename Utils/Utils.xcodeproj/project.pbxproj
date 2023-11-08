@@ -105,6 +105,7 @@
 		E8EF44DB2A89E81A00F798CC /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */; };
 		E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */; };
 		E8F9E4982ADE5F9D00CB465C /* CircleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */; };
+		E8FDC8C72AF9FC560049C95C /* TwoRowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FDC8C62AF9FC560049C95C /* TwoRowListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -207,6 +208,7 @@
 		E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
 		E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
 		E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonStyle.swift; sourceTree = "<group>"; };
+		E8FDC8C62AF9FC560049C95C /* TwoRowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoRowListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,6 +426,7 @@
 				E817C22D2AC82710007FF6D3 /* HorizontalList.swift */,
 				E817C22F2AC91F9D007FF6D3 /* AnalogClock.swift */,
 				E8B170B62AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift */,
+				E8FDC8C62AF9FC560049C95C /* TwoRowListView.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -668,6 +671,7 @@
 				E890503B2A96040D00ECF159 /* LottieView.swift in Sources */,
 				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
+				E8FDC8C72AF9FC560049C95C /* TwoRowListView.swift in Sources */,
 				E8E367912A4604C400379934 /* View.swift in Sources */,
 				E8E297262AA5C58500EB4F6A /* PhoneModelsListView.swift in Sources */,
 				E8BBDC062A8F139400E95C6C /* SettingsToggleStyle.swift in Sources */,
