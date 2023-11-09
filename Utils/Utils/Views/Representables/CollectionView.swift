@@ -17,7 +17,7 @@ struct CollectionView: UIViewRepresentable { // struct CollectionView<Content: V
     var items = [Any]()
 
     // UICollectionViewDelegateFlowLayout
-    var itemSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+    var itemSize: CGSize?
 
     // UICollectionViewDelegate
     @Binding var indexPath: IndexPath?
@@ -104,7 +104,7 @@ struct CollectionView: UIViewRepresentable { // struct CollectionView<Content: V
 
         // UICollectionViewDelegateFlowLayout
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return parent.itemSize
+            return parent.itemSize ?? collectionView.bounds.size
         }
 
         // UICollectionViewDelegate
@@ -137,39 +137,36 @@ struct CollectionViewPreview: View {
     @State private var selection: Bool = false
 
     var body: some View {
-        GeometryReader { proxy in
-            CollectionView(
-                service: collectionViewService,
-                items: items,
-                itemSize: CGSize(width: proxy.size.width, height: proxy.size.height),
-                indexPath: $indexPath,
-                selection: $selection
-            )
-            .onChange(of: selection) { newValue in
-                print(newValue)
-            }
-            .sheet(isPresented: $selection) {
-                selection = false
+        CollectionView(
+            service: collectionViewService,
+            items: items,
+            indexPath: $indexPath,
+            selection: $selection
+        )
+        .onChange(of: selection) { newValue in
+            print(newValue)
+        }
+        .sheet(isPresented: $selection) {
+            selection = false
+        } content: {
+            JMView(.presentation, $selection) {
+                Text("Sheet")
+                    .onAppear {
+                        print("Sheet - onAppear")
+                    }
+                    .onDisappear {
+                        print("Sheet - onDisappear")
+                    }
+            } right: {
+                Button {
+                    print("checkmark button touched")
+                } label: {
+                    Image.checkmark
+                }
             } content: {
-                JMView(.presentation, $selection) {
-                    Text("Sheet")
-                        .onAppear {
-                            print("Sheet - onAppear")
-                        }
-                        .onDisappear {
-                            print("Sheet - onDisappear")
-                        }
-                } right: {
-                    Button {
-                        print("checkmark button touched")
-                    } label: {
-                        Image.checkmark
-                    }
-                } content: {
-                    VStack {
-                        Text("indexPath")
-                        Text(indexPath?.description ?? "Error")
-                    }
+                VStack {
+                    Text("indexPath")
+                    Text(indexPath?.description ?? "Error")
                 }
             }
         }
