@@ -27,6 +27,7 @@
 		E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809D2A4998A400563CBC /* PhotoPicker.swift */; };
 		E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809F2A4998CA00563CBC /* PhotoPickerService.swift */; };
 		E83280A42A4B131B00563CBC /* BackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */; };
+		E8356E852AFC767800E834F5 /* CollectionViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8356E842AFC767800E834F5 /* CollectionViewWrapper.swift */; };
 		E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */; };
 		E83DC5C52A2CD043006E2E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83DC5C42A2CD043006E2E4F /* Assets.xcassets */; };
 		E83DC5C92A2CD043006E2E4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83DC5C82A2CD043006E2E4F /* Preview Assets.xcassets */; };
@@ -129,6 +130,7 @@
 		E832809D2A4998A400563CBC /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		E832809F2A4998CA00563CBC /* PhotoPickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerService.swift; sourceTree = "<group>"; };
 		E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifier.swift; sourceTree = "<group>"; };
+		E8356E842AFC767800E834F5 /* CollectionViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewWrapper.swift; sourceTree = "<group>"; };
 		E83DC5BD2A2CD042006E2E4F /* Utils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsApp.swift; sourceTree = "<group>"; };
 		E83DC5C42A2CD043006E2E4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				E8D2FDBA2A9E32610023DA63 /* VScrollView.swift */,
 				E8128E032AB84BF500B6B8F6 /* CollectionView.swift */,
 				E8128E072AB968EE00B6B8F6 /* CollectionViewService.swift */,
+				E8356E842AFC767800E834F5 /* CollectionViewWrapper.swift */,
 				E8B87B702AEFD69000384444 /* VideoPlayerView.swift */,
 			);
 			path = Representables;
@@ -620,6 +623,7 @@
 				E8D2FDBD2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift in Sources */,
 				E80EFF1E2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift in Sources */,
 				E86DA7AA2AB98DA6006A1743 /* ViewRepresentable.swift in Sources */,
+				E8356E852AFC767800E834F5 /* CollectionViewWrapper.swift in Sources */,
 				E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */,
 				E8F9E4982ADE5F9D00CB465C /* CircleButtonStyle.swift in Sources */,
 				E8128E082AB968EE00B6B8F6 /* CollectionViewService.swift in Sources */,
