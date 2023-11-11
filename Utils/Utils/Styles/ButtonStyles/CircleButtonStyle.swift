@@ -18,3 +18,36 @@ struct CircleButtonStyle: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 0.88 : 1.0)
     }
 }
+
+extension ButtonStyle where Self == CircleButtonStyle {
+    static func circle(backgroundColor: Color) -> CircleButtonStyle { .init(backgroundColor: backgroundColor) }
+}
+
+struct CircleButtonStylePreview: View {
+    struct Category: Identifiable {
+        let id: Int
+        let name: String
+
+        var isOn = false
+    }
+
+    @State private var category = Category(id: 0, name: "8")
+
+    var body: some View {
+        Button {
+            category.isOn.toggle()
+        } label: {
+            Image(systemName: "heart")
+                .imageScale(.medium)
+                .symbolVariant(category.isOn ? .fill : .none)
+                .foregroundColor(category.isOn ? .red : .red.opacity(0.8))
+        }
+        .buttonStyle(.circle(backgroundColor: .primary))
+    }
+}
+
+struct CircleButtonStyle_Previews: PreviewProvider {
+    static var previews: some View {
+        CircleButtonStylePreview()
+    }
+}
