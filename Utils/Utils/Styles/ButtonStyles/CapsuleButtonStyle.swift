@@ -22,10 +22,8 @@ struct CapsuleButtonStyle: ButtonStyle {
     }
 }
 
-struct CapsuleButtonStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        CapsuleButtonStylePreview()
-    }
+extension ButtonStyle where Self == CapsuleButtonStyle {
+    static func capsule(isOn: Binding<Bool>) -> CapsuleButtonStyle { .init(isOn: isOn) }
 }
 
 struct CapsuleButtonStylePreview: View {
@@ -44,6 +42,12 @@ struct CapsuleButtonStylePreview: View {
         } label: {
             Text(category.name)
         }
-        .buttonStyle(CapsuleButtonStyle(isOn: $category.isOn))
+        .buttonStyle(.capsule(isOn: $category.isOn))
+    }
+}
+
+struct CapsuleButtonStyle_Previews: PreviewProvider {
+    static var previews: some View {
+        CapsuleButtonStylePreview()
     }
 }

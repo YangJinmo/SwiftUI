@@ -22,10 +22,8 @@ struct RoundedRectangleButtonStyle: ButtonStyle {
     }
 }
 
-struct RoundedRectangleButtonStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        RoundedRectangleButtonStylePreview()
-    }
+extension ButtonStyle where Self == RoundedRectangleButtonStyle {
+    static func roundedRectangle(isOn: Binding<Bool>) -> RoundedRectangleButtonStyle { .init(isOn: isOn) }
 }
 
 struct RoundedRectangleButtonStylePreview: View {
@@ -44,6 +42,12 @@ struct RoundedRectangleButtonStylePreview: View {
         } label: {
             Text(category.name)
         }
-        .buttonStyle(CapsuleButtonStyle(isOn: $category.isOn))
+        .buttonStyle(.roundedRectangle(isOn: $category.isOn))
+    }
+}
+
+struct RoundedRectangleButtonStyle_Previews: PreviewProvider {
+    static var previews: some View {
+        RoundedRectangleButtonStylePreview()
     }
 }

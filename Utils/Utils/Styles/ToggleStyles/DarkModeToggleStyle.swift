@@ -11,7 +11,7 @@ struct DarkModeToggleStyle: ToggleStyle {
     func makeBody(configuration: Configuration) -> some View {
         Rectangle()
             .fill(configuration.isOn ? .blue : .gray)
-            .animation(.easeInOut(duration: 0.3), value: configuration.isOn)
+            // .animation(.easeInOut(duration: 0.3), value: configuration.isOn)
             .frame(width: 160, height: 80)
             .cornerRadius(40)
             .overlay(
@@ -22,16 +22,14 @@ struct DarkModeToggleStyle: ToggleStyle {
                     .foregroundColor(configuration.isOn ? .yellow : .orange)
                     .padding(.all, 8)
                     .offset(x: configuration.isOn ? 40 : -40, y: 0)
-                    .animation(Animation.easeInOut(duration: 0.3), value: configuration.isOn)
+                // .animation(Animation.easeInOut(duration: 0.3), value: configuration.isOn)
             )
             .onTapGesture { configuration.isOn.toggle() }
     }
 }
 
-struct DarkModeToggleStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        DarkModeToggleStylePreview()
-    }
+extension ToggleStyle where Self == DarkModeToggleStyle {
+    static var darkMode: DarkModeToggleStyle { .init() }
 }
 
 struct DarkModeToggleStylePreview: View {
@@ -39,6 +37,12 @@ struct DarkModeToggleStylePreview: View {
 
     var body: some View {
         Toggle("Enable light mode", isOn: $lightModeEnabled)
-            .toggleStyle(DarkModeToggleStyle())
+            .toggleStyle(.darkMode)
+    }
+}
+
+struct DarkModeToggleStyle_Previews: PreviewProvider {
+    static var previews: some View {
+        DarkModeToggleStylePreview()
     }
 }
