@@ -34,15 +34,7 @@ struct SettingsToggleStyle: ToggleStyle {
 }
 
 extension ToggleStyle where Self == SettingsToggleStyle {
-    static var settings: SettingsToggleStyle {
-        .init()
-    }
-}
-
-struct SettingsToggleStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsToggleStylePreview()
-    }
+    static var settings: SettingsToggleStyle { .init() }
 }
 
 struct SettingsToggleStylePreview: View {
@@ -64,8 +56,14 @@ struct SettingsToggleStylePreview: View {
                 }
             }
             .toggleStyle(.settings)
-            .tint(.accentColor)
+            .tint(.limeGreen)
             .navigationTitle("Settings")
         }
+    }
+}
+
+struct SettingsToggleStyle_Previews: PreviewProvider {
+    static var previews: some View {
+        SettingsToggleStylePreview()
     }
 }

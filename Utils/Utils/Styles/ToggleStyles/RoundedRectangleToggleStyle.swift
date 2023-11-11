@@ -27,17 +27,17 @@ extension ToggleStyle where Self == RoundedRectangleToggleStyle {
     static var roundedRectangle: RoundedRectangleToggleStyle { .init() }
 }
 
-struct RoundedRectangleToggleStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        RoundedRectangleToggleStylePreview()
-    }
-}
-
 struct RoundedRectangleToggleStylePreview: View {
     @State private var isOn: Bool = false
 
     var body: some View {
         Toggle("RoundedRectangleToggleStyle", isOn: $isOn)
             .toggleStyle(.roundedRectangle)
+    }
+}
+
+struct RoundedRectangleToggleStyle_Previews: PreviewProvider {
+    static var previews: some View {
+        RoundedRectangleToggleStylePreview()
     }
 }

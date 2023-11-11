@@ -27,17 +27,17 @@ extension ToggleStyle where Self == CapsuleToggleStyle {
     static var capsule: CapsuleToggleStyle { .init() }
 }
 
-struct CapsuleToggleStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        CapsuleToggleStylePreview()
-    }
-}
-
 struct CapsuleToggleStylePreview: View {
     @State private var isOn: Bool = false
 
     var body: some View {
         Toggle("CapsuleToggleStyle", isOn: $isOn)
             .toggleStyle(.capsule)
+    }
+}
+
+struct CapsuleToggleStyle_Previews: PreviewProvider {
+    static var previews: some View {
+        CapsuleToggleStylePreview()
     }
 }

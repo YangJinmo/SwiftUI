@@ -49,12 +49,6 @@ extension ToggleStyle where Self == CheckboxToggleStyle {
     static var squareChecklist: CheckboxToggleStyle { .init(style: .square) }
 }
 
-struct CheckboxToggleStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        CheckboxToggleStylePreview()
-    }
-}
-
 struct CheckboxToggleStylePreview: View {
     @State private var isOn: Bool = false
 
@@ -66,5 +60,11 @@ struct CheckboxToggleStylePreview: View {
             Toggle("CheckboxToggleStyle", isOn: $isOn)
                 .toggleStyle(.squareChecklist)
         }
+    }
+}
+
+struct CheckboxToggleStyle_Previews: PreviewProvider {
+    static var previews: some View {
+        CheckboxToggleStylePreview()
     }
 }
