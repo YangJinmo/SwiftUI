@@ -28,6 +28,7 @@
 		E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809F2A4998CA00563CBC /* PhotoPickerService.swift */; };
 		E83280A42A4B131B00563CBC /* BackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */; };
 		E8356E852AFC767800E834F5 /* CollectionViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8356E842AFC767800E834F5 /* CollectionViewWrapper.swift */; };
+		E8356E892AFCA61D00E834F5 /* ScaleEffectButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8356E882AFCA61D00E834F5 /* ScaleEffectButtonStyle.swift */; };
 		E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */; };
 		E83DC5C52A2CD043006E2E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83DC5C42A2CD043006E2E4F /* Assets.xcassets */; };
 		E83DC5C92A2CD043006E2E4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83DC5C82A2CD043006E2E4F /* Preview Assets.xcassets */; };
@@ -131,6 +132,7 @@
 		E832809F2A4998CA00563CBC /* PhotoPickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerService.swift; sourceTree = "<group>"; };
 		E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifier.swift; sourceTree = "<group>"; };
 		E8356E842AFC767800E834F5 /* CollectionViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewWrapper.swift; sourceTree = "<group>"; };
+		E8356E882AFCA61D00E834F5 /* ScaleEffectButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleEffectButtonStyle.swift; sourceTree = "<group>"; };
 		E83DC5BD2A2CD042006E2E4F /* Utils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsApp.swift; sourceTree = "<group>"; };
 		E83DC5C42A2CD043006E2E4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 		E8EF44D92A89E80C00F798CC /* ButtonStyles */ = {
 			isa = PBXGroup;
 			children = (
+				E8356E882AFCA61D00E834F5 /* ScaleEffectButtonStyle.swift */,
 				E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */,
 				E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */,
 				E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */,
@@ -610,6 +613,7 @@
 				E8E2972A2AA5C5FB00EB4F6A /* ListableResponseModel.swift in Sources */,
 				E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */,
 				E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */,
+				E8356E892AFCA61D00E834F5 /* ScaleEffectButtonStyle.swift in Sources */,
 				E8B170B72AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift in Sources */,
 				E868E7B92A6F4C580095F030 /* ScrollToID.swift in Sources */,
 				E8627F1C2A7AA07500C01478 /* Dictionary.swift in Sources */,
