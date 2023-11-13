@@ -77,7 +77,7 @@ struct TwoRowListView: View {
     var destinationView: some View {
         VStack {
             if let indexPath = indexPath {
-                Text(viewModel.items[indexPath.section][indexPath.item])
+                Text(viewModel.alphabets[indexPath.section][indexPath.item])
                     .font(.largeTitle)
 
                 Text(indexPath.description)
