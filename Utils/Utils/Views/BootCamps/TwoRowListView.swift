@@ -8,7 +8,12 @@
 import SwiftUI
 
 class TwoRowListViewModel: ObservableObject {
-    var items = [["A", "B"], ["C", "D"], ["E", "F"]]
+    var alphabets = [
+        ["A", "B", "C", "D", "E", "F", "G"],
+        ["H", "I", "J", "K", "L", "M", "N", "O", "P"],
+        ["Q", "R", "S", "T", "U", "V"],
+        ["W", "X", "Y", "Z"],
+    ]
 }
 
 struct TwoRowListView: View {
@@ -27,7 +32,7 @@ struct TwoRowListView: View {
                 )
 
                 List {
-                    ForEach(Array(viewModel.items.enumerated()), id: \.element) { section, row in
+                    ForEach(Array(viewModel.alphabets.enumerated()), id: \.element) { section, row in
                         ScrollView(.horizontal) {
                             HStack {
                                 ForEach(Array(row.enumerated()), id: \.element) { item, value in
