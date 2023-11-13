@@ -22,6 +22,8 @@ struct TwoRowListView: View {
     @State private var selection: Bool? = false
 
     var body: some View {
+        let inset: CGFloat = 16
+
         NavigationView {
             VStack {
                 NavigationLink(
@@ -34,7 +36,7 @@ struct TwoRowListView: View {
                 List {
                     ForEach(Array(viewModel.alphabets.enumerated()), id: \.element) { section, row in
                         ScrollView(.horizontal) {
-                            HStack {
+                            HStack(spacing: inset) {
                                 ForEach(Array(row.enumerated()), id: \.element) { item, value in
                                     VStack {
                                         Text(value)
@@ -48,6 +50,7 @@ struct TwoRowListView: View {
                                             ? Color.green
                                             : Color.yellow
                                     )
+                                    .cornerRadius(16)
                                     .onTapGesture {
                                         indexPath = IndexPath(item: item, section: section)
                                         selection = true
@@ -56,6 +59,16 @@ struct TwoRowListView: View {
                             }
                         }
                     }
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(
+                        .init(
+                            top: 0,
+                            leading: 0,
+                            bottom: inset,
+                            trailing: 0
+                        )
+                    )
                 }
             }
         }
