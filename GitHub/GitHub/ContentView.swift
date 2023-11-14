@@ -333,8 +333,7 @@ struct ContentView: View {
 
     private func showError() {
         DispatchQueue.main.async {
-            // self.statusItem?.button?.title = Localized.error
-            print("Error")
+            print("Error: \(Localized.error)")
         }
     }
 }
@@ -342,89 +341,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-struct GitHubUser: Codable {
-    let login: String
-    let name: String?
-    let avatarUrl: String?
-    let bio: String?
-    let followers: Int
-    let following: Int
-    let htmlUrl: String
-}
-
-enum GHError: Error {
-    case invalidURL
-    case invalidResponse
-    case invalidData
-}
-
-import Foundation
-
-class ContributeData {
-    let count: Int
-    let weekend: String
-    let date: String
-    private var friendContributeData: ContributeData?
-
-    init(count: Int, weekend: String, date: String) {
-        self.count = count
-        self.weekend = weekend
-        self.date = date
-    }
-
-    private func getGoalCountString(_ goal: Int) -> String {
-        return String(goal - count)
-    }
-
-    public func merge(contributeData: ContributeData) {
-        friendContributeData = contributeData
-    }
-}
-
-import Foundation
-
-enum ParseKeys {
-    static let date = "data-date"
-    static let rect = "td"
-}
-
-import Foundation
-
-enum Consts {
-    static let fetchCount = 10
-    static let fetchStreak = 1000
-    static let refreshInterval = 10
-    static let contributionTag = 1
-    static let goalTag = 9
-    static let usernameDefaultKey = "username"
-    static let friendUsernameDefaultKey = "friend_username"
-    static let goalDefaultKey = "goal"
-}
-
-import Foundation
-
-extension Date {
-    func dayOfWeek() -> String {
-        let dateFormatter = DateFormatter()
-        let prefLanguage = Locale.preferredLanguages[0]
-
-        dateFormatter.locale = NSLocale(localeIdentifier: prefLanguage) as Locale
-        dateFormatter.dateFormat = "E"
-        return dateFormatter.string(from: self).capitalized
-    }
-
-    func timeAgoSince() -> String {
-        let calendar = Calendar.current
-        let now = Date()
-
-        let unitFlags: NSCalendar.Unit = [.day]
-        let components = (calendar as NSCalendar).components(unitFlags, from: self, to: now, options: [])
-
-        guard let day = components.day else { return "0" }
-
-        return "\(day)"
     }
 }
