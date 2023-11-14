@@ -17,7 +17,7 @@ class TwoRowListViewModel: ObservableObject {
 }
 
 struct TwoRowListView: View {
-    @ObservedObject private var viewModel = TwoRowListViewModel()
+    @StateObject private var viewModel = TwoRowListViewModel()
     @State private var indexPath: IndexPath?
     @State private var selection: Bool? = false
 

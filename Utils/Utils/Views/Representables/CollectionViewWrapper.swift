@@ -91,7 +91,7 @@ struct CollectionViewWrapper<Data, Content>: UIViewRepresentable where Data: Ran
 struct CollectionViewWrapperPreviews: View {
     let pages: [Color] = [.blue, .green, .yellow]
 
-    @State var currentPage: Int = 0
+    @State private var currentPage: Int = 0
 
     var body: some View {
         ZStack {
