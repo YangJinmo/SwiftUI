@@ -49,6 +49,18 @@ struct AnalogClock: View {
                 .frame(width: geometry.size.width - 36, height: geometry.size.height - 30, alignment: .center)
                 .offset(.init(width: 18, height: 15))
             }
+
+            Clock(model: .init(type: .hour, timeInterval: time.seconds, tickScale: 0.4))
+                .stroke(Color.primary, style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
+                .rotationEffect(Angle.degrees(360 / 60))
+
+            Clock(model: .init(type: .minute, timeInterval: time.seconds, tickScale: 0.6))
+                .stroke(Color.blue, style: StrokeStyle(lineWidth: 3, lineCap: .round, lineJoin: .round))
+                .rotationEffect(Angle.degrees(360 / 60))
+
+            Clock(model: .init(type: .second, timeInterval: time.seconds, tickScale: 0.8))
+                .stroke(Color.red, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
+                .rotationEffect(Angle.degrees(360 / 60))
         }
         .frame(width: 200, height: 200, alignment: .center)
     }
