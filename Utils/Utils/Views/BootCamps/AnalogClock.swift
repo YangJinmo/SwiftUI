@@ -141,3 +141,5 @@ struct ClockTickerModel {
         }
     }
 }
+
+// link: https://prafullkumar77.medium.com/how-to-make-analog-clock-using-swiftui-11a4e16a08ed
