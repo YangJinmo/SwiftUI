@@ -56,6 +56,7 @@
 		E8703E152AC2B7F900FE1FF7 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */; };
 		E870C8FD2AD2BED8003F7DB7 /* FitToAspectRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatio.swift */; };
 		E870C8FF2AD2BF6D003F7DB7 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870C8FE2AD2BF6D003F7DB7 /* CacheAsyncImage.swift */; };
+		E88037582B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88037572B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift */; };
 		E8822E562A7F5DF600E4AF38 /* FocusedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */; };
 		E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */; };
 		E890503B2A96040D00ECF159 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E890503A2A96040D00ECF159 /* LottieView.swift */; };
@@ -162,6 +163,7 @@
 		E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitToAspectRatio.swift; sourceTree = "<group>"; };
 		E870C8FE2AD2BF6D003F7DB7 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
+		E88037572B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveSheetViewModifier.swift; sourceTree = "<group>"; };
 		E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedTextField.swift; sourceTree = "<group>"; };
 		E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 		E890503A2A96040D00ECF159 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 				E83E09972AA027D200065AEF /* OnDidLoadViewModifier.swift */,
 				E8E3C6AE2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift */,
 				E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatio.swift */,
+				E88037572B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				E8E297342AA7272D00EB4F6A /* VerticalPageTabView.swift in Sources */,
 				E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */,
 				E8A990C72A836F8900EB2BC4 /* CapsuleToggleStyle.swift in Sources */,
+				E88037582B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift in Sources */,
 				E8E2972E2AA5C79D00EB4F6A /* ReusableListView.swift in Sources */,
 				E8259C6F2A7CB01A005BF839 /* Bundle.swift in Sources */,
 				E83DC5DA2A2DB8FA006E2E4F /* CGFloat.swift in Sources */,
