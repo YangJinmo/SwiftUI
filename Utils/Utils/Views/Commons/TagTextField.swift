@@ -97,3 +97,45 @@ extension Binding where Value == String {
         return self
     }
 }
+
+struct TagTextFieldPreview: View {
+    @State private var subjects = [Tag()]
+    @State private var focusSubject: Tag?
+
+    @State private var actionTapped = false
+
+    private func appendSubject() {
+        if subjects.first(where: { $0.value.isEmpty }) == nil {
+            subjects.append(Tag())
+        }
+    }
+
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 8) {
+                ForEach($subjects) { $subject in
+                    TagTextField(currentTag: $subject, focusTag: $focusSubject) { _ in
+                        if subjects.count < 3 {
+                            appendSubject()
+                        }
+                    } xmarkTapped: { subject in
+                        subjects.removeAll { $0 == subject }
+                        appendSubject()
+                    }
+                }
+            }
+            .padding()
+        }
+        .onChange(of: subjects) { _ in
+            if !actionTapped {
+                focusSubject = subjects.first { $0.value.isEmpty }
+            }
+        }
+    }
+}
+
+struct TagTextFieldPreview_Previews: PreviewProvider {
+    static var previews: some View {
+        TagTextFieldPreview()
+    }
+}
