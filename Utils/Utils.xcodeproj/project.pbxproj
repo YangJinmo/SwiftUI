@@ -54,7 +54,7 @@
 		E86DA7AA2AB98DA6006A1743 /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7A92AB98DA6006A1743 /* ViewRepresentable.swift */; };
 		E86DA7B22ABE92BA006A1743 /* CollectionViewBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7B12ABE92BA006A1743 /* CollectionViewBootCamp.swift */; };
 		E8703E152AC2B7F900FE1FF7 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */; };
-		E870C8FD2AD2BED8003F7DB7 /* FitToAspectRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatio.swift */; };
+		E870C8FD2AD2BED8003F7DB7 /* FitToAspectRatioViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatioViewModifier.swift */; };
 		E870C8FF2AD2BF6D003F7DB7 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E870C8FE2AD2BF6D003F7DB7 /* CacheAsyncImage.swift */; };
 		E88037582B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88037572B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift */; };
 		E8822E562A7F5DF600E4AF38 /* FocusedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */; };
@@ -161,7 +161,7 @@
 		E86DA7A92AB98DA6006A1743 /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
 		E86DA7B12ABE92BA006A1743 /* CollectionViewBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBootCamp.swift; sourceTree = "<group>"; };
 		E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitToAspectRatio.swift; sourceTree = "<group>"; };
+		E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatioViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitToAspectRatioViewModifier.swift; sourceTree = "<group>"; };
 		E870C8FE2AD2BF6D003F7DB7 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
 		E88037572B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveSheetViewModifier.swift; sourceTree = "<group>"; };
 		E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedTextField.swift; sourceTree = "<group>"; };
@@ -469,7 +469,7 @@
 				E8D2FDBC2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift */,
 				E83E09972AA027D200065AEF /* OnDidLoadViewModifier.swift */,
 				E8E3C6AE2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift */,
-				E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatio.swift */,
+				E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatioViewModifier.swift */,
 				E88037572B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift */,
 			);
 			path = ViewModifiers;
@@ -657,7 +657,7 @@
 				E817C2302AC91F9D007FF6D3 /* AnalogClock.swift in Sources */,
 				E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */,
 				E83DC5DD2A2DB97E006E2E4F /* JMWebView.swift in Sources */,
-				E870C8FD2AD2BED8003F7DB7 /* FitToAspectRatio.swift in Sources */,
+				E870C8FD2AD2BED8003F7DB7 /* FitToAspectRatioViewModifier.swift in Sources */,
 				E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */,
 				E8E2E96E2AD7FACC00712630 /* CacheAsyncImageView.swift in Sources */,
 				E83E09982AA027D200065AEF /* OnDidLoadViewModifier.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  FitToAspectRatio.swift
+//  FitToAspectRatioViewModifier.swift
 //  Utils
 //
 //  Created by Jmy on 2023/10/08.
@@ -17,7 +17,7 @@ public enum AspectRatio: CGFloat {
 }
 
 /// Fit an image to a certain aspect ratio while maintaining its aspect ratio
-public struct FitToAspectRatio: ViewModifier {
+public struct FitToAspectRatioViewModifier: ViewModifier {
     private let aspectRatio: CGFloat
 
     public init(_ aspectRatio: CGFloat) {
@@ -45,20 +45,20 @@ public struct FitToAspectRatio: ViewModifier {
 // Image extension that composes with the `.resizable()` modifier
 public extension Image {
     func fitToAspectRatio(_ aspectRatio: CGFloat) -> some View {
-        resizable().modifier(FitToAspectRatio(aspectRatio))
+        resizable().modifier(FitToAspectRatioViewModifier(aspectRatio))
     }
 
     func fitToAspectRatio(_ aspectRatio: AspectRatio) -> some View {
-        resizable().modifier(FitToAspectRatio(aspectRatio))
+        resizable().modifier(FitToAspectRatioViewModifier(aspectRatio))
     }
 }
 
 public extension View {
     func fitToAspectRatio(_ aspectRatio: CGFloat) -> some View {
-        modifier(FitToAspectRatio(aspectRatio))
+        modifier(FitToAspectRatioViewModifier(aspectRatio))
     }
 
     func fitToAspectRatio(_ aspectRatio: AspectRatio) -> some View {
-        modifier(FitToAspectRatio(aspectRatio))
+        modifier(FitToAspectRatioViewModifier(aspectRatio))
     }
 }
