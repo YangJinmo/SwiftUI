@@ -65,11 +65,11 @@ struct CustomSheet_UI<Content: View>: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: CustomSheetViewController<Content>, context: Context) {
-        if isPresented {
-            uiViewController.presentModalView()
-        } else {
-            uiViewController.dismissModalView()
+        guard uiViewController.isPresented != isPresented else {
+            return
         }
+
+        uiViewController.isPresented = isPresented
     }
 
     class Coordinator: NSObject, UIAdaptivePresentationControllerDelegate {
@@ -90,6 +90,16 @@ struct CustomSheet_UI<Content: View>: UIViewControllerRepresentable {
 
 @available(iOS 15.0, *)
 class CustomSheetViewController<Content: View>: UIViewController {
+    var isPresented: Bool = false {
+        didSet {
+            if isPresented {
+                presentModalView()
+            } else {
+                dismissModalView()
+            }
+        }
+    }
+
     let content: Content
     let coordinator: CustomSheet_UI<Content>.Coordinator
     let detents: [UISheetPresentationController.Detent]
@@ -110,11 +120,11 @@ class CustomSheetViewController<Content: View>: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func dismissModalView() {
+    private func dismissModalView() {
         dismiss(animated: true, completion: nil)
     }
 
-    func presentModalView() {
+    private func presentModalView() {
         let hostingController = UIHostingController(rootView: content)
         hostingController.modalPresentationStyle = .popover
         hostingController.presentationController?.delegate = coordinator as UIAdaptivePresentationControllerDelegate
