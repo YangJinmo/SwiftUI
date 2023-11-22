@@ -88,6 +88,7 @@
 		E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */; };
 		E8D6D2482ADCE3DB001CFD9F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */; };
 		E8D6D24A2ADCE41D001CFD9F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */; };
+		E8E1E6C62B0E1918000F09F8 /* CollectionViewWithDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */; };
 		E8E2971D2AA5C4BA00EB4F6A /* PhoneModels.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */; };
 		E8E2971F2AA5C4DE00EB4F6A /* PrimeMinisters.json in Sources */ = {isa = PBXBuildFile; fileRef = E8E2971E2AA5C4DE00EB4F6A /* PrimeMinisters.json */; };
 		E8E297222AA5C52F00EB4F6A /* PhoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E297212AA5C52F00EB4F6A /* PhoneModel.swift */; };
@@ -195,6 +196,7 @@
 		E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
 		E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewWithDataSource.swift; sourceTree = "<group>"; };
 		E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PhoneModels.json; sourceTree = "<group>"; };
 		E8E2971E2AA5C4DE00EB4F6A /* PrimeMinisters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PrimeMinisters.json; sourceTree = "<group>"; };
 		E8E297212AA5C52F00EB4F6A /* PhoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneModel.swift; sourceTree = "<group>"; };
@@ -474,6 +476,7 @@
 				E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatioViewModifier.swift */,
 				E88037572B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift */,
 				E8279DE82B0B6193006B078B /* ToastViewModifier.swift */,
+				E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				E817C2302AC91F9D007FF6D3 /* AnalogClock.swift in Sources */,
 				E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */,
 				E83DC5DD2A2DB97E006E2E4F /* JMWebView.swift in Sources */,
+				E8E1E6C62B0E1918000F09F8 /* CollectionViewWithDataSource.swift in Sources */,
 				E870C8FD2AD2BED8003F7DB7 /* FitToAspectRatioViewModifier.swift in Sources */,
 				E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */,
 				E8E2E96E2AD7FACC00712630 /* CacheAsyncImageView.swift in Sources */,
