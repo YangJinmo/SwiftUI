@@ -167,7 +167,7 @@ struct ContentView2: View {
     typealias Section = Int
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
 
-    @State var snapshot: Snapshot = {
+    @State private var snapshot: Snapshot = {
         var initialSnapshot = Snapshot()
         initialSnapshot.appendSections([0])
         return initialSnapshot
