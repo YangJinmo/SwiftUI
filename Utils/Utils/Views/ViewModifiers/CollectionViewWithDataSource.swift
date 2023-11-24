@@ -264,45 +264,6 @@ extension ContentView3 {
         UICollectionViewFlowLayout()
     }
 
-    func collectionViewConfiguration(_ collectionView: UICollectionView) {
-        collectionView.register(
-            UICollectionViewCell.self,
-            forCellWithReuseIdentifier: "CellReuseId"
-        )
-
-        collectionView.register(
-            UICollectionReusableView.self,
-            forSupplementaryViewOfKind: "KindOfHeader",
-            withReuseIdentifier: "SupplementaryReuseId"
-        )
-    }
-
-    func cellProvider(
-        _ collectionView: UICollectionView,
-        indexPath: IndexPath,
-        item: Item
-    ) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "CellReuseId",
-            for: indexPath
-        )
-
-        cell.backgroundColor = .red
-        return cell
-    }
-
-    func supplementaryProvider(
-        _ collectionView: UICollectionView,
-        elementKind: String,
-        indexPath: IndexPath
-    ) -> UICollectionReusableView {
-        collectionView.dequeueReusableSupplementaryView(
-            ofKind: elementKind,
-            withReuseIdentifier: "SupplementaryReuseId",
-            for: indexPath
-        )
-    }
-
     func cellProviderWithRegistration(
         _ collectionView: UICollectionView,
         indexPath: IndexPath,
