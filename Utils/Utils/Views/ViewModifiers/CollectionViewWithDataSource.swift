@@ -242,16 +242,18 @@ extension ContentView2 {
 }
 
 extension UICollectionView.CellRegistration {
-    static func hosting<Content: View, Item>(
-        content: @escaping (IndexPath, Item) -> Content) -> UICollectionView.CellRegistration<UICollectionViewCell, Item> {
+    static func hosting<Content: View, Item2>(
+        content: @escaping (IndexPath, Item2) -> Content
+    ) -> UICollectionView.CellRegistration<UICollectionViewCell, Item2> {
         UICollectionView.CellRegistration { cell, indexPath, item in
-
             if #available(iOS 16.0, *) {
                 cell.contentConfiguration = UIHostingConfiguration {
                     content(indexPath, item)
                 }
             } else {
-                // Fallback on earlier versions
+                cell.contentConfiguration = HostingContentConfiguration {
+                    content(indexPath, item)
+                }
             }
         }
     }
