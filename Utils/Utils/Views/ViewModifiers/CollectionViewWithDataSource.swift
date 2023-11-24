@@ -352,6 +352,12 @@ struct ContentView3: View {
     }
 }
 
+struct ContentView2_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView2()
+    }
+}
+
 struct ContentView3_Previews: PreviewProvider {
     static var previews: some View {
         ContentView3()
