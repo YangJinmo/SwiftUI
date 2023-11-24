@@ -259,7 +259,7 @@ extension UICollectionView.CellRegistration {
     }
 }
 
-extension ContentView3 {
+extension CollectionViewWithCellRegistrationPreview {
     func collectionViewLayout() -> UICollectionViewLayout {
         UICollectionViewFlowLayout()
     }
@@ -277,7 +277,7 @@ extension ContentView3 {
     }
 }
 
-struct ContentView3: View {
+struct CollectionViewWithCellRegistrationPreview: View {
     typealias Item = Int
     typealias Section = Int
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
@@ -319,8 +319,8 @@ struct ContentView2_Previews: PreviewProvider {
     }
 }
 
-struct ContentView3_Previews: PreviewProvider {
+struct CollectionViewWithCellRegistrationPreview_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView3()
+        CollectionViewWithCellRegistrationPreview()
     }
 }
