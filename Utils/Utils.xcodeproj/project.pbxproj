@@ -111,6 +111,7 @@
 		E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */; };
 		E8F9E4982ADE5F9D00CB465C /* CircleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */; };
 		E8FDC8C72AF9FC560049C95C /* TwoRowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FDC8C62AF9FC560049C95C /* TwoRowListView.swift */; };
+		E8FE0D582B11EF2D003FF468 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FE0D572B11EF2D003FF468 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -219,6 +220,7 @@
 		E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
 		E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonStyle.swift; sourceTree = "<group>"; };
 		E8FDC8C62AF9FC560049C95C /* TwoRowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoRowListView.swift; sourceTree = "<group>"; };
+		E8FE0D572B11EF2D003FF468 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +406,7 @@
 			children = (
 				E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */,
 				E83DC5E62A2DBC16006E2E4F /* UIEdgeInsets.swift */,
+				E8FE0D572B11EF2D003FF468 /* UIView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */,
 				E8356E892AFCA61D00E834F5 /* ScaleEffectButtonStyle.swift in Sources */,
 				E8B170B72AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift in Sources */,
+				E8FE0D582B11EF2D003FF468 /* UIView.swift in Sources */,
 				E868E7B92A6F4C580095F030 /* ScrollToID.swift in Sources */,
 				E8627F1C2A7AA07500C01478 /* Dictionary.swift in Sources */,
 				E8D2FDBB2A9E32610023DA63 /* VScrollView.swift in Sources */,

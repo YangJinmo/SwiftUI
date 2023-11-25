@@ -249,15 +249,3 @@ private class ContentView<Content>: UIView, UIContentView where Content: View {
         hostingController.didMove(toParent: parent)
     }
 }
-
-extension UIView {
-    func findViewController() -> UIViewController? {
-        if let nextResponder = next as? UIViewController {
-            return nextResponder
-        } else if let nextResponder = next as? UIView {
-            return nextResponder.findViewController()
-        }
-
-        return nil
-    }
-}
