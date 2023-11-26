@@ -109,6 +109,7 @@
 		E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEF1C22A39B29A0031933E /* CustomTextField.swift */; };
 		E8EF44DB2A89E81A00F798CC /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */; };
 		E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */; };
+		E8F92E622B1367D800C1A5ED /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F92E612B1367D800C1A5ED /* StarRating.swift */; };
 		E8F9E4982ADE5F9D00CB465C /* CircleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */; };
 		E8FDC8C72AF9FC560049C95C /* TwoRowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FDC8C62AF9FC560049C95C /* TwoRowListView.swift */; };
 		E8FE0D582B11EF2D003FF468 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FE0D572B11EF2D003FF468 /* UIView.swift */; };
@@ -218,6 +219,7 @@
 		E8EEF1C22A39B29A0031933E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
 		E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
+		E8F92E612B1367D800C1A5ED /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
 		E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonStyle.swift; sourceTree = "<group>"; };
 		E8FDC8C62AF9FC560049C95C /* TwoRowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoRowListView.swift; sourceTree = "<group>"; };
 		E8FE0D572B11EF2D003FF468 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 				E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */,
 				E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */,
 				E80A08002A938804006A75FD /* TogglableScrollView.swift */,
+				E8F92E612B1367D800C1A5ED /* StarRating.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 			files = (
 				E8E297342AA7272D00EB4F6A /* VerticalPageTabView.swift in Sources */,
 				E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */,
+				E8F92E622B1367D800C1A5ED /* StarRating.swift in Sources */,
 				E8A990C72A836F8900EB2BC4 /* CapsuleToggleStyle.swift in Sources */,
 				E88037582B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift in Sources */,
 				E8E2972E2AA5C79D00EB4F6A /* ReusableListView.swift in Sources */,
