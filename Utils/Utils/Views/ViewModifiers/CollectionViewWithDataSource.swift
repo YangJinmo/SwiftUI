@@ -162,7 +162,7 @@ final class CollectionViewDelegateProxy: NSObject, UICollectionViewDelegate {
     }
 }
 
-struct CollectionViewPreview: View {
+struct CollectionViewPreview2: View {
     typealias Item = Int
     typealias Section = Int
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
@@ -196,7 +196,7 @@ struct CollectionViewPreview: View {
     }
 }
 
-extension CollectionViewPreview {
+extension CollectionViewPreview2 {
     func collectionViewLayout() -> UICollectionViewLayout {
         UICollectionViewFlowLayout()
     }
@@ -313,9 +313,9 @@ struct CollectionViewWithCellRegistrationPreview: View {
     }
 }
 
-struct ContentView2_Previews: PreviewProvider {
+struct CollectionViewPreview2_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionViewPreview()
+        CollectionViewPreview2()
     }
 }
 
