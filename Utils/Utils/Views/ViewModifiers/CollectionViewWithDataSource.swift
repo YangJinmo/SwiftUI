@@ -313,7 +313,7 @@ struct CollectionViewWithCellRegistrationPreview: View {
     }
 }
 
-struct CollectionViewPreview2_Previews: PreviewProvider {
+struct CollectionViewPreview_Previews: PreviewProvider {
     static var previews: some View {
         CollectionViewPreview()
     }
