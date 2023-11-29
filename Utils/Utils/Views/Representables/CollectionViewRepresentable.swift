@@ -1,5 +1,5 @@
 //
-//  CollectionView.swift
+//  CollectionViewRepresentable.swift
 //  Utils
 //
 //  Created by Jmy on 2023/09/18.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CollectionView: UIViewRepresentable { // struct CollectionView<Content: View>: UIViewRepresentable {
+struct CollectionViewRepresentable: UIViewRepresentable { // struct CollectionViewRepresentable<Content: View>: UIViewRepresentable {
     typealias UIViewType = UICollectionView
 
     // UICollectionViewFlowLayout
@@ -58,9 +58,9 @@ struct CollectionView: UIViewRepresentable { // struct CollectionView<Content: V
     }
 
     class Coordinator: NSObject, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
-        let parent: CollectionView
+        let parent: CollectionViewRepresentable
 
-        init(_ collectionView: CollectionView) {
+        init(_ collectionView: CollectionViewRepresentable) {
             parent = collectionView
         }
 
@@ -119,7 +119,7 @@ struct CollectionView: UIViewRepresentable { // struct CollectionView<Content: V
     }
 }
 
-struct CollectionViewPreview: View {
+struct CollectionViewRepresentablePreview: View {
     private let items = [
         "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
         "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
@@ -140,7 +140,7 @@ struct CollectionViewPreview: View {
     @State private var selection: Bool = false
 
     var body: some View {
-        CollectionView(
+        CollectionViewRepresentable(
             service: collectionViewService,
             items: items,
             indexPath: $indexPath,
@@ -179,7 +179,7 @@ struct CollectionViewPreview: View {
 
 struct CollectionViewRepresentable_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionViewPreview()
+        CollectionViewRepresentablePreview()
     }
 }
 
