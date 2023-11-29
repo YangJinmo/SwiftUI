@@ -60,14 +60,14 @@ final class CollectionViewWithDataSource<SectionIdentifierType, ItemIdentifierTy
     }
 }
 
-extension CollectionView2 {
+extension CollectionView {
     typealias UIKitCollectionView = CollectionViewWithDataSource<SectionIdentifierType, ItemIdentifierType>
     typealias DataSource = UICollectionViewDiffableDataSource<SectionIdentifierType, ItemIdentifierType>
     typealias Snapshot = NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType>
     typealias UpdateCompletion = () -> Void
 }
 
-struct CollectionView2<SectionIdentifierType, ItemIdentifierType> where SectionIdentifierType: Hashable & Sendable, ItemIdentifierType: Hashable & Sendable {
+struct CollectionView<SectionIdentifierType, ItemIdentifierType> where SectionIdentifierType: Hashable & Sendable, ItemIdentifierType: Hashable & Sendable {
     private let snapshot: Snapshot
     private let configuration: (UICollectionView) -> Void
     private let cellProvider: DataSource.CellProvider
@@ -94,7 +94,7 @@ struct CollectionView2<SectionIdentifierType, ItemIdentifierType> where SectionI
     }
 }
 
-extension CollectionView2: UIViewRepresentable {
+extension CollectionView: UIViewRepresentable {
     func makeUIView(context: Context) -> UIKitCollectionView {
         let collectionView = UIKitCollectionView(
             frame: .zero,
@@ -121,7 +121,7 @@ extension CollectionView2: UIViewRepresentable {
     }
 }
 
-extension CollectionView2 {
+extension CollectionView {
     func animateDifferences(_ animate: Bool) -> Self {
         var selfCopy = self
         selfCopy.animatingDifferences = animate
@@ -162,7 +162,7 @@ final class CollectionViewDelegateProxy: NSObject, UICollectionViewDelegate {
     }
 }
 
-struct CollectionViewPreview2: View {
+struct CollectionViewPreview: View {
     typealias Item = Int
     typealias Section = Int
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Item>
@@ -175,7 +175,7 @@ struct CollectionViewPreview2: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            CollectionView2(
+            CollectionView(
                 snapshot: snapshot,
                 collectionViewLayout: collectionViewLayout,
                 configuration: collectionViewConfiguration,
@@ -196,7 +196,7 @@ struct CollectionViewPreview2: View {
     }
 }
 
-extension CollectionViewPreview2 {
+extension CollectionViewPreview {
     func collectionViewLayout() -> UICollectionViewLayout {
         UICollectionViewFlowLayout()
     }
@@ -290,7 +290,7 @@ struct CollectionViewWithCellRegistrationPreview: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            CollectionView2(
+            CollectionView(
                 snapshot: snapshot,
                 collectionViewLayout: collectionViewLayout,
                 cellProvider: cellProviderWithRegistration
@@ -315,7 +315,7 @@ struct CollectionViewWithCellRegistrationPreview: View {
 
 struct CollectionViewPreview2_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionViewPreview2()
+        CollectionViewPreview()
     }
 }
 
