@@ -89,13 +89,16 @@ struct CollectionView: UIViewRepresentable { // struct CollectionView<Content: V
             }
 
             if #available(iOS 16.0, *) {
-                cell.contentConfiguration = UIHostingConfiguration(content: swiftUIContent)
+                // cell.contentConfiguration = UIHostingConfiguration(content: swiftUIContent)
+                cell.contentConfiguration = HostingContentConfiguration {
+                    swiftUIContent()
+                        .border(.red)
+                }
             } else {
                 cell.contentConfiguration = HostingContentConfiguration {
                     // We add a little bit of padding & height to match the UIHostingConfiguration
                     swiftUIContent()
-//                        .padding()
-//                        .frame(height: 44)
+                        .border(.blue)
                 }
             }
 
