@@ -308,7 +308,9 @@ struct CollectionViewWithCellRegistrationPreview: View {
         }
     }
 
-    let cellRegistration: UICollectionView.CellRegistration = .hosting { (_: IndexPath, item: Item) in
+    private let cellRegistration: UICollectionView.CellRegistration = .hosting { (_: IndexPath, item: Item) in
+        // Text("\(indexPath.section)")
+        // Text("\(indexPath.item)")
         Text("\(item)")
     }
 }
