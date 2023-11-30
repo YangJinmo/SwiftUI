@@ -8,6 +8,16 @@
 import Foundation
 
 extension String {
+    // let stringFromInt: String = String(intTypeNumber: 20000) // "20000"
+    init(intTypeNumber: Int) {
+        self = "\(intTypeNumber)"
+    }
+
+    // let stringFromDouble: String = String(doubleTypeNumber: 3.14159) // "3.14159"
+    init(doubleTypeNumber: Double) {
+        self = "\(doubleTypeNumber)"
+    }
+
     var toURL: URL? {
         guard !isEmpty else {
             print("Error: string is Empty")
