@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8DD5EDA2B19DE9C00610D94 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DD5ED92B19DE9C00610D94 /* WidgetKit.framework */; };
+		E8DD5EDC2B19DE9C00610D94 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DD5EDB2B19DE9C00610D94 /* SwiftUI.framework */; };
+		E8DD5EDF2B19DE9C00610D94 /* KeepGitUpWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD5EDE2B19DE9C00610D94 /* KeepGitUpWidgetBundle.swift */; };
+		E8DD5EE12B19DE9C00610D94 /* KeepGitUpWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD5EE02B19DE9C00610D94 /* KeepGitUpWidgetLiveActivity.swift */; };
+		E8DD5EE32B19DE9C00610D94 /* KeepGitUpWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD5EE22B19DE9C00610D94 /* KeepGitUpWidget.swift */; };
+		E8DD5EE52B19DE9C00610D94 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD5EE42B19DE9C00610D94 /* AppIntent.swift */; };
+		E8DD5EE72B19DE9D00610D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DD5EE62B19DE9D00610D94 /* Assets.xcassets */; };
+		E8DD5EEB2B19DE9D00610D94 /* KeepGitUpWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E8DD5ED72B19DE9C00610D94 /* KeepGitUpWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E8EAE2AE2B0F18A4006B3B82 /* KeepGitUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAE2AD2B0F18A4006B3B82 /* KeepGitUpApp.swift */; };
 		E8EAE2B02B0F18A4006B3B82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAE2AF2B0F18A4006B3B82 /* ContentView.swift */; };
 		E8EAE2B22B0F18A5006B3B82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8EAE2B12B0F18A5006B3B82 /* Assets.xcassets */; };
@@ -21,7 +29,40 @@
 		E8EAE2CE2B0F227A006B3B82 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = E8EAE2CD2B0F227A006B3B82 /* SwiftSoup */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E8DD5EE92B19DE9D00610D94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8EAE2A22B0F18A4006B3B82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8DD5ED62B19DE9C00610D94;
+			remoteInfo = KeepGitUpWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E8DD5EEC2B19DE9D00610D94 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E8DD5EEB2B19DE9D00610D94 /* KeepGitUpWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E8DD5ED72B19DE9C00610D94 /* KeepGitUpWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KeepGitUpWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8DD5ED92B19DE9C00610D94 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E8DD5EDB2B19DE9C00610D94 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E8DD5EDE2B19DE9C00610D94 /* KeepGitUpWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepGitUpWidgetBundle.swift; sourceTree = "<group>"; };
+		E8DD5EE02B19DE9C00610D94 /* KeepGitUpWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepGitUpWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		E8DD5EE22B19DE9C00610D94 /* KeepGitUpWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepGitUpWidget.swift; sourceTree = "<group>"; };
+		E8DD5EE42B19DE9C00610D94 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		E8DD5EE62B19DE9D00610D94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E8DD5EE82B19DE9D00610D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8EAE2AA2B0F18A4006B3B82 /* KeepGitUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepGitUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EAE2AD2B0F18A4006B3B82 /* KeepGitUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepGitUpApp.swift; sourceTree = "<group>"; };
 		E8EAE2AF2B0F18A4006B3B82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +78,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E8DD5ED42B19DE9C00610D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DD5EDC2B19DE9C00610D94 /* SwiftUI.framework in Frameworks */,
+				E8DD5EDA2B19DE9C00610D94 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8EAE2A72B0F18A4006B3B82 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,10 +98,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8DD5ED82B19DE9C00610D94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8DD5ED92B19DE9C00610D94 /* WidgetKit.framework */,
+				E8DD5EDB2B19DE9C00610D94 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8DD5EDD2B19DE9C00610D94 /* KeepGitUpWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E8DD5EDE2B19DE9C00610D94 /* KeepGitUpWidgetBundle.swift */,
+				E8DD5EE02B19DE9C00610D94 /* KeepGitUpWidgetLiveActivity.swift */,
+				E8DD5EE22B19DE9C00610D94 /* KeepGitUpWidget.swift */,
+				E8DD5EE42B19DE9C00610D94 /* AppIntent.swift */,
+				E8DD5EE62B19DE9D00610D94 /* Assets.xcassets */,
+				E8DD5EE82B19DE9D00610D94 /* Info.plist */,
+			);
+			path = KeepGitUpWidget;
+			sourceTree = "<group>";
+		};
 		E8EAE2A12B0F18A4006B3B82 = {
 			isa = PBXGroup;
 			children = (
 				E8EAE2AC2B0F18A4006B3B82 /* KeepGitUp */,
+				E8DD5EDD2B19DE9C00610D94 /* KeepGitUpWidget */,
+				E8DD5ED82B19DE9C00610D94 /* Frameworks */,
 				E8EAE2AB2B0F18A4006B3B82 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				E8EAE2AA2B0F18A4006B3B82 /* KeepGitUp.app */,
+				E8DD5ED72B19DE9C00610D94 /* KeepGitUpWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +192,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E8DD5ED62B19DE9C00610D94 /* KeepGitUpWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8DD5EEF2B19DE9D00610D94 /* Build configuration list for PBXNativeTarget "KeepGitUpWidgetExtension" */;
+			buildPhases = (
+				E8DD5ED32B19DE9C00610D94 /* Sources */,
+				E8DD5ED42B19DE9C00610D94 /* Frameworks */,
+				E8DD5ED52B19DE9C00610D94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeepGitUpWidgetExtension;
+			productName = KeepGitUpWidgetExtension;
+			productReference = E8DD5ED72B19DE9C00610D94 /* KeepGitUpWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E8EAE2A92B0F18A4006B3B82 /* KeepGitUp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8EAE2B82B0F18A5006B3B82 /* Build configuration list for PBXNativeTarget "KeepGitUp" */;
@@ -124,10 +216,12 @@
 				E8EAE2A62B0F18A4006B3B82 /* Sources */,
 				E8EAE2A72B0F18A4006B3B82 /* Frameworks */,
 				E8EAE2A82B0F18A4006B3B82 /* Resources */,
+				E8DD5EEC2B19DE9D00610D94 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E8DD5EEA2B19DE9D00610D94 /* PBXTargetDependency */,
 			);
 			name = KeepGitUp;
 			packageProductDependencies = (
@@ -147,6 +241,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					E8DD5ED62B19DE9C00610D94 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 					E8EAE2A92B0F18A4006B3B82 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
@@ -169,11 +266,20 @@
 			projectRoot = "";
 			targets = (
 				E8EAE2A92B0F18A4006B3B82 /* KeepGitUp */,
+				E8DD5ED62B19DE9C00610D94 /* KeepGitUpWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E8DD5ED52B19DE9C00610D94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DD5EE72B19DE9D00610D94 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8EAE2A82B0F18A4006B3B82 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +292,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E8DD5ED32B19DE9C00610D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DD5EE32B19DE9C00610D94 /* KeepGitUpWidget.swift in Sources */,
+				E8DD5EE52B19DE9C00610D94 /* AppIntent.swift in Sources */,
+				E8DD5EDF2B19DE9C00610D94 /* KeepGitUpWidgetBundle.swift in Sources */,
+				E8DD5EE12B19DE9C00610D94 /* KeepGitUpWidgetLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8EAE2A62B0F18A4006B3B82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,7 +321,69 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E8DD5EEA2B19DE9D00610D94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8DD5ED62B19DE9C00610D94 /* KeepGitUpWidgetExtension */;
+			targetProxy = E8DD5EE92B19DE9D00610D94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E8DD5EED2B19DE9D00610D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YAHW75YBYW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KeepGitUpWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KeepGitUpWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzimss.KeepGitUp.KeepGitUpWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E8DD5EEE2B19DE9D00610D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YAHW75YBYW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KeepGitUpWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KeepGitUpWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zzimss.KeepGitUp.KeepGitUpWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		E8EAE2B62B0F18A5006B3B82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -327,6 +506,7 @@
 		E8EAE2B92B0F18A5006B3B82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -356,6 +536,7 @@
 		E8EAE2BA2B0F18A5006B3B82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -385,6 +566,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E8DD5EEF2B19DE9D00610D94 /* Build configuration list for PBXNativeTarget "KeepGitUpWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8DD5EED2B19DE9D00610D94 /* Debug */,
+				E8DD5EEE2B19DE9D00610D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E8EAE2A52B0F18A4006B3B82 /* Build configuration list for PBXProject "KeepGitUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
