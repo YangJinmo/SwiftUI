@@ -71,7 +71,7 @@ extension ConfigurationAppIntent {
     
     fileprivate static var starEyes: ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "🤩"
+        intent.favoriteEmoji = "🤩🤩🤩🤩🤩"
         return intent
     }
 }
