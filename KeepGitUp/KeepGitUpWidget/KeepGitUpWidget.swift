@@ -84,3 +84,24 @@ extension ConfigurationAppIntent {
     SimpleEntry(date: .now, configuration: .smiley)
     SimpleEntry(date: .now, configuration: .starEyes)
 }
+
+#Preview(as: .systemMedium) {
+    KeepGitUpWidget()
+} timeline: {
+    SimpleEntry(date: .now, configuration: .smiley)
+    SimpleEntry(date: .now, configuration: .starEyes)
+}
+
+#Preview(as: .systemLarge) {
+    KeepGitUpWidget()
+} timeline: {
+    SimpleEntry(date: .now, configuration: .smiley)
+    SimpleEntry(date: .now, configuration: .starEyes)
+}
+
+#Preview(as: .systemExtraLarge) {
+    KeepGitUpWidget()
+} timeline: {
+    SimpleEntry(date: .now, configuration: .smiley)
+    SimpleEntry(date: .now, configuration: .starEyes)
+}
