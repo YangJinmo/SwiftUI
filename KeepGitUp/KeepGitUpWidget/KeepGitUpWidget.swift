@@ -67,13 +67,13 @@ struct KeepGitUpWidget: Widget {
 extension ConfigurationAppIntent {
     fileprivate static var smiley: ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "😀"
+        intent.favoriteEmoji = "🌾"
         return intent
     }
-    
+
     fileprivate static var starEyes: ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "🤩🤩🤩🤩🤩"
+        intent.favoriteEmoji = "🍩"
         return intent
     }
 }
