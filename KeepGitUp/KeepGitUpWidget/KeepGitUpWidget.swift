@@ -42,11 +42,13 @@ struct KeepGitUpWidgetEntryView : View {
 
     var body: some View {
         VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
+            Spacer()
 
-            Text("Favorite Emoji:")
             Text(entry.configuration.favoriteEmoji)
+
+            Spacer()
+
+            Text(entry.date, style: .time)
         }
     }
 }
