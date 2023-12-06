@@ -9,23 +9,23 @@ import SwiftUI
 import WidgetKit
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), emoji: "😀")
+    func placeholder(in context: Context) -> DayEntry {
+        DayEntry(date: Date(), emoji: "😀")
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
-        let entry = SimpleEntry(date: Date(), emoji: "😀")
+    func getSnapshot(in context: Context, completion: @escaping (DayEntry) -> Void) {
+        let entry = DayEntry(date: Date(), emoji: "😀")
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
-        var entries: [SimpleEntry] = []
+        var entries: [DayEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, emoji: "😀")
+            let entry = DayEntry(date: entryDate, emoji: "😀")
             entries.append(entry)
         }
 
@@ -34,7 +34,7 @@ struct Provider: TimelineProvider {
     }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct DayEntry: TimelineEntry {
     let date: Date
     let emoji: String
 }
@@ -75,6 +75,7 @@ struct MonthlyWidget: Widget {
 #Preview(as: .systemSmall) {
     MonthlyWidget()
 } timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
+    DayEntry(date: .now, emoji: "😀")
+    DayEntry(date: .now, emoji: "🤩")
+}
 }
