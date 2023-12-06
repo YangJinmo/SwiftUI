@@ -44,11 +44,24 @@ struct MonthlyWidgetEntryView: View {
 
     var body: some View {
         VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
+            HStack {
+//                Text(entry.emoji)
+//                    .font(.title)
 
-            Text("Emoji:")
-            Text(entry.emoji)
+                Text(entry.date.weekdayDisplayFormat)
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .minimumScaleFactor(0.6)
+                    .foregroundColor(.black.opacity(0.6))
+
+//                Spacer()
+            }
+
+            Text(entry.date.dayDisplayFormat)
+                .font(.system(size: 80, weight: .heavy))
+                .foregroundColor(.white.opacity(0.8))
+
+//            Text(entry.date, style: .time)
         }
     }
 }
@@ -78,4 +91,13 @@ struct MonthlyWidget: Widget {
     DayEntry(date: .now, emoji: "😀")
     DayEntry(date: .now, emoji: "🤩")
 }
+
+extension Date {
+    var weekdayDisplayFormat: String {
+        formatted(.dateTime.weekday(.wide))
+    }
+
+    var dayDisplayFormat: String {
+        formatted(.dateTime.day())
+    }
 }
