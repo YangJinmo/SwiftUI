@@ -13,6 +13,8 @@
 		E81FA4F22B1E1F0000D407F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81FA4F12B1E1F0000D407F4 /* Preview Assets.xcassets */; };
 		E81FA4FF2B1E1F2900D407F4 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81FA4FE2B1E1F2900D407F4 /* KeyboardViewController.swift */; };
 		E81FA5032B1E1F2900D407F4 /* MyKey.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E81FA4FC2B1E1F2900D407F4 /* MyKey.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E8A9644A2B24700A005600E9 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A964492B24700A005600E9 /* KeyboardView.swift */; };
+		E8A9644B2B247025005600E9 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A964492B24700A005600E9 /* KeyboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		E81FA4FC2B1E1F2900D407F4 /* MyKey.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyKey.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81FA4FE2B1E1F2900D407F4 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		E81FA5002B1E1F2900D407F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8A964492B24700A005600E9 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 			children = (
 				E81FA4FE2B1E1F2900D407F4 /* KeyboardViewController.swift */,
 				E81FA5002B1E1F2900D407F4 /* Info.plist */,
+				E8A964492B24700A005600E9 /* KeyboardView.swift */,
 			);
 			path = MyKey;
 			sourceTree = "<group>";
@@ -214,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8A9644B2B247025005600E9 /* KeyboardView.swift in Sources */,
 				E81FA4ED2B1E1EFF00D407F4 /* ContentView.swift in Sources */,
 				E81FA4EB2B1E1EFF00D407F4 /* SampleKeyboardApp.swift in Sources */,
 			);
@@ -224,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E81FA4FF2B1E1F2900D407F4 /* KeyboardViewController.swift in Sources */,
+				E8A9644A2B24700A005600E9 /* KeyboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
