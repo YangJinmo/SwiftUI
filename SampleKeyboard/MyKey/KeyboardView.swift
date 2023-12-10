@@ -9,7 +9,24 @@ import SwiftUI
 
 struct KeyboardView: View {
     var body: some View {
-        Text("This is keyboard")
+        VStack {
+            Button {
+                NotificationCenter.default.post(name: NSNotification.Name("addKey"), object: "Hi!")
+            } label: {
+                Text("Hi!")
+                    .frame(maxWidth: .infinity, minHeight: 40)
+            }
+            .buttonStyle(.bordered)
+            
+            Button {
+                NotificationCenter.default.post(name: NSNotification.Name("addKey"), object: "My name is zzimss")
+            } label: {
+                Text("My name is zzimss")
+                    .frame(maxWidth: .infinity, minHeight: 40)
+            }
+            .buttonStyle(.bordered)
+        }
+        .padding()
     }
 }
 

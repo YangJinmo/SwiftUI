@@ -5,12 +5,12 @@
 //  Created by Jmy on 2023/12/04.
 //
 
-import UIKit
 import SwiftUI
+import UIKit
 
 class KeyboardViewController: UIInputViewController {
     @IBOutlet var nextKeyboardButton: UIButton!
-    
+
     private let keyboardView = KeyboardView()
 
     override func updateViewConstraints() {
@@ -35,8 +35,14 @@ class KeyboardViewController: UIInputViewController {
 
         nextKeyboardButton.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         nextKeyboardButton.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
+
         view.addKeyboardSubivew(UIHostingController(rootView: keyboardView).view)
+
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("addKey"), object: nil, queue: nil) { notification in
+            if let text = notification.object as? String {
+                self.textDocumentProxy.insertText(text + "\n")
+            }
+        }
     }
 
     override func viewWillLayoutSubviews() {
