@@ -20,6 +20,14 @@ struct UtilsApp: App {
                 .onDisappear {
                     "onDisappear".log(trait: .app)
                 }
+                .onOpenURL { url in
+                    print("URL: \(url)")
+                }
+                .onContinueUserActivity("what") { userActivity in
+                    if let thing = userActivity.userInfo?["something"] as? String {
+                        print("Get \(thing)")
+                    }
+                }
         }
         .onChange(of: phase) { newValue in
             if newValue == .active {
@@ -39,7 +47,7 @@ struct UtilsApp: App {
         // 우리에게 필요한 앱 사용 종료를 의미하는 값은 active에서 inactive가 될 경우이다.
         // 앱 사용 시작: active
         // 앱 사용 종료: active -> inactive (이전 상태가 active일 때, inactive가 호출된 시점)
-        // 현재 scenePhase를 저장하고 inactive 호출 시, 만약 저장된 scenePhase가 active일 경우를ㄱㄱㄹ ㅍㅍ
+        // 현재 scenePhase를 저장하고 inactive 호출 시, 만약 저장된 scenePhase가 active일 경우를
         // 유저의 앱 사용 종료로 볼 수 있다.
 
         // 앱 메모리 해제
