@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct UtilsApp: App {
     @Environment(\.scenePhase) var phase
+    @State private var oldScenePhase = ScenePhase.active
 
     var body: some Scene {
         WindowGroup {
@@ -29,13 +30,18 @@ struct UtilsApp: App {
                     }
                 }
         }
-        .onChange(of: phase) { newValue in
-            if newValue == .active {
+        .onChange(of: phase) { newScenePhase in
+            if newScenePhase == .active {
                 "active".log(trait: .app)
-            } else if newValue == .inactive {
+                "Start app usage".log(trait: .app)
+            } else if newScenePhase == .inactive {
                 "inactive".log(trait: .app)
-            } else if newValue == .background {
+            } else if newScenePhase == .background {
                 "background".log(trait: .app)
+            }
+
+            if oldScenePhase == .active, newScenePhase == .inactive {
+                "End app usage".log(trait: .app)
             }
         }
 
