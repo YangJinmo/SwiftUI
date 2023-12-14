@@ -43,6 +43,8 @@ struct UtilsApp: App {
             if oldScenePhase == .active, newScenePhase == .inactive {
                 "End app usage".log(trait: .app)
             }
+
+            oldScenePhase = newScenePhase
         }
 
         // MARK: Scene Phase
