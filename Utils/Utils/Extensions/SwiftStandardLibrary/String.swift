@@ -61,4 +61,19 @@ extension String {
         let components = components(separatedBy: "/")
         return components.isEmpty ? "" : components.last!.components(separatedBy: ".").first!
     }
+
+    // MARK: - Localized
+
+    func localized() -> String {
+        return NSLocalizedString(self, comment: "")
+    }
+
+    // MARK: - Date
+
+    func toDate(dateFormat: String = "yyyy-MM-dd HH:mm:ss") -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = .current
+        dateFormatter.dateFormat = dateFormat
+        return dateFormatter.date(from: self) ?? Date()
+    }
 }
