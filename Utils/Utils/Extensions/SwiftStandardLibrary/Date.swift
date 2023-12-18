@@ -10,6 +10,7 @@ import Foundation.NSDate
 extension Date {
     func toString(dateFormat: String = "yyyy.MM.dd HH:mm:ss:SSS") -> String {
         let dateFormatter = DateFormatter()
+        // dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
         dateFormatter.timeZone = .current
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.string(from: self)
