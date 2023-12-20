@@ -18,6 +18,11 @@ extension String {
         self = "\(doubleTypeNumber)"
     }
 
+    // let stringFromFloat: String = String(floatTypeNumber: 3.14159) // "3.14159"
+    init(floatTypeNumber: Float) {
+        self = "\(floatTypeNumber)"
+    }
+
     var toURL: URL? {
         guard !isEmpty else {
             print("Error: string is Empty")
