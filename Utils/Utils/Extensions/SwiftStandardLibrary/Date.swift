@@ -15,4 +15,8 @@ extension Date {
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.string(from: self)
     }
+
+    var milliSeconds: Int {
+        return Int(Date().timeIntervalSince1970 * 1000)
+    }
 }
