@@ -8,20 +8,8 @@
 import Foundation
 
 extension Int64 {
-    static var timestamp: Int64 {
-        return Date().millisecondsSince1970
-    }
-
-    var toDate: Date {
-        return Date(timeIntervalSince1970: TimeInterval(self) / 1000)
-    }
-
     var millisecondsToSeconds: Int64 {
         return self / 1000
-    }
-
-    var seconds: Int64 {
-        return self % 60
     }
 
     var millisecondsToTimeString: String {
