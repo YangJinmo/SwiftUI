@@ -31,4 +31,11 @@ extension Bundle {
     static var appVersionAndBuild: String {
         return "v \(appVersion) (\(appBuild))"
     }
+
+    static var iconFilePath: String {
+        let iconFilename = main.object(forInfoDictionaryKey: "CFBundleIconFile") as! NSString
+        let iconBasename = iconFilename.deletingPathExtension
+        let iconExtension = iconFilename.pathExtension
+        return main.path(forResource: iconBasename, ofType: iconExtension)!
+    }
 }
