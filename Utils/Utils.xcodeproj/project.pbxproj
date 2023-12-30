@@ -111,6 +111,7 @@
 		E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEF1C22A39B29A0031933E /* CustomTextField.swift */; };
 		E8EF44DB2A89E81A00F798CC /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */; };
 		E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */; };
+		E8F157A82B4027A100F41E56 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F157A72B4027A100F41E56 /* DatePickerView.swift */; };
 		E8F92E622B1367D800C1A5ED /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F92E612B1367D800C1A5ED /* StarRating.swift */; };
 		E8F9E4982ADE5F9D00CB465C /* CircleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */; };
 		E8FDC8C72AF9FC560049C95C /* TwoRowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FDC8C62AF9FC560049C95C /* TwoRowListView.swift */; };
@@ -223,6 +224,7 @@
 		E8EEF1C22A39B29A0031933E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
 		E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
+		E8F157A72B4027A100F41E56 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		E8F92E612B1367D800C1A5ED /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
 		E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonStyle.swift; sourceTree = "<group>"; };
 		E8FDC8C62AF9FC560049C95C /* TwoRowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoRowListView.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 				E8B170B62AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift */,
 				E8FDC8C62AF9FC560049C95C /* TwoRowListView.swift */,
 				E8599C462B2D9AC80085E054 /* HelloView.swift */,
+				E8F157A72B4027A100F41E56 /* DatePickerView.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -698,6 +701,7 @@
 				E86DA7A82AB986B9006A1743 /* ViewControllerRepresentable.swift in Sources */,
 				E8128E0C2AB9719F00B6B8F6 /* TableViewBootCamp.swift in Sources */,
 				E85AFE092A6293FC00E71575 /* JMTextField.swift in Sources */,
+				E8F157A82B4027A100F41E56 /* DatePickerView.swift in Sources */,
 				E8B87B712AEFD69000384444 /* VideoPlayerView.swift in Sources */,
 				E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */,
 				E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */,
