@@ -112,6 +112,7 @@
 		E8EF44DB2A89E81A00F798CC /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */; };
 		E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */; };
 		E8F157A82B4027A100F41E56 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F157A72B4027A100F41E56 /* DatePickerView.swift */; };
+		E8F157AB2B4306C800F41E56 /* LongText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F157AA2B4306C800F41E56 /* LongText.swift */; };
 		E8F92E622B1367D800C1A5ED /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F92E612B1367D800C1A5ED /* StarRating.swift */; };
 		E8F9E4982ADE5F9D00CB465C /* CircleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */; };
 		E8FDC8C72AF9FC560049C95C /* TwoRowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FDC8C62AF9FC560049C95C /* TwoRowListView.swift */; };
@@ -225,6 +226,7 @@
 		E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
 		E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
 		E8F157A72B4027A100F41E56 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		E8F157AA2B4306C800F41E56 /* LongText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongText.swift; sourceTree = "<group>"; };
 		E8F92E612B1367D800C1A5ED /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
 		E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonStyle.swift; sourceTree = "<group>"; };
 		E8FDC8C62AF9FC560049C95C /* TwoRowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoRowListView.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			children = (
 				E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */,
 				E83DC5DF2A2DBB7F006E2E4F /* Views */,
+				E8F157A92B4306B300F41E56 /* Components */,
 				E83DC5D72A2DB83F006E2E4F /* Extensions */,
 				E8191E522A81EA840068D113 /* PreferenceKeys */,
 				E83DC5D42A2DB7DA006E2E4F /* Shapes */,
@@ -543,6 +546,14 @@
 			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
+		E8F157A92B4306B300F41E56 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E8F157AA2B4306C800F41E56 /* LongText.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -664,6 +675,7 @@
 				E86DA7B22ABE92BA006A1743 /* CollectionViewBootCamp.swift in Sources */,
 				E83DC5D62A2DB806006E2E4F /* RoundedCorner.swift in Sources */,
 				E8703E152AC2B7F900FE1FF7 /* CollectionViewController.swift in Sources */,
+				E8F157AB2B4306C800F41E56 /* LongText.swift in Sources */,
 				E8E297222AA5C52F00EB4F6A /* PhoneModel.swift in Sources */,
 				E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */,
 				E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */,
