@@ -39,3 +39,11 @@ extension Bundle {
         return main.path(forResource: iconBasename, ofType: iconExtension)!
     }
 }
+
+import UIKit.UIImage
+
+extension Bundle {
+    static var iconImage: UIImage? {
+        return UIImage(contentsOfFile: iconFilePath)
+    }
+}
