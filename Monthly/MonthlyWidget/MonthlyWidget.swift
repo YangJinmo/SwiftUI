@@ -25,7 +25,8 @@ struct Provider: TimelineProvider {
         let currentDate = Date()
         for dayOffset in 0 ..< 7 {
             let entryDate = Calendar.current.date(byAdding: .day, value: dayOffset, to: currentDate)!
-            let entry = DayEntry(date: entryDate, emoji: "😀")
+            let startOfDate = Calendar.current.startOfDay(for: entryDate)
+            let entry = DayEntry(date: startOfDate, emoji: "😀")
             entries.append(entry)
         }
 
@@ -73,15 +74,19 @@ struct MonthlyWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             if #available(iOS 17.0, *) {
                 MonthlyWidgetEntryView(entry: entry)
-                    .containerBackground(.fill.tertiary, for: .widget)
+                    .containerBackground(for: .widget) {
+                        Color.green
+                    }
             } else {
                 MonthlyWidgetEntryView(entry: entry)
                     .padding()
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Monthly Style Widget")
+        .description("The theme of the widget changes based on month.")
+        .supportedFamilies([.systemSmall])
+        .containerBackgroundRemovable(false)
     }
 }
 
