@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E80A1A292B4ED4B6000AE64D /* SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A1A282B4ED4B6000AE64D /* SwiftUI.swift */; };
 		E8DF193C2B1F19E400BCAB80 /* MonthlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF193B2B1F19E400BCAB80 /* MonthlyApp.swift */; };
 		E8DF193E2B1F19E400BCAB80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF193D2B1F19E400BCAB80 /* ContentView.swift */; };
 		E8DF19402B1F19E500BCAB80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DF193F2B1F19E500BCAB80 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E80A1A282B4ED4B6000AE64D /* SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI.swift; sourceTree = "<group>"; };
 		E8DF19382B1F19E400BCAB80 /* Monthly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monthly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DF193B2B1F19E400BCAB80 /* MonthlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyApp.swift; sourceTree = "<group>"; };
 		E8DF193D2B1F19E400BCAB80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		E8DF192F2B1F19E400BCAB80 = {
 			isa = PBXGroup;
 			children = (
+				E80A1A282B4ED4B6000AE64D /* SwiftUI.swift */,
 				E8DF193A2B1F19E400BCAB80 /* Monthly */,
 				E8DF19532B1F1AA900BCAB80 /* MonthlyWidget */,
 				E8DF194E2B1F1AA900BCAB80 /* Frameworks */,
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80A1A292B4ED4B6000AE64D /* SwiftUI.swift in Sources */,
 				E8DF19552B1F1AA900BCAB80 /* MonthlyWidgetBundle.swift in Sources */,
 				E8DF19572B1F1AA900BCAB80 /* MonthlyWidget.swift in Sources */,
 			);
