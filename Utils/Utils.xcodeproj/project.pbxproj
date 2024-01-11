@@ -90,6 +90,7 @@
 		E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */; };
 		E8D6D2482ADCE3DB001CFD9F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */; };
 		E8D6D24A2ADCE41D001CFD9F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */; };
+		E8DE0D252B4FCC5000B14957 /* PopupMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE0D242B4FCC5000B14957 /* PopupMiddleView.swift */; };
 		E8E1E6C62B0E1918000F09F8 /* CollectionViewWithDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */; };
 		E8E2971D2AA5C4BA00EB4F6A /* PhoneModels.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */; };
 		E8E2971F2AA5C4DE00EB4F6A /* PrimeMinisters.json in Sources */ = {isa = PBXBuildFile; fileRef = E8E2971E2AA5C4DE00EB4F6A /* PrimeMinisters.json */; };
@@ -204,6 +205,7 @@
 		E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
 		E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		E8DE0D242B4FCC5000B14957 /* PopupMiddleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupMiddleView.swift; sourceTree = "<group>"; };
 		E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewWithDataSource.swift; sourceTree = "<group>"; };
 		E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PhoneModels.json; sourceTree = "<group>"; };
 		E8E2971E2AA5C4DE00EB4F6A /* PrimeMinisters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PrimeMinisters.json; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 				E8BF16B52A3B185D0096E57E /* ViewModifiers */,
 				E83DC5DB2A2DB96E006E2E4F /* Representables */,
 				E83DC5DE2A2DBB77006E2E4F /* Commons */,
+				E8DE0D232B4FCC1A00B14957 /* Popups */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -508,6 +511,14 @@
 				E8627F1B2A7AA07500C01478 /* Dictionary.swift */,
 			);
 			path = SwiftStandardLibrary;
+			sourceTree = "<group>";
+		};
+		E8DE0D232B4FCC1A00B14957 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				E8DE0D242B4FCC5000B14957 /* PopupMiddleView.swift */,
+			);
+			path = Popups;
 			sourceTree = "<group>";
 		};
 		E8E297202AA5C52000EB4F6A /* ReusableLists */ = {
@@ -686,6 +697,7 @@
 				E8D6D2482ADCE3DB001CFD9F /* ImageView.swift in Sources */,
 				E8BF16B72A3B18800096E57E /* TextFieldClearButtonViewModifier.swift in Sources */,
 				E86A17152AEEA6CC001119E8 /* AnyCollectionViewController.swift in Sources */,
+				E8DE0D252B4FCC5000B14957 /* PopupMiddleView.swift in Sources */,
 				E8128E042AB84BF500B6B8F6 /* CollectionViewRepresentable.swift in Sources */,
 				E8E297362AAACAE200EB4F6A /* AsyncAwait.swift in Sources */,
 				E8BF16C02A4178AB0096E57E /* String.swift in Sources */,
