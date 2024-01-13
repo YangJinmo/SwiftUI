@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E80A1A292B4ED4B6000AE64D /* SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A1A282B4ED4B6000AE64D /* SwiftUI.swift */; };
+		E83A9CCD2B525E93003427BC /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83A9CCC2B525E93003427BC /* Color+Ext.swift */; };
 		E8DF193C2B1F19E400BCAB80 /* MonthlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF193B2B1F19E400BCAB80 /* MonthlyApp.swift */; };
 		E8DF193E2B1F19E400BCAB80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DF193D2B1F19E400BCAB80 /* ContentView.swift */; };
 		E8DF19402B1F19E500BCAB80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DF193F2B1F19E500BCAB80 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		E80A1A282B4ED4B6000AE64D /* SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI.swift; sourceTree = "<group>"; };
+		E83A9CCC2B525E93003427BC /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		E8DF19382B1F19E400BCAB80 /* Monthly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monthly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DF193B2B1F19E400BCAB80 /* MonthlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyApp.swift; sourceTree = "<group>"; };
 		E8DF193D2B1F19E400BCAB80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		E8DF19532B1F1AA900BCAB80 /* MonthlyWidget */ = {
 			isa = PBXGroup;
 			children = (
+				E83A9CCC2B525E93003427BC /* Color+Ext.swift */,
 				E8DF19542B1F1AA900BCAB80 /* MonthlyWidgetBundle.swift */,
 				E8DF19562B1F1AA900BCAB80 /* MonthlyWidget.swift */,
 				E8DF19582B1F1AAA00BCAB80 /* Assets.xcassets */,
@@ -242,6 +245,7 @@
 			files = (
 				E8DF193E2B1F19E400BCAB80 /* ContentView.swift in Sources */,
 				E8DF193C2B1F19E400BCAB80 /* MonthlyApp.swift in Sources */,
+				E83A9CCD2B525E93003427BC /* Color+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
