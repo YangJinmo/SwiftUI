@@ -30,16 +30,14 @@ struct DeletableHorizontalScrollableItemView: View {
     }
 }
 
-struct DeletableHorizontalScrollableItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        DeletableHorizontalScrollableItemView(
-            texts: ["Apple", "Samsung"],
-            textTapped: { text in
-                print(text)
-            },
-            xmarkTapped: { index in
-                print(index)
-            }
-        )
-    }
+#Preview {
+    DeletableHorizontalScrollableItemView(
+        texts: ["Apple", "Samsung"],
+        textTapped: { text in
+            print(text)
+        },
+        xmarkTapped: { index in
+            print(index)
+        }
+    )
 }

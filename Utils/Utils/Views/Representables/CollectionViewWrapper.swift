@@ -110,8 +110,6 @@ struct CollectionViewWrapperPreviews: View {
     }
 }
 
-struct CollectionViewWrapperPreviews_Previews: PreviewProvider {
-    static var previews: some View {
-        CollectionViewWrapperPreviews()
-    }
+#Preview {
+    CollectionViewWrapperPreviews()
 }

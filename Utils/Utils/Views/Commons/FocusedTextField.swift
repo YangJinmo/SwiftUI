@@ -46,10 +46,8 @@ struct FocusedTextField: UIViewRepresentable {
     }
 }
 
-struct FocusedTextField_Previews: PreviewProvider {
-    static var previews: some View {
-        FocusedTextField_Previews_View()
-    }
+#Preview {
+    FocusedTextField_Previews_View()
 }
 
 struct FocusedTextField_Previews_View: View {

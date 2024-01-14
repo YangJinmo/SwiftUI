@@ -19,8 +19,6 @@ struct CurrentTimeView: View {
     }
 }
 
-struct CurrentTimeView_Previews: PreviewProvider {
-    static var previews: some View {
-        CurrentTimeView()
-    }
+#Preview {
+    CurrentTimeView()
 }

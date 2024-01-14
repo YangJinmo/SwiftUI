@@ -29,10 +29,8 @@ struct AsyncAwait: View {
     }
 }
 
-struct AsyncAwait_Previews: PreviewProvider {
-    static var previews: some View {
-        AsyncAwait()
-    }
+#Preview {
+    AsyncAwait()
 }
 
 import SwiftUI

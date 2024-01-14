@@ -66,10 +66,8 @@ struct AnalogClock: View {
     }
 }
 
-struct AnalogClock_Previews: PreviewProvider {
-    static var previews: some View {
-        AnalogClock()
-    }
+#Preview {
+    AnalogClock()
 }
 
 import Combine

@@ -22,12 +22,9 @@ struct TogglableScrollView<Content>: View where Content: View {
     }
 }
 
-struct TogglableScrollView_Previews: PreviewProvider {
-    static var previews: some View {
-        TogglableScrollView_Previews_View()
-    }
+#Preview {
+    TogglableScrollView_Previews_View()
 }
-
 
 struct TogglableScrollView_Previews_View: View {
     @State private var canScroll: Bool = false

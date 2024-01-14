@@ -21,8 +21,6 @@ struct GeometryReaderView: View {
     }
 }
 
-struct GeometryReaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        GeometryReaderView()
-    }
+#Preview {
+    GeometryReaderView()
 }

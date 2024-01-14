@@ -41,8 +41,6 @@ struct DarkModeToggleStylePreview: View {
     }
 }
 
-struct DarkModeToggleStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        DarkModeToggleStylePreview()
-    }
+#Preview {
+    DarkModeToggleStylePreview()
 }

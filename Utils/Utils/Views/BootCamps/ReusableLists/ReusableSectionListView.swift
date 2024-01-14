@@ -71,8 +71,8 @@ struct ReusableSectionListView<L: ListableResponseModel>: View {
     }
 }
 
-struct ReusableSectionListView_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview {
+    Group {
         ReusableSectionListView(data: models)
         ReusableSectionListView(data: primeMinisters)
     }

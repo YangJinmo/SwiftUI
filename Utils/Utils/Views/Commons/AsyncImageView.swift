@@ -31,8 +31,6 @@ struct AsyncImageView: View {
     }
 }
 
-struct AsyncImageView_Previews: PreviewProvider {
-    static var previews: some View {
-        AsyncImageView(url: "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png")
-    }
+#Preview {
+    AsyncImageView(url: "https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png")
 }

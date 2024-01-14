@@ -177,10 +177,8 @@ struct CollectionViewRepresentablePreview: View {
     }
 }
 
-struct CollectionViewRepresentable_Previews: PreviewProvider {
-    static var previews: some View {
-        CollectionViewRepresentablePreview()
-    }
+#Preview {
+    CollectionViewRepresentablePreview()
 }
 
 struct HostingContentConfiguration<Content>: UIContentConfiguration where Content: View {

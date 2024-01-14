@@ -30,7 +30,7 @@ struct JMTextField: View {
             RoundedRectangle(cornerRadius: 8)
                 .strokeBorder(
                     isFocused
-                        ? Color.limeGreen
+                        ? Color.accentColor
                         : Color.clear,
                     lineWidth: 1
                 )
@@ -44,11 +44,9 @@ struct JMTextField: View {
     }
 }
 
-struct HGTextField_Previews: PreviewProvider {
-    @State private static var productName = ""
+#Preview {
+    @State var productName = ""
 
-    static var previews: some View {
-        JMTextField(text: $productName, placeholder: "상품을 입력해 주세요.")
-            .padding()
-    }
+    return JMTextField(text: $productName, placeholder: "상품을 입력해 주세요.")
+        .padding()
 }

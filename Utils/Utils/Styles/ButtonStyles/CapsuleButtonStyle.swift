@@ -46,8 +46,6 @@ struct CapsuleButtonStylePreview: View {
     }
 }
 
-struct CapsuleButtonStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        CapsuleButtonStylePreview()
-    }
+#Preview {
+    CapsuleButtonStylePreview()
 }

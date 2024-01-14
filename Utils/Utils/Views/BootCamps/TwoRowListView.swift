@@ -86,8 +86,6 @@ struct TwoRowListView: View {
     }
 }
 
-struct TwoRowListView_Previews: PreviewProvider {
-    static var previews: some View {
-        TwoRowListView()
-    }
+#Preview {
+    TwoRowListView()
 }

@@ -69,12 +69,10 @@ struct PresentView<Content: View>: View {
     }
 }
 
-struct PresentView_Previews: PreviewProvider {
-    static var previews: some View {
-        PresentView(title: "title") {
-            Text("content")
-        } action: {
-            print("action")
-        }
+#Preview {
+    PresentView(title: "title") {
+        Text("content")
+    } action: {
+        print("action")
     }
 }

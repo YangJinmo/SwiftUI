@@ -43,11 +43,9 @@ struct JMTextEditor: View {
     }
 }
 
-struct JMTextEditor_Previews: PreviewProvider {
-    @State private static var text = ""
+#Preview {
+    @State var text = ""
 
-    static var previews: some View {
-        JMTextEditor(text: $text, placeholder: "텍스트를 입력해 주세요.")
-            .padding()
-    }
+    return JMTextEditor(text: $text, placeholder: "텍스트를 입력해 주세요.")
+        .padding()
 }

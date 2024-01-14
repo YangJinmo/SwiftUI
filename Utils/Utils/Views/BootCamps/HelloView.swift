@@ -29,10 +29,8 @@ struct HelloView: View, HelloProtocol {
     @State var helloworld3: String = "Hello world3"
 }
 
-struct HelloView_Previews: PreviewProvider {
-    static var previews: some View {
-        HelloView()
-    }
+#Preview {
+    HelloView()
 }
 
 // View의 상태를 먼저 정의하고, View는 상태를 기반으로 화면에 보여줄 UI를 작성합니다.

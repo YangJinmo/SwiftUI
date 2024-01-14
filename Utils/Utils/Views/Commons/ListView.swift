@@ -31,16 +31,14 @@ struct ListView: View {
     }
 }
 
-struct ListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListView(
-            items: Binding<[String]>.init(
-                get: { ["Apple", "Samsung"] },
-                set: { _ in }
-            ),
-            itemTapped: { item in
-                print("Selected item: \(item)")
-            }
-        )
-    }
+#Preview {
+    ListView(
+        items: Binding<[String]>.init(
+            get: { ["Apple", "Samsung"] },
+            set: { _ in }
+        ),
+        itemTapped: { item in
+            print("Selected item: \(item)")
+        }
+    )
 }

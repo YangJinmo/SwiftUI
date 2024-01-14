@@ -59,8 +59,8 @@ struct RowDataView: View {
     }
 }
 
-struct ListBootCamp_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview {
+    Group {
         ListBootCamp()
         ListBootCamp2()
     }

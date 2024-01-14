@@ -26,10 +26,8 @@ struct ItemView: View {
     }
 }
 
-struct ItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        ItemView(text: "Apple") { text in
-            print("Selected text: \(text)")
-        }
+#Preview {
+    ItemView(text: "Apple") { text in
+        print("Selected text: \(text)")
     }
 }

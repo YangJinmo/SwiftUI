@@ -25,13 +25,11 @@ struct HorizontalScrollableItemView: View {
     }
 }
 
-struct HorizontalScrollableItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        HorizontalScrollableItemView(
-            texts: ["Apple", "Samsung"],
-            textTapped: { text in
-                print(text)
-            }
-        )
-    }
+#Preview {
+    HorizontalScrollableItemView(
+        texts: ["Apple", "Samsung"],
+        textTapped: { text in
+            print(text)
+        }
+    )
 }

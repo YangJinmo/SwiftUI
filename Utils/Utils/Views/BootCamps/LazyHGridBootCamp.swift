@@ -32,8 +32,6 @@ struct LazyHGridBootCamp: View {
     }
 }
 
-struct LazyHGridBootCamp_Previews: PreviewProvider {
-    static var previews: some View {
-        LazyHGridBootCamp()
-    }
+#Preview {
+    LazyHGridBootCamp()
 }

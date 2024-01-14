@@ -90,12 +90,10 @@ extension AnyCollectionViewController {
 
 import SwiftUI
 
-struct AnyCollectionViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewControllerRepresentable {
-            // CollectionViewController()
-            AnyCollectionViewController(items: ["1", "2"])
-        }
-        .ignoresSafeArea()
+#Preview {
+    ViewControllerRepresentable {
+        // CollectionViewController()
+        AnyCollectionViewController(items: ["1", "2"])
     }
+    .ignoresSafeArea()
 }

@@ -26,8 +26,6 @@ struct VerticalPageTabView: View {
     }
 }
 
-struct VerticalPageTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        VerticalPageTabView()
-    }
+#Preview {
+    VerticalPageTabView()
 }

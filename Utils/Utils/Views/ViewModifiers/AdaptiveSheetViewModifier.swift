@@ -186,8 +186,6 @@ struct CustomSheetParentView: View {
 }
 
 @available(iOS 15.0, *)
-struct CustomSheetView_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomSheetParentView()
-    }
+#Preview {
+    CustomSheetParentView()
 }

@@ -24,13 +24,13 @@ struct VideoPlayerContainer: View {
     @State private var isPlaying = true
     @State private var currentTime: Float = 0.0
     @State private var playerPaused = true
-    
+
     private let player: AVPlayer
 
     init(url: URL) {
         player = AVPlayer(url: url)
     }
-    
+
     var body: some View {
         VStack {
             VideoPlayerRepresentable(isPlaying: $isPlaying, currentTime: $currentTime)
@@ -43,7 +43,7 @@ struct VideoPlayerContainer: View {
             }
         }
     }
-    
+
     private func pausePlayer(_ pause: Bool) {
         playerPaused = pause
         if playerPaused {
@@ -52,7 +52,7 @@ struct VideoPlayerContainer: View {
             player.play()
         }
     }
-    
+
     private func sliderEditingChanged(editingStarted: Bool) {
         if editingStarted {
             // Set a flag stating that we're seeking so the slider doesn't
@@ -145,8 +145,6 @@ class VideoPlayerViewWrapper: UIView {
     }
 }
 
-struct VideoPlayerView_Previews: PreviewProvider {
-    static var previews: some View {
-        VideoPlayerView()
-    }
+#Preview {
+    VideoPlayerView()
 }

@@ -73,16 +73,14 @@ struct PopupMiddleView: View {
     }
 }
 
-struct PopupMiddleView_Previews: PreviewProvider {
-    static var previews: some View {
-        PopupMiddleView(
-            title: "제목",
-            content: "내용",
-            cancelTitle: nil,
-            confirmTitle: nil
-        ) { action in
-            print("\(action)")
-        }
+#Preview {
+    PopupMiddleView(
+        title: "제목",
+        content: "내용",
+        cancelTitle: nil,
+        confirmTitle: nil
+    ) { action in
+        print("\(action)")
     }
 }
 

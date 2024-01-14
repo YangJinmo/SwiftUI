@@ -18,7 +18,7 @@ struct ScrollToID: View {
                 .border(.gray)
                 .padding(.horizontal)
                 .keyboardType(.numberPad)
-            
+
             Button("SCROLL NOW") {
                 withAnimation(.spring()) {
                     if let index = Int(textFieldText) {
@@ -26,10 +26,10 @@ struct ScrollToID: View {
                     }
                 }
             }
-            
+
             ScrollView {
                 ScrollViewReader { proxy in
-                    ForEach(0..<50) { index in
+                    ForEach(0 ..< 50) { index in
                         Text("This is item #\(index)")
                             .font(.headline)
                             .frame(height: 200)
@@ -49,9 +49,6 @@ struct ScrollToID: View {
     }
 }
 
-
-struct ScrollToID_Previews: PreviewProvider {
-    static var previews: some View {
-        ScrollToID()
-    }
+#Preview {
+    ScrollToID()
 }

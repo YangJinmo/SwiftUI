@@ -46,8 +46,6 @@ struct GaugeProgressStyleView: View {
     }
 }
 
-struct GaugeProgressStyleView_Previews: PreviewProvider {
-    static var previews: some View {
-        GaugeProgressStyleView()
-    }
+#Preview {
+    GaugeProgressStyleView()
 }

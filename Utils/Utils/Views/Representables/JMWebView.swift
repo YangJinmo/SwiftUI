@@ -55,74 +55,74 @@ struct HTMLWebNavigationView: View {
     }
 }
 
-struct HTMLWebNavigationView_Previews: PreviewProvider {
-    static var previews: some View {
-        JMView {
-            Text("https://www.naver.com")
-        } content: {
-            ViewRepresentable {
-                JMWebView(url: "https://www.naver.com".toURL!)
-            }
+#Preview {
+    JMView {
+        Text("https://www.naver.com")
+    } content: {
+        ViewRepresentable {
+            JMWebView(url: "https://www.naver.com".toURL!)
         }
-        .edgesIgnoringSafeArea(.bottom)
-
-        JMView {
-            Text("Hello, world!")
-        } content: {
-            ViewRepresentable {
-                JMWebView(htmlString: """
-                    <html>
-                    <body>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    <h1>Hello, world!</h1>
-                    <p>Welcome to my website</p>
-                    </body>
-                    </html>
-                    """
-                )
-            }
-        }
-        .edgesIgnoringSafeArea(.bottom)
     }
+    .edgesIgnoringSafeArea(.bottom)
+}
+
+#Preview {
+    JMView {
+        Text("Hello, world!")
+    } content: {
+        ViewRepresentable {
+            JMWebView(htmlString: """
+                <html>
+                <body>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                <h1>Hello, world!</h1>
+                <p>Welcome to my website</p>
+                </body>
+                </html>
+                """
+            )
+        }
+    }
+    .edgesIgnoringSafeArea(.bottom)
 }

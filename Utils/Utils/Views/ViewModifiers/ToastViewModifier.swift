@@ -186,8 +186,6 @@ struct ToastViewPreview: View {
     }
 }
 
-struct ToastViewPreview_Previews: PreviewProvider {
-    static var previews: some View {
-        ToastViewPreview()
-    }
+#Preview {
+    ToastViewPreview()
 }

@@ -71,9 +71,7 @@ private struct EditableBookRowView: View {
     }
 }
 
-struct EditableBooksListView_Previews: PreviewProvider {
-    static var previews: some View {
-        EditableBooksListView()
-        // BooksListView()
-    }
+#Preview {
+    EditableBooksListView()
+    // BooksListView()
 }

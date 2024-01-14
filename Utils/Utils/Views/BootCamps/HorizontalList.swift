@@ -31,8 +31,6 @@ struct HorizontalList: View {
     }
 }
 
-struct HorizontalList_Previews: PreviewProvider {
-    static var previews: some View {
-        HorizontalList()
-    }
+#Preview {
+    HorizontalList()
 }

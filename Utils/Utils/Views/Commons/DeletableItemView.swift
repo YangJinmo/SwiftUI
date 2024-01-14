@@ -38,12 +38,10 @@ struct DeletableItemView: View {
     }
 }
 
-struct DeletableItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        DeletableItemView(text: "검색어") { text in
-            print("Selected text: \(text)")
-        } xmarkTapped: { _ in
-            print("xmark Tapped")
-        }
+#Preview {
+    DeletableItemView(text: "검색어") { text in
+        print("Selected text: \(text)")
+    } xmarkTapped: { _ in
+        print("xmark Tapped")
     }
 }

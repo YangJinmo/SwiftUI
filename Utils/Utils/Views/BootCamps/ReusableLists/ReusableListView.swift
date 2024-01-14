@@ -30,8 +30,8 @@ struct ReusableListView<L: ListableResponseModel>: View {
     }
 }
 
-struct ReusableListView_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview {
+    Group {
         ReusableListView(data: models)
         ReusableListView(data: primeMinisters)
     }

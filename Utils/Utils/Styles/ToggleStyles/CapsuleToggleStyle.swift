@@ -36,8 +36,6 @@ struct CapsuleToggleStylePreview: View {
     }
 }
 
-struct CapsuleToggleStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        CapsuleToggleStylePreview()
-    }
+#Preview {
+    CapsuleToggleStylePreview()
 }

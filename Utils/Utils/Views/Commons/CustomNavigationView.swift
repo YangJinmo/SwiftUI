@@ -76,10 +76,8 @@ struct CustomNavigationView<Title: View, Right: View, Content: View>: View {
     }
 }
 
-struct CustomNavigationView_Previews: PreviewProvider {
-    static var previews: some View {
-        RootView()
-    }
+#Preview {
+    RootView()
 }
 
 struct RootView: View {

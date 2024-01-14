@@ -65,11 +65,9 @@ final class TableViewBootCamp: UITableViewController {
 
 import SwiftUI
 
-struct TableViewBootCamp_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewControllerRepresentable {
-            TableViewBootCamp()
-        }
-        .ignoresSafeArea()
+#Preview {
+    ViewControllerRepresentable {
+        TableViewBootCamp()
     }
+    .ignoresSafeArea()
 }

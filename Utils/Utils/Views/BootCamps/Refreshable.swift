@@ -41,10 +41,8 @@ struct Refreshable: View {
     }
 }
 
-struct Refreshable_Previews: PreviewProvider {
-    static var previews: some View {
-        Refreshable()
-    }
+#Preview {
+    Refreshable()
 }
 
 struct PullToRefresh: View {
@@ -87,10 +85,8 @@ struct PullToRefresh: View {
     }
 }
 
-struct PullToRefresh_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsItemView()
-    }
+#Preview {
+    NewsItemView()
 }
 
 struct NewsItemView: View {
@@ -103,14 +99,14 @@ struct NewsItemView: View {
             PullToRefresh(coordinateSpaceName: "pullToRefresh") {
                 // do your stuff when pulled
                 print("pullToRefresh")
-                
+
                 news = [
                     NewsItem(id: 0, title: "Want the latest news?", strap: "Pull to refresh!"),
                     NewsItem(id: 1, title: "Want the latest news?", strap: "Pull to refresh!"),
                     NewsItem(id: 2, title: "Want the latest news?", strap: "Pull to refresh!"),
                 ]
             }
-            
+
             LazyVStack(spacing: 0) {
                 ForEach(news) { item in
                     VStack(alignment: .leading) {
@@ -190,10 +186,8 @@ struct PullToRefreshView: View {
     }
 }
 
-struct PullToRefreshView_Previews: PreviewProvider {
-    static var previews: some View {
-        PullToRefreshViewView()
-    }
+#Preview {
+    PullToRefreshViewView()
 }
 
 struct PullToRefreshViewView: View {
@@ -206,7 +200,7 @@ struct PullToRefreshViewView: View {
             VStack(spacing: 0) {
                 PullToRefreshView {
                     print("refreshing")
-                    
+
                     news = [
                         NewsItem(id: 0, title: "Want the latest news?", strap: "Pull to refresh!"),
                         NewsItem(id: 1, title: "Want the latest news?", strap: "Pull to refresh!"),

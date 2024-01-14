@@ -70,10 +70,8 @@ struct VScrollViewPreview: View {
     }
 }
 
-struct VScrollViewPreview_Previews: PreviewProvider {
-    static var previews: some View {
-        VScrollViewPreview()
-    }
+#Preview {
+    VScrollViewPreview()
 }
 
 struct Screen {

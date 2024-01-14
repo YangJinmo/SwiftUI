@@ -63,8 +63,6 @@ struct CheckboxToggleStylePreview: View {
     }
 }
 
-struct CheckboxToggleStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        CheckboxToggleStylePreview()
-    }
+#Preview {
+    CheckboxToggleStylePreview()
 }

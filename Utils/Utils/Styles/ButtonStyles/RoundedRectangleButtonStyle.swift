@@ -46,8 +46,6 @@ struct RoundedRectangleButtonStylePreview: View {
     }
 }
 
-struct RoundedRectangleButtonStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        RoundedRectangleButtonStylePreview()
-    }
+#Preview {
+    RoundedRectangleButtonStylePreview()
 }

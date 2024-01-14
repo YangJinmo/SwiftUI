@@ -144,10 +144,8 @@ struct CollectionViewBootCampPreviews: View {
     }
 }
 
-struct CollectionViewBootCamp_Previews: PreviewProvider {
-    static var previews: some View {
-        CollectionViewBootCampPreviews()
-    }
+#Preview {
+    CollectionViewBootCampPreviews()
 }
 
 import SwiftUI

@@ -81,8 +81,6 @@ struct PagingScrollViewPreview: View {
     }
 }
 
-struct PagingScrollViewPreview_Previews: PreviewProvider {
-    static var previews: some View {
-        PagingScrollViewPreview()
-    }
+#Preview {
+    PagingScrollViewPreview()
 }

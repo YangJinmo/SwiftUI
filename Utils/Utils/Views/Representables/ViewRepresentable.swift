@@ -22,13 +22,11 @@ struct ViewRepresentable<T: UIView>: UIViewRepresentable {
     }
 }
 
-struct ViewRepresentable_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewRepresentable {
-            let view = UIView()
-            view.backgroundColor = .systemGreen
-            return view
-        }
-        .ignoresSafeArea()
+#Preview {
+    ViewRepresentable {
+        let view = UIView()
+        view.backgroundColor = .systemGreen
+        return view
     }
+    .ignoresSafeArea()
 }

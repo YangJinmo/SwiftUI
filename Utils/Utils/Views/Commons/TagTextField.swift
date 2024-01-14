@@ -134,8 +134,6 @@ struct TagTextFieldPreview: View {
     }
 }
 
-struct TagTextFieldPreview_Previews: PreviewProvider {
-    static var previews: some View {
-        TagTextFieldPreview()
-    }
+#Preview {
+    TagTextFieldPreview()
 }

@@ -107,8 +107,6 @@ struct LottieView: UIViewRepresentable {
     }
 }
 
-struct LottieView_Previews: PreviewProvider {
-    static var previews: some View {
-        LottieView(type: .loading, progress: 1)
-    }
+#Preview {
+    LottieView(type: .loading, progress: 1)
 }

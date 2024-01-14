@@ -86,8 +86,6 @@ struct FinalView: View {
     }
 }
 
-struct EnvironmentObjectBootCamp_Previews: PreviewProvider {
-    static var previews: some View {
-        EnvironmentObjectBootCamp()
-    }
+#Preview {
+    EnvironmentObjectBootCamp()
 }

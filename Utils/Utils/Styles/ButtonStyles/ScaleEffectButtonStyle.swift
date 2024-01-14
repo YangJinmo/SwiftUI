@@ -44,8 +44,6 @@ struct ScaleEffectButtonStylePreview: View {
     }
 }
 
-struct ScaleEffectButtonStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        ScaleEffectButtonStylePreview()
-    }
+#Preview {
+    ScaleEffectButtonStylePreview()
 }

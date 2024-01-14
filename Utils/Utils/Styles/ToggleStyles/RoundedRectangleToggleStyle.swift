@@ -36,8 +36,6 @@ struct RoundedRectangleToggleStylePreview: View {
     }
 }
 
-struct RoundedRectangleToggleStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        RoundedRectangleToggleStylePreview()
-    }
+#Preview {
+    RoundedRectangleToggleStylePreview()
 }

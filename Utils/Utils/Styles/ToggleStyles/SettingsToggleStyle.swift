@@ -62,8 +62,6 @@ struct SettingsToggleStylePreview: View {
     }
 }
 
-struct SettingsToggleStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsToggleStylePreview()
-    }
+#Preview {
+    SettingsToggleStylePreview()
 }

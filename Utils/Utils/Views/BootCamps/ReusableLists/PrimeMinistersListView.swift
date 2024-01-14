@@ -20,8 +20,6 @@ struct PrimeMinistersListView: View {
     }
 }
 
-struct PrimeMinistersListView_Previews: PreviewProvider {
-    static var previews: some View {
-        PrimeMinistersListView()
-    }
+#Preview {
+    PrimeMinistersListView()
 }

@@ -66,9 +66,8 @@ struct CustomTextField: View {
     }
 }
 
-struct CustomTextField_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview {
         CustomTextField(placeholder: "가나다라", text: .constant(""))
             .padding(16)
-    }
+    
 }

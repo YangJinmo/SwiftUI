@@ -106,10 +106,8 @@ struct JMView<Title: View, Right: View, Content: View>: View {
     }
 }
 
-struct JMView_Previews: PreviewProvider {
-    static var previews: some View {
-        JMView_Previews_View()
-    }
+#Preview {
+    JMView_Previews_View()
 }
 
 struct JMView_Previews_View: View {

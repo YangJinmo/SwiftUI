@@ -94,32 +94,30 @@ struct ImageView<Placeholder>: View where Placeholder: View {
 }
 
 #if DEBUG
-    struct ImageView_Previews: PreviewProvider {
-        static var previews: some View {
-            let urls = [
-                "https://wallpaperset.com/w/full/8/c/9/29296.jpg",
-                "https://wallpaperset.com/w/full/8/2/8/29299.jpg",
-                "https://wallpaperset.com/w/full/c/e/1/29301.jpg",
-                "https://wallpaperset.com/w/full/2/6/e/29303.jpg",
-                "https://wallpaperset.com/w/full/e/5/f/29306.jpg",
-                "https://wallpaperset.com/w/full/6/f/b/29309.jpg",
-                "https://wallpaperset.com/w/full/4/c/d/29311.jpg",
-                "https://wallpaperset.com/w/full/2/a/4/29313.jpg",
-                "https://wallpaperset.com/w/full/d/d/d/29472.jpg",
-            ]
+    #Preview {
+        let urls = [
+            "https://wallpaperset.com/w/full/8/c/9/29296.jpg",
+            "https://wallpaperset.com/w/full/8/2/8/29299.jpg",
+            "https://wallpaperset.com/w/full/c/e/1/29301.jpg",
+            "https://wallpaperset.com/w/full/2/6/e/29303.jpg",
+            "https://wallpaperset.com/w/full/e/5/f/29306.jpg",
+            "https://wallpaperset.com/w/full/6/f/b/29309.jpg",
+            "https://wallpaperset.com/w/full/4/c/d/29311.jpg",
+            "https://wallpaperset.com/w/full/2/a/4/29313.jpg",
+            "https://wallpaperset.com/w/full/d/d/d/29472.jpg",
+        ]
 
-            let view = List(urls, id: \.self) { url in
-                ImageView(url: URL(string: url)) {
-                    Text("⚠️")
-                        .font(.system(size: 120))
-                }
-                .frame(width: 300, height: 300)
-                .cornerRadius(20)
+        let view = List(urls, id: \.self) { url in
+            ImageView(url: URL(string: url)) {
+                Text("⚠️")
+                    .font(.system(size: 120))
             }
-
-            view
-                .previewDevice("iPhone 11 Pro")
-                .preferredColorScheme(.light)
+            .frame(width: 300, height: 300)
+            .cornerRadius(20)
         }
+
+        return view
+            .previewDevice("iPhone 11 Pro")
+            .preferredColorScheme(.light)
     }
 #endif

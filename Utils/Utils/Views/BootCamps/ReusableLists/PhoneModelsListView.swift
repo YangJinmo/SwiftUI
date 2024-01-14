@@ -23,8 +23,6 @@ struct PhoneModelsListView: View {
     }
 }
 
-struct PhoneModelsListView_Previews: PreviewProvider {
-    static var previews: some View {
-        PhoneModelsListView()
-    }
+#Preview {
+    PhoneModelsListView()
 }

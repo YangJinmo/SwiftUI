@@ -28,8 +28,6 @@ struct FloatBottomView: View {
     }
 }
 
-struct FloatBottomView_Previews: PreviewProvider {
-    static var previews: some View {
-        FloatBottomView(message: "안녕하세요! 후기입니다! 반갑습니다!")
-    }
+#Preview {
+    FloatBottomView(message: "안녕하세요! 후기입니다! 반갑습니다!")
 }

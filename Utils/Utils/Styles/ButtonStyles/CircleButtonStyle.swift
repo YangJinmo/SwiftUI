@@ -46,8 +46,6 @@ struct CircleButtonStylePreview: View {
     }
 }
 
-struct CircleButtonStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        CircleButtonStylePreview()
-    }
+#Preview {
+    CircleButtonStylePreview()
 }
