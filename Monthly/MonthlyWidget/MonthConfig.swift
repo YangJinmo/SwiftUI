@@ -1,8 +1,8 @@
 //
-//  SwiftUI.swift
+//  MonthConfig.swift
 //  MonthlyWidgetExtension
 //
-//  Created by Jmy on 1/10/24.
+//  Created by Jmy on 1/17/24.
 //
 
 import SwiftUI
