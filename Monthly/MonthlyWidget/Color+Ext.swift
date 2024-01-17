@@ -1,8 +1,8 @@
 //
 //  Color+Ext.swift
-//  Monthly
+//  MonthlyWidgetExtension
 //
-//  Created by Jmy on 1/13/24.
+//  Created by Jmy on 1/17/24.
 //
 
 import SwiftUI
