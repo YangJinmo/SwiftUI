@@ -10,11 +10,11 @@ import WidgetKit
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> DayEntry {
-        DayEntry(date: Date(), emoji: "😀")
+        DayEntry(date: .now)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (DayEntry) -> Void) {
-        let entry = DayEntry(date: Date(), emoji: "😀")
+        let entry = DayEntry(date: Date())
         completion(entry)
     }
 
@@ -26,7 +26,7 @@ struct Provider: TimelineProvider {
         for dayOffset in 0 ..< 7 {
             let entryDate = Calendar.current.date(byAdding: .day, value: dayOffset, to: currentDate)!
             let startOfDate = Calendar.current.startOfDay(for: entryDate)
-            let entry = DayEntry(date: startOfDate, emoji: "😀")
+            let entry = DayEntry(date: startOfDate)
             entries.append(entry)
         }
 
@@ -37,32 +37,41 @@ struct Provider: TimelineProvider {
 
 struct DayEntry: TimelineEntry {
     let date: Date
-    let emoji: String
 }
 
 struct MonthlyWidgetEntryView: View {
     var entry: Provider.Entry
+    var config: MonthConfig
+
+    init(entry: Provider.Entry) {
+        self.entry = entry
+        config = MonthConfig.determineConfig(from: entry.date)
+    }
 
     var body: some View {
         VStack {
             HStack {
-//                Text(entry.emoji)
-//                    .font(.title)
+                Text(config.emojiText)
+                    .font(.title)
 
                 Text(entry.date.weekdayDisplayFormat)
                     .font(.subheadline)
                     .fontWeight(.bold)
                     .minimumScaleFactor(0.6)
-                    .foregroundColor(.black.opacity(0.6))
+                    .foregroundColor(config.weekdayTextColor)
 
-//                Spacer()
+                Spacer()
             }
 
             Text(entry.date.dayDisplayFormat)
                 .font(.system(size: 80, weight: .heavy))
-                .foregroundColor(.white.opacity(0.8))
+                .foregroundColor(config.dayTextColor)
 
-//            Text(entry.date, style: .time)
+            // Text(entry.date, style: .time)
+        }
+        .containerBackground(for: .widget) {
+            ContainerRelativeShape()
+                .fill(config.backgroundColor.gradient)
         }
     }
 }
@@ -72,16 +81,7 @@ struct MonthlyWidget: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            if #available(iOS 17.0, *) {
-                MonthlyWidgetEntryView(entry: entry)
-                    .containerBackground(for: .widget) {
-                        Color.green
-                    }
-            } else {
-                MonthlyWidgetEntryView(entry: entry)
-                    .padding()
-                    .background()
-            }
+            MonthlyWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("Monthly Style Widget")
         .description("The theme of the widget changes based on month.")
@@ -93,8 +93,8 @@ struct MonthlyWidget: Widget {
 #Preview(as: .systemSmall) {
     MonthlyWidget()
 } timeline: {
-    DayEntry(date: .now, emoji: "😀")
-    DayEntry(date: .now, emoji: "🤩")
+    // DayEntry(date: .now)
+    DayEntry(date: .dateToDisplay(month: 5, day: 22))
 }
 
 extension Date {
@@ -104,5 +104,16 @@ extension Date {
 
     var dayDisplayFormat: String {
         formatted(.dateTime.day())
+    }
+
+    static func dateToDisplay(month: Int, day: Int) -> Date {
+        let components = DateComponents(
+            calendar: Calendar.current,
+            year: 2024,
+            month: month,
+            day: day
+        )
+
+        return Calendar.current.date(from: components)!
     }
 }
