@@ -26,10 +26,10 @@ struct MonthConfig {
             )
         default:
             return MonthConfig(
-                backgroundColor: .gray,
-                emojiText: "💂",
-                weekdayTextColor: .black.opacity(0.6),
-                dayTextColor: .white.opacity(0.8)
+                backgroundColor: .palePink,
+                emojiText: "❤️",
+                weekdayTextColor: .black.opacity(0.5),
+                dayTextColor: .pink.opacity(0.8)
             )
         }
     }
