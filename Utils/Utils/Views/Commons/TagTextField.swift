@@ -87,17 +87,6 @@ struct TagTextField: View {
     }
 }
 
-extension Binding where Value == String {
-    func max(_ limit: Int) -> Self {
-        if wrappedValue.count > limit {
-            DispatchQueue.main.async {
-                wrappedValue = String(wrappedValue.dropLast())
-            }
-        }
-        return self
-    }
-}
-
 struct TagTextFieldPreview: View {
     @State private var subjects = [Tag()]
     @State private var focusSubject: Tag?
