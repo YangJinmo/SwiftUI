@@ -73,6 +73,7 @@
 		E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */; };
 		E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB512A5BAD880074A9BE /* Image.swift */; };
 		E8A3CB582A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */; };
+		E8A8CED42B60F5A10007FC33 /* CustomPopupBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A8CED32B60F5A10007FC33 /* CustomPopupBootCamp.swift */; };
 		E8A990C72A836F8900EB2BC4 /* CapsuleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A990C62A836F8900EB2BC4 /* CapsuleToggleStyle.swift */; };
 		E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */; };
 		E8B170B72AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B170B62AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift */; };
@@ -193,6 +194,7 @@
 		E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridBootCamp.swift; sourceTree = "<group>"; };
 		E8A3CB512A5BAD880074A9BE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableItemView.swift; sourceTree = "<group>"; };
+		E8A8CED32B60F5A10007FC33 /* CustomPopupBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupBootCamp.swift; sourceTree = "<group>"; };
 		E8A990C62A836F8900EB2BC4 /* CapsuleToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleToggleStyle.swift; sourceTree = "<group>"; };
 		E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingVideoPlayer.swift; sourceTree = "<group>"; };
 		E8B170B62AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootCamp.swift; sourceTree = "<group>"; };
@@ -474,6 +476,7 @@
 				E8F157A72B4027A100F41E56 /* DatePickerView.swift */,
 				E818CF5F2B5652820075783B /* IfView.swift */,
 				E818CF6D2B590C9B0075783B /* BindingMaxBootCamp.swift */,
+				E8A8CED32B60F5A10007FC33 /* CustomPopupBootCamp.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -757,6 +760,7 @@
 				E818CF6E2B590C9B0075783B /* BindingMaxBootCamp.swift in Sources */,
 				E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */,
 				E817C22E2AC82710007FF6D3 /* HorizontalList.swift in Sources */,
+				E8A8CED42B60F5A10007FC33 /* CustomPopupBootCamp.swift in Sources */,
 				E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */,
 				E8BF16B92A3BED170096E57E /* SelectListTextField.swift in Sources */,
 				E890503B2A96040D00ECF159 /* LottieView.swift in Sources */,
