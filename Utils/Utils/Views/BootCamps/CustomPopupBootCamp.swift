@@ -9,22 +9,21 @@ import SwiftUI
 
 struct CustomPopupBootCamp: View {
     @State private var isShow = false
-    @State private var title = ""
-    @State private var message = ""
 
     var body: some View {
         VStack {
             Button("Show Popup") {
-                title = "Title"
-                message = "lorem ipsum is simply dummy text of the printing and typesetting industry"
-
                 withAnimation {
                     isShow.toggle()
                 }
             }
             .padding()
         }
-        .popup(isShow: $isShow, title: title, message: message)
+        .popup(
+            isShow: $isShow,
+            title: "Title",
+            message: "lorem ipsum is simply dummy text of the printing and typesetting industry"
+        )
     }
 }
 
