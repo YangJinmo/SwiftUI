@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E800B5562B62226600FA861B /* ErrorAlertBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E800B5552B62226600FA861B /* ErrorAlertBootCamp.swift */; };
 		E80403C32A59ADD800B5D7A8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C22A59ADD800B5D7A8 /* ListView.swift */; };
 		E80403C52A5A7FA800B5D7A8 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C42A5A7FA800B5D7A8 /* ItemView.swift */; };
 		E804C5C22A486B320026616E /* DeletableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804C5C12A486B320026616E /* DeletableItemView.swift */; };
@@ -127,6 +128,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E800B5552B62226600FA861B /* ErrorAlertBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertBootCamp.swift; sourceTree = "<group>"; };
 		E80403C22A59ADD800B5D7A8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E80403C42A5A7FA800B5D7A8 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		E804C5C12A486B320026616E /* DeletableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableItemView.swift; sourceTree = "<group>"; };
@@ -477,6 +479,7 @@
 				E818CF5F2B5652820075783B /* IfView.swift */,
 				E818CF6D2B590C9B0075783B /* BindingMaxBootCamp.swift */,
 				E8A8CED32B60F5A10007FC33 /* CustomPopupBootCamp.swift */,
+				E800B5552B62226600FA861B /* ErrorAlertBootCamp.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 				E86A17152AEEA6CC001119E8 /* AnyCollectionViewController.swift in Sources */,
 				E8DE0D252B4FCC5000B14957 /* PopupMiddleView.swift in Sources */,
 				E8128E042AB84BF500B6B8F6 /* CollectionViewRepresentable.swift in Sources */,
+				E800B5562B62226600FA861B /* ErrorAlertBootCamp.swift in Sources */,
 				E8E297362AAACAE200EB4F6A /* AsyncAwait.swift in Sources */,
 				E8BF16C02A4178AB0096E57E /* String.swift in Sources */,
 				E8128E022AB81BA300B6B8F6 /* ListBootCamp.swift in Sources */,
