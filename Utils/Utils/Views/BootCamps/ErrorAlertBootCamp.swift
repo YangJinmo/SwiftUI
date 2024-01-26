@@ -23,6 +23,23 @@ struct ErrorAlertBootCamp: View {
             })
         }
     }
+    
+    enum MyCustomError: Error, LocalizedError {
+        case noInternetConnection
+        case dataNotFound
+        case urlError(error: Error)
+        
+        var errorDescription: String? {
+            switch self {
+            case .noInternetConnection:
+                return "Please check you internet connection and try again."
+            case .dataNotFound:
+                return "There was an error loading data. Please try again!"
+            case .urlError(error: let error):
+                return "Error: \(error.localizedDescription)"
+            }
+        }
+    }
 
     private func saveData() {
         let isSuccessful = false
