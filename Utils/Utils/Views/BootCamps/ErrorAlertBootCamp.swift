@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ErrorAlertBootCamp: View {
     // @State private var errorTitle: String? = nil
-    @State private var error: Error? = nil
+    // @State private var error: Error? = nil
+    @State private var alert: MyCustomAlert? = nil
 
     var body: some View {
         Button {
@@ -23,49 +24,58 @@ struct ErrorAlertBootCamp: View {
 //                Text("OK")
 //            })
 //        }
-        .alert(error?.localizedDescription ?? "Error", isPresented: Binding(value: $error)), actions: {
-            Button(action: {
-            }, label: {
+//        .alert(error?.localizedDescription ?? "Error", isPresented: Binding(value: $error)), actions: {
+//            Button(action: {
+//            }, label: {
+//                Text("OK")
+//            })
+//        }, message: {
+//            Text("MESSAGE GOES HERE")
+//        }
+        .alert(alert?.title ?? "Error", isPresented: Binding(value: $alert)) {
+            Button(action: {}, label: {
                 Text("OK")
             })
-        }, message: {
-            Text("MESSAGE GOES HERE")
+        } message: {
+            if let subtitle = alert?.subtitle {
+                Text(subtitle)
+            }
         }
     }
-    
+
     enum MyCustomError: Error, LocalizedError {
         case noInternetConnection
         case dataNotFound
         case urlError(error: Error)
-        
+
         var errorDescription: String? {
             switch self {
             case .noInternetConnection:
                 return "Please check you internet connection and try again."
             case .dataNotFound:
                 return "There was an error loading data. Please try again!"
-            case .urlError(error: let error):
+            case let .urlError(error: error):
                 return "Error: \(error.localizedDescription)"
             }
         }
     }
-    
+
     enum MyCustomAlert: Error, LocalizedError {
         case noInternetConnection
         case dataNotFound
         case urlError(error: Error)
-        
+
         var errorDescription: String? {
             switch self {
             case .noInternetConnection:
                 return "Please check you internet connection and try again."
             case .dataNotFound:
                 return "There was an error loading data. Please try again!"
-            case .urlError(error: let error):
+            case let .urlError(error: error):
                 return "Error: \(error.localizedDescription)"
             }
         }
-        
+
         var title: String {
             switch self {
             case .noInternetConnection:
@@ -76,14 +86,14 @@ struct ErrorAlertBootCamp: View {
                 return "Error"
             }
         }
-        
+
         var subtitle: String? {
             switch self {
             case .noInternetConnection:
                 return "Please check your internet connection and try again."
             case .dataNotFound:
                 return nil
-            case .urlError(error: let error):
+            case let .urlError(error: error):
                 return "Error: \(error.localizedDescription)"
             }
         }
@@ -98,7 +108,12 @@ struct ErrorAlertBootCamp: View {
             // error
 
             // errorTitle = "An error occured!"
-            let myError: Error = MyCustomError
+            // let myError: Error = URLError(.badURL)
+            // let myError: Error = MyCustomError.urlError(error: URLError(.badURL))
+            // error = myError
+
+            // let alert = MyCustomAlert = .dataNotFound
+            alert = .dataNotFound
         }
     }
 }
