@@ -33,9 +33,22 @@ struct ErrorAlertBootCamp: View {
 //            Text("MESSAGE GOES HERE")
 //        }
         .alert(alert?.title ?? "Error", isPresented: Binding(value: $alert)) {
-            Button(action: {}, label: {
-                Text("OK")
-            })
+            switch alert {
+            case .noInternetConnection:
+                Button(action: {
+                }, label: {
+                    Text("OK")
+                })
+            case .dataNotFound:
+                Button(action: {
+                }, label: {
+                    Text("RETRY")
+                })
+            default:
+                Button("Delete", role: .destructive) {
+                }
+            }
+
         } message: {
             if let subtitle = alert?.subtitle {
                 Text(subtitle)
