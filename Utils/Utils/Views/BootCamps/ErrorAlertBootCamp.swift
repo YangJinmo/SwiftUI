@@ -33,25 +33,31 @@ struct ErrorAlertBootCamp: View {
 //            Text("MESSAGE GOES HERE")
 //        }
         .alert(alert?.title ?? "Error", isPresented: Binding(value: $alert)) {
-            switch alert {
-            case .noInternetConnection:
-                Button(action: {
-                }, label: {
-                    Text("OK")
-                })
-            case .dataNotFound:
-                Button(action: {
-                }, label: {
-                    Text("RETRY")
-                })
-            default:
-                Button("Delete", role: .destructive) {
-                }
+            if let alert {
+                getButtonsForAlert(alert: alert)
             }
-
         } message: {
             if let subtitle = alert?.subtitle {
                 Text(subtitle)
+            }
+        }
+    }
+
+    @ViewBuilder
+    private func getButtonsForAlert(alert: MyCustomAlert) -> some View {
+        switch alert {
+        case .noInternetConnection:
+            Button(action: {
+            }, label: {
+                Text("OK")
+            })
+        case .dataNotFound:
+            Button(action: {
+            }, label: {
+                Text("RETRY")
+            })
+        default:
+            Button("Delete", role: .destructive) {
             }
         }
     }
@@ -126,7 +132,7 @@ struct ErrorAlertBootCamp: View {
             // error = myError
 
             // let alert = MyCustomAlert = .dataNotFound
-            alert = .dataNotFound
+            alert = .noInternetConnection
         }
     }
 }
