@@ -33,9 +33,10 @@ struct ErrorAlertBootCamp: View {
 //            Text("MESSAGE GOES HERE")
 //        }
         .alert(alert?.title ?? "Error", isPresented: Binding(value: $alert)) {
-            if let alert {
-                getButtonsForAlert(alert: alert)
-            }
+//            if let alert {
+//                getButtonsForAlert(alert: alert)
+//            }
+            alert?.getButtonsForAlert
         } message: {
             if let subtitle = alert?.subtitle {
                 Text(subtitle)
@@ -80,7 +81,7 @@ struct ErrorAlertBootCamp: View {
     }
 
     enum MyCustomAlert: Error, LocalizedError {
-        case noInternetConnection
+        case noInternetConnection(onOkPressed: () -> Void, onRetryPressed: () -> Void)
         case dataNotFound
         case urlError(error: Error)
 
@@ -116,6 +117,32 @@ struct ErrorAlertBootCamp: View {
                 return "Error: \(error.localizedDescription)"
             }
         }
+
+        @ViewBuilder
+        var getButtonsForAlert: some View {
+            switch self {
+            case let .noInternetConnection(onOkPressed: onOkPressed, onRetryPressed: onRetryPressed):
+                Button(action: {
+                    onOkPressed()
+                }, label: {
+                    Text("OK")
+                })
+
+                Button(action: {
+                    onRetryPressed()
+                }, label: {
+                    Text("RETRY")
+                })
+            case .dataNotFound:
+                Button(action: {
+                }, label: {
+                    Text("RETRY")
+                })
+            default:
+                Button("Delete", role: .destructive) {
+                }
+            }
+        }
     }
 
     private func saveData() {
@@ -132,7 +159,11 @@ struct ErrorAlertBootCamp: View {
             // error = myError
 
             // let alert = MyCustomAlert = .dataNotFound
-            alert = .noInternetConnection
+            alert = .noInternetConnection(onOkPressed: {
+                print("onOkPressed")
+            }, onRetryPressed: {
+                print("onRetryPressed")
+            })
         }
     }
 }
