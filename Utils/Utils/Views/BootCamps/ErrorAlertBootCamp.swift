@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+extension View {
+    func showCustomAlert(alert: Binding<ErrorAlertBootCamp.MyCustomAlert?>) -> some View {
+        self.alert(alert.wrappedValue?.title ?? "Error", isPresented: Binding(value: alert)) {
+            alert.wrappedValue?.getButtonsForAlert
+        } message: {
+            if let subtitle = alert.wrappedValue?.subtitle {
+                Text(subtitle)
+            }
+        }
+    }
+}
+
 struct ErrorAlertBootCamp: View {
     // @State private var errorTitle: String? = nil
     // @State private var error: Error? = nil
@@ -18,6 +30,7 @@ struct ErrorAlertBootCamp: View {
         } label: {
             Text("CLICK ME")
         }
+        .showCustomAlert(alert: $alert)
 //        .alert(errorTitle ?? "Error", isPresented: Binding(value: $errorTitle)) {
 //            Button(action: {
 //            }, label: {
@@ -32,16 +45,16 @@ struct ErrorAlertBootCamp: View {
 //        }, message: {
 //            Text("MESSAGE GOES HERE")
 //        }
-        .alert(alert?.title ?? "Error", isPresented: Binding(value: $alert)) {
+//        .alert(alert?.title ?? "Error", isPresented: Binding(value: $alert)) {
 //            if let alert {
 //                getButtonsForAlert(alert: alert)
 //            }
-            alert?.getButtonsForAlert
-        } message: {
-            if let subtitle = alert?.subtitle {
-                Text(subtitle)
-            }
-        }
+//            alert?.getButtonsForAlert
+//        } message: {
+//            if let subtitle = alert?.subtitle {
+//                Text(subtitle)
+//            }
+//        }
     }
 
     @ViewBuilder
@@ -122,17 +135,19 @@ struct ErrorAlertBootCamp: View {
         var getButtonsForAlert: some View {
             switch self {
             case let .noInternetConnection(onOkPressed: onOkPressed, onRetryPressed: onRetryPressed):
-                Button(action: {
-                    onOkPressed()
-                }, label: {
-                    Text("OK")
-                })
+                HStack {
+                    Button(action: {
+                        onOkPressed()
+                    }, label: {
+                        Text("OK")
+                    })
 
-                Button(action: {
-                    onRetryPressed()
-                }, label: {
-                    Text("RETRY")
-                })
+                    Button(action: {
+                        onRetryPressed()
+                    }, label: {
+                        Text("RETRY")
+                    })
+                }
             case .dataNotFound:
                 Button(action: {
                 }, label: {
