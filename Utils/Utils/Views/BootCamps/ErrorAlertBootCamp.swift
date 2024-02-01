@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+protocol AppAlert {
+    var title: String { get }
+    var subtitle: String? { get }
+    var buttons: AnyView { get }
+}
+
 extension View {
-    func showCustomAlert(alert: Binding<ErrorAlertBootCamp.MyCustomAlert?>) -> some View {
+    func showCustomAlert<T: AppAlert>(alert: Binding<T?>) -> some View {
         self.alert(alert.wrappedValue?.title ?? "Error", isPresented: Binding(value: alert)) {
-            alert.wrappedValue?.getButtonsForAlert
+            alert.wrappedValue?.buttons
         } message: {
             if let subtitle = alert.wrappedValue?.subtitle {
                 Text(subtitle)
@@ -76,24 +82,24 @@ struct ErrorAlertBootCamp: View {
         }
     }
 
-    enum MyCustomError: Error, LocalizedError {
-        case noInternetConnection
-        case dataNotFound
-        case urlError(error: Error)
+//    enum MyCustomError: Error, LocalizedError {
+//        case noInternetConnection
+//        case dataNotFound
+//        case urlError(error: Error)
+//
+//        var errorDescription: String? {
+//            switch self {
+//            case .noInternetConnection:
+//                return "Please check you internet connection and try again."
+//            case .dataNotFound:
+//                return "There was an error loading data. Please try again!"
+//            case let .urlError(error: error):
+//                return "Error: \(error.localizedDescription)"
+//            }
+//        }
+//    }
 
-        var errorDescription: String? {
-            switch self {
-            case .noInternetConnection:
-                return "Please check you internet connection and try again."
-            case .dataNotFound:
-                return "There was an error loading data. Please try again!"
-            case let .urlError(error: error):
-                return "Error: \(error.localizedDescription)"
-            }
-        }
-    }
-
-    enum MyCustomAlert: Error, LocalizedError {
+    enum MyCustomAlert: Error, LocalizedError, AppAlert {
         case noInternetConnection(onOkPressed: () -> Void, onRetryPressed: () -> Void)
         case dataNotFound
         case urlError(error: Error)
@@ -129,6 +135,10 @@ struct ErrorAlertBootCamp: View {
             case let .urlError(error: error):
                 return "Error: \(error.localizedDescription)"
             }
+        }
+
+        var buttons: AnyView {
+            AnyView(getButtonsForAlert)
         }
 
         @ViewBuilder
