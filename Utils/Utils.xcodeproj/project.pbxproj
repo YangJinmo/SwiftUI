@@ -70,6 +70,7 @@
 		E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */; };
 		E890503B2A96040D00ECF159 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E890503A2A96040D00ECF159 /* LottieView.swift */; };
 		E890503E2A96045800ECF159 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E890503D2A96045800ECF159 /* Lottie */; };
+		E89151642B6CA4F4009AB51E /* TodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89151632B6CA4F4009AB51E /* TodosView.swift */; };
 		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
 		E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */; };
 		E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB512A5BAD880074A9BE /* Image.swift */; };
@@ -192,6 +193,7 @@
 		E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedTextField.swift; sourceTree = "<group>"; };
 		E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 		E890503A2A96040D00ECF159 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		E89151632B6CA4F4009AB51E /* TodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosView.swift; sourceTree = "<group>"; };
 		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
 		E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridBootCamp.swift; sourceTree = "<group>"; };
 		E8A3CB512A5BAD880074A9BE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 				E818CF6D2B590C9B0075783B /* BindingMaxBootCamp.swift */,
 				E8A8CED32B60F5A10007FC33 /* CustomPopupBootCamp.swift */,
 				E800B5552B62226600FA861B /* ErrorAlertBootCamp.swift */,
+				E89151632B6CA4F4009AB51E /* TodosView.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -776,6 +779,7 @@
 				E8BBDC062A8F139400E95C6C /* SettingsToggleStyle.swift in Sources */,
 				E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */,
 				E8A3CB582A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift in Sources */,
+				E89151642B6CA4F4009AB51E /* TodosView.swift in Sources */,
 				E8EF44DB2A89E81A00F798CC /* CapsuleButtonStyle.swift in Sources */,
 				E8E297392AAB21DD00EB4F6A /* Book.swift in Sources */,
 				E8BF16BD2A4177540096E57E /* AsyncImageView.swift in Sources */,
