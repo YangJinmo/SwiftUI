@@ -50,6 +50,8 @@
 		E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */; };
 		E83DC5ED2A2DBCCD006E2E4F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5EC2A2DBCCD006E2E4F /* Color.swift */; };
 		E83E09982AA027D200065AEF /* OnDidLoadViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83E09972AA027D200065AEF /* OnDidLoadViewModifier.swift */; };
+		E840C59D2B6DD91C00E340EF /* TabViewBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840C59C2B6DD91C00E340EF /* TabViewBootCamp.swift */; };
+		E840C59F2B6DD97F00E340EF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840C59E2B6DD97F00E340EF /* ProfileView.swift */; };
 		E8599C472B2D9AC80085E054 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8599C462B2D9AC80085E054 /* HelloView.swift */; };
 		E85AFE072A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */; };
 		E85AFE092A6293FC00E71575 /* JMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85AFE082A6293FC00E71575 /* JMTextField.swift */; };
@@ -174,6 +176,9 @@
 		E83DC5E82A2DBC2C006E2E4F /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		E83DC5EC2A2DBCCD006E2E4F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E83E09972AA027D200065AEF /* OnDidLoadViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnDidLoadViewModifier.swift; sourceTree = "<group>"; };
+		E840C59C2B6DD91C00E340EF /* TabViewBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewBootCamp.swift; sourceTree = "<group>"; };
+		E840C59E2B6DD97F00E340EF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E840C5A02B6DDB7600E340EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E8599C462B2D9AC80085E054 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
 		E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableHorizontalScrollableItemView.swift; sourceTree = "<group>"; };
 		E85AFE082A6293FC00E71575 /* JMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMTextField.swift; sourceTree = "<group>"; };
@@ -301,6 +306,7 @@
 		E83DC5BF2A2CD042006E2E4F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E840C5A02B6DDB7600E340EF /* Info.plist */,
 				E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */,
 				E83DC5DF2A2DBB7F006E2E4F /* Views */,
 				E8F157A92B4306B300F41E56 /* Components */,
@@ -482,7 +488,9 @@
 				E818CF6D2B590C9B0075783B /* BindingMaxBootCamp.swift */,
 				E8A8CED32B60F5A10007FC33 /* CustomPopupBootCamp.swift */,
 				E800B5552B62226600FA861B /* ErrorAlertBootCamp.swift */,
+				E840C59C2B6DD91C00E340EF /* TabViewBootCamp.swift */,
 				E89151632B6CA4F4009AB51E /* TodosView.swift */,
+				E840C59E2B6DD97F00E340EF /* ProfileView.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -675,6 +683,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E297342AA7272D00EB4F6A /* VerticalPageTabView.swift in Sources */,
+				E840C59F2B6DD97F00E340EF /* ProfileView.swift in Sources */,
 				E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */,
 				E8F92E622B1367D800C1A5ED /* StarRating.swift in Sources */,
 				E8A990C72A836F8900EB2BC4 /* CapsuleToggleStyle.swift in Sources */,
@@ -741,6 +750,7 @@
 				E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */,
 				E817C2302AC91F9D007FF6D3 /* AnalogClock.swift in Sources */,
 				E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */,
+				E840C59D2B6DD91C00E340EF /* TabViewBootCamp.swift in Sources */,
 				E83DC5DD2A2DB97E006E2E4F /* JMWebView.swift in Sources */,
 				E8E1E6C62B0E1918000F09F8 /* CollectionViewWithDataSource.swift in Sources */,
 				E870C8FD2AD2BED8003F7DB7 /* FitToAspectRatioViewModifier.swift in Sources */,
@@ -916,10 +926,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Utils/Preview Content\"";
-				DEVELOPMENT_TEAM = MMMXXXYWN4;
+				DEVELOPMENT_TEAM = YAHW75YBYW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Utils/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -956,10 +967,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Utils/Preview Content\"";
-				DEVELOPMENT_TEAM = MMMXXXYWN4;
+				DEVELOPMENT_TEAM = YAHW75YBYW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Utils/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

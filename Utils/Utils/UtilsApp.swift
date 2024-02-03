@@ -14,7 +14,7 @@ struct UtilsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            DateTextField()
+            TabViewBootCamp()
                 .onAppear {
                     "onAppear".log(trait: .app)
                 }
