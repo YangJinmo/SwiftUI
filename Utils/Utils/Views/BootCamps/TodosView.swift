@@ -48,7 +48,8 @@ struct TodosView: View {
                     tag: todoItem.id,
                     // activeUUID 값이 변경되면 해당하는 링크로 이동
                     selection: $activeUUID,
-                    label: { Text("\(todoItem.title)")
+                    label: {
+                        Text("\(todoItem.title)")
                     }
                 )
             }
@@ -56,7 +57,7 @@ struct TodosView: View {
             .onOpenURL { url in
                 if case let .todoItem(id) = url.detailPage {
                     print("todoItem(id): \(id)")
-                    
+
                     activeUUID = id
                 }
             }
