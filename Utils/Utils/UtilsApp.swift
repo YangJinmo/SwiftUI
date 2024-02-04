@@ -11,6 +11,7 @@ import SwiftUI
 struct UtilsApp: App {
     @Environment(\.scenePhase) var phase
     @State private var oldScenePhase = ScenePhase.active
+    @StateObject private var appData: AppData = .init()
 
     var body: some Scene {
         WindowGroup {
@@ -29,6 +30,7 @@ struct UtilsApp: App {
                         print("Get \(thing)")
                     }
                 }
+                .environmentObject(appData)
         }
         .onChange(of: phase) { newScenePhase in
             if newScenePhase == .active {
