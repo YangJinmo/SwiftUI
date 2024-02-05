@@ -16,7 +16,7 @@ struct UtilsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TabViewBootCamp()
+            Home()
                 .onAppear {
                     "onAppear".log(trait: .app)
                 }
@@ -32,6 +32,53 @@ struct UtilsApp: App {
                     }
                 }
                 .environmentObject(appData)
+                /// Called When Deep Link was Triggered
+                .onOpenURL { url in
+                    let string = url.absoluteString.replacingOccurrences(of: "deeplink://", with: "")
+                    print(string)
+
+                    /// Spliting URL Component's
+                    let components = string.components(separatedBy: "?")
+
+                    for component in components {
+                        if component.contains("tab=") {
+                            /// Tab Change Request
+                            let tabRawValue = component.replacingOccurrences(of: "tab=", with: "")
+                            print(tabRawValue)
+
+                            if let requestedTab = Tab.convert(from: tabRawValue) {
+                                appData.activeTab = requestedTab
+                            }
+                        }
+
+                        /// Navigation will only be updated if the link contains or specifies which tab navigation needs to be changed.
+                        if component.contains("nav=") && string.contains("tab") {
+                            /// Nav Change Request
+                            let requestedNavPath = component
+                                .replacingOccurrences(of: "nav=", with: "")
+                                .replacingOccurrences(of: "_", with: " ")
+
+                            print(requestedNavPath)
+
+                            switch appData.activeTab {
+                            case .home:
+                                if let navPath = HomeStack.convert(from: requestedNavPath) {
+                                    appData.homeNavStack.append(navPath)
+                                }
+                            case .favourites:
+                                // deeplink://tab=favourites?nav=jenna29
+                                if let navPath = FavouriteStack.convert(from: requestedNavPath) {
+                                    appData.favouriteNavStack.append(navPath)
+                                }
+                            case .settings:
+                                // deeplink://tab=settings?nav=terms_of_service
+                                if let navPath = SettingStack.convert(from: requestedNavPath) {
+                                    appData.settingNavStack.append(navPath)
+                                }
+                            }
+                        }
+                    }
+                }
         }
         .onChange(of: phase) { newScenePhase in
             if newScenePhase == .active {
