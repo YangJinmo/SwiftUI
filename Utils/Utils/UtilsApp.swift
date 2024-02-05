@@ -11,6 +11,7 @@ import SwiftUI
 struct UtilsApp: App {
     @Environment(\.scenePhase) var phase
     @State private var oldScenePhase = ScenePhase.active
+    /// State Object, Contains Whole App Data And Passes it VIA Enviroment Object
     @StateObject private var appData: AppData = .init()
 
     var body: some Scene {
