@@ -125,6 +125,7 @@
 		E8E3678F2A46047900379934 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E3678E2A46047900379934 /* PresentView.swift */; };
 		E8E367912A4604C400379934 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E367902A4604C400379934 /* View.swift */; };
 		E8E3C6AF2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E3C6AE2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift */; };
+		E8ECF7822B73D00D008825EC /* ViewModifierBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECF7812B73D00D008825EC /* ViewModifierBootcamp.swift */; };
 		E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEF1C22A39B29A0031933E /* CustomTextField.swift */; };
 		E8EF44DB2A89E81A00F798CC /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */; };
 		E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */; };
@@ -257,6 +258,7 @@
 		E8E3678E2A46047900379934 /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
 		E8E367902A4604C400379934 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E8E3C6AE2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnWillDisappearViewModifier.swift; sourceTree = "<group>"; };
+		E8ECF7812B73D00D008825EC /* ViewModifierBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifierBootcamp.swift; sourceTree = "<group>"; };
 		E8EEF1C22A39B29A0031933E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
 		E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonStyle.swift; sourceTree = "<group>"; };
@@ -515,6 +517,7 @@
 				E840C59C2B6DD91C00E340EF /* TabViewBootCamp.swift */,
 				E89151632B6CA4F4009AB51E /* TodosView.swift */,
 				E840C59E2B6DD97F00E340EF /* ProfileView.swift */,
+				E8ECF7812B73D00D008825EC /* ViewModifierBootcamp.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -776,6 +779,7 @@
 				E8F9E4982ADE5F9D00CB465C /* CircleButtonStyle.swift in Sources */,
 				E8128E082AB968EE00B6B8F6 /* CollectionViewService.swift in Sources */,
 				E8A4F3242B7129E300121654 /* Home.swift in Sources */,
+				E8ECF7822B73D00D008825EC /* ViewModifierBootcamp.swift in Sources */,
 				E83DC5E12A2DBB9D006E2E4F /* CustomNavigationView.swift in Sources */,
 				E8279DE92B0B6193006B078B /* ToastViewModifier.swift in Sources */,
 				E86DA7B22ABE92BA006A1743 /* CollectionViewBootCamp.swift in Sources */,
