@@ -57,6 +57,7 @@
 		E83E09982AA027D200065AEF /* OnDidLoadViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83E09972AA027D200065AEF /* OnDidLoadViewModifier.swift */; };
 		E840C59D2B6DD91C00E340EF /* TabViewBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840C59C2B6DD91C00E340EF /* TabViewBootCamp.swift */; };
 		E840C59F2B6DD97F00E340EF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840C59E2B6DD97F00E340EF /* ProfileView.swift */; };
+		E84948E12B75B9C200912986 /* ButtonStyleBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84948E02B75B9C200912986 /* ButtonStyleBootcamp.swift */; };
 		E8599C472B2D9AC80085E054 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8599C462B2D9AC80085E054 /* HelloView.swift */; };
 		E85AFE072A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */; };
 		E85AFE092A6293FC00E71575 /* JMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85AFE082A6293FC00E71575 /* JMTextField.swift */; };
@@ -191,6 +192,7 @@
 		E840C59C2B6DD91C00E340EF /* TabViewBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewBootCamp.swift; sourceTree = "<group>"; };
 		E840C59E2B6DD97F00E340EF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E840C5A02B6DDB7600E340EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E84948E02B75B9C200912986 /* ButtonStyleBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleBootcamp.swift; sourceTree = "<group>"; };
 		E8599C462B2D9AC80085E054 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
 		E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableHorizontalScrollableItemView.swift; sourceTree = "<group>"; };
 		E85AFE082A6293FC00E71575 /* JMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMTextField.swift; sourceTree = "<group>"; };
@@ -518,6 +520,7 @@
 				E89151632B6CA4F4009AB51E /* TodosView.swift */,
 				E840C59E2B6DD97F00E340EF /* ProfileView.swift */,
 				E8ECF7812B73D00D008825EC /* ViewModifierBootcamp.swift */,
+				E84948E02B75B9C200912986 /* ButtonStyleBootcamp.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -841,6 +844,7 @@
 				E8EF44DD2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift in Sources */,
 				E8BF16B92A3BED170096E57E /* SelectListTextField.swift in Sources */,
 				E890503B2A96040D00ECF159 /* LottieView.swift in Sources */,
+				E84948E12B75B9C200912986 /* ButtonStyleBootcamp.swift in Sources */,
 				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
 				E8FDC8C72AF9FC560049C95C /* TwoRowListView.swift in Sources */,

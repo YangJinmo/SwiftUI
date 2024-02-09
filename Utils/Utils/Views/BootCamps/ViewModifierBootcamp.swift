@@ -17,7 +17,7 @@ struct DefaultButtonViewModifier: ViewModifier {
             .frame(maxWidth: .infinity)
             .background(backgroundColor)
             .cornerRadius(10)
-            .shadow(radius: 10)
+            .shadow(radius: 10, x: 0.0, y: 10)
     }
 }
 
