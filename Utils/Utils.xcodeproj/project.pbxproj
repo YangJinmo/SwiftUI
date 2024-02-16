@@ -31,6 +31,7 @@
 		E8191E562A81EAB10068D113 /* HeightPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8191E552A81EAB10068D113 /* HeightPreferenceKey.swift */; };
 		E8259C6F2A7CB01A005BF839 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8259C6E2A7CB01A005BF839 /* Bundle.swift */; };
 		E8279DE92B0B6193006B078B /* ToastViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8279DE82B0B6193006B078B /* ToastViewModifier.swift */; };
+		E82907512B7F7D48009412FC /* CustomCurvesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82907502B7F7D48009412FC /* CustomCurvesBootcamp.swift */; };
 		E82C520F2B30A03D004257AA /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C520E2B30A03D004257AA /* TimeInterval.swift */; };
 		E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809D2A4998A400563CBC /* PhotoPicker.swift */; };
 		E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809F2A4998CA00563CBC /* PhotoPickerService.swift */; };
@@ -166,6 +167,7 @@
 		E8191E552A81EAB10068D113 /* HeightPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightPreferenceKey.swift; sourceTree = "<group>"; };
 		E8259C6E2A7CB01A005BF839 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		E8279DE82B0B6193006B078B /* ToastViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModifier.swift; sourceTree = "<group>"; };
+		E82907502B7F7D48009412FC /* CustomCurvesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCurvesBootcamp.swift; sourceTree = "<group>"; };
 		E82C520E2B30A03D004257AA /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		E832809D2A4998A400563CBC /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		E832809F2A4998CA00563CBC /* PhotoPickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerService.swift; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 				E8B8BC342B768560003FE43F /* AnyTransitionBootcamp.swift */,
 				E819101F2B79BEFE0091A424 /* MatchedGeometryEffectBootcamp.swift */,
 				E8429DD12B7B3549003C2537 /* CustomShapeBootcamp.swift */,
+				E82907502B7F7D48009412FC /* CustomCurvesBootcamp.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				E840C59F2B6DD97F00E340EF /* ProfileView.swift in Sources */,
 				E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */,
 				E8F92E622B1367D800C1A5ED /* StarRating.swift in Sources */,
+				E82907512B7F7D48009412FC /* CustomCurvesBootcamp.swift in Sources */,
 				E8A990C72A836F8900EB2BC4 /* CapsuleToggleStyle.swift in Sources */,
 				E839DE272B6F7A8000B71A7C /* AppData.swift in Sources */,
 				E8599C472B2D9AC80085E054 /* HelloView.swift in Sources */,
