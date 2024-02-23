@@ -15,6 +15,22 @@ struct StringModel {
     }
 }
 
+struct BoolModel {
+    let info: Bool?
+
+    func removeInfo() -> BoolModel {
+        BoolModel(info: nil)
+    }
+}
+
+struct GenericModel<T> {
+    let info: T?
+
+    func removeInfo() -> GenericModel {
+        GenericModel(info: nil)
+    }
+}
+
 class GenericsViewModel: ObservableObject {
 //    @Published var dataArray: [String] = []
 //
@@ -27,9 +43,16 @@ class GenericsViewModel: ObservableObject {
 //    }
 
     @Published var stringModel = StringModel(info: "Hello, world!")
+    @Published var boolModel = BoolModel(info: true)
+
+    @Published var genericStringModel = GenericModel(info: "Hello, world!")
+    @Published var genericBoolModel = GenericModel(info: true)
 
     func removeData() {
         stringModel = stringModel.removeInfo()
+        boolModel = boolModel.removeInfo()
+        genericStringModel = genericStringModel.removeInfo()
+        genericBoolModel = genericBoolModel.removeInfo()
     }
 }
 
@@ -45,9 +68,12 @@ struct GenericsBootcamp: View {
 //                    }
 //            }
             Text(vm.stringModel.info ?? "no data")
-                .onTapGesture {
-                    vm.removeData()
-                }
+            Text(vm.boolModel.info?.description ?? "no data")
+            Text(vm.genericStringModel.info ?? "no data")
+            Text(vm.genericBoolModel.info?.description ?? "no data")
+        }
+        .onTapGesture {
+            vm.removeData()
         }
     }
 }
