@@ -56,6 +56,19 @@ class GenericsViewModel: ObservableObject {
     }
 }
 
+struct GenericView<T: View>: View {
+    let content: T
+    let title: String
+
+    var body: some View {
+        VStack {
+            Text(title)
+
+            content
+        }
+    }
+}
+
 struct GenericsBootcamp: View {
     @StateObject private var vm = GenericsViewModel()
 
@@ -67,10 +80,13 @@ struct GenericsBootcamp: View {
 //                        vm.removeDataFromDataArray()
 //                    }
 //            }
+
             Text(vm.stringModel.info ?? "no data")
             Text(vm.boolModel.info?.description ?? "no data")
             Text(vm.genericStringModel.info ?? "no data")
             Text(vm.genericBoolModel.info?.description ?? "no data")
+
+            GenericView(content: Text("custom content"), title: "new view!")
         }
         .onTapGesture {
             vm.removeData()
