@@ -38,6 +38,11 @@ struct HeaderViewGeneric<Content: View>: View {
     let title: String
     let content: Content
 
+    init(title: String, @ViewBuilder content: () -> Content) {
+        self.title = title
+        self.content = content()
+    }
+
     var body: some View {
         VStack(alignment: .leading, content: {
             Text(title)
@@ -61,17 +66,25 @@ struct ViewBuilderBootcamp: View {
 
             HeaderViewRegular(title: "Another Title", description: nil, iconName: nil)
 
-            HeaderViewGeneric(title: "Generic Title", content: Text("hello"))
+//            HeaderViewGeneric(title: "Generic Title", content: Text("hello"))
+//
+//            HeaderViewGeneric(title: "Generic Title 2", content: Image(systemName: "heart.fill"))
+//
+//            HeaderViewGeneric(title: "Generic Title 3", content:
+//                HStack {
+//                    Text("hellooooo")
+//
+//                    Image(systemName: "bolt.fill")
+//                }
+//            )
 
-            HeaderViewGeneric(title: "Generic Title 2", content: Image(systemName: "heart.fill"))
-
-            HeaderViewGeneric(title: "Generic Title 3", content:
+            HeaderViewGeneric(title: "Generic Title") {
                 HStack {
                     Text("hellooooo")
 
                     Image(systemName: "bolt.fill")
                 }
-            )
+            }
 
             Spacer()
         }
