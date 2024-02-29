@@ -106,6 +106,7 @@
 		E8BF16BD2A4177540096E57E /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16BC2A4177540096E57E /* AsyncImageView.swift */; };
 		E8BF16C02A4178AB0096E57E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16BF2A4178AB0096E57E /* String.swift */; };
 		E8D07C472B8AF77000629F27 /* ViewBuilderBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D07C462B8AF77000629F27 /* ViewBuilderBootcamp.swift */; };
+		E8D07C492B90C1D200629F27 /* PreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D07C482B90C1D200629F27 /* PreferenceKeyBootcamp.swift */; };
 		E8D163672A4D46A400A570A9 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D163662A4D46A400A570A9 /* NavigationBarModifier.swift */; };
 		E8D2FDB32A99B1890023DA63 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDB22A99B1890023DA63 /* Date.swift */; };
 		E8D2FDB72A9C26210023DA63 /* Int64.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDB62A9C26210023DA63 /* Int64.swift */; };
@@ -247,6 +248,7 @@
 		E8BF16BC2A4177540096E57E /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		E8BF16BF2A4178AB0096E57E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E8D07C462B8AF77000629F27 /* ViewBuilderBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderBootcamp.swift; sourceTree = "<group>"; };
+		E8D07C482B90C1D200629F27 /* PreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		E8D163662A4D46A400A570A9 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		E8D2FDB22A99B1890023DA63 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		E8D2FDB62A9C26210023DA63 /* Int64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int64.swift; sourceTree = "<group>"; };
@@ -542,6 +544,7 @@
 				E8AF00B22B8393C200E3E9A2 /* AnimateableBootcamp.swift */,
 				E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */,
 				E8D07C462B8AF77000629F27 /* ViewBuilderBootcamp.swift */,
+				E8D07C482B90C1D200629F27 /* PreferenceKeyBootcamp.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -801,6 +804,7 @@
 				E8D2FDBD2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift in Sources */,
 				E80EFF1E2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift in Sources */,
 				E86DA7AA2AB98DA6006A1743 /* ViewRepresentable.swift in Sources */,
+				E8D07C492B90C1D200629F27 /* PreferenceKeyBootcamp.swift in Sources */,
 				E8356E852AFC767800E834F5 /* CollectionViewWrapper.swift in Sources */,
 				E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */,
 				E8F9E4982ADE5F9D00CB465C /* CircleButtonStyle.swift in Sources */,
