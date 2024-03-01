@@ -70,6 +70,7 @@
 		E868E7B92A6F4C580095F030 /* ScrollToID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7B82A6F4C580095F030 /* ScrollToID.swift */; };
 		E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7BB2A6F96E60095F030 /* Refreshable.swift */; };
 		E86A17152AEEA6CC001119E8 /* AnyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86A17142AEEA6CC001119E8 /* AnyCollectionViewController.swift */; };
+		E86B558A2B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B55892B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift */; };
 		E86CD2572B51462100E325EF /* FloatBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86CD2562B51462100E325EF /* FloatBottomView.swift */; };
 		E86DA7A82AB986B9006A1743 /* ViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7A72AB986B9006A1743 /* ViewControllerRepresentable.swift */; };
 		E86DA7AA2AB98DA6006A1743 /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7A92AB98DA6006A1743 /* ViewRepresentable.swift */; };
@@ -213,6 +214,7 @@
 		E868E7B82A6F4C580095F030 /* ScrollToID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToID.swift; sourceTree = "<group>"; };
 		E868E7BB2A6F96E60095F030 /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 		E86A17142AEEA6CC001119E8 /* AnyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCollectionViewController.swift; sourceTree = "<group>"; };
+		E86B55892B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		E86CD2562B51462100E325EF /* FloatBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatBottomView.swift; sourceTree = "<group>"; };
 		E86DA7A72AB986B9006A1743 /* ViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		E86DA7A92AB98DA6006A1743 /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
@@ -512,6 +514,7 @@
 				E8A4F3212B7129C000121654 /* DeepLink */,
 				E8E297372AAB21C300EB4F6A /* DynamicLists */,
 				E8E297202AA5C52000EB4F6A /* ReusableLists */,
+				E86B55882B91E7C7002DD957 /* PreferenceKeyBootcamp */,
 				E868E7B82A6F4C580095F030 /* ScrollToID.swift */,
 				E868E7BB2A6F96E60095F030 /* Refreshable.swift */,
 				E8E297332AA7272D00EB4F6A /* VerticalPageTabView.swift */,
@@ -544,9 +547,17 @@
 				E8AF00B22B8393C200E3E9A2 /* AnimateableBootcamp.swift */,
 				E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */,
 				E8D07C462B8AF77000629F27 /* ViewBuilderBootcamp.swift */,
-				E8D07C482B90C1D200629F27 /* PreferenceKeyBootcamp.swift */,
 			);
 			path = BootCamps;
+			sourceTree = "<group>";
+		};
+		E86B55882B91E7C7002DD957 /* PreferenceKeyBootcamp */ = {
+			isa = PBXGroup;
+			children = (
+				E8D07C482B90C1D200629F27 /* PreferenceKeyBootcamp.swift */,
+				E86B55892B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift */,
+			);
+			path = PreferenceKeyBootcamp;
 			sourceTree = "<group>";
 		};
 		E86CD2552B51461100E325EF /* Floats */ = {
@@ -795,6 +806,7 @@
 				E8627F1C2A7AA07500C01478 /* Dictionary.swift in Sources */,
 				E8D2FDBB2A9E32610023DA63 /* VScrollView.swift in Sources */,
 				E8D2FDB72A9C26210023DA63 /* Int64.swift in Sources */,
+				E86B558A2B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift in Sources */,
 				E8D6D24A2ADCE41D001CFD9F /* ImageManager.swift in Sources */,
 				E85AFE072A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift in Sources */,
 				E8E3C6AF2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift in Sources */,
