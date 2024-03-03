@@ -97,6 +97,7 @@
 		E8B87B712AEFD69000384444 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B87B702AEFD69000384444 /* VideoPlayerView.swift */; };
 		E8B8BC352B768560003FE43F /* AnyTransitionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B8BC342B768560003FE43F /* AnyTransitionBootcamp.swift */; };
 		E8BBDC062A8F139400E95C6C /* SettingsToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBDC052A8F139400E95C6C /* SettingsToggleStyle.swift */; };
+		E8BBF3332B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */; };
 		E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */; };
 		E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */; };
 		E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */; };
@@ -240,6 +241,7 @@
 		E8B87B702AEFD69000384444 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		E8B8BC342B768560003FE43F /* AnyTransitionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionBootcamp.swift; sourceTree = "<group>"; };
 		E8BBDC052A8F139400E95C6C /* SettingsToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsToggleStyle.swift; sourceTree = "<group>"; };
+		E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMTextEditor.swift; sourceTree = "<group>"; };
 		E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWithLineHeightViewModifier.swift; sourceTree = "<group>"; };
 		E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableTextField.swift; sourceTree = "<group>"; };
@@ -547,6 +549,7 @@
 				E8AF00B22B8393C200E3E9A2 /* AnimateableBootcamp.swift */,
 				E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */,
 				E8D07C462B8AF77000629F27 /* ViewBuilderBootcamp.swift */,
+				E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -800,6 +803,7 @@
 				E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */,
 				E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */,
 				E8356E892AFCA61D00E834F5 /* ScaleEffectButtonStyle.swift in Sources */,
+				E8BBF3332B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */,
 				E8B170B72AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift in Sources */,
 				E8FE0D582B11EF2D003FF468 /* UIView.swift in Sources */,
 				E868E7B92A6F4C580095F030 /* ScrollToID.swift in Sources */,
