@@ -517,6 +517,7 @@
 				E8E297372AAB21C300EB4F6A /* DynamicLists */,
 				E8E297202AA5C52000EB4F6A /* ReusableLists */,
 				E86B55882B91E7C7002DD957 /* PreferenceKeyBootcamp */,
+				E8BBF3342B97076C006ECF3D /* CustomTabBar */,
 				E868E7B82A6F4C580095F030 /* ScrollToID.swift */,
 				E868E7BB2A6F96E60095F030 /* Refreshable.swift */,
 				E8E297332AA7272D00EB4F6A /* VerticalPageTabView.swift */,
@@ -615,6 +616,13 @@
 				E83DC5D02A2CD07C006E2E4F /* GaugeProgressStyle.swift */,
 			);
 			path = ProgressViewStyles;
+			sourceTree = "<group>";
+		};
+		E8BBF3342B97076C006ECF3D /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
 		E8BF16B52A3B185D0096E57E /* ViewModifiers */ = {
