@@ -100,6 +100,7 @@
 		E8BBF3332B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */; };
 		E8BBF3362B9707AD006ECF3D /* AppTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBF3352B9707AD006ECF3D /* AppTabBarView.swift */; };
 		E8BBF3382B99441E006ECF3D /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBF3372B99441E006ECF3D /* CustomTabBarView.swift */; };
+		E8BBF33A2B9A1281006ECF3D /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBF3392B9A1281006ECF3D /* CustomTabBarContainerView.swift */; };
 		E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */; };
 		E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */; };
 		E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */; };
@@ -246,6 +247,7 @@
 		E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOffsetPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		E8BBF3352B9707AD006ECF3D /* AppTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarView.swift; sourceTree = "<group>"; };
 		E8BBF3372B99441E006ECF3D /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		E8BBF3392B9A1281006ECF3D /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
 		E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMTextEditor.swift; sourceTree = "<group>"; };
 		E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWithLineHeightViewModifier.swift; sourceTree = "<group>"; };
 		E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableTextField.swift; sourceTree = "<group>"; };
@@ -627,6 +629,7 @@
 			children = (
 				E8BBF3352B9707AD006ECF3D /* AppTabBarView.swift */,
 				E8BBF3372B99441E006ECF3D /* CustomTabBarView.swift */,
+				E8BBF3392B9A1281006ECF3D /* CustomTabBarContainerView.swift */,
 			);
 			path = CustomTabBar;
 			sourceTree = "<group>";
@@ -827,6 +830,7 @@
 				E8D2FDB72A9C26210023DA63 /* Int64.swift in Sources */,
 				E86B558A2B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift in Sources */,
 				E8D6D24A2ADCE41D001CFD9F /* ImageManager.swift in Sources */,
+				E8BBF33A2B9A1281006ECF3D /* CustomTabBarContainerView.swift in Sources */,
 				E85AFE072A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift in Sources */,
 				E8E3C6AF2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift in Sources */,
 				E80403C32A59ADD800B5D7A8 /* ListView.swift in Sources */,
