@@ -13,32 +13,36 @@ import SwiftUI
 // MatchedGeometryEffect
 
 struct AppTabBarView: View {
-    @State private var selection: String = "home"
-    @State private var tabSelection: TabBarItem
+//    @State private var selection: String = "home"
+//    @State private var tabSelection: TabBarItem
+//
+//    var body: some View {
+//        TabView(selection: $selection) {
+//            Color.red
+//                .tabItem {
+//                    Image(systemName: "house")
+//                    Text("Home")
+//                }
+//                .tag(1)
+//
+//            Color.blue
+//                .tabItem {
+//                    Image(systemName: "heart")
+//                    Text("Favorites")
+//                }
+//                .tag(2)
+//
+//            Color.orange
+//                .tabItem {
+//                    Image(systemName: "person")
+//                    Text("Profile")
+//                }
+//                .tag(3)
+//        }
+//    }
 
     var body: some View {
-        TabView(selection: $selection) {
-            Color.red
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-                .tag(1)
-
-            Color.blue
-                .tabItem {
-                    Image(systemName: "heart")
-                    Text("Favorites")
-                }
-                .tag(2)
-
-            Color.orange
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Profile")
-                }
-                .tag(3)
-        }
+        defaultTabView
     }
 }
 
@@ -48,27 +52,18 @@ struct AppTabBarView: View {
 
 extension AppTabBarView {
     private var defaultTabView: some View {
-        TabView(selection: $selection) {
-            Color.red
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-                .tag(1)
+        NavigationView {
+            ZStack {
+                Color.green.ignoresSafeArea()
 
-            Color.blue
-                .tabItem {
-                    Image(systemName: "heart")
-                    Text("Favorites")
+                NavigationLink {
+                    Text("Destination")
+                        .navigationTitle("Title 2")
+                        .navigationBarBackButtonHidden(false)
+                } label: {
+                    Text("Navigate")
                 }
-                .tag(2)
-
-            Color.orange
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Profile")
-                }
-                .tag(3)
+            }
         }
     }
 }
