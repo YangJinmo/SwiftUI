@@ -13,37 +13,18 @@ import SwiftUI
 // MatchedGeometryEffect
 
 struct AppTabBarView: View {
-//    @State private var selection: String = "home"
-//    @State private var tabSelection: TabBarItem
-//
-//    var body: some View {
-//        TabView(selection: $selection) {
-//            Color.red
-//                .tabItem {
-//                    Image(systemName: "house")
-//                    Text("Home")
-//                }
-//                .tag(1)
-//
-//            Color.blue
-//                .tabItem {
-//                    Image(systemName: "heart")
-//                    Text("Favorites")
-//                }
-//                .tag(2)
-//
-//            Color.orange
-//                .tabItem {
-//                    Image(systemName: "person")
-//                    Text("Profile")
-//                }
-//                .tag(3)
-//        }
-//    }
+    @State private var selection: String = "home"
+    @State private var tabSelection: TabBarItem = TabBarItem(iconName: "house", title: "Home", color: .red)
 
     var body: some View {
-        defaultTabView
+        CustomTabBarContainerView(selection: $tabSelection) {
+            Color.blue
+        }
     }
+
+//    var body: some View {
+//        defaultTabView
+//    }
 }
 
 #Preview {
