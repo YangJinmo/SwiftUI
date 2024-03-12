@@ -25,6 +25,9 @@ struct CustomTabBarContainerView<Content: View>: View {
 
             CustomTabBarView(tabs: tabs, selection: $selection)
         }
+        .onPreferenceChange(TabBarItemsPreferenceKey.self, perform: { value in
+            tabs = value
+        })
     }
 }
 
