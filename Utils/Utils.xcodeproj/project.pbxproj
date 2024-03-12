@@ -102,6 +102,7 @@
 		E8BBF3382B99441E006ECF3D /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBF3372B99441E006ECF3D /* CustomTabBarView.swift */; };
 		E8BBF33A2B9A1281006ECF3D /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBF3392B9A1281006ECF3D /* CustomTabBarContainerView.swift */; };
 		E8BBF33C2BA04AA7006ECF3D /* TabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBF33B2BA04AA7006ECF3D /* TabBarItemsPreferenceKey.swift */; };
+		E8BBF33E2BA0AA77006ECF3D /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBF33D2BA0AA77006ECF3D /* TabBarItem.swift */; };
 		E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */; };
 		E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */; };
 		E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */; };
@@ -250,6 +251,7 @@
 		E8BBF3372B99441E006ECF3D /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		E8BBF3392B9A1281006ECF3D /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
 		E8BBF33B2BA04AA7006ECF3D /* TabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
+		E8BBF33D2BA0AA77006ECF3D /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMTextEditor.swift; sourceTree = "<group>"; };
 		E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWithLineHeightViewModifier.swift; sourceTree = "<group>"; };
 		E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableTextField.swift; sourceTree = "<group>"; };
@@ -633,6 +635,7 @@
 				E8BBF3372B99441E006ECF3D /* CustomTabBarView.swift */,
 				E8BBF3392B9A1281006ECF3D /* CustomTabBarContainerView.swift */,
 				E8BBF33B2BA04AA7006ECF3D /* TabBarItemsPreferenceKey.swift */,
+				E8BBF33D2BA0AA77006ECF3D /* TabBarItem.swift */,
 			);
 			path = CustomTabBar;
 			sourceTree = "<group>";
@@ -898,6 +901,7 @@
 				E80A08012A938804006A75FD /* TogglableScrollView.swift in Sources */,
 				E82C520F2B30A03D004257AA /* TimeInterval.swift in Sources */,
 				E8D07C472B8AF77000629F27 /* ViewBuilderBootcamp.swift in Sources */,
+				E8BBF33E2BA0AA77006ECF3D /* TabBarItem.swift in Sources */,
 				E8E297302AA5CDA000EB4F6A /* ListSection.swift in Sources */,
 				E8E2971F2AA5C4DE00EB4F6A /* PrimeMinisters.json in Sources */,
 				E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */,
