@@ -33,10 +33,8 @@ struct CustomTabBarContainerView<Content: View>: View {
 
 #Preview {
     VStack {
-        let tabs = [
-            TabBarItem(iconName: "house", title: "Home", color: .red),
-            TabBarItem(iconName: "heart", title: "Favorites", color: .blue),
-            TabBarItem(iconName: "person", title: "Profile", color: .green),
+        let tabs: [TabBarItem] = [
+            .home, .favorites, .profile,
         ]
 
         CustomTabBarContainerView(selection: .constant(tabs.first!)) {
