@@ -10,6 +10,7 @@ import SwiftUI
 struct CustomTabBarView: View {
     let tabs: [TabBarItem]
     @Binding var selection: TabBarItem
+    @Namespace private var namespace
 
     var body: some View {
         // tabBarVersion1
@@ -87,16 +88,16 @@ extension CustomTabBarView {
                 if selection == tab {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(tab.color.opacity(0.2))
+                        .matchedGeometryEffect(id: "background_rectangle", in: namespace)
                 }
             }
         )
-        .cornerRadius(10)
     }
 
     private var tabBarVersion2: some View {
         HStack {
             ForEach(tabs, id: \.self) { tab in
-                tabView(tab: tab)
+                tabView2(tab: tab)
                     .onTapGesture {
                         switchToTab(tab: tab)
                     }
