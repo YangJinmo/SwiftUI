@@ -18,10 +18,9 @@ struct CustomTabBarContainerView<Content: View>: View {
     }
 
     var body: some View {
-        VStack {
-            ZStack {
-                content
-            }
+        ZStack(alignment: .bottom) {
+            content
+                .ignoresSafeArea()
 
             CustomTabBarView(tabs: tabs, selection: $selection)
         }
