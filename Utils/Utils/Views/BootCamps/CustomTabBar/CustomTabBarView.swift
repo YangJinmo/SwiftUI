@@ -11,10 +11,16 @@ struct CustomTabBarView: View {
     let tabs: [TabBarItem]
     @Binding var selection: TabBarItem
     @Namespace private var namespace
+    @State var localSelection: TabBarItem
 
     var body: some View {
         // tabBarVersion1
         tabBarVersion2
+            .onChange(of: selection) { value in
+                withAnimation(.easeInOut) {
+                    localSelection = value
+                }
+            }
     }
 }
 
@@ -65,9 +71,9 @@ extension CustomTabBarView {
     }
 
     private func switchToTab(tab: TabBarItem) {
-        withAnimation(.easeInOut) {
-            selection = tab
-        }
+        // withAnimation(.easeInOut) {
+        selection = tab
+        // }
     }
 }
 
