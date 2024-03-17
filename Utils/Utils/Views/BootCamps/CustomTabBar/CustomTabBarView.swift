@@ -34,7 +34,8 @@ struct CustomTabBarView: View {
 
         CustomTabBarView(
             tabs: tabs,
-            selection: .constant(tabs.first!)
+            selection: .constant(tabs.first!),
+            localSelection: tabs.first!
         )
     }
 }
@@ -48,10 +49,10 @@ extension CustomTabBarView {
             Text(tab.title)
                 .font(.system(size: 10, weight: .semibold, design: .rounded))
         }
-        .foregroundColor(selection == tab ? tab.color : .gray)
+        .foregroundColor(localSelection == tab ? tab.color : .gray)
         .padding(.vertical, 8)
         .frame(maxWidth: .infinity)
-        .background(selection == tab ? tab.color.opacity(0.2) : .clear)
+        .background(localSelection == tab ? tab.color.opacity(0.2) : .clear)
         .cornerRadius(10)
     }
 
@@ -86,12 +87,12 @@ extension CustomTabBarView {
             Text(tab.title)
                 .font(.system(size: 10, weight: .semibold, design: .rounded))
         }
-        .foregroundColor(selection == tab ? tab.color : .gray)
+        .foregroundColor(localSelection == tab ? tab.color : .gray)
         .padding(.vertical, 8)
         .frame(maxWidth: .infinity)
         .background(
             ZStack {
-                if selection == tab {
+                if localSelection == tab {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(tab.color.opacity(0.2))
                         .matchedGeometryEffect(id: "background_rectangle", in: namespace)
