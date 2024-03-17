@@ -30,6 +30,9 @@ struct AppTabBarView: View {
             Color.green
 //                .tabBarItem(tab: TabBarItem(iconName: "person", title: "Profile", color: .green), selection: $tabSelection)
                 .tabBarItem(tab: .profile, selection: $tabSelection)
+
+            Color.orange
+                .tabBarItem(tab: .messages, selection: $tabSelection)
         }
     }
 }
