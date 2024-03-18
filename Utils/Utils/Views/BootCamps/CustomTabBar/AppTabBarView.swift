@@ -67,31 +67,3 @@ extension AppTabBarView {
         }
     }
 }
-
-struct AppNavTabBarView: View {
-    var body: some View {
-        defaultTabView
-    }
-}
-
-#Preview {
-    AppNavTabBarView()
-}
-
-extension AppNavTabBarView {
-    private var defaultTabView: some View {
-        NavigationView {
-            ZStack {
-                Color.green.ignoresSafeArea()
-
-                NavigationLink {
-                    Text("Destination")
-                        .navigationTitle("Title 2")
-                        .navigationBarBackButtonHidden(false)
-                } label: {
-                    Text("Navigate")
-                }
-            }
-        }
-    }
-}

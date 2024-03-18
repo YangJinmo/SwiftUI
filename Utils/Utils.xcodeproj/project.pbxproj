@@ -61,6 +61,9 @@
 		E840C59F2B6DD97F00E340EF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840C59E2B6DD97F00E340EF /* ProfileView.swift */; };
 		E8429DD22B7B3549003C2537 /* CustomShapeBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8429DD12B7B3549003C2537 /* CustomShapeBootcamp.swift */; };
 		E84948E12B75B9C200912986 /* ButtonStyleBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84948E02B75B9C200912986 /* ButtonStyleBootcamp.swift */; };
+		E84EEDE92BA69E2100976204 /* AppNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDE82BA69E2100976204 /* AppNavBarView.swift */; };
+		E84EEDEB2BA69ECC00976204 /* CustomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDEA2BA69ECC00976204 /* CustomNavBarView.swift */; };
+		E84EEDED2BA6A15900976204 /* CustomNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDEC2BA6A15900976204 /* CustomNavBarContainerView.swift */; };
 		E852B45D2B8739D5008078DD /* GenericsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */; };
 		E8599C472B2D9AC80085E054 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8599C462B2D9AC80085E054 /* HelloView.swift */; };
 		E85AFE072A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */; };
@@ -211,6 +214,9 @@
 		E840C5A02B6DDB7600E340EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E8429DD12B7B3549003C2537 /* CustomShapeBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapeBootcamp.swift; sourceTree = "<group>"; };
 		E84948E02B75B9C200912986 /* ButtonStyleBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleBootcamp.swift; sourceTree = "<group>"; };
+		E84EEDE82BA69E2100976204 /* AppNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavBarView.swift; sourceTree = "<group>"; };
+		E84EEDEA2BA69ECC00976204 /* CustomNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarView.swift; sourceTree = "<group>"; };
+		E84EEDEC2BA6A15900976204 /* CustomNavBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarContainerView.swift; sourceTree = "<group>"; };
 		E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsBootcamp.swift; sourceTree = "<group>"; };
 		E8599C462B2D9AC80085E054 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
 		E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableHorizontalScrollableItemView.swift; sourceTree = "<group>"; };
@@ -519,6 +525,16 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		E84EEDE72BA69DFA00976204 /* CustomNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				E84EEDE82BA69E2100976204 /* AppNavBarView.swift */,
+				E84EEDEA2BA69ECC00976204 /* CustomNavBarView.swift */,
+				E84EEDEC2BA6A15900976204 /* CustomNavBarContainerView.swift */,
+			);
+			path = CustomNavBar;
+			sourceTree = "<group>";
+		};
 		E868E7BA2A6F96B70095F030 /* BootCamps */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +544,7 @@
 				E8E297202AA5C52000EB4F6A /* ReusableLists */,
 				E86B55882B91E7C7002DD957 /* PreferenceKeyBootcamp */,
 				E8BBF3342B97076C006ECF3D /* CustomTabBar */,
+				E84EEDE72BA69DFA00976204 /* CustomNavBar */,
 				E868E7B82A6F4C580095F030 /* ScrollToID.swift */,
 				E868E7BB2A6F96E60095F030 /* Refreshable.swift */,
 				E8E297332AA7272D00EB4F6A /* VerticalPageTabView.swift */,
@@ -822,6 +839,7 @@
 				E818CF602B5652820075783B /* IfView.swift in Sources */,
 				E83DC5E42A2DBBD4006E2E4F /* KeyboardObserver.swift in Sources */,
 				E8E297282AA5C59700EB4F6A /* PrimeMinistersListView.swift in Sources */,
+				E84EEDEB2BA69ECC00976204 /* CustomNavBarView.swift in Sources */,
 				E8429DD22B7B3549003C2537 /* CustomShapeBootcamp.swift in Sources */,
 				E8E2972A2AA5C5FB00EB4F6A /* ListableResponseModel.swift in Sources */,
 				E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */,
@@ -837,6 +855,7 @@
 				E86B558A2B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift in Sources */,
 				E8D6D24A2ADCE41D001CFD9F /* ImageManager.swift in Sources */,
 				E8BBF33A2B9A1281006ECF3D /* CustomTabBarContainerView.swift in Sources */,
+				E84EEDE92BA69E2100976204 /* AppNavBarView.swift in Sources */,
 				E85AFE072A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift in Sources */,
 				E8E3C6AF2AA1846A00435BA3 /* OnWillDisappearViewModifier.swift in Sources */,
 				E80403C32A59ADD800B5D7A8 /* ListView.swift in Sources */,
@@ -860,6 +879,7 @@
 				E8F157AB2B4306C800F41E56 /* LongText.swift in Sources */,
 				E839DE212B6F78F800B71A7C /* HomeStack.swift in Sources */,
 				E8E297222AA5C52F00EB4F6A /* PhoneModel.swift in Sources */,
+				E84EEDED2BA6A15900976204 /* CustomNavBarContainerView.swift in Sources */,
 				E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */,
 				E818CF6C2B590B9C0075783B /* Binding.swift in Sources */,
 				E852B45D2B8739D5008078DD /* GenericsBootcamp.swift in Sources */,
