@@ -65,6 +65,7 @@
 		E84EEDEB2BA69ECC00976204 /* CustomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDEA2BA69ECC00976204 /* CustomNavBarView.swift */; };
 		E84EEDED2BA6A15900976204 /* CustomNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDEC2BA6A15900976204 /* CustomNavBarContainerView.swift */; };
 		E84EEDEF2BA7EB1D00976204 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDEE2BA7EB1D00976204 /* CustomNavView.swift */; };
+		E84EEDF12BAA81F700976204 /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDF02BAA81F700976204 /* CustomNavLink.swift */; };
 		E852B45D2B8739D5008078DD /* GenericsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */; };
 		E8599C472B2D9AC80085E054 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8599C462B2D9AC80085E054 /* HelloView.swift */; };
 		E85AFE072A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */; };
@@ -219,6 +220,7 @@
 		E84EEDEA2BA69ECC00976204 /* CustomNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarView.swift; sourceTree = "<group>"; };
 		E84EEDEC2BA6A15900976204 /* CustomNavBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarContainerView.swift; sourceTree = "<group>"; };
 		E84EEDEE2BA7EB1D00976204 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
+		E84EEDF02BAA81F700976204 /* CustomNavLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
 		E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsBootcamp.swift; sourceTree = "<group>"; };
 		E8599C462B2D9AC80085E054 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
 		E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableHorizontalScrollableItemView.swift; sourceTree = "<group>"; };
@@ -534,6 +536,7 @@
 				E84EEDEE2BA7EB1D00976204 /* CustomNavView.swift */,
 				E84EEDEA2BA69ECC00976204 /* CustomNavBarView.swift */,
 				E84EEDEC2BA6A15900976204 /* CustomNavBarContainerView.swift */,
+				E84EEDF02BAA81F700976204 /* CustomNavLink.swift */,
 			);
 			path = CustomNavBar;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 				E839DE272B6F7A8000B71A7C /* AppData.swift in Sources */,
 				E8599C472B2D9AC80085E054 /* HelloView.swift in Sources */,
 				E88037582B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift in Sources */,
+				E84EEDF12BAA81F700976204 /* CustomNavLink.swift in Sources */,
 				E8E2972E2AA5C79D00EB4F6A /* ReusableListView.swift in Sources */,
 				E8259C6F2A7CB01A005BF839 /* Bundle.swift in Sources */,
 				E83DC5DA2A2DB8FA006E2E4F /* CGFloat.swift in Sources */,
