@@ -11,16 +11,16 @@ struct AppNavBarView: View {
     var body: some View {
         // defaultNavView
 
-        NavigationView {
-            CustomNavBarContainerView {
-                ZStack {
-                    Color.orange.ignoresSafeArea()
+        // NavigationView {
+        // CustomNavBarContainerView {
+        CustomNavView {
+            ZStack {
+                Color.orange.ignoresSafeArea()
 
-                    NavigationLink {
-                        Text("Destination")
-                    } label: {
-                        Text("Navigate")
-                    }
+                NavigationLink {
+                    Text("Destination")
+                } label: {
+                    Text("Navigate")
                 }
             }
         }
