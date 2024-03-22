@@ -66,6 +66,7 @@
 		E84EEDED2BA6A15900976204 /* CustomNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDEC2BA6A15900976204 /* CustomNavBarContainerView.swift */; };
 		E84EEDEF2BA7EB1D00976204 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDEE2BA7EB1D00976204 /* CustomNavView.swift */; };
 		E84EEDF12BAA81F700976204 /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDF02BAA81F700976204 /* CustomNavLink.swift */; };
+		E84EEDF32BAD1F3200976204 /* CustomNavBarPreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDF22BAD1F3200976204 /* CustomNavBarPreferenceKeys.swift */; };
 		E852B45D2B8739D5008078DD /* GenericsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */; };
 		E8599C472B2D9AC80085E054 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8599C462B2D9AC80085E054 /* HelloView.swift */; };
 		E85AFE072A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */; };
@@ -221,6 +222,7 @@
 		E84EEDEC2BA6A15900976204 /* CustomNavBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarContainerView.swift; sourceTree = "<group>"; };
 		E84EEDEE2BA7EB1D00976204 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
 		E84EEDF02BAA81F700976204 /* CustomNavLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
+		E84EEDF22BAD1F3200976204 /* CustomNavBarPreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferenceKeys.swift; sourceTree = "<group>"; };
 		E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsBootcamp.swift; sourceTree = "<group>"; };
 		E8599C462B2D9AC80085E054 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
 		E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableHorizontalScrollableItemView.swift; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 				E84EEDEA2BA69ECC00976204 /* CustomNavBarView.swift */,
 				E84EEDEC2BA6A15900976204 /* CustomNavBarContainerView.swift */,
 				E84EEDF02BAA81F700976204 /* CustomNavLink.swift */,
+				E84EEDF22BAD1F3200976204 /* CustomNavBarPreferenceKeys.swift */,
 			);
 			path = CustomNavBar;
 			sourceTree = "<group>";
@@ -964,6 +967,7 @@
 				E86CD2572B51462100E325EF /* FloatBottomView.swift in Sources */,
 				E8D2FDB32A99B1890023DA63 /* Date.swift in Sources */,
 				E80A07FB2A9302FB006A75FD /* WidthPreferenceKey.swift in Sources */,
+				E84EEDF32BAD1F3200976204 /* CustomNavBarPreferenceKeys.swift in Sources */,
 				E80403C52A5A7FA800B5D7A8 /* ItemView.swift in Sources */,
 				E8D163672A4D46A400A570A9 /* NavigationBarModifier.swift in Sources */,
 				E8108FC82A4C202E009D60AB /* CurrentTimeView.swift in Sources */,
