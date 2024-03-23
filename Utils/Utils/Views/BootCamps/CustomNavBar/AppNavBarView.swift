@@ -19,6 +19,8 @@ struct AppNavBarView: View {
 
                 CustomNavLink(
                     destination: Text("Destination")
+                        .customNavigationTitle("Second Screen")
+                        .customNavigationSubtitle("Subtitle should be showing!!!!")
                 ) {
                     Text("Navigate")
                 }
@@ -29,6 +31,10 @@ struct AppNavBarView: View {
 //                    Text("Navigate")
 //                }
             }
+            .customNavBarItems(title: "New Title!", subtitle: "Subtitle!", backButtonHidden: false)
+            // .customNavigationTitle("Custom Title!")
+            // .customNavigationSubtitle("Subtitle")
+            // .customNavigationBackButtonHidden(true)
         }
     }
 }
