@@ -23,10 +23,18 @@ struct CustomNavView<Content: View>: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
-}	
+}
 
 #Preview {
     CustomNavView {
         Color.red // .ignoresSafeArea()
+    }
+}
+
+extension UINavigationController {
+    override open func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        interactivePopGestureRecognizer?.delegate = nil
     }
 }
