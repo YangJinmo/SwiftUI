@@ -100,6 +100,7 @@
 		E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */; };
 		E8AF00B32B8393C200E3E9A2 /* AnimateableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AF00B22B8393C200E3E9A2 /* AnimateableBootcamp.swift */; };
 		E8B170B72AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B170B62AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift */; };
+		E8B27E932BB0751100588E5F /* UIViewRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B27E922BB0751100588E5F /* UIViewRepresentableBootcamp.swift */; };
 		E8B87B712AEFD69000384444 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B87B702AEFD69000384444 /* VideoPlayerView.swift */; };
 		E8B8BC352B768560003FE43F /* AnyTransitionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B8BC342B768560003FE43F /* AnyTransitionBootcamp.swift */; };
 		E8BBDC062A8F139400E95C6C /* SettingsToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBDC052A8F139400E95C6C /* SettingsToggleStyle.swift */; };
@@ -255,6 +256,7 @@
 		E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingVideoPlayer.swift; sourceTree = "<group>"; };
 		E8AF00B22B8393C200E3E9A2 /* AnimateableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateableBootcamp.swift; sourceTree = "<group>"; };
 		E8B170B62AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootCamp.swift; sourceTree = "<group>"; };
+		E8B27E922BB0751100588E5F /* UIViewRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresentableBootcamp.swift; sourceTree = "<group>"; };
 		E8B87B702AEFD69000384444 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		E8B8BC342B768560003FE43F /* AnyTransitionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionBootcamp.swift; sourceTree = "<group>"; };
 		E8BBDC052A8F139400E95C6C /* SettingsToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsToggleStyle.swift; sourceTree = "<group>"; };
@@ -586,6 +588,7 @@
 				E8AF00B22B8393C200E3E9A2 /* AnimateableBootcamp.swift */,
 				E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */,
 				E8D07C462B8AF77000629F27 /* ViewBuilderBootcamp.swift */,
+				E8B27E922BB0751100588E5F /* UIViewRepresentableBootcamp.swift */,
 				E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
 			);
 			path = BootCamps;
@@ -970,6 +973,7 @@
 				E84EEDF32BAD1F3200976204 /* CustomNavBarPreferenceKeys.swift in Sources */,
 				E80403C52A5A7FA800B5D7A8 /* ItemView.swift in Sources */,
 				E8D163672A4D46A400A570A9 /* NavigationBarModifier.swift in Sources */,
+				E8B27E932BB0751100588E5F /* UIViewRepresentableBootcamp.swift in Sources */,
 				E8108FC82A4C202E009D60AB /* CurrentTimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
