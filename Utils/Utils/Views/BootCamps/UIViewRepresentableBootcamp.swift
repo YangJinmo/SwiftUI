@@ -16,6 +16,7 @@ struct UIViewRepresentableBootcamp: View {
 
         HStack {
             Text("SwiftUI: ")
+
             TextField("Type here...", text: $text)
                 .frame(height: 55)
                 .background(Color.gray)
@@ -23,7 +24,8 @@ struct UIViewRepresentableBootcamp: View {
 
         HStack {
             Text("UIKit: ")
-            UITextFieldViewRepresentable()
+
+            UITextFieldViewRepresentable(text: $text)
                 .frame(height: 55)
                 .background(Color.gray)
         }
@@ -35,11 +37,17 @@ struct UIViewRepresentableBootcamp: View {
 }
 
 struct UITextFieldViewRepresentable: UIViewRepresentable {
-    func makeUIView(context: Context) -> some UIView {
-        return getTextField()
+    @Binding var text: String
+
+    func makeUIView(context: Context) -> UITextField {
+        let textField = getTextField()
+        textField.delegate = context.coordinator
+        return textField
     }
 
-    func updateUIView(_ uiView: UIViewType, context: Context) {
+    // from SwiftUI to UIKit
+    func updateUIView(_ uiView: UITextField, context: Context) {
+        uiView.text = text
     }
 
     private func getTextField() -> UITextField {
@@ -52,6 +60,23 @@ struct UITextFieldViewRepresentable: UIViewRepresentable {
         )
         textField.attributedPlaceholder = placeholder
         return textField
+    }
+
+    // from UIKit to SwiftUI
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(text: $text)
+    }
+
+    class Coordinator: NSObject, UITextFieldDelegate {
+        @Binding var text: String
+
+        init(text: Binding<String>) {
+            _text = text
+        }
+
+        func textFieldDidChangeSelection(_ textField: UITextField) {
+            text = textField.text ?? ""
+        }
     }
 }
 
