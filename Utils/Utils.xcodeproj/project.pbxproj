@@ -91,6 +91,7 @@
 		E890503E2A96045800ECF159 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E890503D2A96045800ECF159 /* Lottie */; };
 		E89151642B6CA4F4009AB51E /* TodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89151632B6CA4F4009AB51E /* TodosView.swift */; };
 		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
+		E899701D2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */; };
 		E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */; };
 		E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB512A5BAD880074A9BE /* Image.swift */; };
 		E8A3CB582A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */; };
@@ -247,6 +248,7 @@
 		E890503A2A96040D00ECF159 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		E89151632B6CA4F4009AB51E /* TodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosView.swift; sourceTree = "<group>"; };
 		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
+		E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableBootcamp.swift; sourceTree = "<group>"; };
 		E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridBootCamp.swift; sourceTree = "<group>"; };
 		E8A3CB512A5BAD880074A9BE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableItemView.swift; sourceTree = "<group>"; };
@@ -589,6 +591,7 @@
 				E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */,
 				E8D07C462B8AF77000629F27 /* ViewBuilderBootcamp.swift */,
 				E8B27E922BB0751100588E5F /* UIViewRepresentableBootcamp.swift */,
+				E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */,
 				E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
 			);
 			path = BootCamps;
@@ -956,6 +959,7 @@
 				E84948E12B75B9C200912986 /* ButtonStyleBootcamp.swift in Sources */,
 				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
 				E8BBF3362B9707AD006ECF3D /* AppTabBarView.swift in Sources */,
+				E899701D2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
 				E8FDC8C72AF9FC560049C95C /* TwoRowListView.swift in Sources */,
 				E8E367912A4604C400379934 /* View.swift in Sources */,
