@@ -20,7 +20,8 @@ struct UIViewControllerRepresentableBootcamp: View {
                 Text("Click Here")
             })
             .sheet(isPresented: $showScreen, content: {
-                BasicUIViewControllerRepresentable(labelText: "New text here")
+                // BasicUIViewControllerRepresentable(labelText: "New text here")
+                UIImagePickerControllerRepresentable()
             })
         }
     }
@@ -28,6 +29,17 @@ struct UIViewControllerRepresentableBootcamp: View {
 
 #Preview {
     UIViewControllerRepresentableBootcamp()
+}
+
+struct UIImagePickerControllerRepresentable: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIImagePickerController {
+        let vc = UIImagePickerController()
+        vc.allowsEditing = false
+        return vc
+    }
+
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
+    }
 }
 
 struct BasicUIViewControllerRepresentable: UIViewControllerRepresentable {
