@@ -92,6 +92,7 @@
 		E89151642B6CA4F4009AB51E /* TodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89151632B6CA4F4009AB51E /* TodosView.swift */; };
 		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
 		E899701D2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */; };
+		E899701F2BBB88E1008A0D9B /* ProtocolsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */; };
 		E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */; };
 		E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB512A5BAD880074A9BE /* Image.swift */; };
 		E8A3CB582A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */; };
@@ -249,6 +250,7 @@
 		E89151632B6CA4F4009AB51E /* TodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosView.swift; sourceTree = "<group>"; };
 		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
 		E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableBootcamp.swift; sourceTree = "<group>"; };
+		E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsBootcamp.swift; sourceTree = "<group>"; };
 		E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridBootCamp.swift; sourceTree = "<group>"; };
 		E8A3CB512A5BAD880074A9BE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableItemView.swift; sourceTree = "<group>"; };
@@ -592,6 +594,7 @@
 				E8D07C462B8AF77000629F27 /* ViewBuilderBootcamp.swift */,
 				E8B27E922BB0751100588E5F /* UIViewRepresentableBootcamp.swift */,
 				E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */,
+				E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */,
 				E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
 			);
 			path = BootCamps;
@@ -917,6 +920,7 @@
 				E8BF16C02A4178AB0096E57E /* String.swift in Sources */,
 				E81910202B79BEFE0091A424 /* MatchedGeometryEffectBootcamp.swift in Sources */,
 				E8128E022AB81BA300B6B8F6 /* ListBootCamp.swift in Sources */,
+				E899701F2BBB88E1008A0D9B /* ProtocolsBootcamp.swift in Sources */,
 				E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */,
 				E817C2302AC91F9D007FF6D3 /* AnalogClock.swift in Sources */,
 				E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */,
