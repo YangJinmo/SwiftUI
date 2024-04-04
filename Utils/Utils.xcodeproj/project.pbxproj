@@ -93,6 +93,7 @@
 		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
 		E899701D2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */; };
 		E899701F2BBB88E1008A0D9B /* ProtocolsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */; };
+		E89E38372BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */; };
 		E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */; };
 		E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB512A5BAD880074A9BE /* Image.swift */; };
 		E8A3CB582A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */; };
@@ -251,6 +252,7 @@
 		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
 		E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableBootcamp.swift; sourceTree = "<group>"; };
 		E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsBootcamp.swift; sourceTree = "<group>"; };
+		E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionBootcamp.swift; sourceTree = "<group>"; };
 		E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridBootCamp.swift; sourceTree = "<group>"; };
 		E8A3CB512A5BAD880074A9BE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableItemView.swift; sourceTree = "<group>"; };
@@ -595,6 +597,7 @@
 				E8B27E922BB0751100588E5F /* UIViewRepresentableBootcamp.swift */,
 				E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */,
 				E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */,
+				E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */,
 				E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
 			);
 			path = BootCamps;
@@ -915,6 +918,7 @@
 				E86A17152AEEA6CC001119E8 /* AnyCollectionViewController.swift in Sources */,
 				E8DE0D252B4FCC5000B14957 /* PopupMiddleView.swift in Sources */,
 				E8128E042AB84BF500B6B8F6 /* CollectionViewRepresentable.swift in Sources */,
+				E89E38372BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift in Sources */,
 				E800B5562B62226600FA861B /* ErrorAlertBootCamp.swift in Sources */,
 				E8E297362AAACAE200EB4F6A /* AsyncAwait.swift in Sources */,
 				E8BF16C02A4178AB0096E57E /* String.swift in Sources */,
