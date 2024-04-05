@@ -24,13 +24,19 @@ struct PostsModel: Identifiable, Codable {
 }
 
 class ProductionDataService {
-    static let instance = ProductionDataService() // Singleton
+    // static let instance = ProductionDataService() // Singleton
 
     // 2. Can't customize the init!
     // static let instance = ProductionDataService(title: "now")
     // init(title: String) { }
 
-    let url: URL = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+    // let url: URL = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+
+    let url: URL
+
+    init(url: URL) {
+        self.url = url
+    }
 
     func getData() -> AnyPublisher<[PostsModel], Error> {
         URLSession.shared.dataTaskPublisher(for: url)
@@ -44,13 +50,16 @@ class ProductionDataService {
 class DependencyInjectionViewModel: ObservableObject {
     @Published var dataArray: [PostsModel] = []
     var cancellables = Set<AnyCancellable>()
+    let dataService: ProductionDataService
 
-    init() {
+    init(dataService: ProductionDataService) {
+        self.dataService = dataService
         loadPosts()
     }
 
     private func loadPosts() {
-        ProductionDataService.instance.getData()
+        // ProductionDataService.instance.getData()
+        dataService.getData()
             .sink { _ in
 
             } receiveValue: { [weak self] returnedPosts in
@@ -61,7 +70,12 @@ class DependencyInjectionViewModel: ObservableObject {
 }
 
 struct DependencyInjectionBootcamp: View {
-    @StateObject private var vm = DependencyInjectionViewModel()
+    // @StateObject private var vm = DependencyInjectionViewModel()
+    @StateObject private var vm: DependencyInjectionViewModel
+
+    init(dataService: ProductionDataService) {
+        _vm = StateObject(wrappedValue: DependencyInjectionViewModel(dataService: dataService))
+    }
 
     var body: some View {
         ScrollView {
@@ -75,5 +89,5 @@ struct DependencyInjectionBootcamp: View {
 }
 
 #Preview {
-    DependencyInjectionBootcamp()
+    DependencyInjectionBootcamp(dataService: ProductionDataService(url: URL(string: "https://jsonplaceholder.typicode.com/posts")!))
 }
