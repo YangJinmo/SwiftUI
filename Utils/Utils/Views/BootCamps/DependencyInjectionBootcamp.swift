@@ -69,6 +69,14 @@ class MockDataService: DataServiceProtocol {
     }
 }
 
+// class Dependencies {
+//    let dataService: DataServiceProtocol
+//
+//    init(dataService: DataServiceProtocol) {
+//        self.dataService = dataService
+//    }
+// }
+
 class DependencyInjectionViewModel: ObservableObject {
     @Published var dataArray: [PostsModel] = []
     var cancellables = Set<AnyCancellable>()
@@ -98,6 +106,10 @@ struct DependencyInjectionBootcamp: View {
     init(dataService: DataServiceProtocol) {
         _vm = StateObject(wrappedValue: DependencyInjectionViewModel(dataService: dataService))
     }
+
+//    init(dataService: Dependencies) {
+//        _vm = StateObject(wrappedValue: DependencyInjectionViewModel(dataService: dataService))
+//    }
 
     var body: some View {
         ScrollView {
