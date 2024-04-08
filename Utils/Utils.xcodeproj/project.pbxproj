@@ -122,6 +122,7 @@
 		E8BF16B92A3BED170096E57E /* SelectListTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B82A3BED170096E57E /* SelectListTextField.swift */; };
 		E8BF16BD2A4177540096E57E /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16BC2A4177540096E57E /* AsyncImageView.swift */; };
 		E8BF16C02A4178AB0096E57E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16BF2A4178AB0096E57E /* String.swift */; };
+		E8CEBB802BC3DA5C007C1642 /* UnitTestingBootcampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CEBB7F2BC3DA5C007C1642 /* UnitTestingBootcampView.swift */; };
 		E8D07C472B8AF77000629F27 /* ViewBuilderBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D07C462B8AF77000629F27 /* ViewBuilderBootcamp.swift */; };
 		E8D07C492B90C1D200629F27 /* PreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D07C482B90C1D200629F27 /* PreferenceKeyBootcamp.swift */; };
 		E8D163672A4D46A400A570A9 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D163662A4D46A400A570A9 /* NavigationBarModifier.swift */; };
@@ -281,6 +282,7 @@
 		E8BF16B82A3BED170096E57E /* SelectListTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListTextField.swift; sourceTree = "<group>"; };
 		E8BF16BC2A4177540096E57E /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		E8BF16BF2A4178AB0096E57E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E8CEBB7F2BC3DA5C007C1642 /* UnitTestingBootcampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingBootcampView.swift; sourceTree = "<group>"; };
 		E8D07C462B8AF77000629F27 /* ViewBuilderBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderBootcamp.swift; sourceTree = "<group>"; };
 		E8D07C482B90C1D200629F27 /* PreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		E8D163662A4D46A400A570A9 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
@@ -598,6 +600,7 @@
 				E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */,
 				E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */,
 				E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */,
+				E8CEBB7F2BC3DA5C007C1642 /* UnitTestingBootcampView.swift */,
 				E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
 			);
 			path = BootCamps;
@@ -966,6 +969,7 @@
 				E890503B2A96040D00ECF159 /* LottieView.swift in Sources */,
 				E84948E12B75B9C200912986 /* ButtonStyleBootcamp.swift in Sources */,
 				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
+				E8CEBB802BC3DA5C007C1642 /* UnitTestingBootcampView.swift in Sources */,
 				E8BBF3362B9707AD006ECF3D /* AppTabBarView.swift in Sources */,
 				E899701D2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift in Sources */,
 				E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */,
