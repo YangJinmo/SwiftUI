@@ -89,6 +89,7 @@
 		E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */; };
 		E890503B2A96040D00ECF159 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E890503A2A96040D00ECF159 /* LottieView.swift */; };
 		E890503E2A96045800ECF159 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E890503D2A96045800ECF159 /* Lottie */; };
+		E8912E512BC53CF2003B79F4 /* UnitTestingBootcampViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8912E502BC53CF2003B79F4 /* UnitTestingBootcampViewModel.swift */; };
 		E89151642B6CA4F4009AB51E /* TodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89151632B6CA4F4009AB51E /* TodosView.swift */; };
 		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
 		E899701D2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */; };
@@ -249,6 +250,7 @@
 		E8822E552A7F5DF600E4AF38 /* FocusedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedTextField.swift; sourceTree = "<group>"; };
 		E88842DF2A4578BD00D8A9BC /* GeometryReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderView.swift; sourceTree = "<group>"; };
 		E890503A2A96040D00ECF159 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		E8912E502BC53CF2003B79F4 /* UnitTestingBootcampViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingBootcampViewModel.swift; sourceTree = "<group>"; };
 		E89151632B6CA4F4009AB51E /* TodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosView.swift; sourceTree = "<group>"; };
 		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
 		E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableBootcamp.swift; sourceTree = "<group>"; };
@@ -601,6 +603,7 @@
 				E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */,
 				E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */,
 				E8CEBB7F2BC3DA5C007C1642 /* UnitTestingBootcampView.swift */,
+				E8912E502BC53CF2003B79F4 /* UnitTestingBootcampViewModel.swift */,
 				E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
 			);
 			path = BootCamps;
@@ -948,6 +951,7 @@
 				E83280A42A4B131B00563CBC /* BackgroundViewModifier.swift in Sources */,
 				E80A08012A938804006A75FD /* TogglableScrollView.swift in Sources */,
 				E82C520F2B30A03D004257AA /* TimeInterval.swift in Sources */,
+				E8912E512BC53CF2003B79F4 /* UnitTestingBootcampViewModel.swift in Sources */,
 				E8D07C472B8AF77000629F27 /* ViewBuilderBootcamp.swift in Sources */,
 				E8BBF33E2BA0AA77006ECF3D /* TabBarItem.swift in Sources */,
 				E8E297302AA5CDA000EB4F6A /* ListSection.swift in Sources */,

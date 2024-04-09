@@ -15,14 +15,6 @@ import SwiftUI
  - tests the UI of your app
  */
 
-class UnitTestingBootcampViewModel: ObservableObject {
-    @Published var isPremium: Bool
-
-    init(isPremium: Bool) {
-        self.isPremium = isPremium
-    }
-}
-
 struct UnitTestingBootcampView: View {
     @StateObject private var vm: UnitTestingBootcampViewModel
 
