@@ -602,8 +602,7 @@
 				E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */,
 				E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */,
 				E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */,
-				E8CEBB7F2BC3DA5C007C1642 /* UnitTestingBootcampView.swift */,
-				E8912E502BC53CF2003B79F4 /* UnitTestingBootcampViewModel.swift */,
+				E8912E522BC76736003B79F4 /* UnitTestingBootcamp */,
 				E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
 			);
 			path = BootCamps;
@@ -624,6 +623,15 @@
 				E86CD2562B51462100E325EF /* FloatBottomView.swift */,
 			);
 			path = Floats;
+			sourceTree = "<group>";
+		};
+		E8912E522BC76736003B79F4 /* UnitTestingBootcamp */ = {
+			isa = PBXGroup;
+			children = (
+				E8CEBB7F2BC3DA5C007C1642 /* UnitTestingBootcampView.swift */,
+				E8912E502BC53CF2003B79F4 /* UnitTestingBootcampViewModel.swift */,
+			);
+			path = UnitTestingBootcamp;
 			sourceTree = "<group>";
 		};
 		E8A4F3202B7129AF00121654 /* Model */ = {
