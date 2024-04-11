@@ -91,6 +91,7 @@
 		E890503E2A96045800ECF159 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E890503D2A96045800ECF159 /* Lottie */; };
 		E8912E512BC53CF2003B79F4 /* UnitTestingBootcampViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8912E502BC53CF2003B79F4 /* UnitTestingBootcampViewModel.swift */; };
 		E8912E5A2BC77DE1003B79F4 /* Utils_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8912E592BC77DE1003B79F4 /* Utils_Tests.swift */; };
+		E8912E612BC77FF3003B79F4 /* UnitTestingBootcampViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8912E602BC77FF3003B79F4 /* UnitTestingBootcampViewModel_Tests.swift */; };
 		E89151642B6CA4F4009AB51E /* TodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89151632B6CA4F4009AB51E /* TodosView.swift */; };
 		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
 		E899701D2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */; };
@@ -264,6 +265,7 @@
 		E8912E502BC53CF2003B79F4 /* UnitTestingBootcampViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingBootcampViewModel.swift; sourceTree = "<group>"; };
 		E8912E572BC77DE1003B79F4 /* Utils_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Utils_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8912E592BC77DE1003B79F4 /* Utils_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils_Tests.swift; sourceTree = "<group>"; };
+		E8912E602BC77FF3003B79F4 /* UnitTestingBootcampViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingBootcampViewModel_Tests.swift; sourceTree = "<group>"; };
 		E89151632B6CA4F4009AB51E /* TodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosView.swift; sourceTree = "<group>"; };
 		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
 		E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableBootcamp.swift; sourceTree = "<group>"; };
@@ -660,6 +662,7 @@
 			isa = PBXGroup;
 			children = (
 				E8912E592BC77DE1003B79F4 /* Utils_Tests.swift */,
+				E8912E602BC77FF3003B79F4 /* UnitTestingBootcampViewModel_Tests.swift */,
 			);
 			path = Utils_Tests;
 			sourceTree = "<group>";
@@ -1070,6 +1073,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8912E612BC77FF3003B79F4 /* UnitTestingBootcampViewModel_Tests.swift in Sources */,
 				E8912E5A2BC77DE1003B79F4 /* Utils_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
