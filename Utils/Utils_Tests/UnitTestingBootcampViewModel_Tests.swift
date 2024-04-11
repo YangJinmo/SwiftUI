@@ -9,6 +9,7 @@
 import XCTest
 
 // Naming Structure: test_UnitOfWork_StateUnderTest_ExpectedBehavior
+// Naming Structure: test_[struct or class]_[variable or function]_[expected result]
 // Testing Structure: Given, When, Then
 
 final class UnitTestingBootcampViewModel_Tests: XCTestCase {
@@ -29,5 +30,16 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
 
         // Then
         XCTAssertTrue(vm.isPremium)
+    }
+    
+    func test_UnitTestingBootcampViewModel_isPremium_shouldBeFalse() {
+        // Given
+        let userIsPremium: Bool = false
+
+        // When
+        let vm = UnitTestingBootcampViewModel(isPremium: userIsPremium)
+a
+        // Then
+        XCTAssertFalse(vm.isPremium)
     }
 }
