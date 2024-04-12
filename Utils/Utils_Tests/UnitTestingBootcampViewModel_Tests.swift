@@ -31,14 +31,14 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
         // Then
         XCTAssertTrue(vm.isPremium)
     }
-    
+
     func test_UnitTestingBootcampViewModel_isPremium_shouldBeFalse() {
         // Given
         let userIsPremium: Bool = false
 
         // When
         let vm = UnitTestingBootcampViewModel(isPremium: userIsPremium)
-a
+
         // Then
         XCTAssertFalse(vm.isPremium)
     }
