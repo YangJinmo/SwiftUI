@@ -53,4 +53,17 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
         // Then
         XCTAssertEqual(vm.isPremium, userIsPremium)
     }
+
+    func test_UnitTestingBootcampViewModel_isPremium_shouldBeInjectedValue_stress() {
+        for _ in 0 ..< 100 {
+            // Given
+            let userIsPremium: Bool = Bool.random()
+
+            // When
+            let vm = UnitTestingBootcampViewModel(isPremium: userIsPremium)
+
+            // Then
+            XCTAssertEqual(vm.isPremium, userIsPremium)
+        }
+    }
 }
