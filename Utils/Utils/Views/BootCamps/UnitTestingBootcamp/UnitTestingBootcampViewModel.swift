@@ -9,6 +9,7 @@ import SwiftUI
 
 class UnitTestingBootcampViewModel: ObservableObject {
     @Published var isPremium: Bool
+    @Published var dataArray: [String] = []
 
     init(isPremium: Bool) {
         self.isPremium = isPremium

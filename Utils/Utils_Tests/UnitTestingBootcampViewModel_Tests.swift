@@ -66,4 +66,18 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
             XCTAssertEqual(vm.isPremium, userIsPremium)
         }
     }
+
+    func test_UnitTestingBootcampViewModel_dataArray_shouldBeEmpty() {
+        for _ in 0 ..< 100 {
+            // Given
+            let userIsPremium: Bool = Bool.random()
+
+            // When
+            let vm = UnitTestingBootcampViewModel(isPremium: userIsPremium)
+
+            // Then
+            XCTAssertTrue(vm.dataArray.isEmpty)
+            XCTAssertEqual(vm.dataArray.count, 0)
+        }
+    }
 }
