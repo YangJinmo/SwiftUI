@@ -14,4 +14,8 @@ class UnitTestingBootcampViewModel: ObservableObject {
     init(isPremium: Bool) {
         self.isPremium = isPremium
     }
+
+    func addItem(item: String) {
+        dataArray.append(item)
+    }
 }
