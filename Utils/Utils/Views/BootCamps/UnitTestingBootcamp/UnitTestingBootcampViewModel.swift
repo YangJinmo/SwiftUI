@@ -16,6 +16,7 @@ class UnitTestingBootcampViewModel: ObservableObject {
     }
 
     func addItem(item: String) {
+        guard !item.isEmpty else { return }
         dataArray.append(item)
     }
 }
