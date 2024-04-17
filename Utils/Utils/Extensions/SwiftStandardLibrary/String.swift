@@ -23,6 +23,11 @@ extension String {
         self = "\(floatTypeNumber)"
     }
 
+    static func random(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0 ..< length).map { _ in letters.randomElement()! })
+    }
+
     var toURL: URL? {
         guard !isEmpty else {
             print("Error: string is Empty")
