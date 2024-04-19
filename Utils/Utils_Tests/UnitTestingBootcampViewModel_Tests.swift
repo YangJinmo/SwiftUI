@@ -111,4 +111,18 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
             XCTAssertTrue(vm.dataArray.isEmpty)
         }
     }
+    
+    func test_UnitTestingBootcampViewModel_selectedItem_shouldStartAsNil() {
+        for _ in 0 ..< 100 {
+            // Given
+            
+
+            // When
+            let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+
+            // Then
+            XCTAssertTrue(vm.selectedItem == nil)
+            XCTAssertNil(vm.selectedItem)
+        }
+    }
 }
