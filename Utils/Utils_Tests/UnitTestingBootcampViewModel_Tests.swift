@@ -137,5 +137,18 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
             // Then
             XCTAssertNil(vm.selectedItem)
         }
+
+    func test_UnitTestingBootcampViewModel_selectedItem_shouldBeSelected() {
+        // Given
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+
+        // When
+        let newItem = String.random(length: 6)
+        vm.addItem(item: newItem)
+        vm.selectItem(item: newItem)
+
+        // Then
+        XCTAssertNotNil(vm.selectedItem)
+        XCTAssertEqual(vm.selectedItem, newItem)
     }
 }
