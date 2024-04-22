@@ -24,6 +24,8 @@ class UnitTestingBootcampViewModel: ObservableObject {
     func selectItem(item: String) {
         if let x = dataArray.first(where: { $0 == item }) {
             selectedItem = x
+        } else {
+            selectedItem = nil
         }
     }
 }
