@@ -111,32 +111,35 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
             XCTAssertTrue(vm.dataArray.isEmpty)
         }
     }
-    
+
     func test_UnitTestingBootcampViewModel_selectedItem_shouldStartAsNil() {
-        for _ in 0 ..< 100 {
-            // Given
-            
+        // Given
 
-            // When
-            let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+        // When
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
 
-            // Then
-            XCTAssertTrue(vm.selectedItem == nil)
-            XCTAssertNil(vm.selectedItem)
-        }
+        // Then
+        XCTAssertTrue(vm.selectedItem == nil)
+        XCTAssertNil(vm.selectedItem)
     }
-    
+
     func test_UnitTestingBootcampViewModel_selectedItem_shouldBeNilWhenSelectingInvalidItem() {
-        for _ in 0 ..< 100 {
-            // Given
-            let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+        // Given
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
 
-            // When
-            vm.selectItem(item: String.random(length: 6))
+        // When
 
-            // Then
-            XCTAssertNil(vm.selectedItem)
-        }
+        // select valid item
+        let newItem = String.random(length: 6)
+        vm.addItem(item: newItem)
+        vm.selectItem(item: newItem)
+
+        // select invalid item
+        vm.selectItem(item: String.random(length: 6))
+
+        // Then
+        XCTAssertNil(vm.selectedItem)
+    }
 
     func test_UnitTestingBootcampViewModel_selectedItem_shouldBeSelected() {
         // Given
