@@ -174,4 +174,18 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
         XCTAssertNotNil(vm.selectedItem)
         XCTAssertEqual(vm.selectedItem, randomItem)
     }
+
+    func test_UnitTestingBootcampViewModel_saveItem_shouldThrowError_itemNotFound() {
+        // Given
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+
+        // When
+
+        // Then
+        XCTAssertThrowsError(try vm.saveItem(item: String.random(length: 6)))
+        XCTAssertThrowsError(try vm.saveItem(item: String.random(length: 6)), "Should throw Item Not Found error!") { error in
+            let returnedError = error as? UnitTestingBootcampViewModel.DataError
+            XCTAssertEqual(returnedError, UnitTestingBootcampViewModel.DataError.itemNotFound)
+        }
+    }
 }
