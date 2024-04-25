@@ -180,6 +180,11 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
         let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
 
         // When
+        let loopCount: Int = Int.random(in: 1 ..< 100)
+
+        for _ in 0 ..< loopCount {
+            vm.addItem(item: String.random(length: 6))
+        }
 
         // Then
         XCTAssertThrowsError(try vm.saveItem(item: String.random(length: 6)))
@@ -187,5 +192,31 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
             let returnedError = error as? UnitTestingBootcampViewModel.DataError
             XCTAssertEqual(returnedError, UnitTestingBootcampViewModel.DataError.itemNotFound)
         }
+    }
+
+    func test_UnitTestingBootcampViewModel_saveItem_shouldThrowError_noData() {
+        // Given
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+
+        // When
+        let loopCount: Int = Int.random(in: 1 ..< 100)
+
+        for _ in 0 ..< loopCount {
+            vm.addItem(item: String.random(length: 6))
+        }
+
+        // Then
+        do {
+            try vm.saveItem(item: "")
+        } catch {
+            let returnedError = error as? UnitTestingBootcampViewModel.DataError
+            XCTAssertEqual(returnedError, UnitTestingBootcampViewModel.DataError.noData)
+        }
+
+//        XCTAssertThrowsError(try vm.saveItem(item: ""))
+//        XCTAssertThrowsError(try vm.saveItem(item: ""), "Should throw No Data error!") { error in
+//            let returnedError = error as? UnitTestingBootcampViewModel.DataError
+//            XCTAssertEqual(returnedError, UnitTestingBootcampViewModel.DataError.noData)
+//        }
     }
 }
