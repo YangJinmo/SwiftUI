@@ -168,6 +168,7 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
         }
 
         let randomItem = itemsArray.randomElement() ?? ""
+        XCTAssertFalse(randomItem.isEmpty)
         vm.selectItem(item: randomItem)
 
         // Then
@@ -218,5 +219,32 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
 //            let returnedError = error as? UnitTestingBootcampViewModel.DataError
 //            XCTAssertEqual(returnedError, UnitTestingBootcampViewModel.DataError.noData)
 //        }
+    }
+
+    func test_UnitTestingBootcampViewModel_saveItem_shouldSaveItem() {
+        // Given
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+
+        // When
+        let loopCount: Int = Int.random(in: 1 ..< 100)
+        var itemsArray: [String] = []
+
+        for _ in 0 ..< loopCount {
+            let newItem = String.random(length: 6)
+            vm.addItem(item: newItem)
+            itemsArray.append(newItem)
+        }
+
+        let randomItem = itemsArray.randomElement() ?? ""
+        XCTAssertFalse(randomItem.isEmpty)
+
+        // Then
+        XCTAssertNoThrow(try vm.saveItem(item: randomItem))
+
+        do {
+            try vm.saveItem(item: randomItem)
+        } catch {
+            XCTFail()
+        }
     }
 }
