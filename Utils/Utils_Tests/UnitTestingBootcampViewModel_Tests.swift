@@ -110,7 +110,19 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
         // Then
         XCTAssertTrue(vm.dataArray.isEmpty)
     }
+
+    func test_UnitTestingBootcampViewModel_dataArray_shouldNotAddBlankString2() {
+        // Given
+        guard let vm = viewModel else {
+            XCTFail()
+            return
         }
+
+        // When
+        vm.addItem(item: "")
+
+        // Then
+        XCTAssertTrue(vm.dataArray.isEmpty)
     }
 
     func test_UnitTestingBootcampViewModel_selectedItem_shouldStartAsNil() {
