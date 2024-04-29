@@ -5,6 +5,7 @@
 //  Created by Jmy on 4/11/24.
 //
 
+import Combine
 @testable import Utils
 import XCTest
 
@@ -14,6 +15,7 @@ import XCTest
 
 final class UnitTestingBootcampViewModel_Tests: XCTestCase {
     var viewModel: UnitTestingBootcampViewModel?
+    var cancellables = Set<AnyCancellable>()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -262,5 +264,26 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
         } catch {
             XCTFail()
         }
+    }
+
+    func test_UnitTestingBootcampViewModel_downloadWithEscaping_shouldReturnItems() {
+        // Given
+        let vm = UnitTestingBootcampViewModel(isPremium: Bool.random())
+
+        // When
+        let expectation = XCTestExpectation(description: "Should return items after 3 seconds.")
+
+        vm.$dataArray
+            .dropFirst()
+            .sink { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+
+        vm.downloadWithEscaping()
+
+        // Then
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
     }
 }
