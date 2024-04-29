@@ -44,9 +44,11 @@ class UnitTestingBootcampViewModel: ObservableObject {
     @Published var isPremium: Bool
     @Published var dataArray: [String] = []
     @Published var selectedItem: String? = nil
+    let dataService: NewDataServiceProtocol
 
-    init(isPremium: Bool) {
+    init(isPremium: Bool, dataService: NewDataServiceProtocol = NewMockDataService(items: nil)) {
         self.isPremium = isPremium
+        self.dataService = dataService
     }
 
     func addItem(item: String) {
@@ -77,5 +79,11 @@ class UnitTestingBootcampViewModel: ObservableObject {
     enum DataError: LocalizedError {
         case noData
         case itemNotFound
+    }
+
+    func downloadWithEscaping() {
+        dataService.downloadItemWithEscaping { returnedItems in
+            self.dataArray = returnedItems
+        }
     }
 }
