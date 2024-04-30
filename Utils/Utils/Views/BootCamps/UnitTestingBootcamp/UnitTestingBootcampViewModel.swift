@@ -45,6 +45,7 @@ class UnitTestingBootcampViewModel: ObservableObject {
     @Published var dataArray: [String] = []
     @Published var selectedItem: String? = nil
     let dataService: NewDataServiceProtocol
+    var cancellables = Set<AnyCancellable>()
 
     init(isPremium: Bool, dataService: NewDataServiceProtocol = NewMockDataService(items: nil)) {
         self.isPremium = isPremium
@@ -82,8 +83,18 @@ class UnitTestingBootcampViewModel: ObservableObject {
     }
 
     func downloadWithEscaping() {
-        dataService.downloadItemWithEscaping { returnedItems in
-            self.dataArray = returnedItems
+        dataService.downloadItemWithEscaping { [weak self] returnedItems in
+            self?.dataArray = returnedItems
         }
+    }
+    
+    func downloadWithCombine() {
+        dataService.downloadItemsCombine()
+            .sink { _ in
+                
+            } receiveValue: { [weak self] returnedItems in
+                self?.dataArray = returnedItems
+            }
+            .store(in: &cancellables)
     }
 }
