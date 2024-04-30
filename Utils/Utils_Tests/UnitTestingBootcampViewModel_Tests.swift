@@ -280,7 +280,8 @@ final class UnitTestingBootcampViewModel_Tests: XCTestCase {
             }
             .store(in: &cancellables)
 
-        vm.downloadWithEscaping()
+        // vm.downloadWithEscaping()
+        vm.downloadWithCombine()
 
         // Then
         wait(for: [expectation], timeout: 5)
