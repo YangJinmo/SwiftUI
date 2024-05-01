@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E80027402BE3607400BEA1BC /* NewMockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E800273F2BE3607400BEA1BC /* NewMockDataService.swift */; };
+		E80027442BE3616C00BEA1BC /* NewMockDataService_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80027432BE3616C00BEA1BC /* NewMockDataService_Tests.swift */; };
 		E800B5562B62226600FA861B /* ErrorAlertBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E800B5552B62226600FA861B /* ErrorAlertBootCamp.swift */; };
 		E80403C32A59ADD800B5D7A8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C22A59ADD800B5D7A8 /* ListView.swift */; };
 		E80403C52A5A7FA800B5D7A8 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C42A5A7FA800B5D7A8 /* ItemView.swift */; };
@@ -180,6 +181,7 @@
 
 /* Begin PBXFileReference section */
 		E800273F2BE3607400BEA1BC /* NewMockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService.swift; sourceTree = "<group>"; };
+		E80027432BE3616C00BEA1BC /* NewMockDataService_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService_Tests.swift; sourceTree = "<group>"; };
 		E800B5552B62226600FA861B /* ErrorAlertBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertBootCamp.swift; sourceTree = "<group>"; };
 		E80403C22A59ADD800B5D7A8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E80403C42A5A7FA800B5D7A8 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
@@ -666,6 +668,7 @@
 			children = (
 				E8912E592BC77DE1003B79F4 /* Utils_Tests.swift */,
 				E8912E602BC77FF3003B79F4 /* UnitTestingBootcampViewModel_Tests.swift */,
+				E80027432BE3616C00BEA1BC /* NewMockDataService_Tests.swift */,
 			);
 			path = Utils_Tests;
 			sourceTree = "<group>";
@@ -1079,6 +1082,7 @@
 			files = (
 				E8912E612BC77FF3003B79F4 /* UnitTestingBootcampViewModel_Tests.swift in Sources */,
 				E8912E5A2BC77DE1003B79F4 /* Utils_Tests.swift in Sources */,
+				E80027442BE3616C00BEA1BC /* NewMockDataService_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
