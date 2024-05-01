@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E80027402BE3607400BEA1BC /* NewMockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E800273F2BE3607400BEA1BC /* NewMockDataService.swift */; };
 		E800B5562B62226600FA861B /* ErrorAlertBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E800B5552B62226600FA861B /* ErrorAlertBootCamp.swift */; };
 		E80403C32A59ADD800B5D7A8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C22A59ADD800B5D7A8 /* ListView.swift */; };
 		E80403C52A5A7FA800B5D7A8 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C42A5A7FA800B5D7A8 /* ItemView.swift */; };
@@ -178,6 +179,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E800273F2BE3607400BEA1BC /* NewMockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService.swift; sourceTree = "<group>"; };
 		E800B5552B62226600FA861B /* ErrorAlertBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertBootCamp.swift; sourceTree = "<group>"; };
 		E80403C22A59ADD800B5D7A8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E80403C42A5A7FA800B5D7A8 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
@@ -654,6 +656,7 @@
 			children = (
 				E8CEBB7F2BC3DA5C007C1642 /* UnitTestingBootcampView.swift */,
 				E8912E502BC53CF2003B79F4 /* UnitTestingBootcampViewModel.swift */,
+				E800273F2BE3607400BEA1BC /* NewMockDataService.swift */,
 			);
 			path = UnitTestingBootcamp;
 			sourceTree = "<group>";
@@ -1008,6 +1011,7 @@
 				E840C59D2B6DD91C00E340EF /* TabViewBootCamp.swift in Sources */,
 				E83DC5DD2A2DB97E006E2E4F /* JMWebView.swift in Sources */,
 				E8E1E6C62B0E1918000F09F8 /* CollectionViewWithDataSource.swift in Sources */,
+				E80027402BE3607400BEA1BC /* NewMockDataService.swift in Sources */,
 				E870C8FD2AD2BED8003F7DB7 /* FitToAspectRatioViewModifier.swift in Sources */,
 				E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */,
 				E839DE232B6F791300B71A7C /* FavouriteStack.swift in Sources */,
