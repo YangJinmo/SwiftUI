@@ -21,11 +21,17 @@ final class NewMockDataService_Tests: XCTestCase {
     func test_NewMockDataService_init_doesSetValuesCorrectly() {
         // Given
         let items: [String]? = nil
+        let items2: [String]? = []
+        let items3: [String]? = [String.random(length: 6), String.random(length: 6), String.random(length: 6)]
 
         // When
         let dataService = NewMockDataService(items: items)
+        let dataService2 = NewMockDataService(items: items2)
+        let dataService3 = NewMockDataService(items: items3)
 
         // Then
         XCTAssertFalse(dataService.items.isEmpty)
+        XCTAssertTrue(dataService2.items.isEmpty)
+        XCTAssertEqual(dataService3.items.count, items3?.count)
     }
 }
