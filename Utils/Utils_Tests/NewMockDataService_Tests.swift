@@ -34,4 +34,22 @@ final class NewMockDataService_Tests: XCTestCase {
         XCTAssertTrue(dataService2.items.isEmpty)
         XCTAssertEqual(dataService3.items.count, items3?.count)
     }
+
+    func test_NewMockDataService_downloadItemsWithEscaping_doesReturnValues() {
+        // Given
+        let dataService = NewMockDataService(items: nil)
+
+        // When
+        var items: [String] = []
+        let expectation = XCTestExpectation()
+
+        dataService.downloadItemWithEscaping { returnedItems in
+            items = returnedItems
+            expectation.fulfill()
+        }
+
+        // Then
+        wait(for: [expectation], timeout: 5)
+        XCTAssertEqual(items.count, dataService.items.count)
+    }
 }
