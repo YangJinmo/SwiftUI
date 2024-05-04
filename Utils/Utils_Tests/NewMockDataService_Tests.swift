@@ -10,12 +10,15 @@ import Combine
 import XCTest
 
 final class NewMockDataService_Tests: XCTestCase {
+    var cancellables = Set<AnyCancellable>()
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        cancellables.removeAll()
     }
 
     func test_NewMockDataService_init_doesSetValuesCorrectly() {
@@ -47,6 +50,32 @@ final class NewMockDataService_Tests: XCTestCase {
             items = returnedItems
             expectation.fulfill()
         }
+
+        // Then
+        wait(for: [expectation], timeout: 5)
+        XCTAssertEqual(items.count, dataService.items.count)
+    }
+
+    func test_NewMockDataService_downloadItemsWithCombine_doesReturnValues() {
+        // Given
+        let dataService = NewMockDataService(items: nil)
+
+        // When
+        var items: [String] = []
+        let expectation = XCTestExpectation()
+
+        dataService.downloadItemsCombine()
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    expectation.fulfill()
+                case .failure:
+                    XCTFail()
+                }
+            } receiveValue: { returnedItems in
+                items = returnedItems
+            }
+            .store(in: &cancellables)
 
         // Then
         wait(for: [expectation], timeout: 5)
