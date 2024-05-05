@@ -81,7 +81,7 @@ final class NewMockDataService_Tests: XCTestCase {
         wait(for: [expectation], timeout: 5)
         XCTAssertEqual(items.count, dataService.items.count)
     }
-    
+
     func test_NewMockDataService_downloadItemsWithCombine_doesFail() {
         // Given
         let dataService = NewMockDataService(items: [])
