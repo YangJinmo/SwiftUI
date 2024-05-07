@@ -7,7 +7,13 @@
 
 import SwiftUI
 
+class UITestingBootcampViewModel: ObservableObject {
+    let placeholderText: String = "Add your name..."
+    @Published var textFieldText: String = ""
+}
+
 struct UITestingBootcampView: View {
+    @StateObject private var vm = UITestingBootcampViewModel()
     var body: some View {
         ZStack {
             LinearGradient(
@@ -18,8 +24,25 @@ struct UITestingBootcampView: View {
             .ignoresSafeArea()
 
             VStack {
-                // TextField()
+                TextField(vm.placeholderText, text: $vm.textFieldText)
+                    .font(.headline)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(10)
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Sign Up")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.white)
+                        .cornerRadius(10)
+                    
+                })
             }
+            .padding()
         }
     }
 }
