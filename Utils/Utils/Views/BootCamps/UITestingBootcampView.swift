@@ -10,6 +10,12 @@ import SwiftUI
 class UITestingBootcampViewModel: ObservableObject {
     let placeholderText: String = "Add your name..."
     @Published var textFieldText: String = ""
+    @Published var currentUserIsSignedIn: Bool = false
+
+    func signUpButtonPressed() {
+        guard !textFieldText.isEmpty else { return }
+        currentUserIsSignedIn = true
+    }
 }
 
 struct UITestingBootcampView: View {
@@ -22,8 +28,17 @@ struct UITestingBootcampView: View {
                 endPoint: .bottomTrailing
             )
             .ignoresSafeArea()
-            
-            signUpLayer
+
+            if vm.currentUserIsSignedIn {
+                Text("Hello, world!")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .transition(.move(edge: .trailing))
+            }
+            if !vm.currentUserIsSignedIn {
+                signUpLayer
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .transition(.move(edge: .leading))
+            }
         }
     }
 }
@@ -42,6 +57,9 @@ extension UITestingBootcampView {
                 .cornerRadius(10)
 
             Button(action: {
+                withAnimation(.spring()) {
+                    vm.signUpButtonPressed()
+                }
             }, label: {
                 Text("Sign Up")
                     .font(.headline)
