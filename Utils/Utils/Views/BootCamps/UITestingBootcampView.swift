@@ -22,31 +22,37 @@ struct UITestingBootcampView: View {
                 endPoint: .bottomTrailing
             )
             .ignoresSafeArea()
-
-            VStack {
-                TextField(vm.placeholderText, text: $vm.textFieldText)
-                    .font(.headline)
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(10)
-                
-                Button(action: {
-                    
-                }, label: {
-                    Text("Sign Up")
-                        .font(.headline)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .cornerRadius(10)
-                    
-                })
-            }
-            .padding()
+            
+            signUpLayer
         }
     }
 }
 
 #Preview {
     UITestingBootcampView()
+}
+
+extension UITestingBootcampView {
+    private var signUpLayer: some View {
+        VStack {
+            TextField(vm.placeholderText, text: $vm.textFieldText)
+                .font(.headline)
+                .padding()
+                .background(Color.white)
+                .cornerRadius(10)
+
+            Button(action: {
+            }, label: {
+                Text("Sign Up")
+                    .font(.headline)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+
+            })
+        }
+        .padding()
+    }
 }
