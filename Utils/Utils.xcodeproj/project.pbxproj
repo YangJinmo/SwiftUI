@@ -75,6 +75,7 @@
 		E85AFE092A6293FC00E71575 /* JMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85AFE082A6293FC00E71575 /* JMTextField.swift */; };
 		E85AFE112A652F6C00E71575 /* JMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85AFE102A652F6C00E71575 /* JMView.swift */; };
 		E8627F1C2A7AA07500C01478 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8627F1B2A7AA07500C01478 /* Dictionary.swift */; };
+		E864E71B2BEA26F400CF2FE3 /* UITestingBootcampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E864E71A2BEA26F400CF2FE3 /* UITestingBootcampView.swift */; };
 		E868E7B92A6F4C580095F030 /* ScrollToID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7B82A6F4C580095F030 /* ScrollToID.swift */; };
 		E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7BB2A6F96E60095F030 /* Refreshable.swift */; };
 		E86A17152AEEA6CC001119E8 /* AnyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86A17142AEEA6CC001119E8 /* AnyCollectionViewController.swift */; };
@@ -251,6 +252,7 @@
 		E85AFE082A6293FC00E71575 /* JMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMTextField.swift; sourceTree = "<group>"; };
 		E85AFE102A652F6C00E71575 /* JMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMView.swift; sourceTree = "<group>"; };
 		E8627F1B2A7AA07500C01478 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		E864E71A2BEA26F400CF2FE3 /* UITestingBootcampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingBootcampView.swift; sourceTree = "<group>"; };
 		E868E7B82A6F4C580095F030 /* ScrollToID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToID.swift; sourceTree = "<group>"; };
 		E868E7BB2A6F96E60095F030 /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 		E86A17142AEEA6CC001119E8 /* AnyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCollectionViewController.swift; sourceTree = "<group>"; };
@@ -632,6 +634,7 @@
 				E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */,
 				E8912E522BC76736003B79F4 /* UnitTestingBootcamp */,
 				E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
+				E864E71A2BEA26F400CF2FE3 /* UITestingBootcampView.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -1072,6 +1075,7 @@
 				E80403C52A5A7FA800B5D7A8 /* ItemView.swift in Sources */,
 				E8D163672A4D46A400A570A9 /* NavigationBarModifier.swift in Sources */,
 				E8B27E932BB0751100588E5F /* UIViewRepresentableBootcamp.swift in Sources */,
+				E864E71B2BEA26F400CF2FE3 /* UITestingBootcampView.swift in Sources */,
 				E8108FC82A4C202E009D60AB /* CurrentTimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
