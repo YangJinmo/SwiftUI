@@ -30,7 +30,7 @@ struct UITestingBootcampView: View {
             .ignoresSafeArea()
 
             if vm.currentUserIsSignedIn {
-                Text("Hello, world!")
+                SignedInHomeView()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .transition(.move(edge: .trailing))
             }
@@ -72,5 +72,11 @@ extension UITestingBootcampView {
             })
         }
         .padding()
+    }
+}
+
+struct SignedInHomeView: View {
+    var body: some View {
+        Text("Hello, world!")
     }
 }
