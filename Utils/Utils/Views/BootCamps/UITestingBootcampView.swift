@@ -76,7 +76,40 @@ extension UITestingBootcampView {
 }
 
 struct SignedInHomeView: View {
+    @State private var showAlert: Bool = false
+
     var body: some View {
-        Text("Hello, world!")
+        NavigationView {
+            VStack(spacing: 20) {
+                Button(action: {
+                    showAlert.toggle()
+                }, label: {
+                    Text("Show welcome alert!")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .background(Color.red)
+                        .cornerRadius(10)
+                })
+                .alert(isPresented: $showAlert, content: {
+                    Alert(title: Text("Welcome to the app!"))
+                })
+
+                NavigationLink {
+                    Text("Destination")
+                } label: {
+                    Text("Navigate")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+            }
+            .padding()
+            .navigationTitle("Welcome")
+        }
     }
 }
