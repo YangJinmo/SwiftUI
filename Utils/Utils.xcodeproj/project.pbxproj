@@ -24,6 +24,7 @@
 		E8128E0C2AB9719F00B6B8F6 /* TableViewBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8128E0B2AB9719F00B6B8F6 /* TableViewBootCamp.swift */; };
 		E816566E2BEB73A30034DC28 /* Utils_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E816566D2BEB73A30034DC28 /* Utils_UITests.swift */; };
 		E81656702BEB73A30034DC28 /* Utils_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E816566F2BEB73A30034DC28 /* Utils_UITestsLaunchTests.swift */; };
+		E81656772BEDBA9A0034DC28 /* UITestingBootcampView_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81656762BEDBA9A0034DC28 /* UITestingBootcampView_UITests.swift */; };
 		E817C22E2AC82710007FF6D3 /* HorizontalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E817C22D2AC82710007FF6D3 /* HorizontalList.swift */; };
 		E817C2302AC91F9D007FF6D3 /* AnalogClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E817C22F2AC91F9D007FF6D3 /* AnalogClock.swift */; };
 		E818CF602B5652820075783B /* IfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818CF5F2B5652820075783B /* IfView.swift */; };
@@ -208,6 +209,7 @@
 		E816566B2BEB73A30034DC28 /* Utils_UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Utils_UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E816566D2BEB73A30034DC28 /* Utils_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils_UITests.swift; sourceTree = "<group>"; };
 		E816566F2BEB73A30034DC28 /* Utils_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils_UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E81656762BEDBA9A0034DC28 /* UITestingBootcampView_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingBootcampView_UITests.swift; sourceTree = "<group>"; };
 		E817C22D2AC82710007FF6D3 /* HorizontalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalList.swift; sourceTree = "<group>"; };
 		E817C22F2AC91F9D007FF6D3 /* AnalogClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogClock.swift; sourceTree = "<group>"; };
 		E818CF5F2B5652820075783B /* IfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfView.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 			children = (
 				E816566D2BEB73A30034DC28 /* Utils_UITests.swift */,
 				E816566F2BEB73A30034DC28 /* Utils_UITestsLaunchTests.swift */,
+				E81656762BEDBA9A0034DC28 /* UITestingBootcampView_UITests.swift */,
 			);
 			path = Utils_UITests;
 			sourceTree = "<group>";
@@ -984,6 +987,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E81656702BEB73A30034DC28 /* Utils_UITestsLaunchTests.swift in Sources */,
+				E81656772BEDBA9A0034DC28 /* UITestingBootcampView_UITests.swift in Sources */,
 				E816566E2BEB73A30034DC28 /* Utils_UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
