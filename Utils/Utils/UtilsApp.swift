@@ -16,7 +16,8 @@ struct UtilsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            Home()
+            UITestingBootcampView()
+                // Home()
                 .onAppear {
                     "onAppear".log(trait: .app)
                 }
