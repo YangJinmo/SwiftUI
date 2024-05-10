@@ -28,16 +28,34 @@ final class UITestingBootcampView_UITests: XCTestCase {
     }
 
     func test_UITestingBootcampView_signUpButton_shouldSignIn() {
-        app.textFields["Add your name..."].tap()
-        app.buttons["Next keyboard"].tap()
+        // Given
+        let textField = app.textFields["Add your name..."]
 
-        app.keys["A"].tap()
+        // When
+        textField.tap()
 
-        let aKey = app.keys["a"]
-        aKey.tap()
-        aKey.tap()
-        aKey.tap()
-        app.buttons["Sign Up"].tap()
-        app.navigationBars["Welcome"].staticTexts["Welcome"].tap()
+        let keyA = app.keys["A"]
+
+        if !keyA.exists {
+            let nextKeyboard = app.buttons["Next keyboard"]
+            nextKeyboard.tap()
+        }
+
+        keyA.tap()
+
+        let keya = app.keys["a"]
+        keya.tap()
+        keya.tap()
+
+        let returnButton = app.buttons["Return"]
+        returnButton.tap()
+
+        let signUpButton = app.buttons["Sign Up"]
+        signUpButton.tap()
+
+        let navBar = app.navigationBars["Welcome"]
+
+        // Then
+        XCTAssertTrue(navBar.exists)
     }
 }
