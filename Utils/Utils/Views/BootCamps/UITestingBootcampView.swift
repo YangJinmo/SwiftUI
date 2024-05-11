@@ -55,6 +55,7 @@ extension UITestingBootcampView {
                 .padding()
                 .background(Color.white)
                 .cornerRadius(10)
+                .accessibilityIdentifier("SignUpTextField")
 
             Button(action: {
                 withAnimation(.spring()) {
