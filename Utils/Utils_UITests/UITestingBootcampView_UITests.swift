@@ -29,7 +29,8 @@ final class UITestingBootcampView_UITests: XCTestCase {
 
     func test_UITestingBootcampView_signUpButton_shouldSignIn() {
         // Given
-        let textField = app.textFields["Add your name..."]
+        // let textField = app.textFields["Add your name..."]
+        let textField = app.textFields["SignUpTextField"]
 
         // When
         textField.tap()
