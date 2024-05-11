@@ -51,7 +51,8 @@ final class UITestingBootcampView_UITests: XCTestCase {
         let returnButton = app.buttons["Return"]
         returnButton.tap()
 
-        let signUpButton = app.buttons["Sign Up"]
+        // let signUpButton = app.buttons["Sign Up"]
+        let signUpButton = app.buttons["SignUpButton"]
         signUpButton.tap()
 
         let navBar = app.navigationBars["Welcome"]
