@@ -71,6 +71,7 @@ extension UITestingBootcampView {
                     .cornerRadius(10)
 
             })
+            .accessibilityIdentifier("SignUpButton")
         }
         .padding()
     }
