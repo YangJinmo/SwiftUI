@@ -25,6 +25,24 @@ final class UITestingBootcampView_UITests: XCTestCase {
     }
 
     func test_UITestingBootcampView_signUpButton_shouldNotSignIn() {
+        // Given
+        // let textField = app.textFields["Add your name..."]
+        let textField = app.textFields["SignUpTextField"]
+
+        // When
+        textField.tap()
+
+        let returnButton = app.buttons["Return"]
+        returnButton.tap()
+
+        // let signUpButton = app.buttons["Sign Up"]
+        let signUpButton = app.buttons["SignUpButton"]
+        signUpButton.tap()
+
+        let navBar = app.navigationBars["Welcome"]
+
+        // Then
+        XCTAssertFalse(navBar.exists)
     }
 
     func test_UITestingBootcampView_signUpButton_shouldSignIn() {
