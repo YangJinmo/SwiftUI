@@ -109,10 +109,11 @@ final class UITestingBootcampView_UITests: XCTestCase {
         let navBar = app.navigationBars["Welcome"]
         XCTAssertTrue(navBar.exists)
         
-        let alertButton = app.buttons["Show welcome alert!"]
-        alertButton.tap()
+        let showAlertButton = app.buttons["ShowAlertButton"]
+        showAlertButton.tap()
         
-        let alert = app.alerts["Welcome to the app!"]
+        // let alert = app.alerts["Welcome to the app!"]
+        let alert = app.alerts.firstMatch
         XCTAssertTrue(alert.exists)
         
         let alertOKButton = alert.buttons["OK"]
