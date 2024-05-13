@@ -94,6 +94,7 @@ struct SignedInHomeView: View {
                         .background(Color.red)
                         .cornerRadius(10)
                 })
+                .accessibilityIdentifier("ShowAlertButton")
                 .alert(isPresented: $showAlert, content: {
                     Alert(title: Text("Welcome to the app!"))
                 })
@@ -109,6 +110,7 @@ struct SignedInHomeView: View {
                         .background(Color.blue)
                         .cornerRadius(10)
                 }
+                .accessibilityIdentifier("NavigationLinkToDestination")
             }
             .padding()
             .navigationTitle("Welcome")
