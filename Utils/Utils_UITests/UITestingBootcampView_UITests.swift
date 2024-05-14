@@ -79,6 +79,46 @@ final class UITestingBootcampView_UITests: XCTestCase {
         XCTAssertTrue(navBar.exists)
     }
 
+    func test_SignedInHomeView_showAlertButton_shouldDisplay() {
+        // Given
+        let textField = app.textFields["SignUpTextField"]
+
+        // When
+        textField.tap()
+
+        let keyA = app.keys["A"]
+
+        if !keyA.exists {
+            let nextKeyboard = app.buttons["Next keyboard"]
+            nextKeyboard.tap()
+        }
+
+        keyA.tap()
+
+        let keya = app.keys["a"]
+        keya.tap()
+        keya.tap()
+
+        let returnButton = app.buttons["Return"]
+        returnButton.tap()
+
+        // let signUpButton = app.buttons["Sign Up"]
+        let signUpButton = app.buttons["SignUpButton"]
+        signUpButton.tap()
+
+        let navBar = app.navigationBars["Welcome"]
+        XCTAssertTrue(navBar.exists)
+
+        let showAlertButton = app.buttons["ShowAlertButton"]
+        showAlertButton.tap()
+
+        // let alert = app.alerts["Welcome to the app!"]
+        let alert = app.alerts.firstMatch
+
+        // Then
+        XCTAssertTrue(alert.exists)
+    }
+
     func test_SignedInHomeView_showAlertButton_shouldDisplayAndDismissAlert() {
         // Given
         let textField = app.textFields["SignUpTextField"]
