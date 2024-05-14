@@ -78,7 +78,7 @@ final class UITestingBootcampView_UITests: XCTestCase {
         // Then
         XCTAssertTrue(navBar.exists)
     }
-    
+
     func test_SignedInHomeView_showAlertButton_shouldDisplayAndDismissAlert() {
         // Given
         let textField = app.textFields["SignUpTextField"]
@@ -108,22 +108,28 @@ final class UITestingBootcampView_UITests: XCTestCase {
 
         let navBar = app.navigationBars["Welcome"]
         XCTAssertTrue(navBar.exists)
-        
+
         let showAlertButton = app.buttons["ShowAlertButton"]
         showAlertButton.tap()
-        
+
         // let alert = app.alerts["Welcome to the app!"]
         let alert = app.alerts.firstMatch
         XCTAssertTrue(alert.exists)
-        
+
         let alertOKButton = alert.buttons["OK"]
-        XCTAssertTrue(alertOKButton.exists)
-        sleep(1)
+        // XCTAssertTrue(alertOKButton.exists)
+
+        // sleep(1)
+        let alertOKButtonExists = alertOKButton.waitForExistence(timeout: 5)
+        XCTAssertTrue(alertOKButtonExists)
+
         alertOKButton.tap()
-        sleep(1)
-        
+
+        // sleep(1)
+        let alertExists = alert.waitForExistence(timeout: 5)
+
         // Then
+        XCTAssertFalse(alertExists)
         XCTAssertFalse(alert.exists)
-        
     }
 }
