@@ -51,13 +51,11 @@ final class UITestingBootcampView_UITests: XCTestCase {
         signUpAndSignIn(shouldTypeOnKeyboard: true)
 
         // When
-        let showAlertButton = app.buttons["ShowAlertButton"]
-        showAlertButton.tap()
-
-        // let alert = app.alerts["Welcome to the app!"]
-        let alert = app.alerts.firstMatch
+        tapAlertButton(shouldDismissAlert: false)
 
         // Then
+        // let alert = app.alerts["Welcome to the app!"]
+        let alert = app.alerts.firstMatch
         XCTAssertTrue(alert.exists)
     }
 
@@ -66,28 +64,11 @@ final class UITestingBootcampView_UITests: XCTestCase {
         signUpAndSignIn(shouldTypeOnKeyboard: true)
 
         // When
-        let showAlertButton = app.buttons["ShowAlertButton"]
-        showAlertButton.tap()
-
-        // let alert = app.alerts["Welcome to the app!"]
-        let alert = app.alerts.firstMatch
-        XCTAssertTrue(alert.exists)
-
-        let alertOKButton = alert.buttons["OK"]
-        // XCTAssertTrue(alertOKButton.exists)
-
-        // sleep(1)
-        let alertOKButtonExists = alertOKButton.waitForExistence(timeout: 5)
-        XCTAssertTrue(alertOKButtonExists)
-
-        alertOKButton.tap()
-
-        // sleep(1)
-        let alertExists = alert.waitForExistence(timeout: 5)
+        tapAlertButton(shouldDismissAlert: true)
 
         // Then
+        let alertExists = app.alerts.firstMatch.waitForExistence(timeout: 5)
         XCTAssertFalse(alertExists)
-        XCTAssertFalse(alert.exists)
     }
 
     func test_SignedInHomeView_navigationLinkToDestination_shouldNavigateToDestination() {
