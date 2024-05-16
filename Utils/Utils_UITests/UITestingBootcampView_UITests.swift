@@ -252,3 +252,35 @@ final class UITestingBootcampView_UITests: XCTestCase {
         XCTAssertTrue(navBar.exists)
     }
 }
+
+// MARK: FUNCTIONS
+
+extension UITestingBootcampView_UITests {
+    func signUpAndSignIn(shouldTypeOnKeyboard: Bool) {
+        // let textField = app.textFields["Add your name..."]
+        let textField = app.textFields["SignUpTextField"]
+        textField.tap()
+
+        if shouldTypeOnKeyboard {
+            let keyA = app.keys["A"]
+
+            if !keyA.exists {
+                let nextKeyboard = app.buttons["Next keyboard"]
+                nextKeyboard.tap()
+            }
+
+            keyA.tap()
+
+            let keya = app.keys["a"]
+            keya.tap()
+            keya.tap()
+        }
+
+        let returnButton = app.buttons["Return"]
+        returnButton.tap()
+
+        // let signUpButton = app.buttons["Sign Up"]
+        let signUpButton = app.buttons["SignUpButton"]
+        signUpButton.tap()
+    }
+}
