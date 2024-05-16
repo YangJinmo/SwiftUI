@@ -200,4 +200,21 @@ extension UITestingBootcampView_UITests {
         let signUpButton = app.buttons["SignUpButton"]
         signUpButton.tap()
     }
+
+    func tapAlertButton(shouldDismissAlert: Bool) {
+        let showAlertButton = app.buttons["ShowAlertButton"]
+        showAlertButton.tap()
+
+        if shouldDismissAlert {
+            // let alert = app.alerts["Welcome to the app!"]
+            let alert = app.alerts.firstMatch
+            let alertOKButton = alert.buttons["OK"]
+
+            // sleep(1)
+            let alertOKButtonExists = alertOKButton.waitForExistence(timeout: 5)
+            XCTAssertTrue(alertOKButtonExists)
+
+            alertOKButton.tap()
+        }
+    }
 }
