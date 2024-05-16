@@ -26,19 +26,9 @@ final class UITestingBootcampView_UITests: XCTestCase {
 
     func test_UITestingBootcampView_signUpButton_shouldNotSignIn() {
         // Given
-        // let textField = app.textFields["Add your name..."]
-        let textField = app.textFields["SignUpTextField"]
+        signUpAndSignIn(shouldTypeOnKeyboard: false)
 
         // When
-        textField.tap()
-
-        let returnButton = app.buttons["Return"]
-        returnButton.tap()
-
-        // let signUpButton = app.buttons["Sign Up"]
-        let signUpButton = app.buttons["SignUpButton"]
-        signUpButton.tap()
-
         let navBar = app.navigationBars["Welcome"]
 
         // Then
@@ -47,32 +37,9 @@ final class UITestingBootcampView_UITests: XCTestCase {
 
     func test_UITestingBootcampView_signUpButton_shouldSignIn() {
         // Given
-        // let textField = app.textFields["Add your name..."]
-        let textField = app.textFields["SignUpTextField"]
+        signUpAndSignIn(shouldTypeOnKeyboard: true)
 
         // When
-        textField.tap()
-
-        let keyA = app.keys["A"]
-
-        if !keyA.exists {
-            let nextKeyboard = app.buttons["Next keyboard"]
-            nextKeyboard.tap()
-        }
-
-        keyA.tap()
-
-        let keya = app.keys["a"]
-        keya.tap()
-        keya.tap()
-
-        let returnButton = app.buttons["Return"]
-        returnButton.tap()
-
-        // let signUpButton = app.buttons["Sign Up"]
-        let signUpButton = app.buttons["SignUpButton"]
-        signUpButton.tap()
-
         let navBar = app.navigationBars["Welcome"]
 
         // Then
@@ -81,34 +48,9 @@ final class UITestingBootcampView_UITests: XCTestCase {
 
     func test_SignedInHomeView_showAlertButton_shouldDisplay() {
         // Given
-        let textField = app.textFields["SignUpTextField"]
+        signUpAndSignIn(shouldTypeOnKeyboard: true)
 
         // When
-        textField.tap()
-
-        let keyA = app.keys["A"]
-
-        if !keyA.exists {
-            let nextKeyboard = app.buttons["Next keyboard"]
-            nextKeyboard.tap()
-        }
-
-        keyA.tap()
-
-        let keya = app.keys["a"]
-        keya.tap()
-        keya.tap()
-
-        let returnButton = app.buttons["Return"]
-        returnButton.tap()
-
-        // let signUpButton = app.buttons["Sign Up"]
-        let signUpButton = app.buttons["SignUpButton"]
-        signUpButton.tap()
-
-        let navBar = app.navigationBars["Welcome"]
-        XCTAssertTrue(navBar.exists)
-
         let showAlertButton = app.buttons["ShowAlertButton"]
         showAlertButton.tap()
 
@@ -121,34 +63,9 @@ final class UITestingBootcampView_UITests: XCTestCase {
 
     func test_SignedInHomeView_showAlertButton_shouldDisplayAndDismissAlert() {
         // Given
-        let textField = app.textFields["SignUpTextField"]
+        signUpAndSignIn(shouldTypeOnKeyboard: true)
 
         // When
-        textField.tap()
-
-        let keyA = app.keys["A"]
-
-        if !keyA.exists {
-            let nextKeyboard = app.buttons["Next keyboard"]
-            nextKeyboard.tap()
-        }
-
-        keyA.tap()
-
-        let keya = app.keys["a"]
-        keya.tap()
-        keya.tap()
-
-        let returnButton = app.buttons["Return"]
-        returnButton.tap()
-
-        // let signUpButton = app.buttons["Sign Up"]
-        let signUpButton = app.buttons["SignUpButton"]
-        signUpButton.tap()
-
-        let navBar = app.navigationBars["Welcome"]
-        XCTAssertTrue(navBar.exists)
-
         let showAlertButton = app.buttons["ShowAlertButton"]
         showAlertButton.tap()
 
