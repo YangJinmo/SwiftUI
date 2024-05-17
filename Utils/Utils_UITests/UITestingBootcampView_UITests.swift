@@ -73,80 +73,25 @@ final class UITestingBootcampView_UITests: XCTestCase {
 
     func test_SignedInHomeView_navigationLinkToDestination_shouldNavigateToDestination() {
         // Given
-        let textField = app.textFields["SignUpTextField"]
+        signUpAndSignIn(shouldTypeOnKeyboard: true)
 
         // When
-        textField.tap()
-
-        let keyA = app.keys["A"]
-
-        if !keyA.exists {
-            let nextKeyboard = app.buttons["Next keyboard"]
-            nextKeyboard.tap()
-        }
-
-        keyA.tap()
-
-        let keya = app.keys["a"]
-        keya.tap()
-        keya.tap()
-
-        let returnButton = app.buttons["Return"]
-        returnButton.tap()
-
-        // let signUpButton = app.buttons["Sign Up"]
-        let signUpButton = app.buttons["SignUpButton"]
-        signUpButton.tap()
-
-        let navBar = app.navigationBars["Welcome"]
+        tapNavigationLink(shouldDismissDestination: false)
 
         // Then
-        XCTAssertTrue(navBar.exists)
+        let destinationText = app.staticTexts["Destination"]
+        XCTAssertTrue(destinationText.exists)
     }
 
     func test_SignedInHomeView_navigationLinkToDestination_shouldNavigateToDestinationAndGoBack() {
         // Given
-        let textField = app.textFields["SignUpTextField"]
+        signUpAndSignIn(shouldTypeOnKeyboard: true)
 
         // When
-        textField.tap()
-
-        let keyA = app.keys["A"]
-
-        if !keyA.exists {
-            let nextKeyboard = app.buttons["Next keyboard"]
-            nextKeyboard.tap()
-        }
-
-        keyA.tap()
-
-        let keya = app.keys["a"]
-        keya.tap()
-        keya.tap()
-
-        let returnButton = app.buttons["Return"]
-        returnButton.tap()
-
-        // let signUpButton = app.buttons["Sign Up"]
-        let signUpButton = app.buttons["SignUpButton"]
-        signUpButton.tap()
-
-        let navBar = app.navigationBars["Welcome"]
-        XCTAssertTrue(navBar.exists)
-
-        let showAlertButton = app.buttons["ShowAlertButton"]
-        showAlertButton.tap()
-
-        let navLinkButton = app.buttons["NavigationLinkToDestination"]
-        navLinkButton.tap()
-
-        let destinationText = app.staticTexts["Destination"]
-        XCTAssertTrue(destinationText.exists)
-
-        let backButton = app.navigationBars.buttons["Welcome"]
-        backButton.tap()
+        tapNavigationLink(shouldDismissDestination: true)
 
         // Then
+        let navBar = app.navigationBars["Welcome"]
         XCTAssertTrue(navBar.exists)
     }
 }
