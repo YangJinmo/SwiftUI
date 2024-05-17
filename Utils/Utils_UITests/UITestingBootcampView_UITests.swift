@@ -198,4 +198,14 @@ extension UITestingBootcampView_UITests {
             alertOKButton.tap()
         }
     }
+
+    func tapNavigationLink(shouldDismissDestination: Bool) {
+        let navLinkButton = app.buttons["NavigationLinkToDestination"]
+        navLinkButton.tap()
+
+        if shouldDismissDestination {
+            let backButton = app.navigationBars.buttons["Welcome"]
+            backButton.tap()
+        }
+    }
 }
