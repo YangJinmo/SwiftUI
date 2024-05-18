@@ -665,8 +665,8 @@
 				E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */,
 				E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */,
 				E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */,
-				E8912E522BC76736003B79F4 /* UnitTestingBootcamp */,
 				E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
+				E8912E522BC76736003B79F4 /* UnitTestingBootcamp */,
 				E864E71A2BEA26F400CF2FE3 /* UITestingBootcampView.swift */,
 			);
 			path = BootCamps;
