@@ -17,7 +17,8 @@ struct UtilsApp: App {
     let currentUserIsSignedIn: Bool
 
     init() {
-        let userIsSignedIn: Bool = CommandLine.arguments.contains("-UITest_startSignedIn") ? true : false
+        // let userIsSignedIn: Bool = CommandLine.arguments.contains("-UITest_startSignedIn") ? true : false
+        let userIsSignedIn: Bool = ProcessInfo.processInfo.arguments.contains("-UITest_startSignedIn") ? true : false
         currentUserIsSignedIn = userIsSignedIn
         print("USER IS SIGNED IN: \(userIsSignedIn)")
     }
