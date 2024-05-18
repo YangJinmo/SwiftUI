@@ -10,7 +10,11 @@ import SwiftUI
 class UITestingBootcampViewModel: ObservableObject {
     let placeholderText: String = "Add your name..."
     @Published var textFieldText: String = ""
-    @Published var currentUserIsSignedIn: Bool = false
+    @Published var currentUserIsSignedIn: Bool
+
+    init(currentUserIsSignedIn: Bool) {
+        self.currentUserIsSignedIn = currentUserIsSignedIn
+    }
 
     func signUpButtonPressed() {
         guard !textFieldText.isEmpty else { return }
@@ -19,7 +23,12 @@ class UITestingBootcampViewModel: ObservableObject {
 }
 
 struct UITestingBootcampView: View {
-    @StateObject private var vm = UITestingBootcampViewModel()
+    @StateObject private var vm: UITestingBootcampViewModel
+
+    init(currentUserIsSignedIn: Bool) {
+        _vm = StateObject(wrappedValue: UITestingBootcampViewModel(currentUserIsSignedIn: currentUserIsSignedIn))
+    }
+
     var body: some View {
         ZStack {
             LinearGradient(
@@ -44,7 +53,7 @@ struct UITestingBootcampView: View {
 }
 
 #Preview {
-    UITestingBootcampView()
+    UITestingBootcampView(currentUserIsSignedIn: true)
 }
 
 extension UITestingBootcampView {

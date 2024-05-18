@@ -14,14 +14,17 @@ struct UtilsApp: App {
     /// State Object, Contains Whole App Data And Passes it VIA Enviroment Object
     @StateObject private var appData: AppData = .init()
 
+    let currentUserIsSignedIn: Bool
+
     init() {
         let userIsSignedIn: Bool = CommandLine.arguments.contains("-UITest_startSignedIn") ? true : false
+        currentUserIsSignedIn = userIsSignedIn
         print("USER IS SIGNED IN: \(userIsSignedIn)")
     }
 
     var body: some Scene {
         WindowGroup {
-            UITestingBootcampView()
+            UITestingBootcampView(currentUserIsSignedIn: currentUserIsSignedIn)
                 // Home()
                 .onAppear {
                     "onAppear".log(trait: .app)
