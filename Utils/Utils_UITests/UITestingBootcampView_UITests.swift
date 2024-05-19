@@ -17,6 +17,8 @@ final class UITestingBootcampView_UITests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
 
+        // app.launchArguments = ["-UITest_startSignedIn"]
+        // app.launchEnvironment = ["-UITest_startSignedIn" : "true"]
         app.launch()
     }
 
