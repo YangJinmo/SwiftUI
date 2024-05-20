@@ -103,6 +103,7 @@
 		E899701D2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */; };
 		E899701F2BBB88E1008A0D9B /* ProtocolsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */; };
 		E89E38372BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */; };
+		E8A1BD852BFD911800FA2371 /* AdvancedCombineBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */; };
 		E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */; };
 		E8A3CB522A5BAD880074A9BE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB512A5BAD880074A9BE /* Image.swift */; };
 		E8A3CB582A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */; };
@@ -291,6 +292,7 @@
 		E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableBootcamp.swift; sourceTree = "<group>"; };
 		E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsBootcamp.swift; sourceTree = "<group>"; };
 		E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionBootcamp.swift; sourceTree = "<group>"; };
+		E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCombineBootcamp.swift; sourceTree = "<group>"; };
 		E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridBootCamp.swift; sourceTree = "<group>"; };
 		E8A3CB512A5BAD880074A9BE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableItemView.swift; sourceTree = "<group>"; };
@@ -668,6 +670,7 @@
 				E8BBF3322B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift */,
 				E8912E522BC76736003B79F4 /* UnitTestingBootcamp */,
 				E864E71A2BEA26F400CF2FE3 /* UITestingBootcampView.swift */,
+				E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -1008,6 +1011,7 @@
 				E84EEDF12BAA81F700976204 /* CustomNavLink.swift in Sources */,
 				E8E2972E2AA5C79D00EB4F6A /* ReusableListView.swift in Sources */,
 				E8259C6F2A7CB01A005BF839 /* Bundle.swift in Sources */,
+				E8A1BD852BFD911800FA2371 /* AdvancedCombineBootcamp.swift in Sources */,
 				E83DC5DA2A2DB8FA006E2E4F /* CGFloat.swift in Sources */,
 				E8822E562A7F5DF600E4AF38 /* FocusedTextField.swift in Sources */,
 				E8E297322AA5CEF100EB4F6A /* ReusableSectionListView.swift in Sources */,
