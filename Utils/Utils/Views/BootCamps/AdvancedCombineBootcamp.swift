@@ -9,7 +9,8 @@ import Combine
 import SwiftUI
 
 class AdvancedCombineDataService {
-    @Published var basicPublisher: String = ""
+    @Published var basicPublisher: String = "first publish"
+    let currentValuePublisher = CurrentValueSubject<String, Never>("first publish")
 
     init() {
         publishFakeData()
