@@ -9,7 +9,7 @@ import Combine
 import SwiftUI
 
 class AdvancedCombineDataService {
-    @Published var basicPublisher: String = "first publish"
+    // @Published var basicPublisher: String = "first publish"
     let currentValuePublisher = CurrentValueSubject<String, Never>("first publish")
 
     init() {
@@ -21,7 +21,8 @@ class AdvancedCombineDataService {
 
         for x in items.indices {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(x)) {
-                self.basicPublisher = items[x]
+                // self.basicPublisher = items[x]
+                self.currentValuePublisher.send(items[x])
             }
         }
     }
@@ -38,7 +39,7 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
     }
 
     private func addSubscribers() {
-        dataService.$basicPublisher
+        dataService.currentValuePublisher // $basicPublisher
             .sink { completion in
                 switch completion {
                 case .finished:
