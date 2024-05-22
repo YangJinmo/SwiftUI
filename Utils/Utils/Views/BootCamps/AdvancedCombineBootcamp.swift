@@ -11,15 +11,15 @@ import SwiftUI
 class AdvancedCombineDataService {
     // @Published var basicPublisher: String = "first publish"
     // let currentValuePublisher = CurrentValueSubject<String, Never>("first publish")
-    let currentValuePublisher = CurrentValueSubject<String, Error>("first publish")
-    let passThroughPublisher = PassthroughSubject<String, Error>()
+    // let currentValuePublisher = CurrentValueSubject<Int, Error>("first publish")
+    let passThroughPublisher = PassthroughSubject<Int, Error>()
 
     init() {
         publishFakeData()
     }
 
     private func publishFakeData() {
-        let items = ["one", "two", "three"]
+        let items: [Int] = Array(0 ..< 11)
 
         for x in items.indices {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(x)) {
@@ -43,6 +43,7 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
 
     private func addSubscribers() {
         dataService.passThroughPublisher // currentValuePublisher // $basicPublisher
+            .map({ String($0) })
             .sink { completion in
                 switch completion {
                 case .finished:
