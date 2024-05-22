@@ -10,7 +10,9 @@ import SwiftUI
 
 class AdvancedCombineDataService {
     // @Published var basicPublisher: String = "first publish"
-    let currentValuePublisher = CurrentValueSubject<String, Never>("first publish")
+    // let currentValuePublisher = CurrentValueSubject<String, Never>("first publish")
+    let currentValuePublisher = CurrentValueSubject<String, Error>("first publish")
+    let passThroughPublisher = PassthroughSubject<String, Error>()
 
     init() {
         publishFakeData()
@@ -22,7 +24,8 @@ class AdvancedCombineDataService {
         for x in items.indices {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(x)) {
                 // self.basicPublisher = items[x]
-                self.currentValuePublisher.send(items[x])
+                // self.currentValuePublisher.send(items[x])
+                self.passThroughPublisher.send(items[x])
             }
         }
     }
@@ -39,7 +42,7 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
     }
 
     private func addSubscribers() {
-        dataService.currentValuePublisher // $basicPublisher
+        dataService.passThroughPublisher // currentValuePublisher // $basicPublisher
             .sink { completion in
                 switch completion {
                 case .finished:
