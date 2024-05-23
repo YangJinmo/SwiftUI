@@ -33,6 +33,7 @@ class AdvancedCombineDataService {
 
 class AdvancedCombineBootcampViewModel: ObservableObject {
     @Published var data: [String] = []
+    @Published var error: String = ""
     let dataService = AdvancedCombineDataService()
 
     var cancellables = Set<AnyCancellable>()
@@ -43,12 +44,28 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
 
     private func addSubscribers() {
         dataService.passThroughPublisher // currentValuePublisher // $basicPublisher
+
+            // Sequence Operations
+            // .first()
+            // .first(where: { int in
+            // return int > 4
+            // })
+            // .first(where: { $0 > 4 })
+            .tryFirst(where: { int in
+                if int == 3 {
+                    throw URLError(.badServerResponse)
+                }
+                return int > 4
+            })
+
             .map({ String($0) })
             .sink { completion in
                 switch completion {
                 case .finished:
                     break
                 case let .failure(error):
+                    self.error = "ERROR: \(error)"
+                    self.error = "ERROR: \(error.localizedDescription)"
                     print("ERROR: \(error.localizedDescription)")
                 }
             } receiveValue: { [weak self] returnedValue in
@@ -68,6 +85,10 @@ struct AdvancedCombineBootcamp: View {
                     Text($0)
                         .font(.largeTitle)
                         .fontWeight(.black)
+                }
+
+                if !vm.error.isEmpty {
+                    Text(vm.error)
                 }
             }
         }
