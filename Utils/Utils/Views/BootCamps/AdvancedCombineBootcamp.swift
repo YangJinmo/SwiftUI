@@ -26,6 +26,10 @@ class AdvancedCombineDataService {
                 // self.basicPublisher = items[x]
                 // self.currentValuePublisher.send(items[x])
                 self.passThroughPublisher.send(items[x])
+                
+                if x == items.indices.last {
+                    self.passThroughPublisher.send(completion: .finished)
+                }
             }
         }
     }
@@ -48,14 +52,22 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             // Sequence Operations
             // .first()
             // .first(where: { int in
-            // return int > 4
+            //    return int > 4
             // })
             // .first(where: { $0 > 4 })
-            .tryFirst(where: { int in
-                if int == 3 {
+            // .tryFirst(where: { int in
+            //    if int == 3 {
+            //      throw URLError(.badServerResponse)
+            //    }
+            //    return int > 4
+            // })
+            // .last()
+            // .last(where: { $0 < 4 })
+            .tryLast(where: { int in
+                if int == 13 {
                     throw URLError(.badServerResponse)
                 }
-                return int > 4
+                return int > 1
             })
 
             .map({ String($0) })
