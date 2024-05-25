@@ -63,12 +63,22 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             // })
             // .last()
             // .last(where: { $0 < 4 })
-            .tryLast(where: { int in
-                if int == 13 {
-                    throw URLError(.badServerResponse)
-                }
-                return int > 1
-            })
+            // .tryLast(where: { int in
+            //     if int == 13 {
+            //         throw URLError(.badServerResponse)
+            //     }
+            //     return int > 1
+            // })
+            // .dropFirst()
+            // .dropFirst(3)
+            // .drop(while: { $0 > 5 })
+            // .tryDrop(while: { int in
+            //     if int == 15 {
+            //         throw URLError(.badServerResponse)
+            //     }
+            //     return int < 6
+            // })
+        
 
             .map({ String($0) })
             .sink { completion in
