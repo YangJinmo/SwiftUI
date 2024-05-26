@@ -78,6 +78,9 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             //     }
             //     return int < 6
             // })
+            // .prefix(4)
+            // .prefix(while: { $0 < 5 })
+            // .tryPrefix(while: )
         
 
             .map({ String($0) })
