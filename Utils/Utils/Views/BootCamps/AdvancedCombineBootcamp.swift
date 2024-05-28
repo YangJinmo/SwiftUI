@@ -86,6 +86,13 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
              // .output(in: 2 ..< 4)
              */
 
+            // Mathematic Operations
+            // .max()
+            // .max(by: { int1, int2 in
+            //     return int1 < int2
+            // })
+            // .tryMax(by: )
+
             .map({ String($0) })
             .sink { completion in
                 switch completion {
