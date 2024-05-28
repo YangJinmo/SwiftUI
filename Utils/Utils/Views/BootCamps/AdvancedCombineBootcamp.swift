@@ -92,6 +92,9 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             //     return int1 < int2
             // })
             // .tryMax(by: )
+            // .min()
+            // .min(by: )
+            // .tryMin(by: )
 
             .map({ String($0) })
             .sink { completion in
