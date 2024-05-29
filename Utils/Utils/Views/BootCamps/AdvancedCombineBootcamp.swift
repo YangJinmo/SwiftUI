@@ -87,16 +87,33 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
              */
 
             // Mathematic Operations
-            // .max()
-            // .max(by: { int1, int2 in
-            //     return int1 < int2
-            // })
-            // .tryMax(by: )
-            // .min()
-            // .min(by: )
-            // .tryMin(by: )
+            /*
+             // .max()
+             // .max(by: { int1, int2 in
+             //     return int1 < int2
+             // })
+             // .tryMax(by: )
+             // .min()
+             // .min(by: )
+             // .tryMin(by: )
+              */
 
-            .map({ String($0) })
+            // Filter / Reducing Operations
+            // .map({ String($0) })
+            // .tryMap({ int in
+            //     if int == 5 {
+            //         return URLError(.badServerResponse)
+            //     }
+            //     return String(int)
+            // })
+            // .compactMap({ int in
+            //     if int == 5 {
+            //         return nil
+            //     }
+            //     return "\(int)"// String(int)
+            // })
+            // .tryCompactMap()
+
             .sink { completion in
                 switch completion {
                 case .finished:
