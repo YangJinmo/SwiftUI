@@ -19,7 +19,7 @@ class AdvancedCombineDataService {
     }
 
     private func publishFakeData() {
-        let items: [Int] = Array(1 ..< 11)
+        let items: [Int] = [1,2,3,4,4,5,4,6,7,8,9,10] // Array(1 ..< 11)
 
         for x in items.indices {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(x)) {
@@ -113,7 +113,15 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             //     return "\(int)"// String(int)
             // })
             // .tryCompactMap()
-
+            // .filter({ ($0 > 3) && ($0 < 7) })
+            // .tryFilter()
+            // .removeDuplicates() // let items: [Int] = [1,2,3,4,4,5,4,6,7,8,9,10]
+            // .removeDuplicates(by: { int1, int2 in
+            //     return int1 == int2
+            // })
+            // .tryRemoveDuplicates(by: )
+        
+            .map({ String($0) })
             .sink { completion in
                 switch completion {
                 case .finished:
