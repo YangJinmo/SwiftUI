@@ -19,7 +19,7 @@ class AdvancedCombineDataService {
     }
 
     private func publishFakeData() {
-        let items: [Int] = [1, 2, 3, 4, 4, 5, 4, 6, 7, 8, 9, 10] // Array(1 ..< 11)
+        let items: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] // Array(1 ..< 11)
 
         for x in items.indices {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(x)) {
@@ -100,12 +100,12 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
 
             // Filter / Reducing Operations
             // .map({ String($0) })
-             .tryMap({ int in
-                 if int == 5 {
-                     throw URLError(.badServerResponse)
-                 }
-                 return String(int)
-             })
+            // .tryMap({ int in
+            //     if int == 5 {
+            //         throw URLError(.badServerResponse)
+            //     }
+            //     return String(int)
+            // })
             // .compactMap({ int in
             //     if int == 5 {
             //         return nil
@@ -122,7 +122,18 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             // .tryRemoveDuplicates(by: )
             // .replaceNil(with: 5)
             // .replaceEmpty(with: [])
-             .replaceError(with: "DEFAULT ERROR")
+            // .replaceError(with: "DEFAULT ERROR")
+            // .scan(0, { existingValue, newValue in
+            //     return existingValue + newValue
+            // })
+            // .scan(0, { $0 + $1 })
+            // .scan(0, +)
+            // .tryScan(0, )
+            // .reduce(0, { existingValue, newValue in
+            //     return existingValue + newValue
+            // })
+            // .reduce(0, +)
+            // .tryReduce(0, )
 
             .map({ String($0) })
             .sink { completion in
