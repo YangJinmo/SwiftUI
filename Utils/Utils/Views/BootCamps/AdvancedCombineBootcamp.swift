@@ -99,41 +99,50 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
               */
 
             // Filter / Reducing Operations
-            // .map({ String($0) })
-            // .tryMap({ int in
-            //     if int == 5 {
-            //         throw URLError(.badServerResponse)
-            //     }
-            //     return String(int)
-            // })
-            // .compactMap({ int in
-            //     if int == 5 {
-            //         return nil
-            //     }
-            //     return "\(int)"// String(int)
-            // })
-            // .tryCompactMap()
-            // .filter({ ($0 > 3) && ($0 < 7) })
-            // .tryFilter()
-            // .removeDuplicates() // let items: [Int] = [1,2,3,4,4,5,4,6,7,8,9,10]
-            // .removeDuplicates(by: { int1, int2 in
-            //     return int1 == int2
-            // })
-            // .tryRemoveDuplicates(by: )
-            // .replaceNil(with: 5)
-            // .replaceEmpty(with: [])
-            // .replaceError(with: "DEFAULT ERROR")
-            // .scan(0, { existingValue, newValue in
-            //     return existingValue + newValue
-            // })
-            // .scan(0, { $0 + $1 })
-            // .scan(0, +)
-            // .tryScan(0, )
-            // .reduce(0, { existingValue, newValue in
-            //     return existingValue + newValue
-            // })
-            // .reduce(0, +)
-            // .tryReduce(0, )
+            /*
+             // .map({ String($0) })
+             // .tryMap({ int in
+             //     if int == 5 {
+             //         throw URLError(.badServerResponse)
+             //     }
+             //     return String(int)
+             // })
+             // .compactMap({ int in
+             //     if int == 5 {
+             //         return nil
+             //     }
+             //     return "\(int)"// String(int)
+             // })
+             // .tryCompactMap()
+             // .filter({ ($0 > 3) && ($0 < 7) })
+             // .tryFilter()
+             // .removeDuplicates() // let items: [Int] = [1,2,3,4,4,5,4,6,7,8,9,10]
+             // .removeDuplicates(by: { int1, int2 in
+             //     return int1 == int2
+             // })
+             // .tryRemoveDuplicates(by: )
+             // .replaceNil(with: 5)
+             // .replaceEmpty(with: [])
+             // .replaceError(with: "DEFAULT ERROR")
+             // .scan(0, { existingValue, newValue in
+             //     return existingValue + newValue
+             // })
+             // .scan(0, { $0 + $1 })
+             // .scan(0, +)
+             // .tryScan(0, )
+             // .reduce(0, { existingValue, newValue in
+             //     return existingValue + newValue
+             // })
+             // .reduce(0, +)
+             // .tryReduce(0, )
+
+             // .map({ String($0) })
+             // .collect() // self?.data = returnedValue
+             // .collect(3) // self?.data.append(contentsOf: returnedValue)
+             // .allSatisfy({ $0 == 5 })
+             // .allSatisfy({ $0 < 50 })
+             // .tryAllSatisfy()
+             */
 
             .map({ String($0) })
             .sink { completion in
@@ -146,6 +155,8 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
                     print("ERROR: \(error.localizedDescription)")
                 }
             } receiveValue: { [weak self] returnedValue in
+                // self?.data = returnedValue
+                // self?.data.append(contentsOf: returnedValue)
                 self?.data.append(returnedValue)
             }
             .store(in: &cancellables)
