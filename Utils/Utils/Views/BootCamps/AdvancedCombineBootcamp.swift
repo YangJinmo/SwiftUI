@@ -21,16 +21,28 @@ class AdvancedCombineDataService {
     private func publishFakeData() {
         let items: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] // Array(1 ..< 11)
 
-        for x in items.indices {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(x)) {
-                // self.basicPublisher = items[x]
-                // self.currentValuePublisher.send(items[x])
-                self.passThroughPublisher.send(items[x])
+//        for x in items.indices {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + Double(x)) {
+//                // self.basicPublisher = items[x]
+//                // self.currentValuePublisher.send(items[x])
+//                self.passThroughPublisher.send(items[x])
+//
+//                if x == items.indices.last {
+//                    self.passThroughPublisher.send(completion: .finished)
+//                }
+//            }
+//        }
 
-                if x == items.indices.last {
-                    self.passThroughPublisher.send(completion: .finished)
-                }
-            }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+            self.passThroughPublisher.send(1)
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.passThroughPublisher.send(2)
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.passThroughPublisher.send(3)
         }
     }
 }
@@ -143,6 +155,9 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
              // .allSatisfy({ $0 < 50 })
              // .tryAllSatisfy()
              */
+
+            // Timing Operations
+            .debounce(for: 0.75, scheduler: DispatchQueue.main)
 
             .map({ String($0) })
             .sink { completion in
