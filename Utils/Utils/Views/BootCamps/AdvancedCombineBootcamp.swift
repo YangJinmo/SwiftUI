@@ -159,13 +159,16 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             // Timing Operations
             // .debounce(for: 0.75, scheduler: DispatchQueue.main)
             // .delay(for: 2, scheduler: DispatchQueue.main)
+            // .measureInterval(using: DispatchQueue.main)
+            // .map({ stride in
+            //     return "\(stride.timeInterval)"
+            // })
+            // .throttle(for: 2, scheduler: DispatchQueue.main, latest: true) // 1, 3, 5, 7, 9, 10
+            // .throttle(for: 10, scheduler: DispatchQueue.main, latest: true) // 1, 10
+            // .throttle(for: 10, scheduler: DispatchQueue.main, latest: false) // 1, 2
+            // .throttle(for: 5, scheduler: DispatchQueue.main, latest: true) // 1, 6, 10
         
-            .measureInterval(using: DispatchQueue.main)
-            .map({ stride in
-                return "\(stride.timeInterval)"
-            })
-
-            // .map({ String($0) })
+            .map({ String($0) })
             .sink { completion in
                 switch completion {
                 case .finished:
