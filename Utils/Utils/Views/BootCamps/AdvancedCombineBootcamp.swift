@@ -181,12 +181,13 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
 
             // Multiple Publishers / Subscribers
             .combineLatest(dataService.boolPublisher)
-            .compactMap({ (int, bool) in
-                if bool {
-                    return String(int)
-                }
-                return nil
-            })
+            // .compactMap({ (int, bool) in
+            //     if bool {
+            //         return String(int)
+            //     }
+            //     return nil
+            // })
+            .compactMap({ $1 ? String($0) : nil })
             .removeDuplicates()
 
             // .map({ String($0) })
