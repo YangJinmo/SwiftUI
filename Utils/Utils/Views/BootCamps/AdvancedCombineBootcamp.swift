@@ -187,8 +187,9 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             //     }
             //     return nil
             // })
-            .compactMap({ $1 ? String($0) : nil })
-            .removeDuplicates()
+            // .compactMap({ $1 ? String($0) : nil })
+            // .removeDuplicates()
+            .compactMap({ $1 ? String($0) : "n/a" })
 
             // .map({ String($0) })
             .sink { completion in
