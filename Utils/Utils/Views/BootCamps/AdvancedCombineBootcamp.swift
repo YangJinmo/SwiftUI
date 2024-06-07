@@ -199,9 +199,9 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             //     return "n/a"
             // })
             // .merge(with: dataService.intPublisher)
-            .zip(dataService.boolPublisher)
+            .zip(dataService.boolPublisher, dataService.intPublisher)
             .map({ tuple in
-                return String(tuple.0) + tuple.1.description
+                return String(tuple.0) + tuple.1.description + String(tuple.2)
             })
 
             // .map({ String($0) })
