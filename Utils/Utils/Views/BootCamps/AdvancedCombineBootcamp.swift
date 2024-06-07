@@ -182,7 +182,7 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
              */
 
             // Multiple Publishers / Subscribers
-            .combineLatest(dataService.boolPublisher, dataService.intPublisher)
+            // .combineLatest(dataService.boolPublisher, dataService.intPublisher)
             // .compactMap({ (int, bool) in
             //     if bool {
             //         return String(int)
@@ -192,14 +192,15 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             // .compactMap({ $1 ? String($0) : nil })
             // .removeDuplicates()
             // .compactMap({ $1 ? String($0) : "n/a" })
-            .compactMap({ (int1, bool, int2) in
-                if bool {
-                    return String(int1)
-                }
-                return "n/a"
-            })
+            // .compactMap({ (int1, bool, int2) in
+            //     if bool {
+            //         return String(int1)
+            //     }
+            //     return "n/a"
+            // })
+            .merge(with: dataService.intPublisher)
 
-            // .map({ String($0) })
+            .map({ String($0) })
             .sink { completion in
                 switch completion {
                 case .finished:
