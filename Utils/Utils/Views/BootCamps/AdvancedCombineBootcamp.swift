@@ -199,12 +199,18 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             //     return "n/a"
             // })
             // .merge(with: dataService.intPublisher)
-            .zip(dataService.boolPublisher, dataService.intPublisher)
-            .map({ tuple in
-                return String(tuple.0) + tuple.1.description + String(tuple.2)
+            // .zip(dataService.boolPublisher, dataService.intPublisher)
+            // .map({ tuple in
+            //     return String(tuple.0) + tuple.1.description + String(tuple.2)
+            // })
+            .tryMap({ _ in
+                throw URLError(.badServerResponse)
+            })
+            .catch({ error in
+                return self.dataService.intPublisher
             })
 
-            // .map({ String($0) })
+            .map({ String($0) })
             .sink { completion in
                 switch completion {
                 case .finished:
