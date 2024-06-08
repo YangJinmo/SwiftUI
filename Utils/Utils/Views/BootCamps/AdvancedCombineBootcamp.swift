@@ -203,8 +203,11 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             // .map({ tuple in
             //     return String(tuple.0) + tuple.1.description + String(tuple.2)
             // })
-            .tryMap({ _ in
-                throw URLError(.badServerResponse)
+            .tryMap({ int in
+                if int == 5 {
+                    throw URLError(.badServerResponse)
+                }
+                return int
             })
             .catch({ error in
                 return self.dataService.intPublisher
