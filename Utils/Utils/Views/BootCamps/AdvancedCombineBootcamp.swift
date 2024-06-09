@@ -63,6 +63,7 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
     let dataService = AdvancedCombineDataService()
 
     var cancellables = Set<AnyCancellable>()
+    let multiCastPublisher = PassthroughSubject<Int, Error>()
 
     init() {
         addSubscribers()
@@ -217,8 +218,12 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
          */
         
         let sharedPublisher = dataService.passThroughPublisher
-            .dropFirst(3)
+            // .dropFirst(3)
             .share()
+            // .multicast {
+            //     PassthroughSubject<Int, Error>()
+            // }
+            .multicast(subject: multiCastPublisher)
 
         sharedPublisher
             .map({ String($0) })
@@ -255,6 +260,12 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
                 self?.dataBools.append(returnedValue)
             }
             .store(in: &cancellables)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            sharedPublisher
+                .connect()
+                .store(in: &self.cancellables)
+        }
     }
 }
 
