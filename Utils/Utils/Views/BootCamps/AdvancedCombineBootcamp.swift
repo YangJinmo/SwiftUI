@@ -215,8 +215,12 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
          //     return self.dataService.intPublisher
          // })
          */
+        
+        let sharedPublisher = dataService.passThroughPublisher
+            .dropFirst(3)
+            .share()
 
-        dataService.passThroughPublisher
+        sharedPublisher
             .map({ String($0) })
             .sink { completion in
                 switch completion {
@@ -234,7 +238,7 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
             }
             .store(in: &cancellables)
 
-        dataService.passThroughPublisher
+        sharedPublisher
             .map({ $0 > 5 ? true : false })
             .sink { completion in
                 switch completion {
