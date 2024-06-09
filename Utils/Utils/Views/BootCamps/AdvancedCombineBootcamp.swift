@@ -58,6 +58,7 @@ class AdvancedCombineDataService {
 
 class AdvancedCombineBootcampViewModel: ObservableObject {
     @Published var data: [String] = []
+    @Published var dataBools: [Bool] = []
     @Published var error: String = ""
     let dataService = AdvancedCombineDataService()
 
@@ -232,6 +233,24 @@ class AdvancedCombineBootcampViewModel: ObservableObject {
                 self?.data.append(returnedValue)
             }
             .store(in: &cancellables)
+
+        dataService.passThroughPublisher
+            .map({ $0 > 5 ? true : false })
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    break
+                case let .failure(error):
+                    self.error = "ERROR: \(error)"
+                    self.error = "ERROR: \(error.localizedDescription)"
+                    print("ERROR: \(error.localizedDescription)")
+                }
+            } receiveValue: { [weak self] returnedValue in
+                // self?.data = returnedValue
+                // self?.data.append(contentsOf: returnedValue)
+                self?.dataBools.append(returnedValue)
+            }
+            .store(in: &cancellables)
     }
 }
 
@@ -240,15 +259,24 @@ struct AdvancedCombineBootcamp: View {
 
     var body: some View {
         ScrollView {
-            VStack {
-                ForEach(vm.data, id: \.self) {
-                    Text($0)
-                        .font(.largeTitle)
-                        .fontWeight(.black)
-                }
+            HStack {
+                VStack {
+                    ForEach(vm.data, id: \.self) {
+                        Text($0)
+                            .font(.largeTitle)
+                            .fontWeight(.black)
+                    }
 
-                if !vm.error.isEmpty {
-                    Text(vm.error)
+                    if !vm.error.isEmpty {
+                        Text(vm.error)
+                    }
+                }
+                VStack {
+                    ForEach(vm.dataBools, id: \.self) {
+                        Text($0.description)
+                            .font(.largeTitle)
+                            .fontWeight(.black)
+                    }
                 }
             }
         }
