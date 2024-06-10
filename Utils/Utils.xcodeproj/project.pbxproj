@@ -102,6 +102,7 @@
 		E893DBAA2A3D4A3D0058E729 /* ClearBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */; };
 		E899701D2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */; };
 		E899701F2BBB88E1008A0D9B /* ProtocolsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */; };
+		E89B8F6B2C19629D0055841D /* FuturesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B8F6A2C19629D0055841D /* FuturesBootcamp.swift */; };
 		E89E38372BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */; };
 		E8A1BD852BFD911800FA2371 /* AdvancedCombineBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */; };
 		E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */; };
@@ -291,6 +292,7 @@
 		E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackgroundModifier.swift; sourceTree = "<group>"; };
 		E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableBootcamp.swift; sourceTree = "<group>"; };
 		E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsBootcamp.swift; sourceTree = "<group>"; };
+		E89B8F6A2C19629D0055841D /* FuturesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturesBootcamp.swift; sourceTree = "<group>"; };
 		E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionBootcamp.swift; sourceTree = "<group>"; };
 		E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCombineBootcamp.swift; sourceTree = "<group>"; };
 		E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridBootCamp.swift; sourceTree = "<group>"; };
@@ -671,6 +673,7 @@
 				E8912E522BC76736003B79F4 /* UnitTestingBootcamp */,
 				E864E71A2BEA26F400CF2FE3 /* UITestingBootcampView.swift */,
 				E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */,
+				E89B8F6A2C19629D0055841D /* FuturesBootcamp.swift */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -1102,6 +1105,7 @@
 				E83E09982AA027D200065AEF /* OnDidLoadViewModifier.swift in Sources */,
 				E8E3678F2A46047900379934 /* PresentView.swift in Sources */,
 				E839DE252B6F791B00B71A7C /* SettingStack.swift in Sources */,
+				E89B8F6B2C19629D0055841D /* FuturesBootcamp.swift in Sources */,
 				E85AFE112A652F6C00E71575 /* JMView.swift in Sources */,
 				E8BF16B42A3B17ED0096E57E /* Font.swift in Sources */,
 				E8191E542A81EAA30068D113 /* SizePreferenceKey.swift in Sources */,
