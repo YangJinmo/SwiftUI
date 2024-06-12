@@ -393,6 +393,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E80818582C19EA3E00F3D034 /* CloudKitBootcamps */ = {
+			isa = PBXGroup;
+			children = (
+				E80818592C19EA7100F3D034 /* CloudKitUserBootcamp.swift */,
+			);
+			path = CloudKitBootcamps;
+			sourceTree = "<group>";
+		};
 		E816566C2BEB73A30034DC28 /* Utils_UITests */ = {
 			isa = PBXGroup;
 			children = (
