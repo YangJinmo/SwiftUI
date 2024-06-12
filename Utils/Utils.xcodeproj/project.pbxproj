@@ -13,6 +13,7 @@
 		E80403C32A59ADD800B5D7A8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C22A59ADD800B5D7A8 /* ListView.swift */; };
 		E80403C52A5A7FA800B5D7A8 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80403C42A5A7FA800B5D7A8 /* ItemView.swift */; };
 		E804C5C22A486B320026616E /* DeletableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E804C5C12A486B320026616E /* DeletableItemView.swift */; };
+		E808185A2C19EA7100F3D034 /* CloudKitUserBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80818592C19EA7100F3D034 /* CloudKitUserBootcamp.swift */; };
 		E80A07FB2A9302FB006A75FD /* WidthPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A07FA2A9302FB006A75FD /* WidthPreferenceKey.swift */; };
 		E80A08012A938804006A75FD /* TogglableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A08002A938804006A75FD /* TogglableScrollView.swift */; };
 		E80EFF1E2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80EFF1D2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift */; };
@@ -199,6 +200,7 @@
 		E80403C22A59ADD800B5D7A8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E80403C42A5A7FA800B5D7A8 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		E804C5C12A486B320026616E /* DeletableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableItemView.swift; sourceTree = "<group>"; };
+		E80818592C19EA7100F3D034 /* CloudKitUserBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUserBootcamp.swift; sourceTree = "<group>"; };
 		E80A07FA2A9302FB006A75FD /* WidthPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthPreferenceKey.swift; sourceTree = "<group>"; };
 		E80A08002A938804006A75FD /* TogglableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglableScrollView.swift; sourceTree = "<group>"; };
 		E80EFF1D2A87ADA9005FD650 /* RoundedRectangleToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleToggleStyle.swift; sourceTree = "<group>"; };
@@ -674,6 +676,7 @@
 				E864E71A2BEA26F400CF2FE3 /* UITestingBootcampView.swift */,
 				E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */,
 				E89B8F6A2C19629D0055841D /* FuturesBootcamp.swift */,
+				E80818582C19EA3E00F3D034 /* CloudKitBootcamps */,
 			);
 			path = BootCamps;
 			sourceTree = "<group>";
@@ -1112,6 +1115,7 @@
 				E839DE1E2B6F77DD00B71A7C /* Tab.swift in Sources */,
 				E83280A42A4B131B00563CBC /* BackgroundViewModifier.swift in Sources */,
 				E80A08012A938804006A75FD /* TogglableScrollView.swift in Sources */,
+				E808185A2C19EA7100F3D034 /* CloudKitUserBootcamp.swift in Sources */,
 				E82C520F2B30A03D004257AA /* TimeInterval.swift in Sources */,
 				E8912E512BC53CF2003B79F4 /* UnitTestingBootcampViewModel.swift in Sources */,
 				E8D07C472B8AF77000629F27 /* ViewBuilderBootcamp.swift in Sources */,
