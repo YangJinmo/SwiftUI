@@ -22,3 +22,8 @@ extension View {
         modifier(BackgroundViewModifier())
     }
 }
+
+#Preview {
+    EmptyView()
+        .backgroundViewModifier()
+}
