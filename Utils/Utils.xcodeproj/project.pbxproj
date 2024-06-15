@@ -111,6 +111,7 @@
 		E8A3CB582A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */; };
 		E8A4F3242B7129E300121654 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A4F3232B7129E300121654 /* Home.swift */; };
 		E8A739B62C630FC4003E3BF4 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A739B52C630FC4003E3BF4 /* PickerView.swift */; };
+		E8A739BB2C63245C003E3BF4 /* SelectedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A739BA2C63245C003E3BF4 /* SelectedButtonView.swift */; };
 		E8A8CED42B60F5A10007FC33 /* CustomPopupBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A8CED32B60F5A10007FC33 /* CustomPopupBootCamp.swift */; };
 		E8A990C72A836F8900EB2BC4 /* CapsuleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A990C62A836F8900EB2BC4 /* CapsuleToggleStyle.swift */; };
 		E8AA0C862A507FDC00FE6F61 /* LoopingVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */; };
@@ -303,6 +304,7 @@
 		E8A3CB572A5EC0AE0074A9BE /* HorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableItemView.swift; sourceTree = "<group>"; };
 		E8A4F3232B7129E300121654 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		E8A739B52C630FC4003E3BF4 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		E8A739BA2C63245C003E3BF4 /* SelectedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectedButtonView.swift; path = Utils/Views/SelectedButtonView.swift; sourceTree = SOURCE_ROOT; };
 		E8A8CED32B60F5A10007FC33 /* CustomPopupBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupBootCamp.swift; sourceTree = "<group>"; };
 		E8A990C62A836F8900EB2BC4 /* CapsuleToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleToggleStyle.swift; sourceTree = "<group>"; };
 		E8AA0C852A507FDC00FE6F61 /* LoopingVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingVideoPlayer.swift; sourceTree = "<group>"; };
@@ -663,6 +665,7 @@
 				E8A739B52C630FC4003E3BF4 /* PickerView.swift */,
 				E8F157A72B4027A100F41E56 /* DatePickerView.swift */,
 				E818CF5F2B5652820075783B /* IfView.swift */,
+				E8A739BA2C63245C003E3BF4 /* SelectedButtonView.swift */,
 				E818CF6D2B590C9B0075783B /* BindingMaxBootCamp.swift */,
 				E8A8CED32B60F5A10007FC33 /* CustomPopupBootCamp.swift */,
 				E800B5552B62226600FA861B /* ErrorAlertBootCamp.swift */,
@@ -1044,6 +1047,7 @@
 				E8E297282AA5C59700EB4F6A /* PrimeMinistersListView.swift in Sources */,
 				E84EEDEB2BA69ECC00976204 /* CustomNavBarView.swift in Sources */,
 				E8429DD22B7B3549003C2537 /* CustomShapeBootcamp.swift in Sources */,
+				E8A739BB2C63245C003E3BF4 /* SelectedButtonView.swift in Sources */,
 				E8E2972A2AA5C5FB00EB4F6A /* ListableResponseModel.swift in Sources */,
 				E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */,
 				E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */,
