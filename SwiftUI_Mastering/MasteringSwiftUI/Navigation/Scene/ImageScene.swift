@@ -29,6 +29,14 @@ struct ImageScene: View {
 
     @Binding var selectedIndex: Int
 
+    init(imageName: String, color: Color, selectedIndex: Binding<Int>) {
+        self.imageName = imageName
+        self.color = color
+        _selectedIndex = selectedIndex
+
+        print("init ImageScene - \(selectedIndex.wrappedValue), \(imageName), \(color)")
+    }
+
     var body: some View {
         VStack {
             Spacer()
