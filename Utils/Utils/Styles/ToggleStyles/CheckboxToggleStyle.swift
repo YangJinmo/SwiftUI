@@ -16,7 +16,7 @@ struct CheckboxToggleStyle: ToggleStyle {
             configuration.isOn.toggle()
         } label: {
             HStack {
-                Image(systemName: "checkmark.\(style.sfSymbolName)")
+                Image(systemName: "checkmark.\(style)")
                     .symbolVariant(.fill)
                     .imageScale(.large)
 
@@ -30,17 +30,8 @@ struct CheckboxToggleStyle: ToggleStyle {
         .disabled(!isEnabled)
     }
 
-    enum Style {
+    enum Style: String {
         case square, circle
-
-        var sfSymbolName: String {
-            switch self {
-            case .square:
-                return "square"
-            case .circle:
-                return "circle"
-            }
-        }
     }
 }
 
