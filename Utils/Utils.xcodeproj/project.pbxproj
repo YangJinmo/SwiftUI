@@ -147,6 +147,7 @@
 		E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */; };
 		E8D6D2482ADCE3DB001CFD9F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */; };
 		E8D6D24A2ADCE41D001CFD9F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */; };
+		E8D7D8672CD113FD00EFA82E /* ExpandableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7D8662CD113FC00EFA82E /* ExpandableText.swift */; };
 		E8DE0D252B4FCC5000B14957 /* PopupMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE0D242B4FCC5000B14957 /* PopupMiddleView.swift */; };
 		E8E1E6C62B0E1918000F09F8 /* CollectionViewWithDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */; };
 		E8E2971D2AA5C4BA00EB4F6A /* PhoneModels.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */; };
@@ -341,6 +342,7 @@
 		E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
 		E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		E8D7D8662CD113FC00EFA82E /* ExpandableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableText.swift; sourceTree = "<group>"; };
 		E8DE0D242B4FCC5000B14957 /* PopupMiddleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupMiddleView.swift; sourceTree = "<group>"; };
 		E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewWithDataSource.swift; sourceTree = "<group>"; };
 		E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PhoneModels.json; sourceTree = "<group>"; };
@@ -871,6 +873,7 @@
 			isa = PBXGroup;
 			children = (
 				E8F157AA2B4306C800F41E56 /* LongText.swift */,
+				E8D7D8662CD113FC00EFA82E /* ExpandableText.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1097,6 +1100,7 @@
 				E852B45D2B8739D5008078DD /* GenericsBootcamp.swift in Sources */,
 				E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */,
 				E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */,
+				E8D7D8672CD113FD00EFA82E /* ExpandableText.swift in Sources */,
 				E8BBF33C2BA04AA7006ECF3D /* TabBarItemsPreferenceKey.swift in Sources */,
 				E8191E562A81EAB10068D113 /* HeightPreferenceKey.swift in Sources */,
 				E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */,
