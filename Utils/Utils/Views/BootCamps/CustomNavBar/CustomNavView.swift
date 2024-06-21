@@ -21,7 +21,7 @@ struct CustomNavView<Content: View>: View {
             }
             .navigationBarHidden(true)
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(.stack)
     }
 }
 
