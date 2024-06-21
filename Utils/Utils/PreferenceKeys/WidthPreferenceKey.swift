@@ -23,7 +23,7 @@ extension View {
         background(
             GeometryReader { geometryProxy in
                 Color.clear
-                    .preference(key: WidthPreferenceKey.self, value: geometryProxy.size.width)
+                    .preference(key: WidthPreferenceKey.self, value: ceil(geometryProxy.size.width))
             }
         )
         .onPreferenceChange(WidthPreferenceKey.self, perform: onChange)
@@ -32,11 +32,11 @@ extension View {
     // .readWidth($totalWidth)
     func readWidth(_ binding: Binding<CGFloat>) -> some View {
         background(
-            GeometryReader { geometry -> Color in
-                let rect = geometry.frame(in: .local)
+            GeometryReader { geometryProxy -> Color in
+                let rect = geometryProxy.frame(in: .local)
 
                 DispatchQueue.main.async {
-                    binding.wrappedValue = rect.size.width
+                    binding.wrappedValue = ceil(rect.size.width)
                 }
 
                 return .clear

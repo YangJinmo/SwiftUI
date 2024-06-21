@@ -23,7 +23,7 @@ extension View {
         background(
             GeometryReader { geometryProxy in
                 Color.clear
-                    .preference(key: HeightPreferenceKey.self, value: geometryProxy.size.height)
+                    .preference(key: HeightPreferenceKey.self, value: ceil(geometryProxy.size.height))
             }
         )
         .onPreferenceChange(HeightPreferenceKey.self, perform: onChange)
@@ -32,11 +32,11 @@ extension View {
     // .readHeight($totalHeight)
     func readHeight(_ binding: Binding<CGFloat>) -> some View {
         background(
-            GeometryReader { geometry -> Color in
-                let rect = geometry.frame(in: .local)
+            GeometryReader { geometryProxy -> Color in
+                let rect = geometryProxy.frame(in: .local)
 
                 DispatchQueue.main.async {
-                    binding.wrappedValue = rect.size.height
+                    binding.wrappedValue = ceil(rect.size.height)
                 }
 
                 return .clear
