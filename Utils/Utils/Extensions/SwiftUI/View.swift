@@ -8,6 +8,12 @@
 import SwiftUI
 
 extension View {
+    // https://developer.apple.com/design/human-interface-guidelines/buttons
+    // As a general rule, a button needs a hit region of at least 44x44 pt — in visionOS, 60x60 pt
+    func setHitRegion(size: CGFloat = 44) -> some View {
+        frame(width: size, height: size)
+    }
+
     func toAnyView() -> AnyView {
         AnyView(self)
     }
