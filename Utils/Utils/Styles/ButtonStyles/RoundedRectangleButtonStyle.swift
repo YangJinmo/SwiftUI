@@ -18,12 +18,13 @@ struct RoundedRectangleButtonStyle: ButtonStyle {
             .padding(.vertical, 8)
             .background(isOn ? .accentColor : Color.gray700)
             .cornerRadius(8)
+            .contentShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
             .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
     }
 }
 
 extension ButtonStyle where Self == RoundedRectangleButtonStyle {
-    static func roundedRectangle(isOn: Binding<Bool>) -> RoundedRectangleButtonStyle { .init(isOn: isOn) }
+    static func roundedRectangle(isOn: Binding<Bool> = .constant(true)) -> RoundedRectangleButtonStyle { .init(isOn: isOn) }
 }
 
 struct RoundedRectangleButtonStylePreview: View {

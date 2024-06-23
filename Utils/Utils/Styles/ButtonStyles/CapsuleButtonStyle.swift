@@ -23,7 +23,7 @@ struct CapsuleButtonStyle: ButtonStyle {
 }
 
 extension ButtonStyle where Self == CapsuleButtonStyle {
-    static func capsule(isOn: Binding<Bool>) -> CapsuleButtonStyle { .init(isOn: isOn) }
+    static func capsule(isOn: Binding<Bool> = .constant(true)) -> CapsuleButtonStyle { .init(isOn: isOn) }
 }
 
 struct CapsuleButtonStylePreview: View {
