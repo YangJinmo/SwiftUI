@@ -15,7 +15,7 @@ struct CircleButtonStyle: ButtonStyle {
             .padding(8)
             .background(backgroundColor)
             .clipShape(Circle())
-            .scaleEffect(configuration.isPressed ? 0.88 : 1.0)
+            .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
     }
 }
 
