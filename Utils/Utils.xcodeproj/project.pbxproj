@@ -118,6 +118,7 @@
 		E8AF00B32B8393C200E3E9A2 /* AnimateableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AF00B22B8393C200E3E9A2 /* AnimateableBootcamp.swift */; };
 		E8B170B72AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B170B62AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift */; };
 		E8B27E932BB0751100588E5F /* UIViewRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B27E922BB0751100588E5F /* UIViewRepresentableBootcamp.swift */; };
+		E8B364672D749CF3008B30A9 /* RoundedRectangleStrokeBorderButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B364662D749CF2008B30A9 /* RoundedRectangleStrokeBorderButtonStyle.swift */; };
 		E8B87B712AEFD69000384444 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B87B702AEFD69000384444 /* VideoPlayerView.swift */; };
 		E8B8BC352B768560003FE43F /* AnyTransitionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B8BC342B768560003FE43F /* AnyTransitionBootcamp.swift */; };
 		E8BBDC062A8F139400E95C6C /* SettingsToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBDC052A8F139400E95C6C /* SettingsToggleStyle.swift */; };
@@ -313,6 +314,7 @@
 		E8AF00B22B8393C200E3E9A2 /* AnimateableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateableBootcamp.swift; sourceTree = "<group>"; };
 		E8B170B62AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootCamp.swift; sourceTree = "<group>"; };
 		E8B27E922BB0751100588E5F /* UIViewRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresentableBootcamp.swift; sourceTree = "<group>"; };
+		E8B364662D749CF2008B30A9 /* RoundedRectangleStrokeBorderButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleStrokeBorderButtonStyle.swift; sourceTree = "<group>"; };
 		E8B87B702AEFD69000384444 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		E8B8BC342B768560003FE43F /* AnyTransitionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionBootcamp.swift; sourceTree = "<group>"; };
 		E8BBDC052A8F139400E95C6C /* SettingsToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsToggleStyle.swift; sourceTree = "<group>"; };
@@ -864,6 +866,7 @@
 				E8356E882AFCA61D00E834F5 /* ScaleEffectButtonStyle.swift */,
 				E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */,
 				E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */,
+				E8B364662D749CF2008B30A9 /* RoundedRectangleStrokeBorderButtonStyle.swift */,
 				E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */,
 			);
 			path = ButtonStyles;
@@ -1026,6 +1029,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E297342AA7272D00EB4F6A /* VerticalPageTabView.swift in Sources */,
+				E8B364672D749CF3008B30A9 /* RoundedRectangleStrokeBorderButtonStyle.swift in Sources */,
 				E840C59F2B6DD97F00E340EF /* ProfileView.swift in Sources */,
 				E8EEF1C32A39B29A0031933E /* CustomTextField.swift in Sources */,
 				E8F92E622B1367D800C1A5ED /* StarRating.swift in Sources */,
