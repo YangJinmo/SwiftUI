@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     @EnvironmentObject private var appData: AppData
+
     var body: some View {
         TabView(selection: $appData.activeTab) {
             HomeView()

@@ -29,8 +29,9 @@ struct UtilsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            UITestingBootcampView(currentUserIsSignedIn: currentUserIsSignedIn)
-                // Home()
+            // UITestingBootcampView(currentUserIsSignedIn: currentUserIsSignedIn)
+            // AnalogClock()
+            Home()
                 .onAppear {
                     "onAppear".log(trait: .app)
                 }
@@ -76,6 +77,7 @@ struct UtilsApp: App {
 
                             switch appData.activeTab {
                             case .home:
+                                // deeplink://tab=home?nav=old_posts
                                 if let navPath = HomeStack.convert(from: requestedNavPath) {
                                     appData.homeNavStack.append(navPath)
                                 }
