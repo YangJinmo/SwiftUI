@@ -53,6 +53,10 @@ struct UITestingBootcampView: View {
 }
 
 #Preview {
+    UITestingBootcampView(currentUserIsSignedIn: false)
+}
+
+#Preview {
     UITestingBootcampView(currentUserIsSignedIn: true)
 }
 
