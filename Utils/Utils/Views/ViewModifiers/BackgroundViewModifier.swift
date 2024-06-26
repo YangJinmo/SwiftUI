@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct BackgroundViewModifier: ViewModifier {
+    let color: Color
+
     func body(content: Content) -> some View {
         ZStack {
-            Color.gray800.ignoresSafeArea()
+            color.ignoresSafeArea()
 
             content
         }
@@ -18,8 +20,8 @@ struct BackgroundViewModifier: ViewModifier {
 }
 
 extension View {
-    func backgroundViewModifier() -> some View {
-        modifier(BackgroundViewModifier())
+    func backgroundViewModifier(color: Color = .black) -> some View {
+        modifier(BackgroundViewModifier(color: color))
     }
 }
 

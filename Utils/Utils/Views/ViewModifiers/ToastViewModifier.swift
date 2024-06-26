@@ -57,7 +57,7 @@ struct ToastView: View {
                 .foregroundColor(style.themeColor)
 
             Text(message)
-                .font(Font.caption)
+                .font(.caption)
 
             Spacer(minLength: 10)
 
