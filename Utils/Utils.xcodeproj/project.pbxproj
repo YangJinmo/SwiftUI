@@ -150,6 +150,7 @@
 		E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */; };
 		E8D6D2482ADCE3DB001CFD9F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */; };
 		E8D6D24A2ADCE41D001CFD9F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */; };
+		E8D7D8532CD0D8D900EFA82E /* LoadingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7D8522CD0D8D800EFA82E /* LoadingViewModifier.swift */; };
 		E8D7D8672CD113FD00EFA82E /* ExpandableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7D8662CD113FC00EFA82E /* ExpandableText.swift */; };
 		E8DE0D252B4FCC5000B14957 /* PopupMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE0D242B4FCC5000B14957 /* PopupMiddleView.swift */; };
 		E8E1E6C62B0E1918000F09F8 /* CollectionViewWithDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */; };
@@ -348,6 +349,7 @@
 		E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
 		E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		E8D7D8522CD0D8D800EFA82E /* LoadingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModifier.swift; sourceTree = "<group>"; };
 		E8D7D8662CD113FC00EFA82E /* ExpandableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableText.swift; sourceTree = "<group>"; };
 		E8DE0D242B4FCC5000B14957 /* PopupMiddleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupMiddleView.swift; sourceTree = "<group>"; };
 		E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewWithDataSource.swift; sourceTree = "<group>"; };
@@ -807,6 +809,7 @@
 			children = (
 				E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */,
 				E86A718B2CA2828600477BF0 /* CircularProgressViewModifier.swift */,
+				E8D7D8522CD0D8D800EFA82E /* LoadingViewModifier.swift */,
 				E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */,
 				E8D163662A4D46A400A570A9 /* NavigationBarModifier.swift */,
 				E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */,
@@ -1092,6 +1095,7 @@
 				E8356E852AFC767800E834F5 /* CollectionViewWrapper.swift in Sources */,
 				E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */,
 				E8F9E4982ADE5F9D00CB465C /* CircleButtonStyle.swift in Sources */,
+				E8D7D8532CD0D8D900EFA82E /* LoadingViewModifier.swift in Sources */,
 				E8128E082AB968EE00B6B8F6 /* CollectionViewService.swift in Sources */,
 				E8A4F3242B7129E300121654 /* Home.swift in Sources */,
 				E8ECF7822B73D00D008825EC /* ViewModifierBootcamp.swift in Sources */,
