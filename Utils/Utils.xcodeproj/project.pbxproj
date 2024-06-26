@@ -83,6 +83,7 @@
 		E868E7B92A6F4C580095F030 /* ScrollToID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7B82A6F4C580095F030 /* ScrollToID.swift */; };
 		E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7BB2A6F96E60095F030 /* Refreshable.swift */; };
 		E86A17152AEEA6CC001119E8 /* AnyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86A17142AEEA6CC001119E8 /* AnyCollectionViewController.swift */; };
+		E86A718E2CA2886900477BF0 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86A718D2CA2886800477BF0 /* CircularProgressView.swift */; };
 		E86B558A2B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B55892B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift */; };
 		E86CD2572B51462100E325EF /* FloatBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86CD2562B51462100E325EF /* FloatBottomView.swift */; };
 		E86DA7A82AB986B9006A1743 /* ViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86DA7A72AB986B9006A1743 /* ViewControllerRepresentable.swift */; };
@@ -279,6 +280,7 @@
 		E868E7B82A6F4C580095F030 /* ScrollToID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToID.swift; sourceTree = "<group>"; };
 		E868E7BB2A6F96E60095F030 /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 		E86A17142AEEA6CC001119E8 /* AnyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCollectionViewController.swift; sourceTree = "<group>"; };
+		E86A718D2CA2886800477BF0 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		E86B55892B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		E86CD2562B51462100E325EF /* FloatBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatBottomView.swift; sourceTree = "<group>"; };
 		E86DA7A72AB986B9006A1743 /* ViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentable.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 		E83DC5DE2A2DBB77006E2E4F /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				E86A718D2CA2886800477BF0 /* CircularProgressView.swift */,
 				E8EFFEB42C6B6530002457B4 /* LazyView.swift */,
 				E8E3678E2A46047900379934 /* PresentView.swift */,
 				E83DC5E02A2DBB9D006E2E4F /* CustomNavigationView.swift */,
@@ -1102,6 +1105,7 @@
 				E83DC5E72A2DBC16006E2E4F /* UIEdgeInsets.swift in Sources */,
 				E818CF6C2B590B9C0075783B /* Binding.swift in Sources */,
 				E852B45D2B8739D5008078DD /* GenericsBootcamp.swift in Sources */,
+				E86A718E2CA2886900477BF0 /* CircularProgressView.swift in Sources */,
 				E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */,
 				E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */,
 				E8D7D8672CD113FD00EFA82E /* ExpandableText.swift in Sources */,
