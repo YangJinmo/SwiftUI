@@ -83,6 +83,7 @@
 		E868E7B92A6F4C580095F030 /* ScrollToID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7B82A6F4C580095F030 /* ScrollToID.swift */; };
 		E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868E7BB2A6F96E60095F030 /* Refreshable.swift */; };
 		E86A17152AEEA6CC001119E8 /* AnyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86A17142AEEA6CC001119E8 /* AnyCollectionViewController.swift */; };
+		E86A718C2CA2828F00477BF0 /* CircularProgressViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86A718B2CA2828600477BF0 /* CircularProgressViewModifier.swift */; };
 		E86A718E2CA2886900477BF0 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86A718D2CA2886800477BF0 /* CircularProgressView.swift */; };
 		E86B558A2B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B55892B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift */; };
 		E86CD2572B51462100E325EF /* FloatBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86CD2562B51462100E325EF /* FloatBottomView.swift */; };
@@ -280,6 +281,7 @@
 		E868E7B82A6F4C580095F030 /* ScrollToID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToID.swift; sourceTree = "<group>"; };
 		E868E7BB2A6F96E60095F030 /* Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 		E86A17142AEEA6CC001119E8 /* AnyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCollectionViewController.swift; sourceTree = "<group>"; };
+		E86A718B2CA2828600477BF0 /* CircularProgressViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressViewModifier.swift; sourceTree = "<group>"; };
 		E86A718D2CA2886800477BF0 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		E86B55892B91E813002DD957 /* GeometryPreferenceKeyBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKeyBootcamp.swift; sourceTree = "<group>"; };
 		E86CD2562B51462100E325EF /* FloatBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatBottomView.swift; sourceTree = "<group>"; };
@@ -804,6 +806,7 @@
 			isa = PBXGroup;
 			children = (
 				E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */,
+				E86A718B2CA2828600477BF0 /* CircularProgressViewModifier.swift */,
 				E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */,
 				E8D163662A4D46A400A570A9 /* NavigationBarModifier.swift */,
 				E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */,
@@ -1157,6 +1160,7 @@
 				E83DC5D32A2DB3CD006E2E4F /* CheckboxToggleStyle.swift in Sources */,
 				E870C8FF2AD2BF6D003F7DB7 /* CacheAsyncImage.swift in Sources */,
 				E86DA7A82AB986B9006A1743 /* ViewControllerRepresentable.swift in Sources */,
+				E86A718C2CA2828F00477BF0 /* CircularProgressViewModifier.swift in Sources */,
 				E8128E0C2AB9719F00B6B8F6 /* TableViewBootCamp.swift in Sources */,
 				E85AFE092A6293FC00E71575 /* JMTextField.swift in Sources */,
 				E8F157A82B4027A100F41E56 /* DatePickerView.swift in Sources */,
