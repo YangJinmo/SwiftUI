@@ -43,23 +43,23 @@ struct ExpandableText: View {
 
                                 /// Binary search until mid == low && mid == high
                                 var low = 0
-                                var heigh = shrinkText.count
-                                var mid = heigh /// start from top so that if text contain we does not need to loop
+                                var height = shrinkText.count
+                                var mid = height /// start from top so that if text contain we does not need to loop
                                 ///
-                                while (heigh - low) > 1 {
+                                while (height - low) > 1 {
                                     let attributedText = NSAttributedString(string: shrinkText + dot + more, attributes: attributes)
                                     let boundingRect = attributedText.boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil)
                                     if boundingRect.size.height > visibleTextGeometry.size.height {
                                         truncated = true
-                                        heigh = mid
-                                        mid = (heigh + low) / 2
+                                        height = mid
+                                        mid = (height + low) / 2
 
                                     } else {
                                         if mid == text.count {
                                             break
                                         } else {
                                             low = mid
-                                            mid = (low + heigh) / 2
+                                            mid = (low + height) / 2
                                         }
                                     }
                                     shrinkText = String(text.prefix(mid))
