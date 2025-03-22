@@ -39,6 +39,7 @@
 		E8279DE92B0B6193006B078B /* ToastViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8279DE82B0B6193006B078B /* ToastViewModifier.swift */; };
 		E82907512B7F7D48009412FC /* CustomCurvesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82907502B7F7D48009412FC /* CustomCurvesBootcamp.swift */; };
 		E82C520F2B30A03D004257AA /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C520E2B30A03D004257AA /* TimeInterval.swift */; };
+		E82F948E2D943D6700F40E2C /* CapsuleStrokeBorderButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F948D2D943D6600F40E2C /* CapsuleStrokeBorderButtonStyle.swift */; };
 		E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809D2A4998A400563CBC /* PhotoPicker.swift */; };
 		E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809F2A4998CA00563CBC /* PhotoPickerService.swift */; };
 		E83280A42A4B131B00563CBC /* BackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */; };
@@ -235,6 +236,7 @@
 		E8279DE82B0B6193006B078B /* ToastViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewModifier.swift; sourceTree = "<group>"; };
 		E82907502B7F7D48009412FC /* CustomCurvesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCurvesBootcamp.swift; sourceTree = "<group>"; };
 		E82C520E2B30A03D004257AA /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
+		E82F948D2D943D6600F40E2C /* CapsuleStrokeBorderButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleStrokeBorderButtonStyle.swift; sourceTree = "<group>"; };
 		E832809D2A4998A400563CBC /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		E832809F2A4998CA00563CBC /* PhotoPickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerService.swift; sourceTree = "<group>"; };
 		E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifier.swift; sourceTree = "<group>"; };
@@ -874,6 +876,7 @@
 			children = (
 				E8356E882AFCA61D00E834F5 /* ScaleEffectButtonStyle.swift */,
 				E8EF44DA2A89E81A00F798CC /* CapsuleButtonStyle.swift */,
+				E82F948D2D943D6600F40E2C /* CapsuleStrokeBorderButtonStyle.swift */,
 				E8EF44DC2A8C56C600F798CC /* RoundedRectangleButtonStyle.swift */,
 				E8B364662D749CF2008B30A9 /* RoundedRectangleStrokeBorderButtonStyle.swift */,
 				E8F9E4972ADE5F9D00CB465C /* CircleButtonStyle.swift */,
@@ -1114,6 +1117,7 @@
 				E852B45D2B8739D5008078DD /* GenericsBootcamp.swift in Sources */,
 				E86A718E2CA2886900477BF0 /* CircularProgressView.swift in Sources */,
 				E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */,
+				E82F948E2D943D6700F40E2C /* CapsuleStrokeBorderButtonStyle.swift in Sources */,
 				E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */,
 				E8D7D8672CD113FD00EFA82E /* ExpandableText.swift in Sources */,
 				E8BBF33C2BA04AA7006ECF3D /* TabBarItemsPreferenceKey.swift in Sources */,
