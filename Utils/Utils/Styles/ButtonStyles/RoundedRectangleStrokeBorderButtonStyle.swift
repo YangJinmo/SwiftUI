@@ -28,6 +28,7 @@ struct RoundedRectangleStrokeBorderButtonStylePreview: View {
     var body: some View {
         ZStack {
             Color.secondary.ignoresSafeArea()
+
             HStack {
                 Spacer()
 

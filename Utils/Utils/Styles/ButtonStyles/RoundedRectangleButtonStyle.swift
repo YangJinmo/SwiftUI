@@ -38,12 +38,16 @@ struct RoundedRectangleButtonStylePreview: View {
     @State private var category = Category(id: 0, name: "RoundedRectangleButtonStyle")
 
     var body: some View {
-        Button {
-            category.isOn.toggle()
-        } label: {
-            Text(category.name)
+        ZStack {
+            Color.secondary.ignoresSafeArea()
+
+            Button {
+                category.isOn.toggle()
+            } label: {
+                Text(category.name)
+            }
+            .buttonStyle(.roundedRectangle(isOn: $category.isOn))
         }
-        .buttonStyle(.roundedRectangle(isOn: $category.isOn))
     }
 }
 
