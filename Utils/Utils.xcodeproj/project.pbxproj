@@ -154,7 +154,7 @@
 		E8D6D24A2ADCE41D001CFD9F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */; };
 		E8D7D8532CD0D8D900EFA82E /* LoadingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7D8522CD0D8D800EFA82E /* LoadingViewModifier.swift */; };
 		E8D7D8672CD113FD00EFA82E /* ExpandableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7D8662CD113FC00EFA82E /* ExpandableText.swift */; };
-		E8DE0D252B4FCC5000B14957 /* PopupMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE0D242B4FCC5000B14957 /* PopupMiddleView.swift */; };
+		E8DE0D252B4FCC5000B14957 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE0D242B4FCC5000B14957 /* PopupView.swift */; };
 		E8E1E6C62B0E1918000F09F8 /* CollectionViewWithDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */; };
 		E8E2971D2AA5C4BA00EB4F6A /* PhoneModels.json in Resources */ = {isa = PBXBuildFile; fileRef = E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */; };
 		E8E2971F2AA5C4DE00EB4F6A /* PrimeMinisters.json in Sources */ = {isa = PBXBuildFile; fileRef = E8E2971E2AA5C4DE00EB4F6A /* PrimeMinisters.json */; };
@@ -355,7 +355,7 @@
 		E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		E8D7D8522CD0D8D800EFA82E /* LoadingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModifier.swift; sourceTree = "<group>"; };
 		E8D7D8662CD113FC00EFA82E /* ExpandableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableText.swift; sourceTree = "<group>"; };
-		E8DE0D242B4FCC5000B14957 /* PopupMiddleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupMiddleView.swift; sourceTree = "<group>"; };
+		E8DE0D242B4FCC5000B14957 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewWithDataSource.swift; sourceTree = "<group>"; };
 		E8E2971C2AA5C4BA00EB4F6A /* PhoneModels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PhoneModels.json; sourceTree = "<group>"; };
 		E8E2971E2AA5C4DE00EB4F6A /* PrimeMinisters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PrimeMinisters.json; sourceTree = "<group>"; };
@@ -843,7 +843,7 @@
 		E8DE0D232B4FCC1A00B14957 /* Popups */ = {
 			isa = PBXGroup;
 			children = (
-				E8DE0D242B4FCC5000B14957 /* PopupMiddleView.swift */,
+				E8DE0D242B4FCC5000B14957 /* PopupView.swift */,
 			);
 			path = Popups;
 			sourceTree = "<group>";
@@ -1132,7 +1132,7 @@
 				E8D6D2482ADCE3DB001CFD9F /* ImageView.swift in Sources */,
 				E8BF16B72A3B18800096E57E /* TextFieldClearButtonViewModifier.swift in Sources */,
 				E86A17152AEEA6CC001119E8 /* AnyCollectionViewController.swift in Sources */,
-				E8DE0D252B4FCC5000B14957 /* PopupMiddleView.swift in Sources */,
+				E8DE0D252B4FCC5000B14957 /* PopupView.swift in Sources */,
 				E8128E042AB84BF500B6B8F6 /* CollectionViewRepresentable.swift in Sources */,
 				E89E38372BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift in Sources */,
 				E800B5562B62226600FA861B /* ErrorAlertBootCamp.swift in Sources */,
