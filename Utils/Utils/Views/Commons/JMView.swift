@@ -12,6 +12,14 @@ struct JMView<Title: View, Right: View, Content: View>: View {
         case none
         case presentation
         case navigation
+
+        var leftIconImage: Image {
+            switch self {
+            case .none: return Image("")
+            case .presentation: return .xmark
+            case .navigation: return .chevron_backward
+            }
+        }
     }
 
     let viewType: ViewType
@@ -64,19 +72,9 @@ struct JMView<Title: View, Right: View, Content: View>: View {
                         endEditing()
                         isPresented = false
                     } label: {
-                        ZStack {
-                            switch viewType {
-                            case .none:
-                                Image("")
-
-                            case .presentation:
-                                Image.xmark
-
-                            case .navigation:
-                                Image.chevron_backward
-                            }
-                        }
-                        .frame(width: size, height: size)
+                        viewType.leftIconImage
+                            .renderingMode(.template)
+                            .frame(width: size, height: size)
                     }
 
                     Spacer()
@@ -91,7 +89,7 @@ struct JMView<Title: View, Right: View, Content: View>: View {
             if isDivider {
                 Divider()
                     .frame(height: 1)
-                    .overlay(Color.gray700)
+                    .background(Color.gray.opacity(0.5))
             }
 
             ZStack {
@@ -101,8 +99,7 @@ struct JMView<Title: View, Right: View, Content: View>: View {
             }
             .navigationBarHidden(true)
         }
-        .foregroundColor(.gray100)
-        .background(Color.gray800)
+        .foregroundColor(Color(uiColor: .label))
     }
 }
 
@@ -114,7 +111,6 @@ struct JMView_Previews_View: View {
     @State private var isActiving = false
     @State private var isShowingSheet = false
     @State private var isPresenting = false
-    @State private var isPresentingPopover = false
 
     var body: some View {
         NavigationView {
@@ -164,15 +160,6 @@ struct JMView_Previews_View: View {
                             .background(Color.gray)
                             .cornerRadius(16)
                     }
-
-                    Button {
-                        isPresentingPopover = true
-                    } label: {
-                        Text("Popover")
-                            .padding(16)
-                            .background(Color.gray)
-                            .cornerRadius(16)
-                    }
                 }
                 .sheet(isPresented: $isShowingSheet) {
                     isShowingSheet = false
@@ -216,27 +203,80 @@ struct JMView_Previews_View: View {
                         Text("This is fullScreenCover")
                     }
                 }
-                .popover(isPresented: $isPresentingPopover) {
-                    JMView(.presentation, $isPresentingPopover) {
-                        Text("Popover")
-                            .onAppear {
-                                print("Popover - onAppear")
-                            }
-                            .onDisappear {
-                                print("Popover - onDisappear")
-                            }
-                    } right: {
-                        Button {
-                            print("checkmark button touched")
-                        } label: {
-                            Image.checkmark
-                        }
-                    } content: {
-                        Text("This is popover")
-                    }
-                }
             }
         }
         .navigationBarHidden(true)
+        .navigationViewStyle(.stack)
+    }
+}
+
+#Preview {
+    PresentationView()
+}
+
+struct PresentationView: View {
+    @State private var showInfo = false
+    @State private var showSettings = false
+    @State private var presentInfo = false
+    @State private var selectedFlavor: Flavor = .chocolate
+
+    var body: some View {
+        VStack {
+            Button("View Info") {
+                showInfo = true
+            }
+
+            Button("View Settings") {
+                showSettings = true
+            }
+
+            Button("Present Info") {
+                presentInfo = true
+            }
+        }
+        .popover(isPresented: $showInfo) {
+            if #available(iOS 16.4, *) {
+                InfoView()
+                    .presentationCompactAdaptation(
+                        horizontal: .popover,
+                        vertical: .sheet)
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+        .sheet(isPresented: $showSettings) {
+            if #available(iOS 16.4, *) {
+                InfoView()
+                    .presentationDetents([.medium, .large])
+                    .presentationCompactAdaptation(.none)
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+        .sheet(isPresented: $presentInfo) {
+            if #available(iOS 18.0, *) {
+                VStack {
+                    Picker("Flower Species", selection: $selectedFlavor) {
+                        ForEach(Flavor.allCases) {
+                            Text($0.rawValue.uppercased()).tag($0)
+                        }
+                    }
+
+                    Text(selectedFlavor.rawValue)
+                        .font(.largeTitle)
+
+                    Text(selectedFlavor.rawValue)
+                }
+                .frame(maxHeight: .infinity, alignment: .top)
+                .padding()
+                .presentationSizing(
+                    .page
+                        .fitted(horizontal: false, vertical: true)
+                        .sticky(horizontal: false, vertical: true)
+                )
+            } else {
+                // Fallback on earlier versions
+            }
+        }
     }
 }
