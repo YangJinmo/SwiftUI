@@ -26,6 +26,7 @@ struct JMTextField: View {
         .padding(16)
         .background(Color.gray700)
         .cornerRadius(8)
+        .tint(.accentColor)
         .overlay(
             RoundedRectangle(cornerRadius: 8)
                 .strokeBorder(
