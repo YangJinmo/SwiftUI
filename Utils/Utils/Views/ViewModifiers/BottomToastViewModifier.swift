@@ -1,0 +1,146 @@
+//
+//  BottomToastViewModifier.swift
+//  Utils
+//
+//  Created by Jmy on 12/1/24.
+//
+
+import SwiftUI
+
+struct BottomToastView: View {
+    var style: ToastStyle
+    var message: String
+    var width = CGFloat.infinity
+    var onCancelTapped: () -> Void
+
+    var body: some View {
+        HStack(alignment: .center, spacing: 12) {
+            Image(systemName: style.iconFileName)
+                .foregroundColor(style.themeColor)
+
+            Text(message)
+                .font(.caption)
+        }
+        .padding()
+        .frame(minWidth: 0, maxWidth: width)
+        .cornerRadius(8)
+        .overlay(
+            Rectangle()
+                .clipShape(Capsule())
+                .opacity(0.1)
+        )
+        .padding(.horizontal, 16)
+    }
+}
+
+import SwiftUI
+
+struct BottomToastViewModifier: ViewModifier {
+    @Binding var toast: Toast?
+    @State private var workItem: DispatchWorkItem?
+
+    func body(content: Content) -> some View {
+        content
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .overlay(
+                ZStack {
+                    mainToastView()
+                        .offset(y: -32)
+                }
+                .animation(.spring(), value: toast)
+            )
+            .onChange(of: toast) { _ in
+                showToast()
+            }
+    }
+
+    @ViewBuilder func mainToastView() -> some View {
+        if let toast = toast {
+            VStack {
+                Spacer()
+
+                BottomToastView(
+                    style: toast.style,
+                    message: toast.message,
+                    width: toast.width
+                ) {
+                    dismissToast()
+                }
+            }
+        }
+    }
+
+    private func showToast() {
+        guard let toast = toast else { return }
+
+        UIImpactFeedbackGenerator(style: .light)
+            .impactOccurred()
+
+        if toast.duration > 0 {
+            workItem?.cancel()
+
+            let task = DispatchWorkItem {
+                dismissToast()
+            }
+
+            workItem = task
+            DispatchQueue.main.asyncAfter(deadline: .now() + toast.duration, execute: task)
+        }
+    }
+
+    private func dismissToast() {
+        withAnimation {
+            toast = nil
+        }
+
+        workItem?.cancel()
+        workItem = nil
+    }
+}
+
+import SwiftUI
+
+extension View {
+    func bottomToastView(toast: Binding<Toast?>) -> some View {
+        modifier(BottomToastViewModifier(toast: toast))
+    }
+}
+
+import SwiftUI
+
+struct BottomToastViewPreview: View {
+    @State private var toast: Toast? = nil
+
+    var body: some View {
+        VStack(spacing: 32) {
+            Button {
+                toast = Toast(style: .success, message: "Saved.", width: 160)
+            } label: {
+                Text("Run (Success)")
+            }
+
+            Button {
+                toast = Toast(style: .info, message: "Btw, you are a good person.")
+            } label: {
+                Text("Run (Info)")
+            }
+
+            Button {
+                toast = Toast(style: .warning, message: "Beware of a dog!")
+            } label: {
+                Text("Run (Warning)")
+            }
+
+            Button {
+                toast = Toast(style: .error, message: "Fatal error, blue screen level.")
+            } label: {
+                Text("Run (Error)")
+            }
+        }
+        .bottomToastView(toast: $toast)
+    }
+}
+
+#Preview {
+    BottomToastViewPreview()
+}

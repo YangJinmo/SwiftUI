@@ -76,6 +76,7 @@
 		E84EEDF12BAA81F700976204 /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDF02BAA81F700976204 /* CustomNavLink.swift */; };
 		E84EEDF32BAD1F3200976204 /* CustomNavBarPreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84EEDF22BAD1F3200976204 /* CustomNavBarPreferenceKeys.swift */; };
 		E8510A672CF87674005CB45D /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8510A662CF87672005CB45D /* ProgressBarView.swift */; };
+		E8510A6F2CFC9441005CB45D /* BottomToastViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8510A6E2CFC943D005CB45D /* BottomToastViewModifier.swift */; };
 		E852B45D2B8739D5008078DD /* GenericsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */; };
 		E8599C472B2D9AC80085E054 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8599C462B2D9AC80085E054 /* HelloView.swift */; };
 		E85AFE072A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */; };
@@ -278,6 +279,7 @@
 		E84EEDF02BAA81F700976204 /* CustomNavLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
 		E84EEDF22BAD1F3200976204 /* CustomNavBarPreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferenceKeys.swift; sourceTree = "<group>"; };
 		E8510A662CF87672005CB45D /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		E8510A6E2CFC943D005CB45D /* BottomToastViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToastViewModifier.swift; sourceTree = "<group>"; };
 		E852B45C2B8739D5008078DD /* GenericsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericsBootcamp.swift; sourceTree = "<group>"; };
 		E8599C462B2D9AC80085E054 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
 		E85AFE062A5FFD3600E71575 /* DeletableHorizontalScrollableItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletableHorizontalScrollableItemView.swift; sourceTree = "<group>"; };
@@ -827,6 +829,7 @@
 				E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatioViewModifier.swift */,
 				E88037572B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift */,
 				E8279DE82B0B6193006B078B /* ToastViewModifier.swift */,
+				E8510A6E2CFC943D005CB45D /* BottomToastViewModifier.swift */,
 				E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */,
 			);
 			path = ViewModifiers;
@@ -1124,6 +1127,7 @@
 				E818CF6C2B590B9C0075783B /* Binding.swift in Sources */,
 				E852B45D2B8739D5008078DD /* GenericsBootcamp.swift in Sources */,
 				E86A718E2CA2886900477BF0 /* CircularProgressView.swift in Sources */,
+				E8510A6F2CFC9441005CB45D /* BottomToastViewModifier.swift in Sources */,
 				E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */,
 				E82F948E2D943D6700F40E2C /* CapsuleStrokeBorderButtonStyle.swift in Sources */,
 				E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */,
