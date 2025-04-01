@@ -155,6 +155,7 @@
 		E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */; };
 		E8D6D2482ADCE3DB001CFD9F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */; };
 		E8D6D24A2ADCE41D001CFD9F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */; };
+		E8D7D84D2CD0ADB200EFA82E /* JMNavigationBarViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7D84C2CD0ADB100EFA82E /* JMNavigationBarViewModifier.swift */; };
 		E8D7D8532CD0D8D900EFA82E /* LoadingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7D8522CD0D8D800EFA82E /* LoadingViewModifier.swift */; };
 		E8D7D8672CD113FD00EFA82E /* ExpandableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D7D8662CD113FC00EFA82E /* ExpandableText.swift */; };
 		E8DE0D252B4FCC5000B14957 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DE0D242B4FCC5000B14957 /* PopupView.swift */; };
@@ -359,6 +360,7 @@
 		E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
 		E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		E8D7D84C2CD0ADB100EFA82E /* JMNavigationBarViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMNavigationBarViewModifier.swift; sourceTree = "<group>"; };
 		E8D7D8522CD0D8D800EFA82E /* LoadingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModifier.swift; sourceTree = "<group>"; };
 		E8D7D8662CD113FC00EFA82E /* ExpandableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableText.swift; sourceTree = "<group>"; };
 		E8DE0D242B4FCC5000B14957 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
@@ -819,6 +821,7 @@
 			isa = PBXGroup;
 			children = (
 				E8BDCE7E2CC8C6B000A526D4 /* NavigationModifier.swift */,
+				E8D7D84C2CD0ADB100EFA82E /* JMNavigationBarViewModifier.swift */,
 				E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */,
 				E86A718B2CA2828600477BF0 /* CircularProgressViewModifier.swift */,
 				E8D7D8522CD0D8D800EFA82E /* LoadingViewModifier.swift */,
@@ -1136,6 +1139,7 @@
 				E82F948E2D943D6700F40E2C /* CapsuleStrokeBorderButtonStyle.swift in Sources */,
 				E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */,
 				E8D7D8672CD113FD00EFA82E /* ExpandableText.swift in Sources */,
+				E8D7D84D2CD0ADB200EFA82E /* JMNavigationBarViewModifier.swift in Sources */,
 				E8BBF33C2BA04AA7006ECF3D /* TabBarItemsPreferenceKey.swift in Sources */,
 				E8191E562A81EAB10068D113 /* HeightPreferenceKey.swift in Sources */,
 				E868E7BC2A6F96E60095F030 /* Refreshable.swift in Sources */,
