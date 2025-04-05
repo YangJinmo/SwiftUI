@@ -153,6 +153,7 @@
 		E8D2FDB72A9C26210023DA63 /* Int64.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDB62A9C26210023DA63 /* Int64.swift */; };
 		E8D2FDBB2A9E32610023DA63 /* VScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDBA2A9E32610023DA63 /* VScrollView.swift */; };
 		E8D2FDBD2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FDBC2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift */; };
+		E8D47C6C2D01A3AF00C676B4 /* LazyVGridBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D47C6B2D01A3AB00C676B4 /* LazyVGridBootCamp.swift */; };
 		E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */; };
 		E8D6D2482ADCE3DB001CFD9F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */; };
 		E8D6D24A2ADCE41D001CFD9F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */; };
@@ -359,6 +360,7 @@
 		E8D2FDB62A9C26210023DA63 /* Int64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int64.swift; sourceTree = "<group>"; };
 		E8D2FDBA2A9E32610023DA63 /* VScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VScrollView.swift; sourceTree = "<group>"; };
 		E8D2FDBC2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleScrollEnabledViewModifier.swift; sourceTree = "<group>"; };
+		E8D47C6B2D01A3AB00C676B4 /* LazyVGridBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridBootCamp.swift; sourceTree = "<group>"; };
 		E8D4F4A92A9B8A2900D2B0DE /* PagingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingScrollView.swift; sourceTree = "<group>"; };
 		E8D6D2472ADCE3DB001CFD9F /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		E8D6D2492ADCE41D001CFD9F /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
@@ -682,6 +684,7 @@
 				E8E297352AAACAE200EB4F6A /* AsyncAwait.swift */,
 				E8128E012AB81BA300B6B8F6 /* ListBootCamp.swift */,
 				E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */,
+				E8D47C6B2D01A3AB00C676B4 /* LazyVGridBootCamp.swift */,
 				E8128E0B2AB9719F00B6B8F6 /* TableViewBootCamp.swift */,
 				E86DA7B12ABE92BA006A1743 /* CollectionViewBootCamp.swift */,
 				E8703E142AC2B7F900FE1FF7 /* CollectionViewController.swift */,
@@ -1094,6 +1097,7 @@
 				E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */,
 				E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */,
 				E8356E892AFCA61D00E834F5 /* ScaleEffectButtonStyle.swift in Sources */,
+				E8D47C6C2D01A3AF00C676B4 /* LazyVGridBootCamp.swift in Sources */,
 				E8BBF3332B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */,
 				E8B170B72AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift in Sources */,
 				E8FE0D582B11EF2D003FF468 /* UIView.swift in Sources */,
