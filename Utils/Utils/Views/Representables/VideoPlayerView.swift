@@ -148,3 +148,256 @@ class VideoPlayerViewWrapper: UIView {
 #Preview {
     VideoPlayerView()
 }
+
+import AVKit
+import SwiftUI
+
+struct CustomVideoPlayerView: View {
+    @State private var player = AVPlayer()
+    @State private var subtitleOptions: [AVMediaSelectionOption] = []
+
+    var body: some View {
+        VStack {
+            VideoPlayer(player: player)
+                .onAppear {
+                    setupPlayer()
+                }
+
+            // 자막 선택 버튼
+            Menu("자막 변경") {
+                ForEach(subtitleOptions, id: \.self) { option in
+                    Button(action: {
+                        selectSubtitle(option: option)
+                    }) {
+                        Text(option.displayName)
+                    }
+                }
+                Button("자막 없음", action: {
+                    selectSubtitle(option: nil)
+                })
+            }
+        }
+    }
+
+    private func setupPlayer() {
+        // 비디오 URL 설정
+        guard let url = URL(string: "https://d3suxjer5uqf01.cloudfront.net/video/episode/interview/1/1.m3u8") else { return }
+        let playerItem = AVPlayerItem(url: url)
+
+        // 자막 트랙 가져오기
+        if let group = playerItem.asset.mediaSelectionGroup(forMediaCharacteristic: .legible) {
+            subtitleOptions = group.options
+        }
+
+        // 플레이어 설정
+        player.replaceCurrentItem(with: playerItem)
+        player.play()
+    }
+
+    private func selectSubtitle(option: AVMediaSelectionOption?) {
+        guard let playerItem = player.currentItem,
+              let group = playerItem.asset.mediaSelectionGroup(forMediaCharacteristic: .legible) else {
+            return
+        }
+
+        // 선택한 자막을 플레이어에 적용
+        playerItem.select(option, in: group)
+    }
+}
+
+// #Preview {
+//    CustomVideoPlayerView()
+// }
+
+struct DropDownMenu: View {
+    var friuts = ["apple", "banana", "orange", "kiwi"]
+    @State private var selectedFruit: String = "banana"
+
+    var body: some View {
+        VStack {
+            Menu(content: {
+                Picker("fruits", selection: $selectedFruit) {
+                    ForEach(friuts, id: \.self) { fruit in
+                        Text(fruit)
+                    }
+                }
+            }, label: {
+                Text("\(selectedFruit) ") + Text(Image(systemName: "chevron.up"))
+            })
+            .padding(.all, 16)
+            .foregroundStyle(Color.white)
+            .background(RoundedRectangle(cornerRadius: 16).fill(Color.black))
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        .background(Color(UIColor.lightGray).opacity(0.4))
+    }
+}
+
+#Preview {
+    DropDownMenu()
+}
+
+struct DropDownMenu2: View {
+    @State private var sort: Int = 0
+
+    var body: some View {
+        NavigationView {
+            Text("Hello World!")
+                .toolbar {
+                    ToolbarItem(placement: .primaryAction) {
+                        Menu {
+                            Picker(
+                                selection: $sort,
+                                label: Text("Sortingoptions")
+                            ) {
+                                Text("Sort1").tag(0)
+                                Text("Sort2").tag(1)
+                                Text("Sort3").tag(2)
+                            }
+                        }
+                    label: {
+                            Text("Sort")
+                        }
+                    }
+                }
+        }
+    }
+}
+
+#Preview {
+    DropDownMenu2()
+}
+
+@available(iOS 17.0, *)
+struct DropDownMenu3: View {
+    let options: [String]
+
+    var menuWdith: CGFloat = 150
+    var buttonHeight: CGFloat = 50
+    var maxItemDisplayed: Int = 3
+
+    @Binding var selectedOptionIndex: Int
+    @Binding var showDropdown: Bool
+
+    @State private var scrollPosition: Int?
+
+    var body: some View {
+        VStack {
+            VStack(spacing: 0) {
+                if showDropdown {
+                    let scrollViewHeight: CGFloat = options.count > maxItemDisplayed ? (buttonHeight * CGFloat(maxItemDisplayed)) : (buttonHeight * CGFloat(options.count))
+                    ScrollView {
+                        LazyVStack(spacing: 0) {
+                            ForEach(0 ..< options.count, id: \.self) { index in
+                                Button(action: {
+                                    withAnimation {
+                                        selectedOptionIndex = index
+                                        showDropdown.toggle()
+                                    }
+
+                                }, label: {
+                                    HStack {
+                                        Text(options[index])
+                                        Spacer()
+                                        if index == selectedOptionIndex {
+                                            Image(systemName: "checkmark.circle.fill")
+                                        }
+                                    }
+
+                                })
+                                .padding(.horizontal, 20)
+                                .frame(width: menuWdith, height: buttonHeight, alignment: .leading)
+                            }
+                        }
+                        .scrollTargetLayout()
+                    }
+                    .scrollPosition(id: $scrollPosition)
+                    .scrollDisabled(options.count <= 3)
+                    .frame(height: scrollViewHeight)
+                    .onAppear {
+                        scrollPosition = selectedOptionIndex
+                    }
+                }
+                // selected item
+                Button(action: {
+                    withAnimation {
+                        showDropdown.toggle()
+                    }
+                }, label: {
+                    HStack(spacing: nil) {
+                        Text(options[selectedOptionIndex])
+                        Spacer()
+                        Image(systemName: "chevron.up")
+                            .rotationEffect(.degrees(showDropdown ? -180 : 0))
+                    }
+                })
+                .padding(.horizontal, 20)
+                .frame(width: menuWdith, height: buttonHeight, alignment: .leading)
+            }
+            .foregroundStyle(Color.white)
+            .background(RoundedRectangle(cornerRadius: 16).fill(Color.black))
+        }
+        .frame(width: menuWdith, height: buttonHeight, alignment: .bottom)
+        .zIndex(100)
+    }
+}
+
+@available(iOS 17.0, *)
+struct DropDownMenuDemo: View {
+    let fruits = ["apple", "banana", "orange", "kiwi"]
+    @State private var selectedOptionIndex = 0
+    @State private var showDropdown = false
+
+    var body: some View {
+        VStack {
+            DropDownMenu3(options: fruits, selectedOptionIndex: $selectedOptionIndex, showDropdown: $showDropdown)
+            Spacer()
+                .frame(height: 30)
+            Text("You have selected \(fruits[selectedOptionIndex])")
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        .background(Color.yellow)
+        .onTapGesture {
+            withAnimation {
+                showDropdown = false
+            }
+        }
+    }
+}
+
+#Preview {
+    if #available(iOS 17.0, *) {
+        DropDownMenuDemo()
+    } else {
+        // Fallback on earlier versions
+    }
+}
+
+struct SliderView: View {
+    @State private var speed = 50.0
+
+    var minValue: Double = 1
+    var maxValue: Double = 100
+
+    var body: some View {
+        HStack {
+            Text("\(minValue, specifier: "%.f")")
+            Slider(value: $speed, in: minValue ... maxValue, step: 1)
+                .alignmentGuide(VerticalAlignment.center) { $0[VerticalAlignment.center] }
+                .padding(.top)
+                .overlay(GeometryReader { gp in
+                    Text("\(speed, specifier: "%.f")").foregroundColor(.blue)
+                        .alignmentGuide(HorizontalAlignment.leading) {
+                            $0[HorizontalAlignment.leading] - (gp.size.width - $0.width) * speed / (maxValue - minValue)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }, alignment: .top)
+            Text("\(maxValue, specifier: "%.f")")
+        }
+        .padding()
+    }
+}
+
+#Preview {
+    SliderView()
+}
