@@ -111,6 +111,7 @@
 		E899701D2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */; };
 		E899701F2BBB88E1008A0D9B /* ProtocolsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */; };
 		E89B8F6B2C19629D0055841D /* FuturesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B8F6A2C19629D0055841D /* FuturesBootcamp.swift */; };
+		E89D6EC12D037245007FFEEC /* TopToastViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D6EC02D037245007FFEEC /* TopToastViewModifier.swift */; };
 		E89E38372BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */; };
 		E8A1BD852BFD911800FA2371 /* AdvancedCombineBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */; };
 		E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */; };
@@ -319,6 +320,7 @@
 		E899701C2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentableBootcamp.swift; sourceTree = "<group>"; };
 		E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsBootcamp.swift; sourceTree = "<group>"; };
 		E89B8F6A2C19629D0055841D /* FuturesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturesBootcamp.swift; sourceTree = "<group>"; };
+		E89D6EC02D037245007FFEEC /* TopToastViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopToastViewModifier.swift; sourceTree = "<group>"; };
 		E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionBootcamp.swift; sourceTree = "<group>"; };
 		E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCombineBootcamp.swift; sourceTree = "<group>"; };
 		E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridBootCamp.swift; sourceTree = "<group>"; };
@@ -844,6 +846,7 @@
 				E870C8FC2AD2BED8003F7DB7 /* FitToAspectRatioViewModifier.swift */,
 				E88037572B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift */,
 				E8279DE82B0B6193006B078B /* ToastViewModifier.swift */,
+				E89D6EC02D037245007FFEEC /* TopToastViewModifier.swift */,
 				E8510A6E2CFC943D005CB45D /* BottomToastViewModifier.swift */,
 				E8E1E6C52B0E1918000F09F8 /* CollectionViewWithDataSource.swift */,
 			);
@@ -1214,6 +1217,7 @@
 				E890503B2A96040D00ECF159 /* LottieView.swift in Sources */,
 				E84948E12B75B9C200912986 /* ButtonStyleBootcamp.swift in Sources */,
 				E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */,
+				E89D6EC12D037245007FFEEC /* TopToastViewModifier.swift in Sources */,
 				E8CEBB802BC3DA5C007C1642 /* UnitTestingBootcampView.swift in Sources */,
 				E8BBF3362B9707AD006ECF3D /* AppTabBarView.swift in Sources */,
 				E899701D2BB96AA7008A0D9B /* UIViewControllerRepresentableBootcamp.swift in Sources */,
