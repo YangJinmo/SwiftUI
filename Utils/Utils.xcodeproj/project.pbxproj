@@ -112,6 +112,7 @@
 		E899701F2BBB88E1008A0D9B /* ProtocolsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */; };
 		E89B8F6B2C19629D0055841D /* FuturesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B8F6A2C19629D0055841D /* FuturesBootcamp.swift */; };
 		E89D6EC12D037245007FFEEC /* TopToastViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D6EC02D037245007FFEEC /* TopToastViewModifier.swift */; };
+		E89D6EC72D073355007FFEEC /* DynamicTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D6EC62D073355007FFEEC /* DynamicTabView.swift */; };
 		E89E38372BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */; };
 		E8A1BD852BFD911800FA2371 /* AdvancedCombineBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */; };
 		E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */; };
@@ -321,6 +322,7 @@
 		E899701E2BBB88E1008A0D9B /* ProtocolsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsBootcamp.swift; sourceTree = "<group>"; };
 		E89B8F6A2C19629D0055841D /* FuturesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturesBootcamp.swift; sourceTree = "<group>"; };
 		E89D6EC02D037245007FFEEC /* TopToastViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopToastViewModifier.swift; sourceTree = "<group>"; };
+		E89D6EC62D073355007FFEEC /* DynamicTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTabView.swift; sourceTree = "<group>"; };
 		E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionBootcamp.swift; sourceTree = "<group>"; };
 		E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCombineBootcamp.swift; sourceTree = "<group>"; };
 		E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridBootCamp.swift; sourceTree = "<group>"; };
@@ -792,6 +794,7 @@
 			isa = PBXGroup;
 			children = (
 				E8A4F3232B7129E300121654 /* Home.swift */,
+				E89D6EC62D073355007FFEEC /* DynamicTabView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1104,6 +1107,7 @@
 				E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */,
 				E8356E892AFCA61D00E834F5 /* ScaleEffectButtonStyle.swift in Sources */,
 				E8D47C6C2D01A3AF00C676B4 /* LazyVGridBootCamp.swift in Sources */,
+				E89D6EC72D073355007FFEEC /* DynamicTabView.swift in Sources */,
 				E8BBF3332B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */,
 				E8B170B72AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift in Sources */,
 				E8FE0D582B11EF2D003FF468 /* UIView.swift in Sources */,
