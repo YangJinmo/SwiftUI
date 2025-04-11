@@ -113,6 +113,7 @@
 		E89B8F6B2C19629D0055841D /* FuturesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B8F6A2C19629D0055841D /* FuturesBootcamp.swift */; };
 		E89D6EC12D037245007FFEEC /* TopToastViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D6EC02D037245007FFEEC /* TopToastViewModifier.swift */; };
 		E89D6EC72D073355007FFEEC /* DynamicTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D6EC62D073355007FFEEC /* DynamicTabView.swift */; };
+		E89D6ED22D076655007FFEEC /* AnimatedUnderlineTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D6ED12D076654007FFEEC /* AnimatedUnderlineTabBarView.swift */; };
 		E89E38372BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */; };
 		E8A1BD852BFD911800FA2371 /* AdvancedCombineBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */; };
 		E8A319252AB3E17300465490 /* LazyHGridBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */; };
@@ -323,6 +324,7 @@
 		E89B8F6A2C19629D0055841D /* FuturesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturesBootcamp.swift; sourceTree = "<group>"; };
 		E89D6EC02D037245007FFEEC /* TopToastViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopToastViewModifier.swift; sourceTree = "<group>"; };
 		E89D6EC62D073355007FFEEC /* DynamicTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTabView.swift; sourceTree = "<group>"; };
+		E89D6ED12D076654007FFEEC /* AnimatedUnderlineTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedUnderlineTabBarView.swift; sourceTree = "<group>"; };
 		E89E38362BBE2FA20040CB81 /* DependencyInjectionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionBootcamp.swift; sourceTree = "<group>"; };
 		E8A1BD842BFD911800FA2371 /* AdvancedCombineBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCombineBootcamp.swift; sourceTree = "<group>"; };
 		E8A319242AB3E17300465490 /* LazyHGridBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyHGridBootCamp.swift; sourceTree = "<group>"; };
@@ -795,6 +797,7 @@
 			children = (
 				E8A4F3232B7129E300121654 /* Home.swift */,
 				E89D6EC62D073355007FFEEC /* DynamicTabView.swift */,
+				E89D6ED12D076654007FFEEC /* AnimatedUnderlineTabBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1156,6 +1159,7 @@
 				E88842E02A4578BD00D8A9BC /* GeometryReaderView.swift in Sources */,
 				E82F948E2D943D6700F40E2C /* CapsuleStrokeBorderButtonStyle.swift in Sources */,
 				E8D4F4AA2A9B8A2900D2B0DE /* PagingScrollView.swift in Sources */,
+				E89D6ED22D076655007FFEEC /* AnimatedUnderlineTabBarView.swift in Sources */,
 				E8D7D8672CD113FD00EFA82E /* ExpandableText.swift in Sources */,
 				E8D7D84D2CD0ADB200EFA82E /* JMNavigationBarViewModifier.swift in Sources */,
 				E8BBF33C2BA04AA7006ECF3D /* TabBarItemsPreferenceKey.swift in Sources */,
