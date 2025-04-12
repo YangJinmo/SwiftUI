@@ -142,6 +142,7 @@
 		E8BD6BDF2A7E736100860483 /* JMTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */; };
 		E8BD8F802A3F49D90047D42C /* FontWithLineHeightViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */; };
 		E8BDCE7F2CC8C6B600A526D4 /* NavigationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BDCE7E2CC8C6B000A526D4 /* NavigationModifier.swift */; };
+		E8BDCE942CCC059B00A526D4 /* LazyViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BDCE932CCC059900A526D4 /* LazyViewModifier.swift */; };
 		E8BE12E32A386AF30001FE62 /* ClearableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */; };
 		E8BF16B22A3B17A20096E57E /* TagTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B12A3B17A20096E57E /* TagTextField.swift */; };
 		E8BF16B42A3B17ED0096E57E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF16B32A3B17ED0096E57E /* Font.swift */; };
@@ -353,6 +354,7 @@
 		E8BD6BDE2A7E736100860483 /* JMTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMTextEditor.swift; sourceTree = "<group>"; };
 		E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWithLineHeightViewModifier.swift; sourceTree = "<group>"; };
 		E8BDCE7E2CC8C6B000A526D4 /* NavigationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModifier.swift; sourceTree = "<group>"; };
+		E8BDCE932CCC059900A526D4 /* LazyViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyViewModifier.swift; sourceTree = "<group>"; };
 		E8BE12E22A386AF30001FE62 /* ClearableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearableTextField.swift; sourceTree = "<group>"; };
 		E8BF16B12A3B17A20096E57E /* TagTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTextField.swift; sourceTree = "<group>"; };
 		E8BF16B32A3B17ED0096E57E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -837,6 +839,7 @@
 		E8BF16B52A3B185D0096E57E /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
+				E8BDCE932CCC059900A526D4 /* LazyViewModifier.swift */,
 				E8BDCE7E2CC8C6B000A526D4 /* NavigationModifier.swift */,
 				E8D7D84C2CD0ADB100EFA82E /* JMNavigationBarViewModifier.swift */,
 				E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */,
@@ -1106,6 +1109,7 @@
 				E8A739BB2C63245C003E3BF4 /* SelectedButtonView.swift in Sources */,
 				E8E2972A2AA5C5FB00EB4F6A /* ListableResponseModel.swift in Sources */,
 				E86A718A2CA1488000477BF0 /* MailComposeView.swift in Sources */,
+				E8BDCE942CCC059B00A526D4 /* LazyViewModifier.swift in Sources */,
 				E83DC5D12A2CD07C006E2E4F /* GaugeProgressStyle.swift in Sources */,
 				E83DC5E92A2DBC2C006E2E4F /* UIApplication.swift in Sources */,
 				E8356E892AFCA61D00E834F5 /* ScaleEffectButtonStyle.swift in Sources */,
