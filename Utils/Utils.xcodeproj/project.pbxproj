@@ -52,6 +52,7 @@
 		E839DE252B6F791B00B71A7C /* SettingStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E839DE242B6F791B00B71A7C /* SettingStack.swift */; };
 		E839DE272B6F7A8000B71A7C /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E839DE262B6F7A8000B71A7C /* AppData.swift */; };
 		E83DBBD12D8C1864005B362B /* PercentageRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DBBD02D8C1862005B362B /* PercentageRangeSlider.swift */; };
+		E83DBBD32D8C189D005B362B /* PriceRangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DBBD22D8C189B005B362B /* PriceRangeSlider.swift */; };
 		E83DC5C12A2CD042006E2E4F /* UtilsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */; };
 		E83DC5C52A2CD043006E2E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83DC5C42A2CD043006E2E4F /* Assets.xcassets */; };
 		E83DC5C92A2CD043006E2E4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83DC5C82A2CD043006E2E4F /* Preview Assets.xcassets */; };
@@ -262,6 +263,7 @@
 		E839DE242B6F791B00B71A7C /* SettingStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStack.swift; sourceTree = "<group>"; };
 		E839DE262B6F7A8000B71A7C /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		E83DBBD02D8C1862005B362B /* PercentageRangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageRangeSlider.swift; sourceTree = "<group>"; };
+		E83DBBD22D8C189B005B362B /* PriceRangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRangeSlider.swift; sourceTree = "<group>"; };
 		E83DC5BD2A2CD042006E2E4F /* Utils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83DC5C02A2CD042006E2E4F /* UtilsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsApp.swift; sourceTree = "<group>"; };
 		E83DC5C42A2CD043006E2E4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -620,6 +622,7 @@
 				E8F92E612B1367D800C1A5ED /* StarRating.swift */,
 				E818CF6F2B5917480075783B /* DateTextField.swift */,
 				E83DBBD02D8C1862005B362B /* PercentageRangeSlider.swift */,
+				E83DBBD22D8C189B005B362B /* PriceRangeSlider.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -1122,6 +1125,7 @@
 				E8BBF3332B94BA5D006ECF3D /* ScrollViewOffsetPreferenceKeyBootcamp.swift in Sources */,
 				E8B170B72AF60EB70062CB70 /* EnvironmentObjectBootCamp.swift in Sources */,
 				E8FE0D582B11EF2D003FF468 /* UIView.swift in Sources */,
+				E83DBBD32D8C189D005B362B /* PriceRangeSlider.swift in Sources */,
 				E868E7B92A6F4C580095F030 /* ScrollToID.swift in Sources */,
 				E8627F1C2A7AA07500C01478 /* Dictionary.swift in Sources */,
 				E8510A672CF87674005CB45D /* ProgressBarView.swift in Sources */,
