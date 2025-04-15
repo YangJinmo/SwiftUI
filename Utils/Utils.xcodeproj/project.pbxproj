@@ -847,12 +847,12 @@
 			children = (
 				E8BDCE932CCC059900A526D4 /* LazyViewModifier.swift */,
 				E8BDCE7E2CC8C6B000A526D4 /* NavigationModifier.swift */,
+				E8D163662A4D46A400A570A9 /* NavigationBarModifier.swift */,
 				E8D7D84C2CD0ADB100EFA82E /* JMNavigationBarViewModifier.swift */,
 				E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */,
 				E86A718B2CA2828600477BF0 /* CircularProgressViewModifier.swift */,
 				E8D7D8522CD0D8D800EFA82E /* LoadingViewModifier.swift */,
 				E8BD8F7F2A3F49D90047D42C /* FontWithLineHeightViewModifier.swift */,
-				E8D163662A4D46A400A570A9 /* NavigationBarModifier.swift */,
 				E893DBA92A3D4A3D0058E729 /* ClearBackgroundModifier.swift */,
 				E8BF16B62A3B18800096E57E /* TextFieldClearButtonViewModifier.swift */,
 				E8D2FDBC2A9F80F30023DA63 /* ToggleScrollEnabledViewModifier.swift */,
