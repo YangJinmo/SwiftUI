@@ -45,6 +45,7 @@
 		E82F94952D954BBF00F40E2C /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F94942D954BBE00F40E2C /* SideMenuView.swift */; };
 		E82F94972D954BD500F40E2C /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F94962D954BD500F40E2C /* SideMenuHeaderView.swift */; };
 		E82F94992D954BFE00F40E2C /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F94982D954BFD00F40E2C /* SideMenuRowView.swift */; };
+		E82F949B2D954C1C00F40E2C /* SideMenuOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82F949A2D954C1B00F40E2C /* SideMenuOptionModel.swift */; };
 		E832809E2A4998A400563CBC /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809D2A4998A400563CBC /* PhotoPicker.swift */; };
 		E83280A02A4998CA00563CBC /* PhotoPickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832809F2A4998CA00563CBC /* PhotoPickerService.swift */; };
 		E83280A42A4B131B00563CBC /* BackgroundViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */; };
@@ -260,6 +261,7 @@
 		E82F94942D954BBE00F40E2C /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		E82F94962D954BD500F40E2C /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
 		E82F94982D954BFD00F40E2C /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
+		E82F949A2D954C1B00F40E2C /* SideMenuOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionModel.swift; sourceTree = "<group>"; };
 		E832809D2A4998A400563CBC /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		E832809F2A4998CA00563CBC /* PhotoPickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerService.swift; sourceTree = "<group>"; };
 		E83280A32A4B131B00563CBC /* BackgroundViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifier.swift; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 		E82F94912D954B9D00F40E2C /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				E82F949A2D954C1B00F40E2C /* SideMenuOptionModel.swift */,
 				E82F94922D954BA900F40E2C /* SideMenuHomeView.swift */,
 				E82F94942D954BBE00F40E2C /* SideMenuView.swift */,
 				E82F94962D954BD500F40E2C /* SideMenuHeaderView.swift */,
@@ -1113,6 +1116,7 @@
 				E839DE272B6F7A8000B71A7C /* AppData.swift in Sources */,
 				E8599C472B2D9AC80085E054 /* HelloView.swift in Sources */,
 				E88037582B04AD43008D2C81 /* AdaptiveSheetViewModifier.swift in Sources */,
+				E82F949B2D954C1C00F40E2C /* SideMenuOptionModel.swift in Sources */,
 				E84EEDF12BAA81F700976204 /* CustomNavLink.swift in Sources */,
 				E8E2972E2AA5C79D00EB4F6A /* ReusableListView.swift in Sources */,
 				E8259C6F2A7CB01A005BF839 /* Bundle.swift in Sources */,
